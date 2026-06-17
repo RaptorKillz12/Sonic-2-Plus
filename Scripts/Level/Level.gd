@@ -85,6 +85,7 @@ func setup_hud_properties() -> void:
 			ringsForPerfect = get_tree().get_nodes_in_group("Rings").size()
 			print(str(ringsForPerfect) + " rings to perfect.")
 		Global.hud.ringsForPerfect = ringsForPerfect
+		Global.pause.get_node("PauseMenu/TextureRect3/Label").text = str(ringsForPerfect)
 		
 		if !zone_name_overide: zone_name_overide = Global.zone_names[zone_id]
 		Global.hud.initialize_hud(zone_name_overide,zone_text,act_number)

@@ -5,10 +5,15 @@ var yesno_menu_scene: PackedScene = preload("res://Entities/MenuObjects/yes_no_p
 
 var options_menu: PackedScene = preload("res://Scene/Presentation/OptionsMenu.tscn")
 
+var sfx_move = preload("res://Audio/SFX/Misc/MenuBleep.wav")
+var sfx_select = preload("res://Audio/SFX/Misc/MenuAccept.wav")
+var sfx_back = preload("res://Audio/SFX/Misc/MenuWoosh.wav")
+
+@onready var sfx_player: AudioStreamPlayer = $SFXPlayer
+
 @onready var background: TextureRect = $PauseCover
 @onready var menu_text: VBoxContainer = $PauseMenu/VBoxContainer
 @onready var continue_button: Button = %Continue
-@onready var options_button: Button = %Options
 @onready var restart_button: Button = %Restart
 @onready var quit_button: Button = %Quit
 ## Last saved menu button
@@ -17,7 +22,12 @@ var menu_option: Button = null
 
 func  _ready() -> void:
 	menu_option = continue_button
-
+	Global.pause = self
+	
+	for button in menu_text.get_children():
+		if button is Button:
+			button.focus_entered.connect(_on_button_focus_entered)
+			
 func set_control_lock_state(state: bool) -> void:
 	for i in menu_text.get_children():
 		if i is Button:
@@ -29,6 +39,7 @@ func set_control_lock_state(state: bool) -> void:
 	if menu_option and menu_option.disabled == false:
 		await get_tree().process_frame
 		menu_option.grab_focus()
+	
 
 
 func _input(event: InputEvent) -> void:
@@ -38,6 +49,7 @@ func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("ui_pause") or 
 	event.is_action_pressed("ui_pause_P2")) and (continue_button.disabled == false):
 		if Main.can_pause:
+			play_sfx(sfx_back)
 			await get_tree().process_frame
 			get_tree().paused = false
 			visible = false
@@ -51,6 +63,7 @@ func _on_visibility_changed() -> void:
 			background.texture = tex
 
 func _on_continue_pressed() -> void:
+	play_sfx(sfx_select)
 	menu_option = continue_button
 	await set_control_lock_state(true)
 	await get_tree().process_frame
@@ -59,6 +72,7 @@ func _on_continue_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
+	play_sfx(sfx_select)
 	menu_option = restart_button
 	await set_control_lock_state(true)
 	
@@ -77,6 +91,7 @@ func _on_restart_pressed() -> void:
 
 
 func _on_quit_pressed() -> void:
+	play_sfx(sfx_select)
 	menu_option = quit_button
 	await set_control_lock_state(true)
 
@@ -100,15 +115,7 @@ func _on_quit_pressed() -> void:
 		await set_control_lock_state(false)
 
 
-func _on_options_pressed() -> void:
-	menu_option = options_button
-	await set_control_lock_state(true)
-	$PauseMenu/VBoxContainer.hide()
-	var opt_menu: Control = options_menu.instantiate()
-	add_child(opt_menu)
-	await opt_menu.tree_exited
-	$PauseMenu/VBoxContainer.show()
-	await set_control_lock_state(false)
+
 
 
 func restart_level() -> void:
@@ -128,3 +135,10 @@ func quit_to_title() -> void:
 	await Main.reset_game()
 	SoundDriver.music.stop()
 	#Main.set_volume(0)
+
+func play_sfx(sound: AudioStream) -> void:
+	sfx_player.stream = sound
+	sfx_player.play()
+	
+func _on_button_focus_entered() -> void:
+	play_sfx(sfx_move)

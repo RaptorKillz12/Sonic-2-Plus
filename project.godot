@@ -16,13 +16,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Sonic 2:Retold"
 config/tags=PackedStringArray("2d", "arcade", "multiplayer", "singleplayer")
-run/main_scene="uid://dtlk8krmkmm4a"
+run/main_scene="uid://c58ontqoxjuti"
 config/features=PackedStringArray("4.6")
 run/max_fps=60
 boot_splash/bg_color=Color(0.933333, 0.933333, 0.933333, 1)
-boot_splash/image="res://icon.png"
 config/icon="uid://vt5jl3128xt"
 config/windows_native_icon="res://sonic.ico"
+boot_splash/image="res://icon.png"
 
 [autoload]
 
@@ -215,6 +215,7 @@ ui_clear_action={
 textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0.266667, 1)
 2d/snapping/use_gpu_pixel_snap=true
 batching/precision/uv_contract=true

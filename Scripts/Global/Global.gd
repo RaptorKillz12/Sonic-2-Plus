@@ -26,6 +26,7 @@ var players: Array[Player2D] = []
 var special_stage_players: Array = []
 ## HUD object reference
 var hud: CanvasLayer = null
+var pause:Control = null
 ## HUD object specificiall in special stages.
 var special_hud: CanvasLayer = null
 ## Slot machines (Casino Night Zone Only), probably not needed.
@@ -165,10 +166,7 @@ var super_anyone:bool = false
 var insta_shield:bool = true
 
 ## If certain debug features will be enabled.
-var debug_mode: bool = true: set = _set_debug_mode
-func _set_debug_mode(value: bool) -> void:
-	Main.input_view.visible = value
-	debug_mode = value
+
 
 # Two Player settings
 #Single Race: Pick a character and a zone for each race

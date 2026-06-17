@@ -360,7 +360,7 @@ func ProcessStageClear() -> void:
 	# initialize stage clear sequence
 	if !isStageEnding:
 		isStageEnding = true
-		set_hud_visibility(false)
+		set_hud_visibility(true)
 		state = STATES.END_OF_LEVEL
 		# reset air in case we are under water
 		_reset_air()

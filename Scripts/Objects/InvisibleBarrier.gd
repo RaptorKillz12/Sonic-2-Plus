@@ -1,9 +1,6 @@
 @tool
 extends StaticBody2D
 
-func _ready() -> void:
-	if !Engine.is_editor_hint():
-		visible = Global.debug_mode
 
 func _process(_delta: float) -> void:
 	var size: Vector2 = Vector2(32*scale.x,32*scale.y) 

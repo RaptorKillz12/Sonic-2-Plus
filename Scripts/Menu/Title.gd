@@ -1,12 +1,9 @@
 extends Node2D
 
 @export var music: AudioStream = preload("res://Audio/Soundtrack/s2br_TitleScreen.ogg")
-@onready var title_menu: VBoxContainer = $CanvasLayer/Menu
-var zone_loader: String = "res://Scene/Presentation/DataSelectMenu.tscn"
-var two_player_menu: String = "res://Scene/Presentation/TwoPlayerMenu.tscn"
-var level_select_menu: String = "res://Scene/Presentation/LevelSelect.tscn"
 var opening_cutscene: String = "res://Scene/Cutscenes/Opening.tscn"
-var optionsScene: String = "res://Scene/Presentation/OptionsMenu.tscn"
+var menu: String = "res://Scene/Presentation/DataSelectMenu.tscn"
+
 
 @export var demo_flag: bool = false
 
@@ -15,37 +12,14 @@ var state: int = STATES.INTRO
 ## If the Title Screen should be moving
 var title_scroll: bool = false
 
-## Toggle when the menu should display.
-var menuActive: bool = false:
-	set(value):
-		menuActive = value
-		if value:
-			title_menu.show()
-			await get_tree().create_timer(0.5).timeout
-			title_menu.get_child(0).grab_focus()
+signal music_finished
 
+var 	titleEnd: bool = false
 ## If a cheat code has been applied on this loop, don't allow it to be again
 var cheat_active: bool = false
 
 var BackgroundScene: PackedScene
 var parallaxBackgrounds: Array[StringName] = [
-	"res://Scene/Backgrounds/00-EmeraldHill.tscn",
-	"res://Scene/Backgrounds/01-HiddenPalace.tscn",
-	"res://Scene/Backgrounds/02-HillTop.tscn",
-	"res://Scene/Backgrounds/03-ChemicalPlant.tscn",
-	"res://Scene/Backgrounds/04-OilOcean.tscn",
-	"res://Scene/Backgrounds/05-NeoGreenHill.tscn",
-	"res://Scene/Backgrounds/06-Metropolis.tscn",
-	"res://Scene/Backgrounds/07-DustHill.tscn",
-	"res://Scene/Backgrounds/08-WoodGadget.tscn",
-	"res://Scene/Backgrounds/09-CasinoNightF.tscn",
-	"res://Scene/Backgrounds/10-JewelGrotto.tscn",
-	"res://Scene/Backgrounds/11-WinterHill.tscn",
-	"res://Scene/Backgrounds/12-SandShower.tscn",
-	"res://Scene/Backgrounds/13-TropicalJungle.tscn",
-	"res://Scene/Backgrounds/14-CyberCity.tscn",
-	"res://Scene/Backgrounds/15-SkyFortress.tscn",
-	"res://Scene/Backgrounds/16-DeathEgg.tscn",
 	"res://Scene/Backgrounds/17-Ending.tscn",
 ]
 var sceneInstance: ParallaxBackground = null
@@ -85,7 +59,7 @@ var lastCheatInput: Vector2 = Vector2.ZERO
 var lastInput: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	title_menu.hide()
+	self.music_finished.connect(_on_music_finished)
 	get_tree().paused = false
 	#Wipe the player arrays to avoid contamination.
 	reset_values()
@@ -100,7 +74,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if title_scroll:
 		$TitleBanner.global_position.x += (5*60*delta)
-		$Celebrations.global_position.x += (5*60*delta)
+
 	if state < STATES.FADEOUT:
 		_unhandledInput()
 
@@ -112,12 +86,11 @@ func _unhandledInput() -> void:
 	lastInput = inputCue
 
 
-func _input(event: InputEvent) -> void:
-	# On start button press, skip intro or make selection
-	if event.is_action_pressed("ui_pause") and $TitleAnimate.is_playing():
-		if !$TitleWaitTimer.is_stopped():
-			$TitleAnimate.play("RESET")
-			menuActive = true
+func _input(event):
+	# end title on start press
+	if event.is_action_pressed("ui_pause") and !titleEnd:
+		titleEnd = true
+		SetFadeOut(menu)
 
 
 func CheckCheatInputs(inputCue: Vector2 = Vector2.ZERO) -> void:
@@ -131,8 +104,6 @@ func CheckCheatInputs(inputCue: Vector2 = Vector2.ZERO) -> void:
 				#print("Wrong input!" + str(inputCue))
 			if cheatInputCount == levelSelectCheat.size():
 				cheatInputCount = 0
-				if !demo_flag:
-					Global.debug_mode = true
 				Global.emeralds += 1
 				$TitleBanner/RingChime.play(0.0)
 				Global.tails_name_cheat = !Global.tails_name_cheat
@@ -151,30 +122,24 @@ func InstantiateBG() -> void:
 		sceneInstance = BackgroundScene.instantiate()
 		sceneInstance.scroll_base_offset.y = paraOffsets[min(Global.saved_zone_id,parallaxBackgrounds.size()-1)]
 		add_child(sceneInstance)
-	#Activate the Menu
-	menuActive = true
+
 
 func PlayMusic() -> void:
 	SoundDriver.music.play()
 	title_scroll = true #Begin scrolling
-	$TitleWaitTimer.start()
+	await SoundDriver.music.finished
+	emit_signal("music_finished")
+
 
 func SetFadeOut(newScene: String) -> void:
 	if state < STATES.FADEOUT:
 		state = STATES.FADEOUT
-		menuActive = false
+
 		await Main.change_scene(newScene,"FadeOut",1.0,false)
 
-#The sparkling rings have finished, fade out to demo
-func _on_celebrations_finished() -> void:
-	menuActive = false
-	await SetFadeOut(opening_cutscene)
 
 #The wait timer has run out, activate the spakls in time with the shooting star sound
-func _on_title_wait_timer_timeout() -> void:
-	#If and only if a selection has not yet been made
-	if menuActive:
-		$Celebrations.emitting = true
+
 
 func reset_values() -> void:
 	Global.stage_cleared = false 
@@ -199,24 +164,5 @@ func reset_values() -> void:
 	Global.animals = [0,1]
 
 
-func _on_player_pressed() -> void:
-	Global.saved_act_id = 0
-	await SetFadeOut(zone_loader)
-	#SetFadeOut(level_select_menu)
-
-
-func _on_player_vs_pressed() -> void:
-	Global.two_player_mode = true
-	Global.PlayerChar1 = Global.CHARACTERS.SONIC
-	Global.PlayerChar2 = Global.CHARACTERS.TAILS
-	await SetFadeOut(two_player_menu)
-
-
-func _on_options_pressed() -> void:
-	await SetFadeOut(optionsScene)
-
-
-func _on_quit_pressed() -> void:
-	state = STATES.FADEOUT
-	menuActive = false
-	await Main.quit_game()
+func _on_music_finished() -> void:
+	SetFadeOut(opening_cutscene)

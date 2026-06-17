@@ -1093,10 +1093,8 @@ func hit_player(damagePoint: Vector2 = global_position, damageType: int = 0, sou
 				Global.hud.super_icon_ready(false)
 			call_deferred('deferred_spill_rings')
 		elif shield == SHIELDS.NONE and (playerControl == 1 or Global.two_player_mode):
-			if Global.debug_mode:
-				sfx[soundID].play()
-				return false
-			else:
+			
+
 				kill(soundID)
 		else:
 			sfx[soundID].play()

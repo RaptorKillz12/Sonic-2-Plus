@@ -6,7 +6,7 @@ signal scene_faded
 ## If the game can be paused in its current state
 var can_pause: bool = false
 
-@onready var input_view: Control = $GUI/ControlMap
+
 @onready var crt_filter: ColorRect = $CanvasLayer/ColorRect
 @onready var control_menu: ControllerMenu = $GUI/ControllerMenu
 

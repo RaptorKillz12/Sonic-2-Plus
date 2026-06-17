@@ -1,0 +1,48 @@
+{
+	"PAUSE": {"File": "assets.png", "Rect": "1,191,78,16"},
+	"RIGHTPART": {"File": "assets.png", "Rect": "248,0,144,256"},
+	"LOWERPART": {"File": "assets.png", "Rect": "0,256,512,32"},
+	"SONIC2ABSOLUTE": {"File": "assets.png", "Rect": "37,73,140,5"},
+
+	"s2a_pause_emeraldSlot": {"File": "assets.png", "Rect": "84,22,14,16"},
+	"s2a_pause_emerald_0x00": {"File": "assets.png", "Rect": "99,22,8,10"},
+	"s2a_pause_emerald_0x01": {"File": "assets.png", "Rect": "108,22,8,10"},
+	"s2a_pause_emerald_0x02": {"File": "assets.png", "Rect": "117,22,8,10"},
+	"s2a_pause_emerald_0x03": {"File": "assets.png", "Rect": "126,22,8,10"},
+	"s2a_pause_emerald_0x04": {"File": "assets.png", "Rect": "135,22,8,10"},
+	"s2a_pause_emerald_0x05": {"File": "assets.png", "Rect": "144,22,8,10"},
+	"s2a_pause_emerald_0x06": {"File": "assets.png", "Rect": "153,22,8,10"},
+	
+	"s2a_pause_none": {"File": "assets.png", "Rect": "8,45,1,1"},
+	
+	"RINGCHAIN": {"File": "assets.png", "Rect": "133,181,61,7"},
+	"s2a_ringchaindigit_0": {"File": "assets.png", "Rect": "1,50,8,11"},
+	"s2a_ringchaindigit_1": {"File": "assets.png", "Rect": "10,50,8,11"},
+	"s2a_ringchaindigit_2": {"File": "assets.png", "Rect": "19,50,8,11"},
+	"s2a_ringchaindigit_3": {"File": "assets.png", "Rect": "28,50,8,11"},
+	"s2a_ringchaindigit_4": {"File": "assets.png", "Rect": "1,62,8,11"},
+	"s2a_ringchaindigit_5": {"File": "assets.png", "Rect": "10,62,8,11"},
+	"s2a_ringchaindigit_6": {"File": "assets.png", "Rect": "19,62,8,11"},
+	"s2a_ringchaindigit_7": {"File": "assets.png", "Rect": "28,62,8,11"},
+	"s2a_ringchaindigit_8": {"File": "assets.png", "Rect": "1,74,8,11"},
+	"s2a_ringchaindigit_9": {"File": "assets.png", "Rect": "10,74,8,11"},
+
+	"ringchain_ring_0x00": {"File": "assets.png", "Rect": "80,189,18,18", "Center": "9,9"},
+	"ringchain_ring_0x01": {"File": "assets.png", "Rect": "99,189,16,18", "Center": "8,9"},
+	"ringchain_ring_0x02": {"File": "assets.png", "Rect": "116,189,14,18", "Center": "7,9"},
+	"ringchain_ring_0x03": {"File": "assets.png", "Rect": "131,189,10,18", "Center": "5,9"},
+	"ringchain_ring_0x04": {"File": "assets.png", "Rect": "142,189,8,18", "Center": "4,9"},
+	"ringchain_ring_0x05": {"File": "assets.png", "Rect": "151,189,10,18", "Center": "5,9"},
+	"ringchain_ring_0x06": {"File": "assets.png", "Rect": "162,189,14,18", "Center": "7,9"},
+	"ringchain_ring_0x07": {"File": "assets.png", "Rect": "177,189,16,18", "Center": "8,9"},
+
+	"s2a_pause_0x00": {"File": "assets.png", "Rect": "1,208,51,11"},
+	"s2a_pause_0x01": {"File": "assets.png", "Rect": "1,220,57,11"},
+	"s2a_pause_0x02": {"File": "assets.png", "Rect": "1,232,81,11"},
+	"s2a_pause_0x03": {"File": "assets.png", "Rect": "1,244,30,11"},
+
+	"s2a_pause_selected_0x00": {"File": "assets.png", "Rect": "59,220,51,11"},
+	"s2a_pause_selected_0x01": {"File": "assets.png", "Rect": "53,208,57,11"},
+	"s2a_pause_selected_0x02": {"File": "assets.png", "Rect": "32,244,81,11"},
+	"s2a_pause_selected_0x03": {"File": "assets.png", "Rect": "83,232,30,11"},
+}

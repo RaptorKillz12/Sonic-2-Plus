@@ -7,11 +7,8 @@ var ending_scene: bool = false
 var globalTime: float = 0.0
 
 func _ready() -> void:
-	Global.debug_mode = false
 	var rng: int = randi_range(0,255)
-	if rng == Global.ZONES.DEATH_EGG:
-		$CanvasLayer/Center/SilverSonic.visible = true
-		$CanvasLayer/Center/Sonic.visible = false
+
 	
 	# delay so game can start
 	await get_tree().create_timer(1.0).timeout
@@ -41,11 +38,9 @@ func _input(event: InputEvent) -> void:
 
 func end_scene() -> void:
 	ending_scene = true
-	$Warp.play()
-	await Main.change_scene(nextScene,"WhiteOut",1,false)
+	await Main.change_scene(nextScene,"FadeOut",1,false)
 
-func playDashSound() -> void:
-	$DashSFX.play()
+
 
 func playJingle() -> void:
 	$Emerald.play()
