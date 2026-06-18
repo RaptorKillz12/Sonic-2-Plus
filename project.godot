@@ -49,6 +49,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Sonic Worlds Next"
 
+[editor]
+
+movie_writer/movie_file="/storage/emulated/0/test.ogv"
+
 [file_customization]
 
 folder_colors={

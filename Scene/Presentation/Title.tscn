@@ -492,7 +492,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=956897603]
-position = Vector2(170, 202)
+position = Vector2(204, 202)
 texture = ExtResource("7_8n8qr")
 
 [node name="Cover" type="CanvasLayer" parent="." unique_id=877930667]

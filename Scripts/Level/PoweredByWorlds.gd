@@ -9,7 +9,7 @@ var globalTime: float = 0.0
 func _ready() -> void:
 	var rng: int = randi_range(0,255)
 
-	
+
 	# delay so game can start
 	await get_tree().create_timer(1.0).timeout
 	
@@ -24,7 +24,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	globalTime += delta
-
+	if $AnimationPlayer.is_playing():
+		print($CanvasLayer/Center/Sonic/TextureRect2.position)
 
 func _input(event: InputEvent) -> void:
 	if ending_scene or globalTime < 1.0:
