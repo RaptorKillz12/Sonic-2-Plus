@@ -1,65 +1,38 @@
 [gd_scene format=3 uid="uid://douh8pscjw7hm"]
 
-[ext_resource type="Texture2D" uid="uid://6x38yqia731l" path="res://Graphics/Menus/DataBox.png" id="1_k7mkp"]
 [ext_resource type="Script" uid="uid://fhosnxb7v1xy" path="res://Scripts/Menu/save_panel.gd" id="1_vt2ve"]
-[ext_resource type="Texture2D" uid="uid://d3g0w6uwq7bvj" path="res://Graphics/Menus/Icons_All.png" id="2_85gd5"]
-[ext_resource type="Texture2D" uid="uid://b2m8w8il8ycx8" path="res://Graphics/Menus/CharacterPreviews.png" id="4_4i5fd"]
+[ext_resource type="Texture2D" uid="uid://dbxc42htynsdf" path="res://Graphics/Menus/SaveSlot.png" id="2_vt2ve"]
+[ext_resource type="FontFile" uid="uid://dvy7b5uq4xilw" path="res://Graphics/Fonts/credits_font.png" id="3_vt2ve"]
+[ext_resource type="Texture2D" uid="uid://q7inm4mjuqgc" path="res://Graphics/Menus/New Folder/Save-Background.png" id="4_43m3s"]
+[ext_resource type="Texture2D" uid="uid://bgfcf380ax1xm" path="res://Graphics/Menus/Playericons.png" id="5_43m3s"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i5fd"]
-draw_center = false
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7prb"]
-draw_center = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_544rh"]
-draw_center = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6q4q"]
-draw_center = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1ty6"]
-draw_center = false
-
-[sub_resource type="Theme" id="Theme_vt2ve"]
-Button/colors/icon_focus_color = Color(0.93333334, 0.93333334, 0, 1)
-Button/colors/icon_hover_color = Color(0.93333334, 0.93333334, 0, 1)
-Button/colors/icon_hover_pressed_color = Color(0.93333334, 0, 0, 1)
-Button/colors/icon_pressed_color = Color(0.93333334, 0, 0, 1)
-Button/styles/disabled = SubResource("StyleBoxFlat_4i5fd")
-Button/styles/focus = SubResource("StyleBoxFlat_k7prb")
-Button/styles/hover = SubResource("StyleBoxFlat_544rh")
-Button/styles/normal = SubResource("StyleBoxFlat_i6q4q")
-Button/styles/pressed = SubResource("StyleBoxFlat_g1ty6")
-
-[node name="SavePanel" type="Button" unique_id=6753834]
-offset_right = 96.0
-offset_bottom = 176.0
-theme = SubResource("Theme_vt2ve")
-icon = ExtResource("1_k7mkp")
+[node name="SavePanel" type="Node2D" unique_id=1132083271]
 script = ExtResource("1_vt2ve")
 
-[node name="Label" type="Label" parent="." unique_id=1774549869]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 160.0
-offset_right = 72.0
-offset_bottom = 168.0
+[node name="DataBox" type="Sprite2D" parent="." unique_id=237314286]
+z_index = 1
+position = Vector2(48, 96)
+texture = ExtResource("2_vt2ve")
+
+[node name="Label" type="Label" parent="DataBox" unique_id=762198640]
+offset_left = -66.0
+offset_top = -5.0
+offset_right = -10.0
+offset_bottom = 3.0
+theme_override_fonts/font = ExtResource("3_vt2ve")
 text = "no save"
 
-[node name="LevelIcon" type="Sprite2D" parent="." unique_id=519870549]
-unique_name_in_owner = true
-position = Vector2(12, 8)
-scale = Vector2(2, 2)
-texture = ExtResource("2_85gd5")
-centered = false
-hframes = 4
-vframes = 7
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=2077134077]
+offset_left = -92.0
+offset_top = 75.0
+offset_right = 190.0
+offset_bottom = 119.0
+texture = ExtResource("4_43m3s")
 
-[node name="CharacterIcon" type="Sprite2D" parent="." unique_id=1415201798]
+[node name="CharacterIcon" type="Sprite2D" parent="." unique_id=1150082247]
 unique_name_in_owner = true
-position = Vector2(48, 96)
-texture = ExtResource("4_4i5fd")
-vframes = 8
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+z_index = 2
+position = Vector2(-72, 96)
+texture = ExtResource("5_43m3s")
+region_enabled = true
+region_rect = Rect2(0, 0, 30, 30)

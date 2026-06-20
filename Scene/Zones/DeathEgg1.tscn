@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://fyxpn2yiyquc"]
 
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_yyvsh"]
-[ext_resource type="AudioStream" uid="uid://g0a01sst32bm" path="res://Audio/Soundtrack/s2br_DeathEgg.ogg" id="2_fqqc2"]
+[ext_resource type="AudioStream" uid="uid://b0gx23e4wj7s3" path="res://Audio/Soundtrack/DeathEgg.ogg" id="2_fqqc2"]
 [ext_resource type="PackedScene" uid="uid://d2ectm23ulm50" path="res://Scene/Backgrounds/16-DeathEgg.tscn" id="3_d6uqq"]
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="5_1knt1"]
 [ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="6_1scnv"]
@@ -13,6 +13,8 @@ script = ExtResource("1_yyvsh")
 zone_id = 16
 music = ExtResource("2_fqqc2")
 music2P = ExtResource("2_fqqc2")
+F_music = ExtResource("2_fqqc2")
+F_music2P = ExtResource("2_fqqc2")
 animal1 = 6
 animal2 = 3
 

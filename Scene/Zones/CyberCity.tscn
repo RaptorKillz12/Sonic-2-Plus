@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://c3i0t665l1320"]
 
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_2qba3"]
-[ext_resource type="AudioStream" uid="uid://b23aiesjup068" path="res://Audio/Soundtrack/s2br_HyperHyper.ogg" id="2_t02ck"]
-[ext_resource type="AudioStream" uid="uid://c3q4c6tduy0jg" path="res://Audio/Soundtrack/s2br_Electoria.ogg" id="2_wqlgd"]
-[ext_resource type="AudioStream" uid="uid://bomm2jjdsrep3" path="res://Audio/Soundtrack/s2br_Boss2.ogg" id="3_u6dil"]
+[ext_resource type="AudioStream" uid="uid://c1mjerwx6wq1a" path="res://Audio/Soundtrack/Metropolis.ogg" id="2_wqlgd"]
+[ext_resource type="AudioStream" uid="uid://6rit71ongu60" path="res://Audio/Soundtrack/Metropolis_F.ogg" id="3_lykp7"]
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="5_a3l5i"]
 [ext_resource type="PackedScene" uid="uid://c3plocm0bipdf" path="res://Scene/Backgrounds/14-CyberCity.tscn" id="5_dx3sm"]
 [ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="6_dx3sm"]
@@ -20,8 +19,9 @@ script = ExtResource("1_2qba3")
 zone_id = 14
 act_number = 3
 music = ExtResource("2_wqlgd")
-music2P = ExtResource("2_t02ck")
-boss_theme = ExtResource("3_u6dil")
+music2P = ExtResource("2_wqlgd")
+F_music = ExtResource("3_lykp7")
+F_music2P = ExtResource("3_lykp7")
 animal1 = 13
 animal2 = 8
 end_cutscene = true

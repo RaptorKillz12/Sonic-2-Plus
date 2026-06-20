@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var music: AudioStream = preload("res://Audio/Soundtrack/s2br_TitleScreen.ogg")
+@export var music: AudioStream = preload("res://Audio/Soundtrack/Titlescreen.ogg")
 var opening_cutscene: String = "res://Scene/Cutscenes/Opening.tscn"
-var menu: String = "res://Scene/Presentation/DataSelectMenu.tscn"
+var menu: String = "res://Scene/Presentation/Menu.tscn"
 
 
 @export var demo_flag: bool = false

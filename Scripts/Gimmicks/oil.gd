@@ -10,7 +10,6 @@ var restPos = 0 #Position the invisible platforms move up to.
 
 func _ready():
 	if !Engine.is_editor_hint():
-		visible = Global.debug_mode
 		restPos = global_position.y - 8
 
 func _physics_process(delta: float) -> void:

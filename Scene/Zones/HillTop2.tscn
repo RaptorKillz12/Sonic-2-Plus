@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b25bf70l62rjr"]
 
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_o6dl6"]
-[ext_resource type="AudioStream" uid="uid://dhw5trv54kut7" path="res://Audio/Soundtrack/s2br_HillTop.ogg" id="2_5rsgg"]
+[ext_resource type="AudioStream" uid="uid://bg4dsvo220x7f" path="res://Audio/Soundtrack/HillTop.ogg" id="2_5rsgg"]
+[ext_resource type="AudioStream" uid="uid://cgn6i3uug1kju" path="res://Audio/Soundtrack/HillTop_F.ogg" id="3_erwqf"]
 [ext_resource type="PackedScene" uid="uid://dcw6jbk0f0o84" path="res://Scene/Backgrounds/02-HillTop.tscn" id="4_uwk6t"]
 [ext_resource type="PackedScene" uid="uid://cck7mid4dflrd" path="res://Scene/level_layouts/layout_htz_2.scn" id="5_umcr1"]
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="16_sexxm"]
@@ -49,6 +50,8 @@ zone_id = 2
 act_number = 2
 music = ExtResource("2_5rsgg")
 music2P = ExtResource("2_5rsgg")
+F_music = ExtResource("3_erwqf")
+F_music2P = ExtResource("3_erwqf")
 animal1 = 9
 animal2 = 7
 defaultRightBoundry = 12928

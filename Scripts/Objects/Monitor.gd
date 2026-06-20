@@ -134,13 +134,13 @@ func destroy() -> void:
 			if !playerTouch.get("is_super"):
 				playerTouch.shoe_time = 20
 				playerTouch.switch_physics()
-				SoundDriver.playMusic(SoundDriver.themes[SoundDriver.THEME.SPEED])
+				SoundDriver.playNormalMusic()
 		ITEMTYPES.INVINCIBILITY: # Invincibility
 			if !playerTouch.get("is_super"):
 				playerTouch.super_time = 20
 				playerTouch.shieldSprite.visible = false # turn off barrier for stars
 				playerTouch.get_node("InvincibilityBarrier").visible = true
-				SoundDriver.playMusic(SoundDriver.themes[SoundDriver.THEME.INVINCIBLE])
+				SoundDriver.playNormalMusic()
 		ITEMTYPES.SHIELD: # Shield
 			playerTouch.set_shield(playerTouch.SHIELDS.NORMAL)
 		ITEMTYPES.ELECSHIELD: # Elec

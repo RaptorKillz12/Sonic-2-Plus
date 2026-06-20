@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="1_f4g8u"]
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_rpqfi"]
-[ext_resource type="AudioStream" uid="uid://bqki542g2mt4h" path="res://Audio/Soundtrack/s2br_Metropolis3.ogg" id="2_4vde7"]
+[ext_resource type="AudioStream" uid="uid://c1mjerwx6wq1a" path="res://Audio/Soundtrack/Metropolis.ogg" id="2_4vde7"]
 [ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="2_ykppd"]
-[ext_resource type="AudioStream" uid="uid://bomm2jjdsrep3" path="res://Audio/Soundtrack/s2br_Boss2.ogg" id="3_3dxql"]
+[ext_resource type="AudioStream" uid="uid://6rit71ongu60" path="res://Audio/Soundtrack/Metropolis_F.ogg" id="3_ulfwb"]
 [ext_resource type="PackedScene" uid="uid://br54h8eixiokf" path="res://Scene/Backgrounds/06-Metropolis.tscn" id="4_bsr7b"]
 [ext_resource type="PackedScene" uid="uid://bcq6uwh1unyl5" path="res://Scene/level_layouts/layout_mtz_2.scn" id="6_ulfwb"]
 [ext_resource type="PackedScene" uid="uid://cuy6501gydmja" path="res://Entities/ZoneObjects/MTZ_WallSpring.tscn" id="7_c80cu"]
@@ -45,7 +45,8 @@ zone_id = 6
 act_number = 2
 music = ExtResource("2_4vde7")
 music2P = ExtResource("2_4vde7")
-boss_theme = ExtResource("3_3dxql")
+F_music = ExtResource("3_ulfwb")
+F_music2P = ExtResource("3_ulfwb")
 animal1 = 9
 animal2 = 7
 defaultRightBoundry = 8960
@@ -284,14 +285,14 @@ starting_dir = 3
 [node name="ConveyorBelt" parent="Entities" unique_id=42773468 instance=ExtResource("23_bvosn")]
 position = Vector2(1664, 368)
 constant_linear_velocity = Vector2(-60, 0)
-speed = -60
-length = 3
+speed = -60.0
+length = 3.0
 
 [node name="ConveyorBelt2" parent="Entities" unique_id=1508837321 instance=ExtResource("23_bvosn")]
 position = Vector2(4288, 1296)
 constant_linear_velocity = Vector2(-60, 0)
-speed = -60
-length = 7
+speed = -60.0
+length = 7.0
 
 [node name="SpearBlock5" parent="Entities" unique_id=1689613440 instance=ExtResource("22_253bp")]
 position = Vector2(2512, 1568)

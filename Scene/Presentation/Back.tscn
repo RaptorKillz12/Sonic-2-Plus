@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://n2wl1ep1amyn"]
+
+[ext_resource type="Texture2D" uid="uid://gpe8aoxkxtdc" path="res://Graphics/Menus/Sonic_3.webp" id="3_8lq1p"]
+[ext_resource type="Texture2D" uid="uid://c056gxpyitwdj" path="res://Graphics/Menus/Proverb-of-Sonic.png" id="4_nmc5r"]
+[ext_resource type="Texture2D" uid="uid://dwa0120l0j6ey" path="res://Graphics/Menus/Sonic-the-Hedgehog-2-JP-Logo.png" id="5_m1p11"]
+[ext_resource type="Texture2D" uid="uid://c0i83jutus7c5" path="res://Graphics/Menus/Sonic-the-Hedgehog-2(1).png" id="6_mv6xw"]
+[ext_resource type="Texture2D" uid="uid://mepeqpyn7r3q" path="res://Graphics/Menus/Tails_1.webp" id="7_px1r6"]
+[ext_resource type="Texture2D" uid="uid://cbu11xnc4cack" path="res://Graphics/Menus/Sonic-the-Hedgehog-2.png" id="8_im8km"]
+
+[sub_resource type="Animation" id="Animation_0e48y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../CanvasLayer/PatternLeft/PatternLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, -1.7332516)]
+}
+
+[sub_resource type="Animation" id="Animation_epypp"]
+resource_name = "slider"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../CanvasLayer/PatternLeft/PatternLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(80, -32), Vector2(80, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hol4"]
+_data = {
+&"RESET": SubResource("Animation_0e48y"),
+&"slider": SubResource("Animation_epypp")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1650039800]
+metadata/_edit_horizontal_guides_ = [8500.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1751990577]
+offset_right = 320.0
+offset_bottom = 224.0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1516224985]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 170.0
+offset_right = 104.0
+offset_bottom = 210.0
+texture = ExtResource("3_8lq1p")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect" unique_id=1461889491]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 284.0
+offset_bottom = 200.0
+texture = ExtResource("4_nmc5r")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1246928626]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1083254410]
+
+[node name="PatternLeft" type="Control" parent="CanvasLayer" unique_id=1535167847]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_bottom = 39456.0
+grow_vertical = 2
+
+[node name="PatternLeft" type="TextureRect" parent="CanvasLayer/PatternLeft" unique_id=971705692]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 80.0
+offset_top = -1.7332516
+offset_right = 694.0
+offset_bottom = 218.26675
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("5_m1p11")
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PatternLeft" unique_id=140639445]
+libraries/ = SubResource("AnimationLibrary_0hol4")
+autoplay = &"slider"
+speed_scale = 4.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1240870697]
+offset_left = 64.0
+offset_right = 678.0
+offset_bottom = 220.0
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_mv6xw")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=682071388]
+anchors_preset = -1
+anchor_right = 0.256
+anchor_bottom = 0.5
+offset_left = 94.0
+offset_top = 170.0
+offset_right = 52.079994
+offset_bottom = 98.0
+texture = ExtResource("7_px1r6")
+expand_mode = 1
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1913582120]
+
+[node name="RightRatio" type="Control" parent="UI" unique_id=1072735663]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PatternRight" type="Control" parent="UI/RightRatio" unique_id=1837482658]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_bottom = 39168.0
+
+[node name="PatternRight" type="TextureRect" parent="UI/RightRatio/PatternRight" unique_id=41073748]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.003
+anchor_right = 1.0
+anchor_bottom = 0.003
+offset_left = -121.0
+offset_top = 136.728
+offset_right = 493.0
+offset_bottom = 356.728
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.5707964
+texture = ExtResource("5_m1p11")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/RightRatio/PatternRight" unique_id=797722660]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 29.0
+offset_right = -3.0
+offset_bottom = 69.0
+texture = ExtResource("8_im8km")
+expand_mode = 1

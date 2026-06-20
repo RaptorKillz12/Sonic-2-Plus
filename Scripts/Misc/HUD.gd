@@ -489,20 +489,7 @@ func _add_score(subtractFrom: int,delta: float) -> float:
 	return subtractFrom
 
 ## Setup the intial boss meter.
-func setup_boss_meter(boss: BossBase) -> void:
-	$"Boss Life/BossName".text = boss.boss_name
-	boss_max_health = boss.hp
-	boss_current_health = boss.hp
-	$"Boss Life".visible = true
-	boss.got_hit.connect(boss_hit)
 
-func boss_hit() -> void:
-	boss_current_health -= 1
-	@warning_ignore("integer_division")
-	$"Boss Life/EggMeterFull".set_size(Vector2((128/min(boss_max_health,8))*min(boss_current_health,8),8))
-	if boss_current_health == 0:
-		#disconnect("boss.got_hit",boss_hit)
-		$"Boss Life".visible = false
 
 
 func super_icon_ready(vis: bool = false) -> void:

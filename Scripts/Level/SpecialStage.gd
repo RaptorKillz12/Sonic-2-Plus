@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var music: AudioStream = preload("res://Audio/Soundtrack/s2br_SpecialStage.ogg")
+@export var music: AudioStream = preload("res://Audio/Soundtrack/SpecialStage.ogg")
 @export var stage_layouts: Array[PackedScene] = []
 ## TODO
 @onready var stage: SpecialProperties = $stage_layout/Stage1

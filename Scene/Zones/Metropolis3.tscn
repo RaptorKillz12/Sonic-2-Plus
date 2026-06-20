@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_fdfw1"]
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="1_rm2lr"]
-[ext_resource type="AudioStream" uid="uid://bqki542g2mt4h" path="res://Audio/Soundtrack/s2br_Metropolis3.ogg" id="2_jat8k"]
+[ext_resource type="AudioStream" uid="uid://c1mjerwx6wq1a" path="res://Audio/Soundtrack/Metropolis.ogg" id="2_jat8k"]
 [ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="2_vtuux"]
-[ext_resource type="AudioStream" uid="uid://bomm2jjdsrep3" path="res://Audio/Soundtrack/s2br_Boss2.ogg" id="3_g3ene"]
+[ext_resource type="AudioStream" uid="uid://6rit71ongu60" path="res://Audio/Soundtrack/Metropolis_F.ogg" id="3_bdlvk"]
 [ext_resource type="PackedScene" uid="uid://br54h8eixiokf" path="res://Scene/Backgrounds/06-Metropolis.tscn" id="4_rvg24"]
 [ext_resource type="TileSet" uid="uid://b78s7tfu844gd" path="res://Tileset/Levels/MTZ_Tiles.tres" id="6_g3ene"]
 
@@ -14,7 +14,8 @@ zone_id = 6
 act_number = 3
 music = ExtResource("2_jat8k")
 music2P = ExtResource("2_jat8k")
-boss_theme = ExtResource("3_g3ene")
+F_music = ExtResource("3_bdlvk")
+F_music2P = ExtResource("3_bdlvk")
 animal1 = 9
 animal2 = 7
 

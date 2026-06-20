@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://856g6l24nl6o" path="res://Scripts/Global/Main.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b2xskcomtpo2x" path="res://Entities/Misc/ControllerMenu.tscn" id="6"]
-[ext_resource type="AudioStream" uid="uid://dk4rjhevrqj00" path="res://Audio/Soundtrack/s2br_ExtraLife.ogg" id="6_5mxpv"]
+[ext_resource type="AudioStream" uid="uid://boms6qlyoqdx6" path="res://Audio/Soundtrack/1Up.ogg" id="6_5mxpv"]
 [ext_resource type="PackedScene" uid="uid://c1xhc4uh26inb" path="res://Entities/Misc/PauseMenu.tscn" id="7"]
 [ext_resource type="Shader" uid="uid://hv4tpe8p5fc3" path="res://Shaders/vhs_crt.gdshader" id="7_h3nmf"]
 [ext_resource type="Texture2D" uid="uid://d3bnbfh56x3kc" path="res://icon.png" id="8_hueuk"]

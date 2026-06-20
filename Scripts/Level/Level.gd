@@ -14,9 +14,13 @@ extends Node2D
 @export var act_number: int = 1
 
 @export_group("Music")
-@export var music: AudioStream = preload("res://Audio/Soundtrack/s2br_EmeraldHilll.ogg")
-@export var music2P: AudioStream = preload("res://Audio/Soundtrack/s2br_Tropical.ogg")
-@export var boss_theme: AudioStream = preload("res://Audio/Soundtrack/s2br_Boss.ogg")
+@export var music: AudioStream = preload("res://Audio/Soundtrack/EmeraldHill.ogg")
+@export var music2P: AudioStream = preload("res://Audio/Soundtrack/EmeraldHill2.ogg")
+@export var F_music: AudioStream = preload("res://Audio/Soundtrack/EmeraldHill_F.ogg")
+@export var F_music2P: AudioStream = preload("res://Audio/Soundtrack/EmeraldHill2_F.ogg")
+@export var invmusic: AudioStream = preload("res://Audio/Soundtrack/Invincibility.ogg")
+@export var F_invmusic: AudioStream = preload("res://Audio/Soundtrack/Invincibility_F.ogg")
+@export var boss_theme: AudioStream = preload("res://Audio/Soundtrack/Boss.ogg")
 
 ## SiIvagunner
 @export var silvagunner_music: AudioStream
@@ -101,9 +105,12 @@ func level_reset_data(_playCard: bool = true) -> void:
 		if music != null:
 			if !Global.two_player_mode:
 				level_theme = music
-				
+				SoundDriver.set_level_music(level_theme,F_music)
+				SoundDriver.set_invincible_music(invmusic,F_invmusic)
 			else:
 				level_theme = music2P
+				SoundDriver.set_level_music(level_theme,F_music2P)
+				SoundDriver.set_invincible_music(invmusic,F_invmusic)
 			SoundDriver.music.stream_paused = false
 			SoundDriver.themes[SoundDriver.THEME.NORMAL] = level_theme
 	

@@ -1,8 +1,8 @@
 extends Node2D
 
 
-@export var music: AudioStream = preload("res://Audio/Soundtrack/s2br_2PResults.ogg")
-@export var eggman_music: AudioStream = preload("res://Audio/Soundtrack/s2br_Boss.ogg")
+@export var music: AudioStream = preload("res://Audio/Soundtrack/Results.ogg")
+@export var eggman_music: AudioStream = preload("res://Audio/Soundtrack/Boss.ogg")
 var title_screen: String = "res://Scene/Presentation/Title.tscn"
 var explosion: PackedScene = preload("res://Entities/Misc/GenericParticle.tscn")
 

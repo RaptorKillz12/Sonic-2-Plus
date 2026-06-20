@@ -1,0 +1,1320 @@
+[gd_scene format=3 uid="uid://bjavywoj00j1j"]
+
+[ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://cs4ey3b5ny2oe" path="res://Audio/Soundtrack/OilOcean_F.ogg" id="3_u5ayq"]
+[ext_resource type="AudioStream" uid="uid://q2k6kop88k7r" path="res://Audio/Soundtrack/OilOcean.ogg" id="3_w8bgu"]
+[ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cm1lcnrr22juy" path="res://Scene/Backgrounds/04-OilOcean.tscn" id="4_wms2a"]
+[ext_resource type="Script" uid="uid://cqt4ecbyppstm" path="res://Scripts/Objects/StateMovers/StateMoverMaster.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://b326psjfeaai" path="res://Scene/level_layouts/layout_ooz_2.scn" id="7_uemc5"]
+[ext_resource type="Script" uid="uid://bn2tfwi81xpdy" path="res://Scripts/Objects/StateMovers/StateMoverTranslational.gd" id="8"]
+[ext_resource type="PackedScene" uid="uid://dggjdwwkl527b" path="res://Entities/Items/Ring.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://ra3mqewhj6kl" path="res://Entities/Hazards/Saw.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://bvtk4rs7h7sup" path="res://Entities/Gimmicks/Oil.tscn" id="11_4ni42"]
+[ext_resource type="PackedScene" uid="uid://lc6u37tnp7td" path="res://Entities/Hazards/OOZ_Spiker.tscn" id="11_5go7m"]
+[ext_resource type="PackedScene" uid="uid://4q0hpddgto2k" path="res://Entities/Gimmicks/Spring.tscn" id="12_rrmya"]
+[ext_resource type="PackedScene" uid="uid://f2u7qhtothnl" path="res://Entities/ZoneObjects/OOZ_Platform_Spawner.tscn" id="13_1b3gq"]
+[ext_resource type="PackedScene" uid="uid://tvwn5saboqsa" path="res://Entities/Gimmicks/OOZ_launcher.tscn" id="13_bjjaa"]
+[ext_resource type="PackedScene" uid="uid://f2yjfoe6b1n7" path="res://Entities/Enemies/Aquis.tscn" id="13_u5cyi"]
+[ext_resource type="PackedScene" uid="uid://bqknlkx2y1d0q" path="res://Entities/ZoneObjects/OOZ_Platform_SpawnerLeft.tscn" id="14_4174n"]
+[ext_resource type="PackedScene" uid="uid://c2t7hwn0iln3x" path="res://Entities/Obstacles/Elevator.tscn" id="15_opk6m"]
+[ext_resource type="Texture2D" uid="uid://cyco1uten7qfm" path="res://Graphics/Objects_Zone/OOZ_Elevator.png" id="16_74o7v"]
+[ext_resource type="PackedScene" uid="uid://gklj3ebdwveu" path="res://Entities/Items/Monitor.tscn" id="16_mordc"]
+[ext_resource type="PackedScene" uid="uid://chgov1cta70sn" path="res://Entities/Gimmicks/OOZ_Lid.tscn" id="17_kwdjh"]
+[ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://bxxqw6i4k1tti" path="res://Entities/Gimmicks/Invisible_launcher.tscn" id="18_1elsj"]
+[ext_resource type="PackedScene" uid="uid://bvvxl5bmelnk1" path="res://Entities/Gimmicks/WaterSlide.tscn" id="21_1fygu"]
+[ext_resource type="PackedScene" uid="uid://dh3178ok4om00" path="res://Entities/Misc/player_reset_field.tscn" id="21_k3j71"]
+[ext_resource type="PackedScene" uid="uid://bjuh5cvbt06af" path="res://Entities/MainObjects/Capsule.tscn" id="22_gayax"]
+[ext_resource type="PackedScene" uid="uid://bqttecb8klixv" path="res://Entities/Gimmicks/OilSlick.tscn" id="22_tegdf"]
+[ext_resource type="PackedScene" uid="uid://7k14xkpjguop" path="res://Entities/Obstacles/SwingingPlatform.tscn" id="23_q608s"]
+[ext_resource type="PackedScene" uid="uid://bbf1sa8l70ygh" path="res://Entities/Gimmicks/fan.tscn" id="23_uuon4"]
+[ext_resource type="PackedScene" uid="uid://c25uslo56f3u1" path="res://Entities/Obstacles/BreakableTubeLauncher.tscn" id="23_w8bgu"]
+[ext_resource type="Texture2D" uid="uid://b5e1b22f63hkx" path="res://Graphics/Obstacles/OOZ_Swing.png" id="24_8ymcl"]
+[ext_resource type="PackedScene" uid="uid://msycxndhmuin" path="res://Entities/Obstacles/InvisibleBarrier.tscn" id="26_h0mhp"]
+[ext_resource type="PackedScene" uid="uid://cfteqnft5ynr7" path="res://Entities/Hazards/Spikes.tscn" id="27_rhtyr"]
+[ext_resource type="PackedScene" uid="uid://vh0ailk0432j" path="res://Entities/Boss/BossBoundrySetter.tscn" id="29_3hmk6"]
+[ext_resource type="PackedScene" uid="uid://cma7d8l5wmqmd" path="res://Entities/Items/LampPost.tscn" id="29_w7iey"]
+[ext_resource type="PackedScene" uid="uid://c8djwr7o6d6f7" path="res://Entities/Enemies/Octus.tscn" id="34_bvw6j"]
+[ext_resource type="PackedScene" uid="uid://bp678wjhmnwip" path="res://Entities/Boss/Submarine Eggman/GetawaySubmarine.tscn" id="37_ud3r1"]
+[ext_resource type="Script" uid="uid://ioiij6aukh60" path="res://Scripts/Misc/AltSpawn.gd" id="38_es7xl"]
+[ext_resource type="PackedScene" uid="uid://l26y1wupkm3f" path="res://Entities/MainObjects/Signpost_New.tscn" id="38_nxyu5"]
+
+[node name="BaseZoneAct2" type="Node2D" unique_id=1490191328]
+script = ExtResource("2")
+zone_id = 4
+act_number = 2
+music = ExtResource("3_w8bgu")
+music2P = ExtResource("3_w8bgu")
+F_music = ExtResource("3_u5ayq")
+F_music2P = ExtResource("3_u5ayq")
+animal1 = 4
+animal2 = 5
+defaultRightBoundry = 11392
+defaultBottomBoundry = 1920
+metadata/_edit_vertical_guides_ = [3600.0]
+
+[node name="04-OilOcean" parent="." unique_id=340405966 instance=ExtResource("4_wms2a")]
+
+[node name="HUD" parent="." unique_id=908494859 instance=ExtResource("4")]
+
+[node name="Layout_OOZ2" parent="." unique_id=636889636 instance=ExtResource("7_uemc5")]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=271954848 instance=ExtResource("18")]
+position = Vector2(96, 1388)
+
+[node name="Entities" type="Node" parent="." unique_id=1724338433]
+
+[node name="StatefulMover3" type="Node2D" parent="Entities" unique_id=2009578682]
+position = Vector2(592, 448)
+script = ExtResource("5")
+
+[node name="Saw" parent="Entities/StatefulMover3" unique_id=828422245 instance=ExtResource("11")]
+z_index = -40
+position = Vector2(0, -2)
+
+[node name="TranslationalState_0" type="Node2D" parent="Entities/StatefulMover3" unique_id=522658650]
+position = Vector2(64, 0)
+script = ExtResource("8")
+interpolationMode = 1
+
+[node name="TranslationalState_1" type="Node2D" parent="Entities/StatefulMover3" unique_id=1457125864]
+position = Vector2(-64, 0)
+script = ExtResource("8")
+nextState = 0
+
+[node name="Oil" parent="Entities" unique_id=690573731 instance=ExtResource("11_4ni42")]
+position = Vector2(5120, 1856)
+scale = Vector2(320, 1)
+
+[node name="Oil2" parent="Entities" unique_id=1705778781 instance=ExtResource("11_4ni42")]
+position = Vector2(10752, 704)
+scale = Vector2(40, 1)
+
+[node name="OOZ_Spiker" parent="Entities" unique_id=1406779778 instance=ExtResource("11_5go7m")]
+position = Vector2(3520, 1200)
+
+[node name="OOZ_Spiker2" parent="Entities" unique_id=1199554917 instance=ExtResource("11_5go7m")]
+position = Vector2(5696, 688)
+
+[node name="OOZ_Spiker3" parent="Entities" unique_id=1173453634 instance=ExtResource("11_5go7m")]
+position = Vector2(8192, 176)
+
+[node name="OOZ_Spiker4" parent="Entities" unique_id=166377476 instance=ExtResource("11_5go7m")]
+position = Vector2(8320, 176)
+
+[node name="Spring" parent="Entities" unique_id=1512647957 instance=ExtResource("12_rrmya")]
+position = Vector2(1696, 1592)
+
+[node name="Spring2" parent="Entities" unique_id=1216186733 instance=ExtResource("12_rrmya")]
+position = Vector2(2168, 1296)
+scale = Vector2(-1, 1)
+spring_direction = 3
+
+[node name="Spring3" parent="Entities" unique_id=142607731 instance=ExtResource("12_rrmya")]
+position = Vector2(4032, 1360)
+spring_direction = 2
+
+[node name="Spring4" parent="Entities" unique_id=530113212 instance=ExtResource("12_rrmya")]
+position = Vector2(4176, 1024)
+scale = Vector2(1, -1)
+
+[node name="Spring5" parent="Entities" unique_id=202749472 instance=ExtResource("12_rrmya")]
+position = Vector2(5232, 1560)
+type = 1
+
+[node name="Spring6" parent="Entities" unique_id=862243892 instance=ExtResource("12_rrmya")]
+position = Vector2(7744, 560)
+scale = Vector2(-1, 1)
+type = 1
+spring_direction = 3
+
+[node name="Spring7" parent="Entities" unique_id=1664037868 instance=ExtResource("12_rrmya")]
+position = Vector2(7744, 848)
+scale = Vector2(-1, 1)
+type = 1
+spring_direction = 3
+
+[node name="Spring8" parent="Entities" unique_id=93588154 instance=ExtResource("12_rrmya")]
+position = Vector2(7920, 216)
+
+[node name="OOZ Launcher" parent="Entities" unique_id=1969397000 instance=ExtResource("13_bjjaa")]
+position = Vector2(2504, 832)
+startDirection = 2
+
+[node name="OOZ Launcher3" parent="Entities" unique_id=1980241861 instance=ExtResource("13_bjjaa")]
+position = Vector2(2760, 712)
+startDirection = 2
+turnDirection = 1
+
+[node name="OOZ Launcher6" parent="Entities" unique_id=1000024234 instance=ExtResource("13_bjjaa")]
+position = Vector2(3136, 712)
+startDirection = 3
+
+[node name="OOZ Launcher2" parent="Entities" unique_id=509134960 instance=ExtResource("13_bjjaa")]
+position = Vector2(2112, 832)
+startDirection = 1
+turnDirection = 1
+
+[node name="PlayerResetField" parent="Entities" unique_id=228232164 instance=ExtResource("21_k3j71")]
+position = Vector2(2112, 672)
+scale = Vector2(4, 4)
+
+[node name="PlayerResetField3" parent="Entities" unique_id=405597680 instance=ExtResource("21_k3j71")]
+position = Vector2(3136, 448)
+scale = Vector2(4, 4)
+
+[node name="PlayerResetField4" parent="Entities" unique_id=433386740 instance=ExtResource("21_k3j71")]
+position = Vector2(5312, 448)
+scale = Vector2(4, 4)
+
+[node name="PlayerResetField5" parent="Entities" unique_id=913274633 instance=ExtResource("21_k3j71")]
+position = Vector2(7616, 64)
+scale = Vector2(4, 4)
+
+[node name="PlayerResetField6" parent="Entities" unique_id=1915700455 instance=ExtResource("21_k3j71")]
+position = Vector2(6592, 64)
+scale = Vector2(4, 4)
+
+[node name="PlayerResetField7" parent="Entities" unique_id=106555332 instance=ExtResource("21_k3j71")]
+position = Vector2(7488, 64)
+scale = Vector2(4, 4)
+
+[node name="Fan" parent="Entities" unique_id=1692886299 instance=ExtResource("23_uuon4")]
+position = Vector2(1088, 1536)
+activeTime = 4.0
+
+[node name="Fan2" parent="Entities" unique_id=1823887929 instance=ExtResource("23_uuon4")]
+position = Vector2(960, 1648)
+activeTime = 4.0
+
+[node name="Fan3" parent="Entities" unique_id=1873227021 instance=ExtResource("23_uuon4")]
+position = Vector2(1088, 1760)
+activeTime = 4.0
+
+[node name="Fan11" parent="Entities" unique_id=640645625 instance=ExtResource("23_uuon4")]
+position = Vector2(576, 1552)
+
+[node name="Fan5" parent="Entities" unique_id=1413010717 instance=ExtResource("23_uuon4")]
+position = Vector2(8000, 1808)
+activeTime = 4.0
+
+[node name="Fan6" parent="Entities" unique_id=647638671 instance=ExtResource("23_uuon4")]
+position = Vector2(6848, 1776)
+activeTime = 4.0
+
+[node name="Fan8" parent="Entities" unique_id=1724058910 instance=ExtResource("23_uuon4")]
+position = Vector2(6080, 1776)
+
+[node name="Fan12" parent="Entities" unique_id=1572546055 instance=ExtResource("23_uuon4")]
+position = Vector2(5056, 1720)
+
+[node name="Fan13" parent="Entities" unique_id=551105871 instance=ExtResource("23_uuon4")]
+position = Vector2(4928, 1760)
+
+[node name="Fan14" parent="Entities" unique_id=134885642 instance=ExtResource("23_uuon4")]
+position = Vector2(4800, 1792)
+
+[node name="Fan4" parent="Entities" unique_id=943377740 instance=ExtResource("23_uuon4")]
+position = Vector2(992, 1392)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="Fan7" parent="Entities" unique_id=108693607 instance=ExtResource("23_uuon4")]
+position = Vector2(4080, 864)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="Fan16" parent="Entities" unique_id=837480103 instance=ExtResource("23_uuon4")]
+position = Vector2(5296, 984)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="Fan15" parent="Entities" unique_id=133555337 instance=ExtResource("23_uuon4")]
+position = Vector2(3296, 1320)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="Fan9" parent="Entities" unique_id=849285856 instance=ExtResource("23_uuon4")]
+position = Vector2(3776, 680)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="Fan10" parent="Entities" unique_id=1436433048 instance=ExtResource("23_uuon4")]
+position = Vector2(6336, 808)
+rotation = -1.5708
+activeTime = 4.0
+
+[node name="OOZ_Lid" parent="Entities" unique_id=1737474081 instance=ExtResource("17_kwdjh")]
+position = Vector2(2368, 1280)
+
+[node name="OOZ_Lid2" parent="Entities" unique_id=1510131185 instance=ExtResource("17_kwdjh")]
+position = Vector2(2496, 1280)
+
+[node name="OOZ_Lid3" parent="Entities" unique_id=514928913 instance=ExtResource("17_kwdjh")]
+position = Vector2(2624, 1280)
+
+[node name="OOZ_Lid4" parent="Entities" unique_id=1557038539 instance=ExtResource("17_kwdjh")]
+position = Vector2(2752, 1280)
+
+[node name="OOZ Tube Launcher" parent="Entities" unique_id=1803340347 instance=ExtResource("18_1elsj")]
+position = Vector2(2496, 1056)
+
+[node name="OOZ Tube Launcher2" parent="Entities" unique_id=1309289782 instance=ExtResource("18_1elsj")]
+position = Vector2(2752, 1056)
+
+[node name="PlayerResetField2" parent="Entities" unique_id=1409080249 instance=ExtResource("21_k3j71")]
+position = Vector2(9968, 1024)
+scale = Vector2(1, 64)
+
+[node name="OOZ_Lid5" parent="Entities" unique_id=1108030380 instance=ExtResource("17_kwdjh")]
+position = Vector2(8896, 1664)
+
+[node name="OOZ_Lid6" parent="Entities" unique_id=2131170821 instance=ExtResource("17_kwdjh")]
+position = Vector2(9024, 1536)
+
+[node name="OOZ_Lid7" parent="Entities" unique_id=522823408 instance=ExtResource("17_kwdjh")]
+position = Vector2(9152, 1408)
+
+[node name="OOZ_Lid8" parent="Entities" unique_id=464629839 instance=ExtResource("17_kwdjh")]
+position = Vector2(9280, 1280)
+
+[node name="OOZ Launcher8" parent="Entities" unique_id=1194189986 instance=ExtResource("13_bjjaa")]
+position = Vector2(4416, 448)
+startDirection = 2
+turnDirection = 1
+
+[node name="OOZ Launcher9" parent="Entities" unique_id=1065800595 instance=ExtResource("13_bjjaa")]
+position = Vector2(4680, 448)
+startDirection = 3
+turnDirection = 1
+
+[node name="OOZ Launcher10" parent="Entities" unique_id=1690520415 instance=ExtResource("13_bjjaa")]
+position = Vector2(4680, 736)
+
+[node name="OOZ Launcher11" parent="Entities" unique_id=56462591 instance=ExtResource("13_bjjaa")]
+position = Vector2(5312, 736)
+startDirection = 3
+
+[node name="OOZ Launcher14" parent="Entities" unique_id=1117384077 instance=ExtResource("13_bjjaa")]
+position = Vector2(6720, 800)
+startDirection = 2
+turnDirection = 1
+
+[node name="OOZ Launcher16" parent="Entities" unique_id=713294863 instance=ExtResource("13_bjjaa")]
+position = Vector2(7104, 672)
+startDirection = 2
+turnDirection = 1
+
+[node name="OOZ Launcher17" parent="Entities" unique_id=1898025496 instance=ExtResource("13_bjjaa")]
+position = Vector2(7272, 672)
+startDirection = 3
+turnDirection = 1
+
+[node name="OOZ Launcher20" parent="Entities" unique_id=1138176687 instance=ExtResource("13_bjjaa")]
+position = Vector2(7272, 864)
+
+[node name="OOZ Launcher25" parent="Entities" unique_id=444895278 instance=ExtResource("13_bjjaa")]
+position = Vector2(7488, 864)
+startDirection = 3
+
+[node name="OOZ Launcher15" parent="Entities" unique_id=1538009555 instance=ExtResource("13_bjjaa")]
+position = Vector2(7192, 800)
+startDirection = 3
+
+[node name="OOZ Launcher21" parent="Entities" unique_id=1230369928 instance=ExtResource("13_bjjaa")]
+position = Vector2(7192, 544)
+startDirection = 2
+
+[node name="OOZ Launcher22" parent="Entities" unique_id=4776884 instance=ExtResource("13_bjjaa")]
+position = Vector2(6872, 544)
+startDirection = 1
+turnDirection = 1
+
+[node name="OOZ Launcher23" parent="Entities" unique_id=731147058 instance=ExtResource("13_bjjaa")]
+position = Vector2(6872, 232)
+startDirection = 2
+
+[node name="OOZ Launcher24" parent="Entities" unique_id=1171102101 instance=ExtResource("13_bjjaa")]
+position = Vector2(6592, 232)
+startDirection = 1
+turnDirection = 1
+
+[node name="OOZ Launcher18" parent="Entities" unique_id=1792815857 instance=ExtResource("13_bjjaa")]
+position = Vector2(8256, 328)
+startDirection = 2
+
+[node name="OOZ Launcher19" parent="Entities" unique_id=813546870 instance=ExtResource("13_bjjaa")]
+position = Vector2(7656, 328)
+startDirection = 1
+turnDirection = 1
+
+[node name="WaterSlide" parent="Entities" unique_id=301919136 instance=ExtResource("21_1fygu")]
+position = Vector2(2432, 496)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide3" parent="Entities" unique_id=876705927 instance=ExtResource("21_1fygu")]
+position = Vector2(2560, 496)
+rotation = 0.453786
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide4" parent="Entities" unique_id=65277195 instance=ExtResource("21_1fygu")]
+position = Vector2(4480, 1008)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide5" parent="Entities" unique_id=178257403 instance=ExtResource("21_1fygu")]
+position = Vector2(4608, 1008)
+rotation = 0.453786
+scale = Vector2(28, 2)
+speed = 600.0
+
+[node name="WaterSlide6" parent="Entities" unique_id=1517827687 instance=ExtResource("21_1fygu")]
+position = Vector2(5760, 1008)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide10" parent="Entities" unique_id=1021959927 instance=ExtResource("21_1fygu")]
+position = Vector2(6400, 1136)
+rotation = -3.14159
+scale = Vector2(8, 2)
+
+[node name="WaterSlide11" parent="Entities" unique_id=147572013 instance=ExtResource("21_1fygu")]
+position = Vector2(6400, 1392)
+rotation = -3.14159
+scale = Vector2(8, 2)
+
+[node name="WaterSlide7" parent="Entities" unique_id=983765468 instance=ExtResource("21_1fygu")]
+position = Vector2(5888, 1008)
+rotation = 0.453786
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide14" parent="Entities" unique_id=1447037190 instance=ExtResource("21_1fygu")]
+position = Vector2(6272, 1136)
+rotation = 2.70526
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide15" parent="Entities" unique_id=243497247 instance=ExtResource("21_1fygu")]
+position = Vector2(6272, 1392)
+rotation = 2.70526
+scale = Vector2(30, 2)
+speed = 600.0
+
+[node name="WaterSlide8" parent="Entities" unique_id=1117328506 instance=ExtResource("21_1fygu")]
+position = Vector2(5632, 1200)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide9" parent="Entities" unique_id=700702833 instance=ExtResource("21_1fygu")]
+position = Vector2(5760, 1200)
+rotation = 0.453786
+scale = Vector2(28, 2)
+speed = 600.0
+
+[node name="WaterSlide12" parent="Entities" unique_id=939903068 instance=ExtResource("21_1fygu")]
+position = Vector2(5504, 1648)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide16" parent="Entities" unique_id=1853500021 instance=ExtResource("21_1fygu")]
+position = Vector2(5888, 1776)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide17" parent="Entities" unique_id=1107834568 instance=ExtResource("21_1fygu")]
+position = Vector2(8576, 304)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide18" parent="Entities" unique_id=1025383510 instance=ExtResource("21_1fygu")]
+position = Vector2(8704, 304)
+rotation = 0.436332
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide21" parent="Entities" unique_id=1137440333 instance=ExtResource("21_1fygu")]
+position = Vector2(8576, 624)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide23" parent="Entities" unique_id=300484888 instance=ExtResource("21_1fygu")]
+position = Vector2(8960, 744)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide22" parent="Entities" unique_id=275929070 instance=ExtResource("21_1fygu")]
+position = Vector2(8704, 624)
+rotation = 0.436332
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide19" parent="Entities" unique_id=1440732286 instance=ExtResource("21_1fygu")]
+position = Vector2(9216, 496)
+rotation = 3.14159
+scale = Vector2(8, 2)
+
+[node name="WaterSlide27" parent="Entities" unique_id=1438790122 instance=ExtResource("21_1fygu")]
+position = Vector2(8960, 1016)
+rotation = 3.14159
+scale = Vector2(8, 2)
+
+[node name="WaterSlide28" parent="Entities" unique_id=81271315 instance=ExtResource("21_1fygu")]
+position = Vector2(8320, 1264)
+rotation = 3.14159
+scale = Vector2(8, 2)
+speed = 800.0
+
+[node name="WaterSlide20" parent="Entities" unique_id=1875540462 instance=ExtResource("21_1fygu")]
+position = Vector2(9088, 496)
+rotation = 2.70526
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide29" parent="Entities" unique_id=201641832 instance=ExtResource("21_1fygu")]
+position = Vector2(8832, 1016)
+rotation = 2.68781
+scale = Vector2(36, 2)
+speed = 600.0
+
+[node name="WaterSlide13" parent="Entities" unique_id=596410232 instance=ExtResource("21_1fygu")]
+position = Vector2(5632, 1648)
+rotation = 0.453786
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide24" parent="Entities" unique_id=1660119353 instance=ExtResource("21_1fygu")]
+position = Vector2(6912, 176)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide25" parent="Entities" unique_id=1320867396 instance=ExtResource("21_1fygu")]
+position = Vector2(7296, 304)
+scale = Vector2(8, 2)
+
+[node name="WaterSlide26" parent="Entities" unique_id=1596766539 instance=ExtResource("21_1fygu")]
+position = Vector2(7040, 176)
+rotation = 0.453786
+scale = Vector2(18, 2)
+speed = 600.0
+
+[node name="WaterSlide2" parent="Entities" unique_id=1516715497 instance=ExtResource("21_1fygu")]
+position = Vector2(2816, 624)
+scale = Vector2(8, 2)
+
+[node name="Fan17" parent="Entities" unique_id=233418686 instance=ExtResource("23_uuon4")]
+position = Vector2(3456, 1008)
+
+[node name="Fan18" parent="Entities" unique_id=953900663 instance=ExtResource("23_uuon4")]
+position = Vector2(3584, 1008)
+
+[node name="OilSlick" parent="Entities" unique_id=585485641 instance=ExtResource("22_tegdf")]
+position = Vector2(3776, 1392)
+scale = Vector2(3, 1)
+
+[node name="BreakableTubeLauncher" parent="Entities" unique_id=1587584913 instance=ExtResource("23_w8bgu")]
+position = Vector2(4416, 624)
+
+[node name="BreakableTubeLauncher2" parent="Entities" unique_id=574696737 instance=ExtResource("23_w8bgu")]
+position = Vector2(6720, 1008)
+
+[node name="BreakableTubeLauncher3" parent="Entities" unique_id=1954974807 instance=ExtResource("23_w8bgu")]
+position = Vector2(7104, 1008)
+
+[node name="Platforms" type="Node" parent="." unique_id=1153354605]
+
+[node name="OozPlatformSpawnerRight" parent="Platforms" unique_id=443943769 instance=ExtResource("13_1b3gq")]
+position = Vector2(512, 1472)
+
+[node name="OozPlatformSpawnerRight5" parent="Platforms" unique_id=1053153937 instance=ExtResource("13_1b3gq")]
+position = Vector2(4016, 1184)
+
+[node name="OozPlatformSpawnerRight3" parent="Platforms" unique_id=216435592 instance=ExtResource("13_1b3gq")]
+position = Vector2(7744, 1216)
+
+[node name="OozPlatformSpawnerRight2" parent="Platforms" unique_id=1774969559 instance=ExtResource("13_1b3gq")]
+position = Vector2(6784, 1664)
+
+[node name="OozPlatformSpawnerRight4" parent="Platforms" unique_id=1961602301 instance=ExtResource("13_1b3gq")]
+position = Vector2(10112, 608)
+
+[node name="OozPlatformSpawnerLeft" parent="Platforms" unique_id=506093022 instance=ExtResource("14_4174n")]
+position = Vector2(1152, 1440)
+
+[node name="OozPlatformSpawnerLeft3" parent="Platforms" unique_id=7385611 instance=ExtResource("14_4174n")]
+position = Vector2(5120, 1568)
+
+[node name="OozPlatformSpawnerLeft2" parent="Platforms" unique_id=1363285711 instance=ExtResource("14_4174n")]
+position = Vector2(8064, 1728)
+
+[node name="OozPlatformSpawnerLeft4" parent="Platforms" unique_id=1011599909 instance=ExtResource("14_4174n")]
+position = Vector2(8704, 1696)
+
+[node name="Elevator" parent="Platforms" unique_id=2080151159 instance=ExtResource("15_opk6m")]
+position = Vector2(1728, 1484)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Elevator12" parent="Platforms" unique_id=1717073891 instance=ExtResource("15_opk6m")]
+position = Vector2(2112, 652)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Elevator2" parent="Platforms" unique_id=140971536 instance=ExtResource("15_opk6m")]
+position = Vector2(3136, 1156)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -184)
+
+[node name="Elevator13" parent="Platforms" unique_id=1982456512 instance=ExtResource("15_opk6m")]
+position = Vector2(4672, 1744)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Elevator6" parent="Platforms" unique_id=1979970784 instance=ExtResource("15_opk6m")]
+position = Vector2(5184, 848)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator7" parent="Platforms" unique_id=693618225 instance=ExtResource("15_opk6m")]
+position = Vector2(5056, 656)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator10" parent="Platforms" unique_id=1102212182 instance=ExtResource("15_opk6m")]
+position = Vector2(5056, 272)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator11" parent="Platforms" unique_id=285783068 instance=ExtResource("15_opk6m")]
+position = Vector2(4928, 464)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator8" parent="Platforms" unique_id=2143089106 instance=ExtResource("15_opk6m")]
+position = Vector2(6208, 656)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator9" parent="Platforms" unique_id=550590074 instance=ExtResource("15_opk6m")]
+position = Vector2(6464, 848)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, 192)
+
+[node name="Elevator3" parent="Platforms" unique_id=1766970478 instance=ExtResource("15_opk6m")]
+position = Vector2(7616, 1232)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Elevator5" parent="Platforms" unique_id=1860793034 instance=ExtResource("15_opk6m")]
+position = Vector2(9536, 1104)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Elevator4" parent="Platforms" unique_id=32304525 instance=ExtResource("15_opk6m")]
+position = Vector2(8000, 1040)
+texture = ExtResource("16_74o7v")
+endPosition = Vector2(0, -192)
+
+[node name="Platform" parent="Platforms" unique_id=441072155 instance=ExtResource("23_q608s")]
+position = Vector2(7616, 1616)
+chain_size = 19
+plat_img = ExtResource("24_8ymcl")
+
+[node name="Hazards" type="Node" parent="." unique_id=809104031]
+
+[node name="InvisibleBarrier3" parent="Hazards" unique_id=371026911 instance=ExtResource("26_h0mhp")]
+position = Vector2(1728, 1648)
+scale = Vector2(4, 3)
+
+[node name="InvisibleBarrier" parent="Hazards" unique_id=807444008 instance=ExtResource("26_h0mhp")]
+position = Vector2(10304, 656)
+scale = Vector2(4, 3)
+
+[node name="InvisibleBarrier2" parent="Hazards" unique_id=720173227 instance=ExtResource("26_h0mhp")]
+position = Vector2(10688, 656)
+scale = Vector2(12, 3)
+
+[node name="Spikes" parent="Hazards" unique_id=340072548 instance=ExtResource("27_rhtyr")]
+position = Vector2(1264, 1392)
+
+[node name="Spikes2" parent="Hazards" unique_id=1492985679 instance=ExtResource("27_rhtyr")]
+position = Vector2(2800, 1296)
+
+[node name="Spikes3" parent="Hazards" unique_id=974592083 instance=ExtResource("27_rhtyr")]
+position = Vector2(3264, 1136)
+
+[node name="Spikes4" parent="Hazards" unique_id=600218493 instance=ExtResource("27_rhtyr")]
+position = Vector2(2832, 752)
+
+[node name="Spikes5" parent="Hazards" unique_id=1688400922 instance=ExtResource("27_rhtyr")]
+position = Vector2(2864, 752)
+
+[node name="Spikes6" parent="Hazards" unique_id=52074787 instance=ExtResource("27_rhtyr")]
+position = Vector2(2896, 752)
+
+[node name="Spikes7" parent="Hazards" unique_id=730678989 instance=ExtResource("27_rhtyr")]
+position = Vector2(2928, 752)
+
+[node name="Spikes8" parent="Hazards" unique_id=1278310892 instance=ExtResource("27_rhtyr")]
+position = Vector2(4152, 592)
+
+[node name="Spikes24" parent="Hazards" unique_id=1166070235 instance=ExtResource("27_rhtyr")]
+position = Vector2(5264, 624)
+
+[node name="Spikes9" parent="Hazards" unique_id=1941236274 instance=ExtResource("27_rhtyr")]
+position = Vector2(4368, 672)
+
+[node name="Spikes10" parent="Hazards" unique_id=868913595 instance=ExtResource("27_rhtyr")]
+position = Vector2(4464, 672)
+
+[node name="Spikes11" parent="Hazards" unique_id=1193482197 instance=ExtResource("27_rhtyr")]
+position = Vector2(4800, 1520)
+
+[node name="Spikes12" parent="Hazards" unique_id=1983799619 instance=ExtResource("27_rhtyr")]
+position = Vector2(6080, 624)
+
+[node name="Spikes25" parent="Hazards" unique_id=1836441928 instance=ExtResource("27_rhtyr")]
+position = Vector2(7488, 1008)
+
+[node name="Spikes13" parent="Hazards" unique_id=268686818 instance=ExtResource("27_rhtyr")]
+position = Vector2(6672, 1048)
+
+[node name="Spikes14" parent="Hazards" unique_id=1888575449 instance=ExtResource("27_rhtyr")]
+position = Vector2(6768, 1048)
+
+[node name="Spikes15" parent="Hazards" unique_id=1126643545 instance=ExtResource("27_rhtyr")]
+position = Vector2(7056, 1048)
+
+[node name="Spikes16" parent="Hazards" unique_id=1081542889 instance=ExtResource("27_rhtyr")]
+position = Vector2(8128, 1712)
+
+[node name="Spikes17" parent="Hazards" unique_id=1005245648 instance=ExtResource("27_rhtyr")]
+position = Vector2(8256, 1712)
+
+[node name="Spikes18" parent="Hazards" unique_id=1576830795 instance=ExtResource("27_rhtyr")]
+position = Vector2(8944, 1688)
+
+[node name="Spikes19" parent="Hazards" unique_id=1379897579 instance=ExtResource("27_rhtyr")]
+position = Vector2(9072, 1560)
+
+[node name="Spikes20" parent="Hazards" unique_id=260775096 instance=ExtResource("27_rhtyr")]
+position = Vector2(9200, 1432)
+
+[node name="Spikes21" parent="Hazards" unique_id=1251484483 instance=ExtResource("27_rhtyr")]
+position = Vector2(9328, 1304)
+
+[node name="Spikes22" parent="Hazards" unique_id=1978323851 instance=ExtResource("27_rhtyr")]
+position = Vector2(9280, 880)
+
+[node name="Spikes23" parent="Hazards" unique_id=211640777 instance=ExtResource("27_rhtyr")]
+position = Vector2(8128, 632)
+
+[node name="Spikes26" parent="Hazards" unique_id=848594997 instance=ExtResource("27_rhtyr")]
+position = Vector2(5488, 984)
+
+[node name="Badniks" type="Node" parent="." unique_id=1499834390]
+
+[node name="Aquis" parent="Badniks" unique_id=1180561882 instance=ExtResource("13_u5cyi")]
+position = Vector2(1360, 1336)
+
+[node name="Aquis2" parent="Badniks" unique_id=1384170234 instance=ExtResource("13_u5cyi")]
+position = Vector2(1520, 1384)
+
+[node name="Aquis3" parent="Badniks" unique_id=490288031 instance=ExtResource("13_u5cyi")]
+position = Vector2(3472, 552)
+
+[node name="Aquis4" parent="Badniks" unique_id=1590983424 instance=ExtResource("13_u5cyi")]
+position = Vector2(3656, 592)
+
+[node name="Aquis5" parent="Badniks" unique_id=841981773 instance=ExtResource("13_u5cyi")]
+position = Vector2(4816, 192)
+
+[node name="Aquis6" parent="Badniks" unique_id=330090190 instance=ExtResource("13_u5cyi")]
+position = Vector2(4952, 160)
+
+[node name="Aquis7" parent="Badniks" unique_id=1064139087 instance=ExtResource("13_u5cyi")]
+position = Vector2(8448, 1664)
+
+[node name="Aquis8" parent="Badniks" unique_id=2011865049 instance=ExtResource("13_u5cyi")]
+position = Vector2(9416, 1024)
+
+[node name="Aquis9" parent="Badniks" unique_id=156102888 instance=ExtResource("13_u5cyi")]
+position = Vector2(9128, 808)
+
+[node name="Octus" parent="Badniks" unique_id=1689591997 instance=ExtResource("34_bvw6j")]
+position = Vector2(4096, 608)
+
+[node name="Octus2" parent="Badniks" unique_id=924806770 instance=ExtResource("34_bvw6j")]
+position = Vector2(5392, 640)
+
+[node name="Octus3" parent="Badniks" unique_id=465211468 instance=ExtResource("34_bvw6j")]
+position = Vector2(5528, 960)
+
+[node name="Octus4" parent="Badniks" unique_id=229132111 instance=ExtResource("34_bvw6j")]
+position = Vector2(5600, 960)
+
+[node name="Octus5" parent="Badniks" unique_id=354154765 instance=ExtResource("34_bvw6j")]
+position = Vector2(7104, 1600)
+
+[node name="Octus6" parent="Badniks" unique_id=231143261 instance=ExtResource("34_bvw6j")]
+position = Vector2(7232, 1600)
+
+[node name="Octus7" parent="Badniks" unique_id=617912154 instance=ExtResource("34_bvw6j")]
+position = Vector2(7360, 1600)
+
+[node name="Octus8" parent="Badniks" unique_id=212209387 instance=ExtResource("34_bvw6j")]
+position = Vector2(7200, 1072)
+
+[node name="Octus9" parent="Badniks" unique_id=966452057 instance=ExtResource("34_bvw6j")]
+position = Vector2(6760, 96)
+
+[node name="Octus10" parent="Badniks" unique_id=474954879 instance=ExtResource("34_bvw6j")]
+position = Vector2(9296, 384)
+
+[node name="Octus11" parent="Badniks" unique_id=2010520048 instance=ExtResource("34_bvw6j")]
+position = Vector2(9024, 960)
+
+[node name="Octus12" parent="Badniks" unique_id=1779633902 instance=ExtResource("34_bvw6j")]
+position = Vector2(7960, 128)
+
+[node name="Aquis10" parent="Badniks" unique_id=399268060 instance=ExtResource("13_u5cyi")]
+position = Vector2(6728, 1584)
+
+[node name="ItemsHolder" type="Node" parent="." unique_id=560004316]
+
+[node name="Monitor" parent="ItemsHolder" unique_id=1394596192 instance=ExtResource("16_mordc")]
+position = Vector2(1216, 1392)
+
+[node name="Monitor2" parent="ItemsHolder" unique_id=823195808 instance=ExtResource("16_mordc")]
+position = Vector2(1736, 1584)
+
+[node name="Monitor3" parent="ItemsHolder" unique_id=1316090700 instance=ExtResource("16_mordc")]
+position = Vector2(1768, 1584)
+item = 3
+shieldAffinity = 3
+
+[node name="Monitor4" parent="ItemsHolder" unique_id=1477129605 instance=ExtResource("16_mordc")]
+position = Vector2(5328, 1264)
+shieldAffinity = 3
+
+[node name="Monitor5" parent="ItemsHolder" unique_id=811144520 instance=ExtResource("16_mordc")]
+position = Vector2(5360, 1264)
+shieldAffinity = 3
+
+[node name="Monitor6" parent="ItemsHolder" unique_id=1046634248 instance=ExtResource("16_mordc")]
+position = Vector2(6256, 496)
+item = 1
+shieldAffinity = 3
+
+[node name="Monitor7" parent="ItemsHolder" unique_id=2136343185 instance=ExtResource("16_mordc")]
+position = Vector2(6976, 880)
+item = 12
+shieldAffinity = 3
+
+[node name="Monitor8" parent="ItemsHolder" unique_id=1805097745 instance=ExtResource("16_mordc")]
+position = Vector2(7824, 800)
+item = 2
+shieldAffinity = 3
+
+[node name="Monitor9" parent="ItemsHolder" unique_id=1273986565 instance=ExtResource("16_mordc")]
+position = Vector2(7856, 800)
+shieldAffinity = 3
+
+[node name="Monitor10" parent="ItemsHolder" unique_id=229874117 instance=ExtResource("16_mordc")]
+position = Vector2(7888, 800)
+shieldAffinity = 3
+
+[node name="Monitor11" parent="ItemsHolder" unique_id=1783939368 instance=ExtResource("16_mordc")]
+position = Vector2(7920, 800)
+shieldAffinity = 3
+
+[node name="Monitor12" parent="ItemsHolder" unique_id=1320396090 instance=ExtResource("16_mordc")]
+position = Vector2(8848, 1296)
+shieldAffinity = 3
+
+[node name="Monitor13" parent="ItemsHolder" unique_id=1128394120 instance=ExtResource("16_mordc")]
+position = Vector2(9104, 1072)
+item = 2
+shieldAffinity = 3
+
+[node name="Monitor14" parent="ItemsHolder" unique_id=1932811915 instance=ExtResource("16_mordc")]
+position = Vector2(9136, 912)
+shieldAffinity = 3
+
+[node name="Monitor15" parent="ItemsHolder" unique_id=1275070116 instance=ExtResource("16_mordc")]
+position = Vector2(9264, 560)
+item = 2
+shieldAffinity = 3
+
+[node name="Monitor16" parent="ItemsHolder" unique_id=1113623243 instance=ExtResource("16_mordc")]
+position = Vector2(9456, 368)
+item = 3
+shieldAffinity = 3
+
+[node name="LampPost" parent="ItemsHolder" unique_id=1419873080 instance=ExtResource("29_w7iey")]
+position = Vector2(6592, 1000)
+
+[node name="LampPost2" parent="ItemsHolder" unique_id=872633656 instance=ExtResource("29_w7iey")]
+position = Vector2(6296, 1672)
+
+[node name="LampPost3" parent="ItemsHolder" unique_id=1345369135 instance=ExtResource("29_w7iey")]
+position = Vector2(8512, 552)
+
+[node name="Capsule" parent="ItemsHolder" unique_id=1032116286 instance=ExtResource("22_gayax")]
+position = Vector2(10688, 576)
+
+[node name="SignpostNew" parent="ItemsHolder" unique_id=433041737 instance=ExtResource("38_nxyu5")]
+position = Vector2(9728, 640)
+multiplayerOnly = true
+
+[node name="Rings" type="Node" parent="." unique_id=31029771]
+
+[node name="Ring" parent="Rings" unique_id=1796648184 instance=ExtResource("10")]
+position = Vector2(600, 1441)
+
+[node name="Ring2" parent="Rings" unique_id=32532241 instance=ExtResource("10")]
+position = Vector2(576, 1441)
+
+[node name="Ring3" parent="Rings" unique_id=898524413 instance=ExtResource("10")]
+position = Vector2(552, 1441)
+
+[node name="Ring4" parent="Rings" unique_id=79834870 instance=ExtResource("10")]
+position = Vector2(288, 1401)
+
+[node name="Ring5" parent="Rings" unique_id=430560369 instance=ExtResource("10")]
+position = Vector2(320, 1409)
+
+[node name="Ring6" parent="Rings" unique_id=878796914 instance=ExtResource("10")]
+position = Vector2(352, 1417)
+
+[node name="Ring7" parent="Rings" unique_id=899492783 instance=ExtResource("10")]
+position = Vector2(1952, 1272)
+
+[node name="Ring8" parent="Rings" unique_id=1459491822 instance=ExtResource("10")]
+position = Vector2(1984, 1280)
+
+[node name="Ring9" parent="Rings" unique_id=61182349 instance=ExtResource("10")]
+position = Vector2(2016, 1288)
+
+[node name="Ring10" parent="Rings" unique_id=124981646 instance=ExtResource("10")]
+position = Vector2(2368, 1016)
+
+[node name="Ring11" parent="Rings" unique_id=1026030247 instance=ExtResource("10")]
+position = Vector2(2392, 1016)
+
+[node name="Ring12" parent="Rings" unique_id=235049289 instance=ExtResource("10")]
+position = Vector2(2616, 1016)
+
+[node name="Ring13" parent="Rings" unique_id=1577099377 instance=ExtResource("10")]
+position = Vector2(2640, 1016)
+
+[node name="Ring14" parent="Rings" unique_id=1640715436 instance=ExtResource("10")]
+position = Vector2(2976, 1272)
+
+[node name="Ring15" parent="Rings" unique_id=797029926 instance=ExtResource("10")]
+position = Vector2(3008, 1280)
+
+[node name="Ring16" parent="Rings" unique_id=1559233106 instance=ExtResource("10")]
+position = Vector2(3040, 1288)
+
+[node name="Ring17" parent="Rings" unique_id=1273204469 instance=ExtResource("10")]
+position = Vector2(3104, 1304)
+
+[node name="Ring18" parent="Rings" unique_id=556485654 instance=ExtResource("10")]
+position = Vector2(3136, 1312)
+
+[node name="Ring19" parent="Rings" unique_id=1914119225 instance=ExtResource("10")]
+position = Vector2(3168, 1320)
+
+[node name="Ring20" parent="Rings" unique_id=805746586 instance=ExtResource("10")]
+position = Vector2(3704, 1368)
+
+[node name="Ring21" parent="Rings" unique_id=454296418 instance=ExtResource("10")]
+position = Vector2(3728, 1368)
+
+[node name="Ring22" parent="Rings" unique_id=1279389927 instance=ExtResource("10")]
+position = Vector2(3752, 1368)
+
+[node name="Ring23" parent="Rings" unique_id=1920139830 instance=ExtResource("10")]
+position = Vector2(3800, 1368)
+
+[node name="Ring24" parent="Rings" unique_id=2062055773 instance=ExtResource("10")]
+position = Vector2(3824, 1368)
+
+[node name="Ring25" parent="Rings" unique_id=879339214 instance=ExtResource("10")]
+position = Vector2(3848, 1368)
+
+[node name="Ring26" parent="Rings" unique_id=1916730991 instance=ExtResource("10")]
+position = Vector2(4048, 1168)
+
+[node name="Ring27" parent="Rings" unique_id=1503795851 instance=ExtResource("10")]
+position = Vector2(4072, 1168)
+
+[node name="Ring28" parent="Rings" unique_id=470665042 instance=ExtResource("10")]
+position = Vector2(4096, 1168)
+
+[node name="Ring29" parent="Rings" unique_id=2038033479 instance=ExtResource("10")]
+position = Vector2(3496, 1096)
+
+[node name="Ring30" parent="Rings" unique_id=1685379894 instance=ExtResource("10")]
+position = Vector2(3520, 1096)
+
+[node name="Ring31" parent="Rings" unique_id=380393495 instance=ExtResource("10")]
+position = Vector2(3544, 1096)
+
+[node name="Ring32" parent="Rings" unique_id=470168919 instance=ExtResource("10")]
+position = Vector2(3784, 864)
+
+[node name="Ring33" parent="Rings" unique_id=1604529278 instance=ExtResource("10")]
+position = Vector2(3808, 864)
+
+[node name="Ring34" parent="Rings" unique_id=314719060 instance=ExtResource("10")]
+position = Vector2(3832, 864)
+
+[node name="Ring145" parent="Rings" unique_id=1249423200 instance=ExtResource("10")]
+position = Vector2(3496, 896)
+
+[node name="Ring146" parent="Rings" unique_id=1502518044 instance=ExtResource("10")]
+position = Vector2(3520, 896)
+
+[node name="Ring147" parent="Rings" unique_id=458558950 instance=ExtResource("10")]
+position = Vector2(3544, 896)
+
+[node name="Ring35" parent="Rings" unique_id=990636288 instance=ExtResource("10")]
+position = Vector2(1704, 1200)
+
+[node name="Ring36" parent="Rings" unique_id=1257685892 instance=ExtResource("10")]
+position = Vector2(1728, 1200)
+
+[node name="Ring37" parent="Rings" unique_id=884360205 instance=ExtResource("10")]
+position = Vector2(1752, 1200)
+
+[node name="Ring38" parent="Rings" unique_id=1975467659 instance=ExtResource("10")]
+position = Vector2(2088, 360)
+
+[node name="Ring39" parent="Rings" unique_id=66224015 instance=ExtResource("10")]
+position = Vector2(2112, 360)
+
+[node name="Ring40" parent="Rings" unique_id=38348144 instance=ExtResource("10")]
+position = Vector2(2136, 360)
+
+[node name="Ring41" parent="Rings" unique_id=1126491545 instance=ExtResource("10")]
+position = Vector2(3136, 264)
+
+[node name="Ring42" parent="Rings" unique_id=1387612660 instance=ExtResource("10")]
+position = Vector2(3136, 288)
+
+[node name="Ring43" parent="Rings" unique_id=1316581148 instance=ExtResource("10")]
+position = Vector2(3136, 312)
+
+[node name="Ring44" parent="Rings" unique_id=1510200843 instance=ExtResource("10")]
+position = Vector2(3136, 336)
+
+[node name="Ring45" parent="Rings" unique_id=1741484988 instance=ExtResource("10")]
+position = Vector2(3136, 360)
+
+[node name="Ring46" parent="Rings" unique_id=2132801431 instance=ExtResource("10")]
+position = Vector2(3136, 384)
+
+[node name="Ring47" parent="Rings" unique_id=968423432 instance=ExtResource("10")]
+position = Vector2(3120, 272)
+
+[node name="Ring48" parent="Rings" unique_id=1008498266 instance=ExtResource("10")]
+position = Vector2(3120, 296)
+
+[node name="Ring49" parent="Rings" unique_id=1627759328 instance=ExtResource("10")]
+position = Vector2(3120, 320)
+
+[node name="Ring50" parent="Rings" unique_id=93351005 instance=ExtResource("10")]
+position = Vector2(3120, 344)
+
+[node name="Ring51" parent="Rings" unique_id=1042670505 instance=ExtResource("10")]
+position = Vector2(3152, 272)
+
+[node name="Ring52" parent="Rings" unique_id=2075389780 instance=ExtResource("10")]
+position = Vector2(3152, 296)
+
+[node name="Ring53" parent="Rings" unique_id=1582574636 instance=ExtResource("10")]
+position = Vector2(3152, 320)
+
+[node name="Ring54" parent="Rings" unique_id=1873108120 instance=ExtResource("10")]
+position = Vector2(3152, 344)
+
+[node name="Ring55" parent="Rings" unique_id=309989222 instance=ExtResource("10")]
+position = Vector2(3232, 568)
+
+[node name="Ring56" parent="Rings" unique_id=254629935 instance=ExtResource("10")]
+position = Vector2(3264, 576)
+
+[node name="Ring57" parent="Rings" unique_id=488336254 instance=ExtResource("10")]
+position = Vector2(3296, 584)
+
+[node name="Ring58" parent="Rings" unique_id=569615111 instance=ExtResource("10")]
+position = Vector2(3488, 632)
+
+[node name="Ring59" parent="Rings" unique_id=1677730270 instance=ExtResource("10")]
+position = Vector2(3520, 640)
+
+[node name="Ring60" parent="Rings" unique_id=1936683787 instance=ExtResource("10")]
+position = Vector2(3552, 648)
+
+[node name="Ring61" parent="Rings" unique_id=794659171 instance=ExtResource("10")]
+position = Vector2(3904, 688)
+
+[node name="Ring62" parent="Rings" unique_id=676817304 instance=ExtResource("10")]
+position = Vector2(3936, 672)
+
+[node name="Ring63" parent="Rings" unique_id=322545292 instance=ExtResource("10")]
+position = Vector2(3952, 640)
+
+[node name="Ring64" parent="Rings" unique_id=1059146320 instance=ExtResource("10")]
+position = Vector2(5040, 1552)
+
+[node name="Ring65" parent="Rings" unique_id=934428405 instance=ExtResource("10")]
+position = Vector2(5064, 1552)
+
+[node name="Ring66" parent="Rings" unique_id=1894166013 instance=ExtResource("10")]
+position = Vector2(5088, 1552)
+
+[node name="Ring67" parent="Rings" unique_id=136420887 instance=ExtResource("10")]
+position = Vector2(5312, 392)
+
+[node name="Ring68" parent="Rings" unique_id=715984937 instance=ExtResource("10")]
+position = Vector2(5312, 416)
+
+[node name="Ring69" parent="Rings" unique_id=604591641 instance=ExtResource("10")]
+position = Vector2(5312, 440)
+
+[node name="Ring70" parent="Rings" unique_id=917332788 instance=ExtResource("10")]
+position = Vector2(5312, 464)
+
+[node name="Ring71" parent="Rings" unique_id=170955978 instance=ExtResource("10")]
+position = Vector2(5296, 408)
+
+[node name="Ring72" parent="Rings" unique_id=509441605 instance=ExtResource("10")]
+position = Vector2(5296, 432)
+
+[node name="Ring73" parent="Rings" unique_id=1965525798 instance=ExtResource("10")]
+position = Vector2(5296, 456)
+
+[node name="Ring74" parent="Rings" unique_id=1667612700 instance=ExtResource("10")]
+position = Vector2(5328, 408)
+
+[node name="Ring75" parent="Rings" unique_id=1876546266 instance=ExtResource("10")]
+position = Vector2(5328, 432)
+
+[node name="Ring76" parent="Rings" unique_id=1256300564 instance=ExtResource("10")]
+position = Vector2(5328, 456)
+
+[node name="Ring77" parent="Rings" unique_id=1770676432 instance=ExtResource("10")]
+position = Vector2(5608, 600)
+
+[node name="Ring78" parent="Rings" unique_id=1026882286 instance=ExtResource("10")]
+position = Vector2(5632, 600)
+
+[node name="Ring79" parent="Rings" unique_id=849251471 instance=ExtResource("10")]
+position = Vector2(5656, 600)
+
+[node name="Ring80" parent="Rings" unique_id=515565458 instance=ExtResource("10")]
+position = Vector2(5736, 600)
+
+[node name="Ring81" parent="Rings" unique_id=711605020 instance=ExtResource("10")]
+position = Vector2(5760, 600)
+
+[node name="Ring82" parent="Rings" unique_id=582432556 instance=ExtResource("10")]
+position = Vector2(5784, 600)
+
+[node name="Ring83" parent="Rings" unique_id=1550244368 instance=ExtResource("10")]
+position = Vector2(6056, 1688)
+
+[node name="Ring84" parent="Rings" unique_id=465990155 instance=ExtResource("10")]
+position = Vector2(6080, 1688)
+
+[node name="Ring85" parent="Rings" unique_id=901470769 instance=ExtResource("10")]
+position = Vector2(6104, 1688)
+
+[node name="Ring86" parent="Rings" unique_id=1239770780 instance=ExtResource("10")]
+position = Vector2(6824, 1648)
+
+[node name="Ring87" parent="Rings" unique_id=1074298365 instance=ExtResource("10")]
+position = Vector2(6848, 1648)
+
+[node name="Ring88" parent="Rings" unique_id=1915024701 instance=ExtResource("10")]
+position = Vector2(6872, 1648)
+
+[node name="Ring89" parent="Rings" unique_id=512465624 instance=ExtResource("10")]
+position = Vector2(6816, 88)
+
+[node name="Ring90" parent="Rings" unique_id=705030245 instance=ExtResource("10")]
+position = Vector2(6848, 96)
+
+[node name="Ring91" parent="Rings" unique_id=1005415579 instance=ExtResource("10")]
+position = Vector2(6880, 104)
+
+[node name="Ring92" parent="Rings" unique_id=1493055477 instance=ExtResource("10")]
+position = Vector2(7456, 1584)
+
+[node name="Ring93" parent="Rings" unique_id=1174681825 instance=ExtResource("10")]
+position = Vector2(7464, 1648)
+
+[node name="Ring94" parent="Rings" unique_id=1479914444 instance=ExtResource("10")]
+position = Vector2(7488, 1696)
+
+[node name="Ring95" parent="Rings" unique_id=1444731219 instance=ExtResource("10")]
+position = Vector2(7544, 1728)
+
+[node name="Ring96" parent="Rings" unique_id=9628310 instance=ExtResource("10")]
+position = Vector2(7616, 1744)
+
+[node name="Ring97" parent="Rings" unique_id=821035146 instance=ExtResource("10")]
+position = Vector2(7688, 1728)
+
+[node name="Ring98" parent="Rings" unique_id=356353884 instance=ExtResource("10")]
+position = Vector2(7744, 1696)
+
+[node name="Ring99" parent="Rings" unique_id=274803210 instance=ExtResource("10")]
+position = Vector2(7768, 1648)
+
+[node name="Ring100" parent="Rings" unique_id=1852498668 instance=ExtResource("10")]
+position = Vector2(7776, 1584)
+
+[node name="Ring101" parent="Rings" unique_id=767283624 instance=ExtResource("10")]
+position = Vector2(7976, 1712)
+
+[node name="Ring102" parent="Rings" unique_id=1213580999 instance=ExtResource("10")]
+position = Vector2(8000, 1712)
+
+[node name="Ring103" parent="Rings" unique_id=1072049119 instance=ExtResource("10")]
+position = Vector2(8024, 1712)
+
+[node name="Ring104" parent="Rings" unique_id=489885582 instance=ExtResource("10")]
+position = Vector2(8616, 1680)
+
+[node name="Ring105" parent="Rings" unique_id=1456254916 instance=ExtResource("10")]
+position = Vector2(8640, 1680)
+
+[node name="Ring106" parent="Rings" unique_id=1010806723 instance=ExtResource("10")]
+position = Vector2(8664, 1680)
+
+[node name="Ring107" parent="Rings" unique_id=363621339 instance=ExtResource("10")]
+position = Vector2(7784, 1200)
+
+[node name="Ring108" parent="Rings" unique_id=1409717795 instance=ExtResource("10")]
+position = Vector2(7808, 1200)
+
+[node name="Ring109" parent="Rings" unique_id=673276065 instance=ExtResource("10")]
+position = Vector2(7832, 1200)
+
+[node name="Ring110" parent="Rings" unique_id=406958910 instance=ExtResource("10")]
+position = Vector2(8208, 1032)
+
+[node name="Ring111" parent="Rings" unique_id=727863179 instance=ExtResource("10")]
+position = Vector2(8208, 1056)
+
+[node name="Ring112" parent="Rings" unique_id=978077857 instance=ExtResource("10")]
+position = Vector2(8208, 1080)
+
+[node name="Ring113" parent="Rings" unique_id=1658730959 instance=ExtResource("10")]
+position = Vector2(8208, 1104)
+
+[node name="Ring114" parent="Rings" unique_id=60313452 instance=ExtResource("10")]
+position = Vector2(9256, 984)
+
+[node name="Ring115" parent="Rings" unique_id=702574901 instance=ExtResource("10")]
+position = Vector2(9280, 984)
+
+[node name="Ring116" parent="Rings" unique_id=1800362476 instance=ExtResource("10")]
+position = Vector2(9304, 984)
+
+[node name="Ring117" parent="Rings" unique_id=474858526 instance=ExtResource("10")]
+position = Vector2(9232, 688)
+
+[node name="Ring118" parent="Rings" unique_id=690017056 instance=ExtResource("10")]
+position = Vector2(9272, 688)
+
+[node name="Ring119" parent="Rings" unique_id=92849519 instance=ExtResource("10")]
+position = Vector2(9312, 672)
+
+[node name="Ring120" parent="Rings" unique_id=2050727151 instance=ExtResource("10")]
+position = Vector2(9328, 640)
+
+[node name="Ring121" parent="Rings" unique_id=226286050 instance=ExtResource("10")]
+position = Vector2(5160, 816)
+
+[node name="Ring122" parent="Rings" unique_id=4207047 instance=ExtResource("10")]
+position = Vector2(5184, 816)
+
+[node name="Ring123" parent="Rings" unique_id=1855310979 instance=ExtResource("10")]
+position = Vector2(5208, 816)
+
+[node name="Ring124" parent="Rings" unique_id=1827083734 instance=ExtResource("10")]
+position = Vector2(5032, 816)
+
+[node name="Ring125" parent="Rings" unique_id=957104557 instance=ExtResource("10")]
+position = Vector2(5056, 816)
+
+[node name="Ring126" parent="Rings" unique_id=1621895717 instance=ExtResource("10")]
+position = Vector2(5072, 816)
+
+[node name="Ring127" parent="Rings" unique_id=1115601601 instance=ExtResource("10")]
+position = Vector2(4520, 208)
+
+[node name="Ring128" parent="Rings" unique_id=1734178340 instance=ExtResource("10")]
+position = Vector2(4544, 208)
+
+[node name="Ring129" parent="Rings" unique_id=1314781973 instance=ExtResource("10")]
+position = Vector2(4568, 208)
+
+[node name="Ring130" parent="Rings" unique_id=1608625259 instance=ExtResource("10")]
+position = Vector2(8104, 88)
+
+[node name="Ring131" parent="Rings" unique_id=51468287 instance=ExtResource("10")]
+position = Vector2(8128, 88)
+
+[node name="Ring132" parent="Rings" unique_id=777652 instance=ExtResource("10")]
+position = Vector2(8152, 88)
+
+[node name="Ring133" parent="Rings" unique_id=1372494783 instance=ExtResource("10")]
+position = Vector2(8232, 88)
+
+[node name="Ring134" parent="Rings" unique_id=1975195293 instance=ExtResource("10")]
+position = Vector2(8256, 88)
+
+[node name="Ring135" parent="Rings" unique_id=526468644 instance=ExtResource("10")]
+position = Vector2(8280, 88)
+
+[node name="Ring136" parent="Rings" unique_id=500945016 instance=ExtResource("10")]
+position = Vector2(8352, 88)
+
+[node name="Ring137" parent="Rings" unique_id=167688586 instance=ExtResource("10")]
+position = Vector2(8376, 88)
+
+[node name="Ring138" parent="Rings" unique_id=1532578490 instance=ExtResource("10")]
+position = Vector2(8400, 88)
+
+[node name="Ring139" parent="Rings" unique_id=1026929597 instance=ExtResource("10")]
+position = Vector2(4256, 888)
+
+[node name="Ring140" parent="Rings" unique_id=1258708796 instance=ExtResource("10")]
+position = Vector2(4288, 896)
+
+[node name="Ring141" parent="Rings" unique_id=956493594 instance=ExtResource("10")]
+position = Vector2(4320, 904)
+
+[node name="Ring142" parent="Rings" unique_id=1664663001 instance=ExtResource("10")]
+position = Vector2(4384, 920)
+
+[node name="Ring143" parent="Rings" unique_id=598755414 instance=ExtResource("10")]
+position = Vector2(4416, 928)
+
+[node name="Ring144" parent="Rings" unique_id=896865039 instance=ExtResource("10")]
+position = Vector2(4448, 936)
+
+[node name="Boss" type="Node" parent="." unique_id=104055598]
+
+[node name="BossBoundrySetter" parent="Boss" unique_id=2006953104 instance=ExtResource("29_3hmk6")]
+position = Vector2(10432, 592)
+bossPath = NodePath("../GetawaySubmarine")
+keepRightLocked = false
+
+[node name="GetawaySubmarine" parent="Boss" unique_id=250733101 instance=ExtResource("37_ud3r1")]
+position = Vector2(10432, 664)
+
+[node name="BossTestSpawn" type="Node2D" parent="." unique_id=448700316]
+position = Vector2(9888, 552)
+script = ExtResource("38_es7xl")
+currentCharacter = 7

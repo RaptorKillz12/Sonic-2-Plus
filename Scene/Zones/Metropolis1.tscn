@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Entities/Misc/HUD.tscn" id="1_67gif"]
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Scripts/Level/Level.gd" id="1_swaun"]
 [ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Entities/MainObjects/Player.tscn" id="2_0nln4"]
-[ext_resource type="AudioStream" uid="uid://bqki542g2mt4h" path="res://Audio/Soundtrack/s2br_Metropolis3.ogg" id="2_xntwa"]
-[ext_resource type="AudioStream" uid="uid://bomm2jjdsrep3" path="res://Audio/Soundtrack/s2br_Boss2.ogg" id="3_7hpa3"]
+[ext_resource type="AudioStream" uid="uid://c1mjerwx6wq1a" path="res://Audio/Soundtrack/Metropolis.ogg" id="2_xntwa"]
+[ext_resource type="AudioStream" uid="uid://6rit71ongu60" path="res://Audio/Soundtrack/Metropolis_F.ogg" id="3_7hqel"]
 [ext_resource type="PackedScene" uid="uid://br54h8eixiokf" path="res://Scene/Backgrounds/06-Metropolis.tscn" id="4_1dnfb"]
 [ext_resource type="PackedScene" uid="uid://dkp47tn7purbu" path="res://Scene/level_layouts/layout_mtz_1.scn" id="6_7hqel"]
 [ext_resource type="PackedScene" uid="uid://bhxbnpwhxw87p" path="res://Entities/Gimmicks/Corkscrew_HTube.tscn" id="7_ry86e"]
@@ -43,7 +43,8 @@ script = ExtResource("1_swaun")
 zone_id = 6
 music = ExtResource("2_xntwa")
 music2P = ExtResource("2_xntwa")
-boss_theme = ExtResource("3_7hpa3")
+F_music = ExtResource("3_7hqel")
+F_music2P = ExtResource("3_7hqel")
 animal1 = 9
 animal2 = 7
 defaultRightBoundry = 9088
@@ -77,22 +78,18 @@ position = Vector2(1744, 472)
 
 [node name="Switch2" parent="Entities" unique_id=521724247 instance=ExtResource("8_25fm7")]
 position = Vector2(2128, 184)
-animator = NodePath("")
 animationName = "Elevator1"
 
 [node name="Switch3" parent="Entities" unique_id=611940253 instance=ExtResource("8_25fm7")]
 position = Vector2(2280, 312)
-animator = NodePath("")
 animationName = "Elevator2"
 
 [node name="Switch4" parent="Entities" unique_id=1117296925 instance=ExtResource("8_25fm7")]
 position = Vector2(2544, 444)
-animator = NodePath("")
 animationName = "Elevator1"
 
 [node name="Switch5" parent="Entities" unique_id=567324564 instance=ExtResource("8_25fm7")]
 position = Vector2(3056, 888)
-animator = NodePath("")
 animationName = "Elevator1"
 
 [node name="MTZ_SteamPipe" parent="Entities" unique_id=383285177 instance=ExtResource("9_tjfo8")]
@@ -146,7 +143,6 @@ open_direction = 1
 
 [node name="Switch6" parent="Entities" unique_id=1583754852 instance=ExtResource("8_25fm7")]
 position = Vector2(6384, 248)
-animator = NodePath("")
 animationName = "Elevator1"
 
 [node name="SpringWall" parent="Entities" unique_id=561834827 instance=ExtResource("13_i3g7m")]

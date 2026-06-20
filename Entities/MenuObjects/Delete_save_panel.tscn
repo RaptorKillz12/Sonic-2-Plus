@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://t2ge5a1hjrf8"]
+[gd_scene format=3 uid="uid://dixrimnofcfc5"]
 
+[ext_resource type="Script" uid="uid://berpvgmimltpi" path="res://Scripts/Menu/data_select_panel.gd" id="1_mksyj"]
 [ext_resource type="Texture2D" uid="uid://dkbs1h30coegf" path="res://Graphics/Menus/Character_Box.png" id="2_440cw"]
 [ext_resource type="Texture2D" uid="uid://b6tu5dfysi026" path="res://Graphics/Menus/Robotnik_Del.png" id="3_mksyj"]
 
@@ -9,7 +10,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CharacterIcon:frame")
+tracks/0/path = NodePath("CharacterIcon:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,7 +27,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CharacterIcon:frame")
+tracks/0/path = NodePath("CharacterIcon:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -44,7 +45,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CharacterIcon:frame")
+tracks/0/path = NodePath("CharacterIcon:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -61,9 +62,8 @@ _data = {
 &"spin": SubResource("Animation_440cw")
 }
 
-[node name="DeleteSavePanel" type="Button" unique_id=998142527]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="DeleteSavePanel" type="Node2D" unique_id=1014442072]
+script = ExtResource("1_mksyj")
 
 [node name="DataBox" type="Sprite2D" parent="." unique_id=130298376]
 z_index = 1
@@ -87,6 +87,5 @@ hframes = 5
 vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=452192354]
-root_node = NodePath("")
 libraries/ = SubResource("AnimationLibrary_w5tei")
 autoplay = &"RESET"

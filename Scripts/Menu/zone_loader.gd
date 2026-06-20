@@ -32,15 +32,15 @@ func queue_level() -> void:
 		Global.ZONES.CHEMICAL_PLANT:
 			match Global.saved_act_id:
 				0:
-					Global.current_zone_pointer = "res://Scene/Zones/ChunkZone.tscn"
+					Global.current_zone_pointer = "res://Scene/Zoness/ChemicalPlant.tscn"
 				_:
 					Global.current_zone_pointer = "res://Scene/Zones/ChemicalPlant2.tscn"
 		Global.ZONES.OIL_OCEAN:
 			match Global.saved_act_id:
 				0:
-					Global.current_zone_pointer = "res://Scene/Zones/BaseZone.tscn"
+					Global.current_zone_pointer = "res://Scene/Zones/OilOcean.tscn"
 				_:
-					Global.current_zone_pointer = "res://Scene/Zones/BaseZoneAct2.tscn"
+					Global.current_zone_pointer = "res://Scene/Zones/OilOceanAct2.tscn"
 		Global.ZONES.NEO_GREEN_HILL:
 			match Global.saved_act_id:
 				0:
@@ -59,48 +59,13 @@ func queue_level() -> void:
 					Global.current_zone_pointer = "res://Scene/Zones/DustHill1.tscn"
 				_:
 					Global.current_zone_pointer = "res://Scene/Zones/DustHill2.tscn"
-		Global.ZONES.WOOD_GADGET:
-			match Global.saved_act_id:
-				0:
-					Global.current_zone_pointer = "res://Scene/Zones/Wood1.tscn"
-				_:
-					Global.current_zone_pointer = "res://Scene/Zones/Wood2.tscn"
+
 		Global.ZONES.CASINO_NIGHT:
 			match Global.saved_act_id:
 				0:
-					if Global.beta_mode:
-						Global.current_zone_pointer = "res://Scene/Zones/CasinoNight1.tscn"
-					else:
-						Global.current_zone_pointer = "res://Scene/Zones/CasinoNight1New.tscn"
+					Global.current_zone_pointer = "res://Scene/Zones/CasinoNight1New.tscn"
 				_:
-					if Global.beta_mode:
-						Global.current_zone_pointer = "res://Scene/Zones/CasinoNight2.tscn"
-					else:
-						Global.current_zone_pointer = "res://Scene/Zones/CasinoNight2New.tscn"
-		Global.ZONES.JEWEL_GROTTO:
-			match Global.saved_act_id:
-				0:
-					Global.current_zone_pointer = "res://Scene/Zones/JewelGrotto1.tscn"
-				_:
-					Global.current_zone_pointer = "res://Scene/Zones/JewelGrotto2.tscn"
-		Global.ZONES.WINTER:
-			match Global.saved_act_id:
-				0:
-					Global.current_zone_pointer = "res://Scene/Zones/Winter1.tscn"
-				_:
-					Global.current_zone_pointer = "res://Scene/Zones/Winter2.tscn"
-		Global.ZONES.SAND_SHOWER:
-			match Global.saved_act_id:
-				0:
-					Global.current_zone_pointer = "res://Scene/Zones/SandShower1.tscn"
-				_:
-					Global.current_zone_pointer = "res://Scene/Zones/SandShower2.tscn"
-		Global.ZONES.TROPICAL:
-			match Global.saved_act_id:
-				0:
-					Global.current_zone_pointer = "res://Scene/Zones/Tropical1.tscn"
-				_:
-					Global.current_zone_pointer = "res://Scene/Zones/Tropical2.tscn"
+					Global.current_zone_pointer = "res://Scene/Zones/CasinoNight2New.tscn"
 		Global.ZONES.CYBER_CITY:
 			match Global.saved_act_id:
 				#0:

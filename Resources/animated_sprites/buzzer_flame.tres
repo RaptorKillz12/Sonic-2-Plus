@@ -19,12 +19,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1jjky")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"stop",
 "speed": 5.0
 }]

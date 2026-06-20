@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dl60ab8cdu0iq"]
+[gd_scene format=3 uid="uid://dl60ab8cdu0iq"]
 
 [ext_resource type="Texture2D" uid="uid://cf4j1ed0nh7oq" path="res://Graphics/Items/ChaosEmeralds.png" id="1"]
 [ext_resource type="Script" uid="uid://chob38ab6gf8k" path="res://Scripts/Misc/SpecialStageResult.gd" id="3"]
@@ -152,7 +152,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0nsea")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Blue",
 "speed": 60.0
 }, {
@@ -169,7 +169,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_icx3v")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Cyan",
 "speed": 60.0
 }, {
@@ -186,7 +186,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_56ikg")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Green",
 "speed": 60.0
 }, {
@@ -203,7 +203,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3lscu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Magenta",
 "speed": 60.0
 }, {
@@ -220,7 +220,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_conr2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Purple",
 "speed": 60.0
 }, {
@@ -237,7 +237,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k2y06")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Red",
 "speed": 60.0
 }, {
@@ -254,7 +254,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3ll3w")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Silver",
 "speed": 60.0
 }, {
@@ -271,18 +271,18 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wgbwq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Yellow",
 "speed": 60.0
 }]
 
-[node name="SpecialStageResults" type="Node2D"]
+[node name="SpecialStageResults" type="Node2D" unique_id=888098548]
 script = ExtResource("3")
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1841962240]
 layer = -1
 
-[node name="Back" type="ColorRect" parent="HUD"]
+[node name="Back" type="ColorRect" parent="HUD" unique_id=202714034]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -290,7 +290,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.933333, 0.933333, 0.933333, 1)
 
-[node name="ColorRect" type="ColorRect" parent="HUD"]
+[node name="ColorRect" type="ColorRect" parent="HUD" unique_id=1130273079]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -304,47 +304,47 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
-[node name="BlueEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="BlueEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=1045329954]
 position = Vector2(56, -28)
 sprite_frames = SubResource("29")
 animation = &"Cyan"
 
-[node name="PurpleEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="PurpleEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=1908232150]
 position = Vector2(80, -16)
 sprite_frames = SubResource("29")
 animation = &"Purple"
 
-[node name="RedEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="RedEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=235271163]
 position = Vector2(80, 8)
 sprite_frames = SubResource("29")
 animation = &"Red"
 
-[node name="CyanEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="CyanEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=270712520]
 position = Vector2(56, 20)
 sprite_frames = SubResource("29")
 animation = &"Magenta"
 
-[node name="YellowEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="YellowEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=825552764]
 position = Vector2(32, 8)
 sprite_frames = SubResource("29")
 animation = &"Yellow"
 
-[node name="GreenEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="GreenEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=1495015333]
 position = Vector2(32, -16)
 sprite_frames = SubResource("29")
 animation = &"Green"
 
-[node name="SilverEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="SilverEmerald" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=1080868139]
 position = Vector2(56, -4)
 sprite_frames = SubResource("29")
 animation = &"Silver"
 
-[node name="SilverEmerald2" type="AnimatedSprite2D" parent="HUD/ColorRect"]
+[node name="SilverEmerald2" type="AnimatedSprite2D" parent="HUD/ColorRect" unique_id=1245545277]
 position = Vector2(56, 40)
 sprite_frames = SubResource("29")
 animation = &"Blue"
 
-[node name="ResultLabel" type="Control" parent="HUD"]
+[node name="ResultLabel" type="Control" parent="HUD" unique_id=168120421]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -354,7 +354,7 @@ offset_right = 160.0
 offset_bottom = 40.0
 grow_horizontal = 2
 
-[node name="SonicGot" type="Label" parent="HUD/ResultLabel"]
+[node name="SonicGot" type="Label" parent="HUD/ResultLabel" unique_id=442775609]
 self_modulate = Color(0, 1, 1, 1)
 layout_mode = 0
 offset_top = 24.0
@@ -364,7 +364,7 @@ theme_override_fonts/font = ExtResource("3_fyibw")
 text = "SONIC GOT"
 horizontal_alignment = 1
 
-[node name="Through" type="Label" parent="HUD/ResultLabel"]
+[node name="Through" type="Label" parent="HUD/ResultLabel" unique_id=7304255]
 self_modulate = Color(0, 1, 1, 1)
 layout_mode = 0
 offset_top = 48.0
@@ -374,7 +374,7 @@ theme_override_fonts/font = ExtResource("3_fyibw")
 text = "A CHAOS EMERALD"
 horizontal_alignment = 1
 
-[node name="Results" type="Control" parent="HUD"]
+[node name="Results" type="Control" parent="HUD" unique_id=314877097]
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -387,7 +387,7 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RingBonus" type="Sprite2D" parent="HUD/Results"]
+[node name="RingBonus" type="Sprite2D" parent="HUD/Results" unique_id=845580967]
 self_modulate = Color(0, 1, 1, 1)
 position = Vector2(-60, -40)
 texture = ExtResource("4_0ktv8")
@@ -395,7 +395,7 @@ centered = false
 vframes = 6
 frame = 1
 
-[node name="RingScore" type="Label" parent="HUD/Results/RingBonus"]
+[node name="RingScore" type="Label" parent="HUD/Results/RingBonus" unique_id=256054054]
 unique_name_in_owner = true
 self_modulate = Color(1, 0, 1, 1)
 anchors_preset = 1
@@ -409,7 +409,7 @@ theme_override_fonts/font = ExtResource("5_26jf7")
 text = "0"
 horizontal_alignment = 2
 
-[node name="GemsBonus" type="Sprite2D" parent="HUD/Results"]
+[node name="GemsBonus" type="Sprite2D" parent="HUD/Results" unique_id=637220123]
 self_modulate = Color(0, 1, 1, 1)
 position = Vector2(-60, -24)
 texture = ExtResource("4_0ktv8")
@@ -417,7 +417,7 @@ centered = false
 vframes = 6
 frame = 5
 
-[node name="GemScore" type="Label" parent="HUD/Results/GemsBonus"]
+[node name="GemScore" type="Label" parent="HUD/Results/GemsBonus" unique_id=530064767]
 unique_name_in_owner = true
 self_modulate = Color(1, 0, 1, 1)
 anchors_preset = 1
@@ -431,7 +431,7 @@ theme_override_fonts/font = ExtResource("5_26jf7")
 text = "0"
 horizontal_alignment = 2
 
-[node name="Total" type="Sprite2D" parent="HUD/Results"]
+[node name="Total" type="Sprite2D" parent="HUD/Results" unique_id=1036340693]
 self_modulate = Color(0, 1, 1, 1)
 position = Vector2(-60, 8)
 texture = ExtResource("4_0ktv8")
@@ -439,7 +439,7 @@ centered = false
 vframes = 6
 frame = 3
 
-[node name="TotalScore" type="Label" parent="HUD/Results/Total"]
+[node name="TotalScore" type="Label" parent="HUD/Results/Total" unique_id=1962915263]
 unique_name_in_owner = true
 self_modulate = Color(1, 0, 1, 1)
 anchors_preset = 1
@@ -453,20 +453,20 @@ theme_override_fonts/font = ExtResource("5_26jf7")
 text = "0"
 horizontal_alignment = 2
 
-[node name="CounterWait" type="Timer" parent="HUD"]
+[node name="CounterWait" type="Timer" parent="HUD" unique_id=399281554]
 wait_time = 6.0
 one_shot = true
 
-[node name="CounterSFX" type="AudioStreamPlayer" parent="HUD"]
+[node name="CounterSFX" type="AudioStreamPlayer" parent="HUD" unique_id=442967674]
 stream = ExtResource("6_ehcj4")
 mix_target = 2
 bus = &"SFX"
 
-[node name="Score" type="AudioStreamPlayer" parent="HUD"]
+[node name="Score" type="AudioStreamPlayer" parent="HUD" unique_id=1037069837]
 stream = ExtResource("7_qeqoj")
 bus = &"SFX"
 
-[node name="Emerald" type="AudioStreamPlayer" parent="."]
+[node name="Emerald" type="AudioStreamPlayer" parent="." unique_id=34986987]
 stream = ExtResource("8_ehcj4")
 bus = &"SFX"
 

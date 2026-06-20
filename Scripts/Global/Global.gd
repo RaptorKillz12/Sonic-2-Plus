@@ -15,6 +15,7 @@ const zone_names: Array[StringName] = [
 	"Death Egg","Emerald Hill"
 ]
 
+
 const save_path = "user://Sonic.dat"
 ## The Save slot (section in the file). if 0, treat game file as a NO SAVE
 var current_save_index: int = 0
