@@ -7,6 +7,7 @@ on:
       - rsdkv4-reorganization
     paths:
       - '.github/workflows/rsdkv4-data-layout.yml'
+      - 'project.godot'
 
 permissions:
   contents: write
