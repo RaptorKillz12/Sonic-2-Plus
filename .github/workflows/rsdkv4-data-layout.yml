@@ -1,0 +1,131 @@
+name: Reorganize project into RSDKv4-style Data layout
+
+on:
+  push:
+    branches:
+      - rsdkv4-reorganization
+    paths:
+      - .github/workflows/rsdkv4-data-layout.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reorganize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out reorganization branch
+        uses: actions/checkout@v4
+        with:
+          ref: rsdkv4-reorganization
+          fetch-depth: 0
+
+      - name: Move project files into Data
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import shutil
+
+          # Preserve every filename and extension; only move their parent folders.
+          moves = [
+              ("Audio/Soundtrack", "Data/Music"),
+              ("Audio/SFX", "Data/SoundFX"),
+              ("Entities", "Data/Objects"),
+              ("Entitites3D", "Data/Objects/3D"),
+              ("Graphics", "Data/Sprites"),
+              ("Models", "Data/Meshes"),
+              ("Resources", "Data/Game/Resources"),
+              ("Scene", "Data/Scenes"),
+              ("Scripts", "Data/Scripts"),
+              ("Shaders", "Data/Shaders"),
+              ("Tileset", "Data/Stages/Tileset"),
+          ]
+
+          for source_name, destination_name in moves:
+              source = Path(source_name)
+              destination = Path(destination_name)
+              if not source.exists():
+                  continue
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              if destination.exists():
+                  raise RuntimeError(f"Refusing to overwrite existing folder: {destination}")
+              shutil.move(str(source), str(destination))
+
+          # Remove the old Audio container only if it is now empty.
+          audio = Path("Audio")
+          if audio.exists() and not any(audio.iterdir()):
+              audio.rmdir()
+
+          # Update Godot resource paths in project files, scenes, scripts,
+          # import sidecars, resources and text-based configuration files.
+          replacements = {
+              "res://Audio/Soundtrack/": "res://Data/Music/",
+              "res://Audio/SFX/": "res://Data/SoundFX/",
+              "res://Entities/": "res://Data/Objects/",
+              "res://Entitites3D/": "res://Data/Objects/3D/",
+              "res://Graphics/": "res://Data/Sprites/",
+              "res://Models/": "res://Data/Meshes/",
+              "res://Resources/": "res://Data/Game/Resources/",
+              "res://Scene/": "res://Data/Scenes/",
+              "res://Scripts/": "res://Data/Scripts/",
+              "res://Shaders/": "res://Data/Shaders/",
+              "res://Tileset/": "res://Data/Stages/Tileset/",
+          }
+
+          for path in Path(".").rglob("*"):
+              if not path.is_file() or ".git" in path.parts or ".godot" in path.parts:
+                  continue
+              try:
+                  original = path.read_bytes()
+                  content = original.decode("utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              updated = content
+              for old, new in replacements.items():
+                  updated = updated.replace(old, new)
+              if updated != content:
+                  path.write_text(updated, encoding="utf-8", newline="")
+
+          # Fail rather than commit a partial migration if old resource paths remain.
+          leftovers = []
+          old_prefixes = tuple(replacements.keys())
+          for path in Path(".").rglob("*"):
+              if not path.is_file() or ".git" in path.parts or ".godot" in path.parts:
+                  continue
+              try:
+                  content = path.read_text(encoding="utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              if any(prefix in content for prefix in old_prefixes):
+                  leftovers.append(str(path))
+          if leftovers:
+              raise RuntimeError("Old resource paths remain in: " + ", ".join(leftovers[:30]))
+
+          print("RSDKv4-style Data layout migration completed.")
+          PY
+
+      - name: Verify project references and commit
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          project = Path("project.godot").read_text(encoding="utf-8")
+          refs = re.findall(r'res://[^"\\s]+', project)
+          missing = [ref for ref in refs if not Path(ref[6:]).exists() and not ref.startswith("res://.godot/")]
+          if missing:
+              raise SystemExit("Missing project.godot resources: " + ", ".join(missing))
+          print(f"Checked {len(refs)} project.godot resource paths.")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Reorganize project into RSDKv4 Data layout"
+            git push origin HEAD:rsdkv4-reorganization
+          else
+            echo "No migration changes to commit."
+          fi
