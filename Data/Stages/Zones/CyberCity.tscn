@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://c3i0t665l1320"]
+
+[ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Data/Scripts/Level/Level.gd" id="1_2qba3"]
+[ext_resource type="AudioStream" uid="uid://c1mjerwx6wq1a" path="res://Data/Music/Metropolis.ogg" id="2_wqlgd"]
+[ext_resource type="AudioStream" uid="uid://6rit71ongu60" path="res://Data/Music/Metropolis_F.ogg" id="3_lykp7"]
+[ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Data/Scripts/Entities/Misc/HUD.tscn" id="5_a3l5i"]
+[ext_resource type="PackedScene" uid="uid://c3plocm0bipdf" path="res://Data/Stages/Backgrounds/14-CyberCity.tscn" id="5_dx3sm"]
+[ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Data/Scripts/Entities/MainObjects/Player.tscn" id="6_dx3sm"]
+[ext_resource type="PackedScene" uid="uid://vh0ailk0432j" path="res://Data/Scripts/Entities/Boss/BossBoundrySetter.tscn" id="6_kpoau"]
+[ext_resource type="PackedScene" uid="uid://dtk1fabu5doxe" path="res://Data/Stages/level_layouts/layout_egz.scn" id="7_5qfg6"]
+[ext_resource type="PackedScene" uid="uid://3n283yjcshus" path="res://Data/Scripts/Entities/Boss/Bouncer Eggman/BouncerEggman.tscn" id="7_u6dil"]
+[ext_resource type="PackedScene" uid="uid://bjuh5cvbt06af" path="res://Data/Scripts/Entities/MainObjects/Capsule.tscn" id="10_gh610"]
+[ext_resource type="PackedScene" uid="uid://dggjdwwkl527b" path="res://Data/Scripts/Entities/Items/Ring.tscn" id="11_ym01q"]
+[ext_resource type="PackedScene" uid="uid://gklj3ebdwveu" path="res://Data/Scripts/Entities/Items/Monitor.tscn" id="12_sjsw3"]
+[ext_resource type="PackedScene" uid="uid://bgodeg4oddje6" path="res://Data/Scripts/Entities/MainObjects/BoundrySetter.tscn" id="18_yg66v"]
+
+[node name="BossZone" type="Node2D" unique_id=956240958]
+script = ExtResource("1_2qba3")
+zone_id = 14
+act_number = 3
+music = ExtResource("2_wqlgd")
+music2P = ExtResource("2_wqlgd")
+F_music = ExtResource("3_lykp7")
+F_music2P = ExtResource("3_lykp7")
+animal1 = 13
+animal2 = 8
+end_cutscene = true
+defaultRightBoundry = 3200
+defaultBottomBoundry = 1024
+
+[node name="14-CyberCity" parent="." unique_id=2144296963 instance=ExtResource("5_dx3sm")]
+
+[node name="HUD" parent="." unique_id=1511589331 instance=ExtResource("5_a3l5i")]
+
+[node name="Layout_EGZ" parent="." unique_id=1725868695 instance=ExtResource("7_5qfg6")]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=2093330052 instance=ExtResource("6_dx3sm")]
+position = Vector2(96, 716)
+
+[node name="Entities" type="Node" parent="." unique_id=1735929079]
+
+[node name="BoundrySetter" parent="Entities" unique_id=1698336261 instance=ExtResource("18_yg66v")]
+position = Vector2(2848, 624)
+setLeft = false
+leftBoundry = 2560
+rightBoundry = 3200
+bottomBoundry = 768
+
+[node name="Items" type="Node" parent="." unique_id=1811601504]
+
+[node name="Capsule" parent="Items" unique_id=1267418682 instance=ExtResource("10_gh610")]
+position = Vector2(2880, 704)
+
+[node name="Ring" parent="Items" unique_id=662141282 instance=ExtResource("11_ym01q")]
+position = Vector2(112, 1048)
+
+[node name="Ring2" parent="Items" unique_id=2145240247 instance=ExtResource("11_ym01q")]
+position = Vector2(360, 656)
+
+[node name="Ring3" parent="Items" unique_id=69892401 instance=ExtResource("11_ym01q")]
+position = Vector2(384, 656)
+
+[node name="Ring4" parent="Items" unique_id=1270993173 instance=ExtResource("11_ym01q")]
+position = Vector2(408, 656)
+
+[node name="Monitor" parent="Items" unique_id=1395240085 instance=ExtResource("12_sjsw3")]
+position = Vector2(240, 592)
+
+[node name="Boss" type="Node" parent="." unique_id=142293841]
+
+[node name="BossBoundrySetter" parent="Boss" unique_id=1504435363 instance=ExtResource("6_kpoau")]
+position = Vector2(2240, 656)
+scale = Vector2(1, 8)
+bossPath = NodePath("../BouncerEggman")
+keepTopLocked = false
+keepRightLocked = false
+keepBottomLocked = false
+
+[node name="BouncerEggman" parent="Boss" unique_id=791845407 instance=ExtResource("7_u6dil")]
+position = Vector2(2240, 696)

@@ -1,0 +1,1520 @@
+class_name Player2D extends PhysicsObject
+# Sonic, Knuckles, Mighty, Ray
+const HITBOXESSONIC = {
+	NORMAL = Vector2(9,19)*2, 
+	ROLL = Vector2(7,14)*2, 
+	CROUCH = Vector2(9,11)*2, 
+	GLIDE = Vector2(10,10)*2, 
+	HORIZONTAL = Vector2(22,9)*2}
+# Tails & Amy
+const HITBOXESTAILS = {
+	NORMAL = Vector2(9,15)*2, 
+	ROLL = Vector2(7,14)*2, 
+	CROUCH = Vector2(9,9)*2, 
+	GLIDE = Vector2(10,10)*2, 
+	HORIZONTAL = Vector2(22,9)*2}
+var currentHitbox: Dictionary = HITBOXESSONIC
+
+const JUMP_BUFFER_TIME: float = 3.0/60.0 #Time after pressing jump button to buffer the input, in case it's pressed early.
+const defaultAirTime: float = 30.0 # 30 seconds
+const panicTime: float = 12.0 # start count down at 12 seconds
+const airWarning: float = 5.0 # time between air meter sound
+
+@export var disablePartner: bool = false
+
+# Signals
+signal enemy_bounced
+signal turned_super
+
+# Speed variables
+var acc: float = 0.046875			#acceleration
+var dec: float = 0.5				#deceleration
+var frc: float = 0.046875			#friction (same as acc)
+var rollfrc: float = frc*0.5		#roll friction
+var rolldec: float = 0.125			#roll deceleration
+var top: float = 6*60				#top horizontal speed
+var toproll: float = 20*60			#top horizontal speed rolling
+var slp: float = 0.125				#slope factor when walking/running #0.125
+var slprollup: float = 0.078125		#slope factor when rolling uphill
+var slprolldown: float = 0.3125		#slope factor when rolling downhill
+var fall: float = 2.5*60			#tolerance ground speed for sticking to walls and ceilings
+
+# Airborne Speed variables
+## jump force (6 for knuckles)
+var jmp: float = 6.5*60
+## gravity
+var grv: float = 0.21875
+## jump release velocity
+var releaseJmp: float = 4
+
+var spindashPower: float = 0.0
+var peelOutCharge: float = 0.0
+## If the Character has used their air ability.
+var abilityUsed: bool = false
+## This is Mighty-specific. If the character is in a ball with armor.
+var curled: bool = false
+## Amount to bounce when landing from a Bubble Shield or Mighty stomp.
+var bounceReaction: float = 0
+## Invulnerability time remaining (Seconds)
+var invTime: float = 0
+## This is also used for invincibility monitors. When super, it doesn't count down.
+var super_time: float = 0
+## True is the Character is in Super Form. Depends on invTime.
+var is_super: bool = false:
+	set(value):
+		turned_super.emit()
+		is_super = value
+## Speed Shoes time remaining (Seconds)
+var shoe_time: float = 0
+## Time remaining for the player can interact with Rings again (Seconds)
+var ringDisTime: float = 0 # ring collecting disable timer
+
+# water settings
+## If true, the Player is treated as underwater.
+var is_in_water: bool = false
+## Breath remaining (Seconds)
+var airTimer: float = defaultAirTime
+# force roll variables
+## The number of force roll objects the player is interacting with.
+var forceRoll: int = 0
+## The direction the player is pushed in if they happen to lose too much momentum.
+var forceDirection: int = 0
+## If the Player presses jump too early, jump presses are stored here. This also helps prevent missed inputs from physics oddities.
+var jump_buffer: float = 0.0
+
+# collision related values
+## This is the DIRECTION of the pushed wall.
+var pushing_wall: int = 0
+## Number of enmies the player has defeated since leaving the ground.
+var enemyCounter: int = 0
+## If the player dies (in two player mode), they will respawn here. Essentially useless in single player.
+var respawnPosition: Vector2i = Vector2.ZERO
+## Global.CHARACTERS ID
+var character: int = Global.CHARACTERS.SONIC
+## Strength level of this character.
+var strength: Global.STRENGTH_TIER = Global.STRENGTH_TIER.NORMAL
+
+# physics list order
+# 0 Acceleration
+# 1 Deceleration
+# 2 Friction
+# 3 Top Speed
+# 4 Null
+# 5 Rolling Friction 
+# 6 Rolling Deceleration
+
+const physicsList: Array = [
+# 0 Sonic (Primary Character physics)
+[12.0/256.0, 0.50, 12/256.0,  6*60, 0, 12/256.0, 32/256.0],
+# 1 Speed Shoes
+[24.0/256.0, 0.50, 24/256.0, 12*60, 0, 12/256.0, 32/256.0],
+# 2 Super Sonic
+[32.0/256.0, 1.00, 12/256.0, 10*60, 0,  6/256.0, 32/256.0],
+# 3 Super Forms besides Sonic
+[24.0/256.0, 0.75, 12/256.0,  8*60, 0,  6/256.0, 32/256.0],
+]
+
+const waterPhysicsListNew: Array = [
+# 0 Sonic (Primary Character physics)
+[ 8/256.0, 0.250,  8/256.0, 4*60, 0, 8/256.0, 32/256.0],
+# 1 Speed Shoes
+[12/256.0, 0.250, 12/256.0, 8*60, 0, 8/256.0, 32/256.0],
+# 2 Super Sonic
+[12/256.0, 0.500, 12/256.0, 8*60, 0,12/256.0, 32/256.0],
+# 3 Super Forms besides Sonic
+[12/256.0, 0.375, 12/256.0,8*60, 0, 8/256.0, 32/256.0],
+]
+
+#Depricated
+const waterPhysicsList: Array = [
+# 0 Sonic (Primary Character physics)
+[0.046875/2.0, 0.5/2.0, 0.046875/2.0, 6*60/2.0, 0, 0.046875*0.5, 0.125],
+# 1 Speed Shoes
+[0.046875/2.0, 0.5/2.0, 0.046875/2.0, 6*60/2.0, 0, 0.046875*0.5, 0.125],
+# 2 Super Sonic
+[0.09375, 0.5, 0.046875, 5*60, 0, 0.046875, 0.125],
+# 3 Super Forms besides Sonic
+[0.046875, 0.375, 0.046875, 4*60, 0, 0.0234375, 0.125],
+]
+# ================
+
+var Ring: PackedScene = preload("res://Data/Scripts/Entities/Items/Ring.tscn")
+var ringChannel: int = 0
+
+var Particle: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var Bubble: PackedScene = preload("res://Data/Scripts/Entities/Misc/Bubbles.tscn")
+var CountDown: PackedScene = preload("res://Data/Scripts/Entities/Misc/CountDownTimer.tscn")
+var RotatingParticle: PackedScene = preload("res://Data/Scripts/Entities/Misc/RotatingParticle.tscn")
+
+var superSprite: Texture2D
+@onready var normalSprite: Texture2D = $Sonic/Sprite2D.texture
+var playerPal: Resource = preload("res://Data/Shaders/PlayerPalette.tres")
+
+# ================
+## Timer before the Player can input left/right. 
+var horizontalLockTimer: float = 0
+## Updating the angle over time helps prevent angle "fighting"
+var spriteRotation: float = 0
+## If false, ignore player left/right inputs in the air (Roll jumping).
+var air_control: bool = true
+## if the player is in a general damaging state.
+var attacking: bool = false
+
+# States
+enum STATES {NORMAL, AIR, JUMP, ROLL, SPINDASH, PEELOUT, ANIMATION, HIT, DIE, CORKSCREW, JUMPCANCEL,
+SUPER, FLY, RESPAWN, HANG, GLIDE, WALLCLIMB, AMYHAMMER}
+var currentState: int = STATES.AIR
+@onready var hitbox: CollisionShape2D = $HitBox
+@onready var hitBoxOffset: Dictionary = {normal = $HitBox.position, crouch = $HitBox.position}
+@onready var defaultHitBoxPos: Vector2 = $HitBox.position
+var crouchBox:CollisionShape2D = null
+
+# Shield variables
+enum SHIELDS {NONE, NORMAL, FIRE, ELEC, BUBBLE}
+var shield: int = SHIELDS.NONE
+@onready var magnetShape: CollisionShape2D = $RingMagnet/CollisionShape2D
+@onready var shieldSprite: AnimatedSprite2D = $Shields
+var reflective: bool = false # used for reflecting projectiles
+
+# State array
+@onready var stateList: Array[Node] = $States.get_children()
+
+
+# Animation related
+@onready var animator: AnimationPlayer = $Sonic/PlayerAnimation
+@onready var superAnimator: AnimationPlayer = $Sonic/SuperPalette
+@onready var sprite: Sprite2D = $Sonic/Sprite2D
+@onready var spriteController: Node2D = $Sonic
+var centerReference:Sprite2D = null # center reference is a center reference point used for hitboxes and shields (the sprite node need a node called "CenterReference" for this to work)
+var lastActiveAnimation: String = ""
+var defaultSpriteOffset: Vector2 = Vector2.ZERO
+
+var camera: Camera2D = Camera2D.new()
+var camDist: Vector2 = Vector2(32,64)
+var camLookDist: Array = [-88,88] # Up and Down
+var camLookAmount: float = 0
+var camAdjust: Vector2 = Vector2.ZERO
+var cameraDragLerp: float = 0
+var camLockTime: float = 0
+var cameraShakeTime: float = 0
+
+#Camera Shake Parameters (To be depricated)
+var randomStrength: float = 2.0
+var shakefade: float = 5.0
+var shakeStrength : float = 0.0
+
+# boundries
+var limitLeft: int = 0
+var limitRight: int = 0
+var limitTop: int = 0
+var limitBottom: int = 0
+
+# screen scroll locking as the camera scrolls
+var rachetScrollLeft: bool = false
+var rachetScrollRight: bool = false
+
+var rotatableSprites: PackedStringArray = ["walk", "run", "peelOut", "hammerSwing"]
+var direction: int = roundi(scale.x)
+
+# Ground speed is mostly used for timing and animations, there isn't any functionality to it.
+var groundSpeed: float = 0
+
+enum INPUTS {XINPUT, YINPUT, ACTION, ACTION2, ACTION3, SUPER, PAUSE}
+# Input control, 0 = 0ff, 1 = pressed, 2 = held
+# (for held it's best to use inputs[INPUTS.ACTION] > 0)
+# XInput and YInput are directions and are either -1, 0 or 1.
+var inputs: Array[float] = [0,0,0,0,0,0,0,0]
+const INPUTACTIONS_P1 = [["ui_left","ui_right"],["ui_up","ui_down"],"ui_accept","ui_select","ui_cancel","ui_super","ui_pause"]
+const INPUTACTIONS_P2 = [["ui_left_P2","ui_right_P2"],["ui_up_P2","ui_down_P2"],"ui_accept_P2","ui_select_P2","ui_cancel_P2","ui_super_P2","ui_pause_P2"]
+var inputActions: Array = INPUTACTIONS_P1
+# 0 = ai, 1 = player 1, 2 = player 2
+var playerControl: int = 1
+
+var partner: Player2D = null
+var partnerPanic: float = 0.0
+
+const RESPAWN_DEFAULT_TIME: float = 5.0
+var respawnTime: float = RESPAWN_DEFAULT_TIME
+
+const DEFAULT_PLAYER2_CONTROL_TIME = 10.0
+var partnerControlTime: float = DEFAULT_PLAYER2_CONTROL_TIME
+
+# defaults
+@onready var defaultLayer: int = collision_layer
+@onready var defaultMask: int = collision_mask
+@onready var defaultZIndex: int = z_index
+
+## Control memory queue
+var inputMemory: Array[Array] = []
+# XXX TODO; Note that since we're doing this on process and not physics_process, the speed that we
+# exhaust the memoryPosition is going to vary based on monitor refresh rate.
+# Should be updated to run at consistent rate.
+## Used to track current position in the queue - this is where the player inserts into memory
+var memoryPosition: int = 0
+const INPUT_MEMORY_LENGTH = 20
+
+var Player: PackedScene = load("res://Data/Scripts/Entities/MainObjects/Player.tscn")
+
+#An array of, well, Arrays, in order of Global.CHARACTERS, skipping 0.
+var playerskins: Array[PackedScene] = [
+	preload("res://Data/Sprites/Players/PlayerAnimations/Sonic.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Tails.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Knuckles.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Amy.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Mighty.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Ray.tscn"),
+	preload("res://Data/Sprites/Players/PlayerAnimations/Sonic_Old.tscn"),
+]
+
+# Get sfx list
+@onready var sfx: Array[Node] = $SFX.get_children()
+
+# Ring-related values
+var rings: int = 0
+var ring1upCounter: int = 100
+var totalRings: int = 0 #The perminant counter, never decreased. For perfect check.
+var superRingTimer: float = 1.0 #Time before a ring is taken.
+
+# How far in can the player can be towards the screen edge before they're limit_length
+var cameraMargin: float = 16
+
+# Variables responsible for shifting the camera's bound over time. left, top, right, bottom
+var camera_limits_target: Array[float] = [0,0,320,224]
+var camera_limits_current: Array[float] = [0,0,320,224]
+var camera_shift_time: float = 0.0
+
+## A pole the player it grabbing onto.
+var poleGrabID: Node = null
+## A node, if any, that id overrideing normal object control.
+var controlObject: Node = null
+
+func _ready() -> void:
+	super()
+	Global.players.append(self)
+	call_deferred("setup_initial_state")
+	
+	connectFloor.connect(land_floor)
+	connectCeiling.connect(touch_ceiling)
+	positionChanged.connect(on_position_changed)
+	
+	intialize_camera()
+	init_player_bounds()
+	call_deferred("init_player_bounds") ## I hate that I have to do this
+	call_deferred("snap_camera_to_limits")
+	
+	# verify that we're player 1
+	if Global.players[0] == self:
+		character = Global.PlayerChar1
+		# input memory
+		for _i in range(INPUT_MEMORY_LENGTH):
+			inputMemory.append(inputs.duplicate(true))
+		# Partner (if player character 2 isn't none)
+		if Global.PlayerChar2 > Global.CHARACTERS.NONE and (!disablePartner):
+			partner = Player.instantiate()
+			partner.name = "Partner"
+			get_parent().call_deferred("add_child", (partner))
+			partner.playerControl = 2 if Global.two_player_mode else 0
+			partner.partner = self
+			partner.z_index = z_index-1
+			partner.global_position = round(global_position+Vector2(-24,0))
+			partner.character = Global.PlayerChar2
+			partner.inputActions = INPUTACTIONS_P2
+	if character == Global.CHARACTERS.SONIC and Global.beta_mode:
+		character = Global.CHARACTERS.SONIC_BETA
+	# Character settings
+	currentHitbox = HITBOXESSONIC
+	if (character == Global.CHARACTERS.TAILS or
+	character == Global.CHARACTERS.AMY):
+		currentHitbox = HITBOXESTAILS
+	spriteController.name = "OldSprite"
+	var skin: PackedScene = playerskins[max(min(character-1,playerskins.size()),0)]
+	var newSprite: Node2D = skin.instantiate()
+	add_child(newSprite)
+	sprite = newSprite.get_node("Sprite2D")
+	animator = newSprite.get_node("PlayerAnimation")
+	superAnimator = newSprite.get_node_or_null("SuperPalette")
+	spriteController.queue_free()
+	spriteController = newSprite
+	
+	superAnimator.play("RESET")
+	superSprite = spriteController.super_sprites
+	
+	# set super palettes
+	match (character):
+		Global.CHARACTERS.SONIC:
+			# shader texture sizes need to be to the power of 2
+			playerPal.set_shader_parameter("amount",5)
+			playerPal.set_shader_parameter("palRows",16)
+			playerPal.set_shader_parameter("row",0)
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperSonicPal.png"))
+		Global.CHARACTERS.TAILS:
+			playerPal.set_shader_parameter("amount",8)
+			playerPal.set_shader_parameter("palRows",16)
+			playerPal.set_shader_parameter("row",0)
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperTails.png"))
+		Global.CHARACTERS.KNUCKLES:
+			playerPal.set_shader_parameter("amount",4)
+			playerPal.set_shader_parameter("palRows",16)
+			playerPal.set_shader_parameter("row",0)
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperKnuckles.png"))
+			strength = Global.STRENGTH_TIER.SUPER
+		Global.CHARACTERS.AMY:
+			playerPal.set_shader_parameter("amount",4)
+			playerPal.set_shader_parameter("palRows",8)
+			playerPal.set_shader_parameter("row",0)
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperAmy.png"))
+		Global.CHARACTERS.MIGHTY:
+			playerPal.set_shader_parameter("amount",4)
+			playerPal.set_shader_parameter("palRows",16)
+			playerPal.set_shader_parameter("row",0)
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperKnuckles.png"))
+		#Global.CHARACTERS.RAY:
+	
+	# Checkpoints
+	await get_tree().process_frame
+	for i in Global.checkpoints:
+		if Global.saved_checkpoint == i.checkpoint_id:
+			global_position = i.global_position+Vector2(0,8)
+			respawnPosition = global_position
+			camera.global_position = i.global_position+Vector2(0,8)
+			Global.levelTime = Global.checkpoint_time_p1
+			Global.levelTimeP2 = Global.checkpoint_time_p1
+		else:
+			Global.levelTime = 0
+			Global.levelTimeP2 = 0
+	
+	if Global.bonus_stage_saved_data:
+		global_position = Global.bonus_stage_saved_data.pop_front()
+		camera.global_position = global_position
+		rings = Global.bonus_stage_saved_data.pop_front()
+		Global.levelTime = Global.bonus_stage_saved_data.pop_front()
+		while ring1upCounter < rings:
+			ring1upCounter += 100
+	
+	# run switch physics to ensure character specific physics
+	switch_physics()
+
+	# connect animator
+	animator.connect("animation_started",Callable(self,"_on_PlayerAnimation_animation_started"))
+	defaultSpriteOffset = sprite.offset
+	
+	# set partner sounds to share players (prevents sound overlap)
+	if playerControl == 1 and partner:
+		partner.sfx = sfx
+	
+
+func setup_initial_state() -> void:
+	# set secondary hitboxes
+	crouchBox = spriteController.get_node_or_null("CrouchBox")
+	if crouchBox != null:
+		crouchBox.get_parent().remove_child(crouchBox)
+		add_child(crouchBox)
+		crouchBox.disabled = true
+		hitBoxOffset.crouch = crouchBox.position
+	# add center reference node
+	centerReference = spriteController.get_node_or_null("CenterReference")
+	# Disable and enable states
+	set_state(currentState)
+	respawnPosition = global_position
+
+func init_player_bounds() -> void:
+	# reset camera limits
+	limitLeft = Global.hardBorderLeft
+	limitRight = Global.hardBorderRight
+	if Global.y_wrap:
+		limitTop = -4096
+		limitBottom = 4096
+	else:
+		limitTop = Global.hardBorderTop
+		limitBottom = Global.hardBorderBottom
+	if camera:
+		camera_limits_target[0] = limitLeft
+		camera_limits_target[1] = limitTop
+		camera_limits_target[2] = limitRight
+		camera_limits_target[3] = limitBottom
+	
+
+func intialize_camera() -> void:
+	# Camera settings
+	get_parent().call_deferred("add_child", (camera))
+	camera.enabled = (playerControl == 1)
+	var viewSize: Vector2 = get_viewport_rect().size
+	camera.drag_left_margin =   camDist.x/viewSize.x
+	camera.drag_right_margin =  camDist.x/viewSize.x
+	camera.drag_top_margin =    camDist.y/viewSize.y
+	camera.drag_bottom_margin = camDist.y/viewSize.y
+	camera.drag_horizontal_enabled = true
+	camera.drag_vertical_enabled = true
+	camera.global_position = global_position
+
+
+# 0 not pressed, 1 pressed, 2 held (best to do > 0 when checking input), -1 released
+func calculate_input(event: InputEvent, action: StringName = "ui_accept") -> int:
+	return int(event.is_action(action) or event.is_action_pressed(action))-int(event.is_action_released(action))
+
+
+func _process(delta:float ) -> void:
+	# Player 1 input settings and partner AI
+	if playerControl == 1:
+		# Input memory - write the player's input to the inputMemory queue at the current queue position
+		for i in range(inputs.size()):
+			inputMemory[memoryPosition][i] = inputs[i]
+
+		# Go ahead and advance the position to the one we wrote INPUT_MEMORY_LENGTH frames ago... it's the
+		# next one we want to read anyway *and* the next one we want to write after that.
+		memoryPosition = (memoryPosition + 1) % INPUT_MEMORY_LENGTH
+
+		# Partner ai logic
+		if partner && !Global.two_player_mode:
+			# Check if partner panic
+			if partnerPanic <= 0:
+				if partner.playerControl == 0:
+					for i in partner.inputs.size():
+						# Copy the frame of input from the oldest written portion of the inputMemory
+						# Array into the partner's input for the current frame
+						partner.inputs[i] = inputMemory[memoryPosition][i]
+				
+				# x distance difference check, try to go to the partner
+				if (partner.inputs[INPUTS.XINPUT] == 0 and partner.inputs[INPUTS.YINPUT] == 0
+					or global_position.distance_to(partner.global_position) > 48 and round(movement.x/300) == 0
+					) and abs(global_position.x-partner.global_position.x) >= 32:
+					partner.inputs[INPUTS.XINPUT] = sign(global_position.x - partner.global_position.x)
+				
+				#If more than 64 pixels away on X, override AI control to come back.
+				if abs(global_position.x-partner.global_position.x) <= 64:
+					# get behind Player 1
+					var testPos: float = round(global_position.x + ((0-direction)))
+					if sign((partner.global_position.x - testPos)*direction) > 0:
+						partner.inputs[INPUTS.XINPUT] = sign(0-direction)
+				
+				# Jump if pushing a wall, slower then half speed, on a flat surface and is either normal or jumping
+				if (partner.currentState == STATES.NORMAL or partner.currentState == STATES.JUMP) and snap_angle(partner.angle) == 0 or (partner.pushing_wall != 0 and pushing_wall == 0):
+					# check partners position, only jump ever 0.25 seconds (prevent jump spam)
+					if global_position.y+32 < partner.global_position.y and partner.inputs[INPUTS.ACTION] == 0 and partner.ground and ground and (fmod(Global.globalTimer+delta,0.25) < fmod(Global.globalTimer,0.25)):
+						partner.inputs[INPUTS.ACTION] = 1
+					elif global_position.y < partner.global_position.y and ground and !partner.ground:
+						partner.inputs[INPUTS.ACTION] = 2
+			# panic
+			else:
+				if global_position.distance_to(partner.global_position) <= 48 or partner.direction != sign(global_position.x - partner.global_position.x):
+					partnerPanic = 0
+				partner.inputs[INPUTS.XINPUT] = 0
+				if round(partner.movement.x) == 0:
+					partnerPanic -= delta
+					partner.inputs[INPUTS.YINPUT] = 1
+					# press action every 0.3 ticks
+					if fmod(partnerPanic+delta,0.3) < fmod(partnerPanic,0.3):
+						partner.inputs[INPUTS.ACTION] = 1
+					else:
+						partner.inputs[INPUTS.ACTION] = 0
+	
+			# Panic
+			# if partner is locked, and stopped then do a spindash
+			# panic for 128 frames before letting go of spindash
+			if partner.horizontalLockTimer > 0 and partner.currentState == STATES.NORMAL and global_position.distance_to(partner.global_position) > 48:
+				partnerPanic = 128/60.0
+
+	# respawn mechanics
+	else:
+		if $ScreenCheck.is_on_screen() or Global.two_player_mode:
+			respawnTime = RESPAWN_DEFAULT_TIME
+		else:
+			if respawnTime > 0:
+				respawnTime -= delta
+			else:
+				respawn()
+				
+			
+	
+	# Sprite2D rotation handling
+	if (ground):
+		spriteRotation = rad_to_deg(angle)+rad_to_deg(gravityAngle)+90
+	else:
+		if (spriteRotation+90 >= 180):
+			spriteRotation = max(90,spriteRotation-(168.75*delta))
+		else:
+			spriteRotation = min(360,spriteRotation+(168.75*delta))
+	
+	# set the sprite to match the sprite rotation variable if it's in the rotatable Sprites list
+	if (rotatableSprites.has(animator.current_animation)):
+		# check if player rotation is greater then 45 degrees or current angle doesn't match the gravity's angle or not on the floor
+		if abs(spriteRotation-90) >= 35 or !ground: #or rotation != gravityAngle
+			sprite.rotation = deg_to_rad(snapped(spriteRotation,45)-90)-rotation-gravityAngle
+		else:
+			sprite.rotation = -rotation-gravityAngle
+		# uncomment this next line out for smooth rotation (you should remove the above line too)
+		#sprite.rotation = deg_to_rad(spriteRotation-90)-rotation-gravityAngle
+	else:
+		sprite.rotation = -rotation+gravityAngle
+
+	spriteController.global_position = global_position.round()
+
+	# Sprite center offset referencing for shields
+	if centerReference != null:
+		shieldSprite.global_position = centerReference.global_position
+
+	if (horizontalLockTimer > 0):
+		horizontalLockTimer -= delta
+		inputs[INPUTS.XINPUT] = 0
+
+	# jump buffer time
+	if jump_buffer > 0.0:
+		jump_buffer -= delta
+
+	# super / invincibility handling
+	if (super_time > 0):
+		if !is_super:
+			super_time -= delta
+		else:
+			$InvincibilityBarrier.visible = false
+			# Animate Palette
+			if is_instance_valid(superAnimator):
+				if !superAnimator.is_playing():
+					superAnimator.play("Flash")
+			# check if ring count is greater then 0
+			# deactivate if stage cleared
+			if rings > 0 and !Global.stage_cleared:
+				superRingTimer -= delta
+				if Global.super_ring_drain and superRingTimer <= 0.0:
+					rings -=1
+					superRingTimer = 1.0
+			else:
+				# Deactivate super
+				super_time = 0
+				if character == Global.CHARACTERS.SONIC:
+					sprite.texture = normalSprite
+					strength = Global.STRENGTH_TIER.NORMAL
+				
+		if (super_time <= 0):
+			if (shield != SHIELDS.NONE):
+				shieldSprite.visible = true
+			$InvincibilityBarrier.visible = false
+			# turn off super palette and physics (if super)
+			if is_instance_valid(superAnimator) and is_super:
+				is_super = false
+				superAnimator.play("PowerDown")
+				switch_physics()
+			SoundDriver.playNormalMusic()
+			invTime = 60
+	
+	if (shoe_time > 0):
+		shoe_time -= delta
+		if (shoe_time <= 0):
+			switch_physics()
+			SoundDriver.playNormalMusic()
+	
+	# Invulnerability timer
+	if (invTime > 0 and currentState != STATES.HIT and currentState != STATES.DIE):
+		visible = !visible
+		invTime -= delta*60
+		if (invTime <= 0):
+			invTime = 0
+			visible = true
+			
+	
+	if (ringDisTime > 0) and currentState != STATES.HIT:
+		ringDisTime -= delta
+
+	# Rings 1up
+	if rings >= ring1upCounter:
+		ring1upCounter += 100
+		# Award Exra Life
+		Global.lives += 1
+		if !Global.two_player_mode:
+			Global.temporary_coins += 1
+		await SoundDriver.playExtraLifeMusic()
+
+	#Rotating stars
+	if ($InvincibilityBarrier.visible):
+		var stars: Array[Node] = $InvincibilityBarrier.get_children()
+		for i in stars:
+			i.position = i.position.rotated(deg_to_rad(360*delta*4))
+			i.visible = visible
+
+		if (fmod(Global.globalTimer,0.1)+delta > 0.1) and visible:
+			var star: Node2D = RotatingParticle.instantiate()
+			var starPart: Node2D = star.get_node("GenericParticle")
+			star.global_position = global_position
+			starPart.getTarget = self
+			starPart.direction = -direction
+			get_parent().add_child(star)
+			var options: Array[StringName] = ["StarSingle","StarSinglePat2","default"]
+			starPart.play(options[round(randf()*2)])
+			starPart.frame = randf_range(0,2)
+			starPart.velocity = velocity
+			starPart.position = stars[0].global_position-global_position
+
+	# Animator
+	if currentState != STATES.PEELOUT:
+		handle_animation_speed()
+	else:
+		handle_animation_speed(peelOutCharge)
+	
+	if animator.current_animation != "":
+		lastActiveAnimation = animator.current_animation
+		
+	# Time over
+	if Global.levelTime >= Global.maxTime:
+		kill()
+		
+	
+	# Water timer
+	if is_in_water and shield != SHIELDS.BUBBLE:
+		if airTimer > 0:
+			if playerControl == 1:
+				if snapped(airTimer,airWarning) != snapped(airTimer-delta,airWarning) and airTimer > panicTime:
+					sfx[24].play()
+			# Count down timer
+			if airTimer <= panicTime and snapped(airTimer,1.8) != snapped(airTimer-delta,1.8):
+				if round(airTimer/1.8)-2 >= 0:
+					var count: Node2D = CountDown.instantiate()
+					get_parent().add_child(count)
+					count.countTime = clamp(round(airTimer/1.8)-2,0,5)
+					count.global_position = global_position+Vector2(8*direction,0)
+			airTimer -= delta
+		elif currentState != STATES.DIE: # Drown (kill checks if air timer is greater then 0)
+			$BubbleTimer.start(0.1)
+			kill()
+	else:
+		if airTimer <= panicTime:
+			SoundDriver.playNormalMusic()
+		airTimer = defaultAirTime
+		
+	
+	# drowning theme related
+	if playerControl == 1:
+		if (airTimer <= panicTime and airTimer > 0
+		and SoundDriver.currentTheme != SoundDriver.THEME.DROWN):
+			SoundDriver.playMusic(SoundDriver.themes[SoundDriver.THEME.DROWN])
+	
+	# partner control timer for player 2
+	if partnerControlTime > 0:
+		partnerControlTime -= delta
+	
+	# Set player inputs
+	set_inputs()
+	if any_action_pressed():
+		jump_buffer = JUMP_BUFFER_TIME
+	
+	# Update the player's attacking state every step.
+	attacking = Update_Attacking_Flag()
+
+
+func _physics_process(delta: float) -> void:
+	super(delta)
+	
+	if ground and forceRoll > 0:
+		if (movement*Vector2(1,0)).is_equal_approx(Vector2.ZERO):
+			movement.x = 2*sign(-1+(forceDirection*2))*60.0
+		if currentState != STATES.ROLL:
+			set_state(STATES.ROLL)
+			animator.play("roll")
+			sfx[1].play()
+	
+	# physics sets
+	# collide with solids if not rolling layer
+	set_collision_mask_value(16,(!attacking and !curled))
+	# collide with solids if not Knuckles or Super layer
+	set_collision_mask_value(19,!character == Global.CHARACTERS.KNUCKLES or
+	!(character == Global.CHARACTERS.SONIC and is_super))
+	# collide with solids if not rolling or Knuckles layer
+	set_collision_mask_value(21,(character != Global.CHARACTERS.KNUCKLES and !attacking))
+	# damage mask bit
+	#EDIT: This is only used for projectile deflection
+	set_collision_layer_value(20,reflective)
+	# water surface running
+	set_collision_mask_value(23,ground and abs(groundSpeed) >= 7*60 and !is_in_water)
+	
+	if ground:
+		groundSpeed = movement.x
+		
+	# wall detection
+	if horizontalSensor.is_colliding() or is_on_wall():
+		var getDir: int = sign(horizontalSensor.target_position.x)
+		if is_on_wall():
+			getDir = -sign(get_wall_normal().x)
+		
+		# give pushing_wall a buffer otherwise this just switches on and off
+		pushing_wall = getDir*2
+		if sign(movement.x) == sign(horizontalSensor.target_position.x):
+			movement.x = 0
+		# disable pushing wall
+		if inputs[INPUTS.XINPUT] != sign(pushing_wall):
+			pushing_wall = 0
+	
+	elif pushing_wall != 0:
+		# count down pushing_wall
+		pushing_wall -= sign(pushing_wall)
+	
+	# Camera settings
+	if camera:
+		
+		# Lerp camera scroll based on if on floor
+		var playerOffset: float = ((abs(global_position.y-camera.get_target_position().y)*2)/camDist.y)
+		
+		cameraDragLerp = max(int(!ground),min(cameraDragLerp,playerOffset)-6*delta)
+		
+		# Looking/Lag
+		camLookAmount = clamp(camLookAmount,camLookDist[0],camLookDist[1])
+		if currentState != STATES.NORMAL or velocity.x != 0:
+			camLookAmount = move_toward(camLookAmount,0.0,6.0)
+		
+		# Camera Lock
+		#if camLockTime > 0: Its faster to just do the math.
+		camLockTime -= delta
+		
+		#rumbling timer
+		if cameraShakeTime > 0.0:
+			cameraShakeTime -= delta
+			shakeStrength = randomStrength
+			
+		if shakeStrength > 0:
+			shakeStrength = lerpf(shakeStrength,0.0,shakefade * delta)
+			camera.offset = RandomOffset()
+		
+		update_camera_limits(delta)
+		
+		if Global.y_wrap:
+			var test_pos: float = global_position.y
+			global_position.y = wrapf(global_position.y,0,2048)
+			if global_position.y != test_pos:
+				camera.global_position.y = wrapf(camera.global_position.y,0,2048)
+		# Death at border bottom
+		elif global_position.y > limitBottom and !Global.stage_cleared:
+			kill()
+	
+	# Stop movement at borders
+	if (global_position.x < limitLeft+cameraMargin or global_position.x > limitRight-cameraMargin):
+		movement.x = 0
+	# Clamp position
+	global_position.x = clamp(global_position.x,limitLeft+cameraMargin,limitRight-cameraMargin)
+	
+	
+	# center offsets (only moves hitbox if the centers moved)
+	if centerReference != null:
+		if centerReference.position != Vector2.ZERO:
+			# change to center offset if the center position is different
+			hitbox.position = centerReference.position
+	
+	# Water
+	if Global.waterLevel > 0 and currentState != STATES.DIE:
+		# Enter water
+		if global_position.y > Global.waterLevel and !is_in_water:
+			is_in_water = true
+			switch_physics()
+			movement.x *= 0.5
+			movement.y *= 0.25
+			if currentState != STATES.RESPAWN and movement.y !=0:
+				sfx[17].play()
+				var splash: Node2D = Particle.instantiate()
+				splash.behaviour = splash.TYPE.FOLLOW_WATER_SURFACE
+				splash.global_position = Vector2(global_position.x,Global.waterLevel-16)
+				splash.play("Splash")
+				splash.z_index = sprite.z_index+10
+				get_parent().add_child(splash)
+			
+		# Elec shield/Fire shield logic is in HUD script (related to screen flashing)
+		# Exit water
+		if global_position.y < Global.waterLevel and is_in_water:
+			is_in_water = false
+			switch_physics()
+			if abs(movement.y) <= jmp:
+				movement.y *= 2
+			movement.y = clampf(movement.y,0-(16*60),(16*60))
+			sfx[17].play()
+			var splash: Node2D = Particle.instantiate()
+			splash.behaviour = splash.TYPE.FOLLOW_WATER_SURFACE
+			splash.global_position = Vector2(global_position.x,Global.waterLevel-16)
+			splash.play("Splash")
+			splash.z_index = sprite.z_index+10
+			get_parent().add_child(splash)
+	
+	# We don't check for crushing if the player is in an invulnerable state (note that invulernable means immune to crushing/death by falling)
+	if !stateList[currentState].get_state_invulnerable() and !controlObject:
+		var crushSensorLeft: Area2D = $CrushSensorLeft
+		var crushSensorRight: Area2D = $CrushSensorRight
+		var crushSensorUp: Area2D = $CrushSensorUp
+		var crushSensorDown: Area2D = $CrushSensorDown
+		
+		crushSensorLeft.position.x = -(hitbox.shape.size.x/2 - 1)
+		crushSensorRight.position.x = (hitbox.shape.size.x/2 - 1)
+		crushSensorUp.position.y = -(hitbox.shape.size.y/2 -1)
+		# note that the bottom crush sensor actually goes *below* the feet so that it can contact the floor
+		crushSensorDown.position.y = (hitbox.shape.size.y/2 +1)
+		
+		# crusher deaths NOTE: the allowTranslate and visibility is used for stuff like the sky sanctuary teleporters, visibility check is for stuff like the carnival night barrels
+		if ((
+				#(crushSensorLeft.get_overlapping_areas() + 
+				crushSensorLeft.get_overlapping_bodies().size() and #\
+				#(crushSensorRight.get_overlapping_areas() + 
+				crushSensorRight.get_overlapping_bodies().size() ) or
+			(
+				#((crushSensorUp.get_overlapping_areas() + 
+				crushSensorUp.get_overlapping_bodies().size() and #\
+				#(crushSensorDown.get_overlapping_areas() + 
+				crushSensorDown.get_overlapping_bodies().size()
+				)): #and (!allowTranslate or visible)
+			kill()
+
+func RandomOffset() -> Vector2:
+	return Vector2(randf_range(-shakeStrength,shakeStrength),randf_range(-shakeStrength,shakeStrength))
+
+## Input buttons
+func set_inputs() -> void:
+	# If Player Control is negative, it means we're in a cutscene.
+	if playerControl < 0:
+		return
+	# player control inputs
+	# check if ai or player 2
+	if playerControl != 1:
+		# player 2 active time check, if below 0 return to ai state
+		if partnerControlTime <= 0 and playerControl == 2:
+			playerControl = 0
+		
+		# player 2 control active check
+		for i in inputActions.size():
+			var player2Active: bool = false
+			# 0 and 1 in inputActions are arrays
+			if i <= 1:
+				if Input.is_action_pressed(inputActions[i][0]) or Input.is_action_pressed(inputActions[i][1]):
+					player2Active = true
+			# rest are inputs
+			elif Input.is_action_pressed(inputActions[i]):
+				player2Active = true
+			if player2Active:
+				# if none of the button checks fail, give the player control
+				playerControl = 2
+				partnerControlTime = DEFAULT_PLAYER2_CONTROL_TIME
+
+	if playerControl:
+		inputs[INPUTS.ACTION] = (int(Input.is_action_pressed(inputActions[INPUTS.ACTION]))*2)-int(Input.is_action_just_pressed(inputActions[INPUTS.ACTION]))
+		inputs[INPUTS.ACTION2] = (int(Input.is_action_pressed(inputActions[INPUTS.ACTION2]))*2)-int(Input.is_action_just_pressed(inputActions[INPUTS.ACTION2]))
+		inputs[INPUTS.ACTION3] =  (int(Input.is_action_pressed(inputActions[INPUTS.ACTION3]))*2)-int(Input.is_action_just_pressed(inputActions[INPUTS.ACTION3]))
+		inputs[INPUTS.SUPER] =  (int(Input.is_action_pressed(inputActions[INPUTS.SUPER]))*2)-int(Input.is_action_just_pressed(inputActions[INPUTS.SUPER]))
+	
+		#if horizontalLockTimer <= 0:
+		inputs[INPUTS.XINPUT] = -int(Input.is_action_pressed(inputActions[INPUTS.XINPUT][0]))+int(Input.is_action_pressed(inputActions[INPUTS.XINPUT][1]))
+		inputs[INPUTS.YINPUT] = -int(Input.is_action_pressed(inputActions[INPUTS.YINPUT][0]))+int(Input.is_action_pressed(inputActions[INPUTS.YINPUT][1]))
+
+# Controller scan functions -- so you don't have to dig into the inputs to check controller state
+func any_action_pressed() -> bool:
+	if inputs[INPUTS.ACTION] == 1:
+		return true
+	if inputs[INPUTS.ACTION2] == 1:
+		return true
+	if inputs[INPUTS.ACTION3] == 1:
+		return true
+	return false
+		
+func any_action_held() -> bool:
+	if inputs[INPUTS.ACTION] == 2:
+		return true
+	if inputs[INPUTS.ACTION2] == 2:
+		return true
+	if inputs[INPUTS.ACTION3] == 2:
+		return true
+	return false
+		
+func any_action_held_or_pressed() -> bool:
+	if inputs[INPUTS.ACTION] > 0:
+		return true
+	if inputs[INPUTS.ACTION2] > 0:
+		return true
+	if inputs[INPUTS.ACTION3] > 0:
+		return true
+	return false
+
+# Note that there is no way to check the 'pressed' vs 'held' status of X/Y inputs.
+func get_y_input() -> float:
+	return inputs[INPUTS.YINPUT]
+	
+func is_up_held() -> bool:
+	return inputs[INPUTS.YINPUT] < 0
+	
+func is_down_held() -> bool:
+	return inputs[INPUTS.YINPUT] > 0
+	
+func get_x_input() -> float:
+	return inputs[INPUTS.XINPUT]
+	
+func is_left_held() -> bool:
+	return inputs[INPUTS.XINPUT] < 0
+	
+func is_right_held() -> bool:
+	return inputs[INPUTS.XINPUT] > 0
+	
+func get_state() -> STATES:
+	return currentState
+
+func set_state(newState: STATES, forceMask: Vector2 = Vector2.ZERO) -> void:
+	defaultHitBoxPos = hitBoxOffset.normal
+	hitbox.position = defaultHitBoxPos
+	# reset the center offset
+	if centerReference != null:
+		centerReference.position = Vector2.ZERO
+	
+	if currentState != newState:
+		var lastState: STATES = currentState
+		currentState = newState
+		stateList[lastState].state_exit()
+		stateList[newState].state_activated()
+	
+	for i in stateList:
+		i.set_process(i == stateList[newState])
+		i.set_physics_process(i == stateList[newState])
+		i.set_process_input(i == stateList[newState])
+	
+	var forcePoseChange: Vector2 = Vector2.ZERO
+	
+	if (forceMask == Vector2.ZERO):
+		match(newState):
+			STATES.JUMP, STATES.ROLL:
+				# adjust y position
+				forcePoseChange = ((currentHitbox.ROLL-hitbox.shape.size)*Vector2.UP).rotated(rotation)*0.5
+				
+				# change hitbox size
+				hitbox.shape.size = currentHitbox.ROLL
+			STATES.SPINDASH:
+				# change hitbox size
+				hitbox.shape.size = currentHitbox.CROUCH
+				
+			_:
+				# adjust y position
+				forcePoseChange = ((currentHitbox.NORMAL-hitbox.shape.size)*Vector2.UP).rotated(rotation)*0.5
+				
+				# change hitbox size
+				hitbox.shape.size = currentHitbox.NORMAL
+	else:
+		# adjust y position
+		forcePoseChange = ((forceMask-hitbox.shape.size)*Vector2.UP).rotated(rotation)*0.5
+		# change hitbox size
+		hitbox.shape.size = forceMask
+	
+	position += forcePoseChange
+	
+	sprite.get_node("DashDust").visible = false
+
+# sets the hitbox mask shape, referenced in other states
+func set_hitbox(mask: Vector2 = Vector2.ZERO, forcePoseChange: bool = false) -> void:
+	# adjust position if on floor or force pose change
+	if ground or forcePoseChange:
+		position += ((mask-hitbox.shape.size)*Vector2.UP).rotated(rotation)*0.5
+	
+	hitbox.shape.size = mask
+
+# set shields
+func set_shield(setShieldID: int) -> void:
+	call_deferred("set_shield_deffered",setShieldID)
+
+
+func set_shield_deffered(setShieldID: int) -> bool:
+	magnetShape.disabled = true
+	#magnetShape.disabled = true
+	# verify not in water and shield compatible
+	if is_in_water and (setShieldID == SHIELDS.FIRE or setShieldID == SHIELDS.ELEC):
+		return false
+	
+	shield = setShieldID
+	# make shield visible if not super and the invincibility barrier isn't going
+	shieldSprite.visible = !is_super and !$InvincibilityBarrier.visible
+	match (shield):
+		SHIELDS.NORMAL:
+			shieldSprite.play("Default")
+			sfx[5].play()
+		SHIELDS.ELEC:
+			shieldSprite.play("Elec")
+			sfx[10].play()
+			magnetShape.disabled = false
+		SHIELDS.FIRE:
+			shieldSprite.play("Fire")
+			sfx[11].play()
+		SHIELDS.BUBBLE:
+			shieldSprite.play("Bubble")
+			sfx[12].play()
+		_: # disable
+			shieldSprite.visible = false
+	return true
+
+
+const currentAnimChecks: Array[StringName] = [
+	"roll","dropDash","spinDash","glide","glideSlide","drop",
+	]
+
+const lastActiveAnimCheck: Array[StringName] = [
+	"glide","glideSlide"
+	]
+
+func Update_Attacking_Flag() -> bool:
+	var attacking_state: bool = false
+	if animator.is_playing():
+		for i in currentAnimChecks:
+			if animator.current_animation == i:
+				attacking_state = true
+	else:
+		for i in lastActiveAnimCheck:
+			if lastActiveAnimation == i:
+				attacking_state = true
+	return attacking_state
+
+
+func is_attacking() -> bool:
+	return attacking
+
+# see Global for damage types, 0 = none, 1 = Fire, 2 = Elec, 3 = Water
+func hit_player(damagePoint: Vector2 = global_position, damageType: int = 0, soundID: int = 6) -> bool:
+	if damageType != 0 and shield == damageType+1:
+		return false
+	if (currentState != STATES.HIT and invTime <= 0 and 
+	super_time <= 0 and (shieldSprite.get_node("InstaShieldHitbox/HitBox").disabled 
+	or character != Global.CHARACTERS.SONIC)):
+		movement.x = sign(global_position.x-damagePoint.x)*2*60
+		
+		if !check_for_ceiling():
+			movement.y = -4*60
+		
+		if (movement.x == 0):
+			movement.x = 2*60
+		# check for water
+		if is_in_water:
+			movement = movement*0.5
+		if poleGrabID:
+			poleGrabID = null
+			allowTranslate = false
+		disconect_from_floor()
+		set_state(STATES.HIT)
+		$Shields/InstaShieldHitbox/HitBox.disabled = true
+		invTime = 120 # Ivulnerable for 2 seconds. Starts counting *after* landing.
+		# Ring loss
+		if (shield == SHIELDS.NONE and rings > 0 and (playerControl == 1 or Global.two_player_mode)):
+			sfx[9].play()
+			#ringDisTime = 30.0/60.0 # ignore rings for 64 frames
+			if Global.hud:
+				Global.hud.perfectEnabled = false
+				Global.hud.super_icon_ready(false)
+			call_deferred('deferred_spill_rings')
+		elif shield == SHIELDS.NONE and (playerControl == 1 or Global.two_player_mode):
+			
+
+				kill(soundID)
+		else:
+			sfx[soundID].play()
+		# Disable Shield
+		set_shield(SHIELDS.NONE)
+		return true
+	return false
+
+func deferred_spill_rings() -> void:
+	ringDisTime = 1.0/60.0 # ignore rings for 1/60th second after landing
+	var ringCount: int = 0
+	var ringAngle: float = 101.25
+	var ringAlt: bool = false
+	var ringSpeed: float = 4
+	while (ringCount < min(rings,32)):
+		# Create ring
+		var ring: Node2D = Ring.instantiate()
+		ring.global_position = global_position
+		ring.scattered = true
+		ring.velocity.y = -sin(deg_to_rad(ringAngle))*ringSpeed*60
+		ring.velocity.x = cos(deg_to_rad(ringAngle))*ringSpeed*60
+
+		if (ringAlt):
+			ring.velocity.x *= -1
+			ringAngle += 22.5
+		ringAlt = !ringAlt
+		ringCount += 1
+		# if we're on the second circle, decrease the speed
+		if (ringCount == 16):
+			ringSpeed = 2
+			ringAngle = 101.25 # Reset angle
+		get_parent().add_child(ring)
+	rings = 0
+
+func get_ring() -> void:
+	if playerControl == 1 or Global.two_player_mode:
+		#var prev_rings = rings
+		rings += 1
+		totalRings+=1
+		sfx[7+ringChannel].play()
+		sfx[7].play()
+		ringChannel = int(!ringChannel)
+		if Global.hud and super_form_ready():
+			Global.hud.super_icon_ready(true)
+		
+	elif partner != null:
+		partner.get_ring()
+
+func super_form_ready() -> bool:
+	if !Global.stage_cleared and (Global.emeralds == 127 and rings > 49 and !is_super):
+		return true
+	return false
+
+func kill(soundID: int = 6) -> void:
+	if currentState != STATES.DIE:
+		hitbox.disabled = true
+		disconect_from_floor()
+		super_time = 0
+		shoe_time = 0
+		allowTranslate = true
+		# turn off super palette and physics (if super)
+		if is_instance_valid(superAnimator) and is_super:
+			superAnimator.play("PowerDown")
+			is_super = false
+		# stop special music
+		#if playerControl == 1:
+		#	Global.music.play()
+		#	Global.effectTheme.stop()
+		if !Global.two_player_mode and playerControl == 1 and partner:
+			var saved: Vector2 = partner.global_position
+			partner.respawn()
+			partner.global_position = saved
+		collision_layer = 0
+		collision_mask = 0
+		z_index = 120
+		if airTimer > 0:
+			is_in_water = false
+			switch_physics()
+			movement = Vector2(0,-7*60)
+			animator.play("die")
+			sfx[soundID].play()
+		else:
+			if playerControl == 1:
+				SoundDriver.music.stop()
+			movement = Vector2(0,0)
+			animator.play("drown")
+			sfx[25].play()
+		set_state(STATES.DIE,currentHitbox.NORMAL)
+		
+		if playerControl == 1 and !Global.two_player_mode:
+			Main.can_pause = false # stop the ability to pause
+			if get_tree().paused:
+				get_tree().paused = false
+
+func respawn() -> void:
+	if partner != null:
+		# cancel function if partner is dead or ai controlled
+		if partner.currentState == STATES.DIE || partner.playerControl != 1:
+			return
+		
+		airTimer = 1
+		collision_layer = 0
+		collision_mask = 0
+		z_index = 16 #When respawning, appear in front of virtually everything
+		respawnTime = RESPAWN_DEFAULT_TIME
+		movement = Vector2.ZERO
+		is_in_water = false
+		
+		# update physics (prevents player having water physics on respawn)
+		switch_physics()
+		global_position = partner.global_position+Vector2(0,-224)
+		limitLeft = partner.limitLeft
+		limitRight = partner.limitRight
+		if !Global.y_wrap:
+			limitTop = partner.limitTop
+			limitBottom = partner.limitBottom
+		get_node("TailsCarryBox/HitBox").disabled = true
+		set_state(STATES.RESPAWN)
+
+
+func touch_ceiling() -> void:
+	if getVert != null:
+		var getAngle: float = wrapf(-rad_to_deg(getVert.get_collision_normal().angle())-90,0,360)
+		if (getAngle > 225 or getAngle < 135):
+			angle = getAngle
+			rotation = snap_angle(-deg_to_rad(getAngle))
+			update_sensors()
+			movement = -Vector2(movement.y*sign(sin(deg_to_rad(getAngle))),0)
+			ground = true
+			return
+	movement.y = 0
+
+func land_floor() -> void:
+	curled = (character == Global.CHARACTERS.MIGHTY and abilityUsed)
+
+	abilityUsed = false
+	# landing movement calculation
+	
+	# recalculate ground angle
+	var calcAngle: float = wrapf(rad_to_deg(angle)-rad_to_deg(gravityAngle),0,360)
+	
+	# check not shallow
+	if (calcAngle >= 22.5 and calcAngle <= 337.5 and abs(movement.x) < movement.y):
+		# check half steep
+		if (calcAngle < 45 or calcAngle > 315):
+			movement.x = movement.y*0.5*sign(sin(angle-gravityAngle))
+		# else do full steep
+		else:
+			movement.x = movement.y*sign(sin(angle-gravityAngle))
+
+
+# clean animation
+func _on_PlayerAnimation_animation_started(_anim_name: StringName) -> void:
+	if (sprite != null):
+		sprite.flip_v = false
+		sprite.offset = defaultSpriteOffset
+		if animator.speed_scale < 0:
+			animator.speed_scale = abs(animator.speed_scale)
+		elif animator.speed_scale == 0:
+			animator.speed_scale = 1
+		# reset the center offset
+		if centerReference != null:
+			centerReference.position = Vector2.ZERO
+		animator.advance(0)
+
+
+# return the physics id variable, see physicsList array for reference
+func determine_physics() -> int:
+	# get physics from character
+	match (character):
+		Global.CHARACTERS.SONIC:
+			if is_super:
+				return 2 # Super Sonic
+	#Anyone who isn't a special case:
+	if is_super:
+		return 3 # Super
+	elif shoe_time > 0:
+		return 1 # Shoes
+	return 0 #Default to Sonic 
+
+func determine_jump_property() -> float:
+	if !is_in_water:
+		match (character):
+			Global.CHARACTERS.SONIC:
+				if is_super:
+					return 8*60
+			Global.CHARACTERS.KNUCKLES:
+				return 6*60
+		return 6.5*60
+	else:
+		match (character):
+			Global.CHARACTERS.KNUCKLES:
+				return 3*60
+		return 3.5*60
+
+func switch_physics() -> void:
+	var physicsID: int = determine_physics()
+	var getList: Array = physicsList[max(0,physicsID)]
+	if is_in_water:
+		getList = waterPhysicsListNew[max(0,physicsID)]
+	acc = getList[0]
+	dec = getList[1]
+	frc = getList[2]
+	top = getList[3]
+	#air = getList[0]*2.0
+	rollfrc = getList[5]
+	rolldec = getList[6]
+	# For Jump height:
+	jmp = determine_jump_property()
+	if !is_in_water:
+		grv = 56/256.0
+		releaseJmp = 4
+	else:
+		grv = 16/256.0
+		releaseJmp = 2
+
+
+
+
+func _on_SparkleTimer_timeout() -> void:
+	if is_super and abs(groundSpeed) >= top:
+		var sparkle: AnimatedSprite2D = Particle.instantiate()
+		sparkle.global_position = global_position
+		sparkle.play("Super")
+		get_parent().add_child(sparkle)
+
+func on_position_changed() -> void:
+	cam_update(true)
+
+func cam_update(forceMove: bool = false) -> void:
+	# Cancel camera movement
+	if currentState == STATES.DIE:
+		return
+	# Camera vertical drag
+	var viewSize: Vector2 = get_viewport_rect().size
+	
+	camera.drag_top_margin =    lerp(0.0,float(camDist.y/viewSize.y),float(cameraDragLerp))
+	camera.drag_bottom_margin = camera.drag_top_margin
+	
+	# Extra drag margin for rolling
+	match(character):
+		Global.CHARACTERS.TAILS or Global.CHARACTERS.AMY:
+			match(hitbox.shape.size):
+				currentHitbox.ROLL:
+					camAdjust = Vector2(0,-1)
+				_:
+					camAdjust = Vector2.ZERO
+		_: # default
+			match(hitbox.shape.size):
+				currentHitbox.ROLL:
+					camAdjust = Vector2(0,-5)
+				_:
+					camAdjust = Vector2.ZERO
+
+	# Camera lock
+	# remove round() if you are not making a pixel perfect game
+	var getPos: Vector2 = (global_position+Vector2(0,camLookAmount)+camAdjust).round()
+	if camLockTime <= 0 and (forceMove or camera.global_position.distance_to(getPos) <= 16):
+		# limit_length speed camera
+		camera.global_position.x = move_toward(camera.global_position.x,getPos.x,16*60*get_physics_process_delta_time())
+		# clamp to region
+		camera.global_position.x = clamp(camera.global_position.x,limitLeft,limitRight)
+	
+	if (forceMove or camera.global_position.distance_to(getPos) <= 16):
+		camera.global_position.y = move_toward(camera.global_position.y,getPos.y,16*60*get_physics_process_delta_time())
+		camera.global_position.y = clamp(camera.global_position.y,limitTop,limitBottom)
+	
+	# Ratchet camera scrolling (locks the camera behind the player)
+	if rachetScrollLeft:
+		limitLeft = max(limitLeft,camera.get_screen_center_position().x-viewSize.x/2)
+		camera_limits_current[0] = limitLeft
+		camera_limits_target[0] = max(camera_limits_target[0],limitLeft)
+	if rachetScrollRight:
+		limitRight = max(limitRight,camera.get_screen_center_position().x+viewSize.x/2)
+		camera_limits_current[2] = limitRight
+		camera_limits_target[2] = min(camera_limits_target[2],limitRight)
+
+
+func _adjust_camera_zoom() -> void:
+	if movement.length() > 600.0 and Global.zoomSize > 1:
+		camera.zoom.x = move_toward(camera.zoom.x, 0.8, get_physics_process_delta_time()/3)
+	else:
+		camera.zoom.x = move_toward(camera.zoom.x, 1.0, get_physics_process_delta_time()/3)
+	camera.zoom.y = camera.zoom.x
+
+func lock_camera(time: float = 1) -> void:
+	camLockTime = max(time,camLockTime)
+
+func update_camera_limits(delta: float) -> void:
+	if camera_shift_time <= 0.0:
+		snap_camera_to_limits()
+		return
+	for i: int in 4:
+		camera_limits_current[i] = move_toward(camera_limits_current[i],camera_limits_target[i],camera_shift_time*(60*delta))
+	camera.limit_left = roundi(camera_limits_current[0])
+	camera.limit_top = roundi(camera_limits_current[1])
+	camera.limit_right = roundi(camera_limits_current[2])
+	camera.limit_bottom = roundi(camera_limits_current[3])
+
+func snap_camera_to_limits() -> void:
+	for i in 4:
+		camera_limits_current[i] = camera_limits_target[i]
+	camera.limit_left = roundi(camera_limits_current[0])
+	camera.limit_top = roundi(camera_limits_current[1])
+	camera.limit_right = roundi(camera_limits_current[2])
+	camera.limit_bottom = roundi(camera_limits_current[3])
+	if Global.y_wrap:
+		camera.limit_top = -4096
+		camera.limit_bottom = 4096
+
+# Water bubble timer
+func _on_BubbleTimer_timeout() -> void:
+	if is_in_water and shield != SHIELDS.BUBBLE:
+		# Generate Bubble
+		var bub: Node2D = Bubble.instantiate()
+		bub.z_index = z_index+3
+		if airTimer > 0:
+			bub.global_position = global_position+Vector2(8*direction,0)
+			$BubbleTimer.start(max(randf()*3,0.5))
+		elif movement.y < 250:
+			bub.global_position = global_position+Vector2(0,-8)
+			# pick either 0 or 1 for the bubble type (cosmetic)
+			bub.bubbleType = int(round(randf()))
+			$BubbleTimer.start(0.1)
+		else:
+			bub.queue_free()
+			$BubbleTimer.start(max(randf()*3,0.5))
+		get_parent().add_child(bub)
+
+# player actions
+
+# player movements
+func action_move(delta: float) -> void:
+	# moving left and right, check if left or right is being pressed
+	if inputs[INPUTS.XINPUT] != 0:
+		if horizontalLockTimer <= 0: # skip logic if lock timer is around, friction gets skipped too since the original games worked like that
+			# check if movement is less then the top speed
+			if movement.x*inputs[INPUTS.XINPUT] < top:
+				# check if the player is pressing the direction they're moving
+				if sign(movement.x) == inputs[INPUTS.XINPUT] or sign(movement.x) == 0:
+					if abs(movement.x) < top:
+						movement.x = move_toward(movement.x,top*inputs[INPUTS.XINPUT],acc/GlobalFunctions.div_by_delta(delta))
+				else:
+					# reverse direction
+					movement.x += dec/GlobalFunctions.div_by_delta(delta)*inputs[INPUTS.XINPUT]
+					# implament weird turning quirk
+					if (sign(movement.x) != sign(movement.x-dec/GlobalFunctions.div_by_delta(delta)*inputs[INPUTS.XINPUT])):
+						movement.x = 0.5*60*sign(movement.x)
+	else:
+		# come to a stop if neither left or right is pressed
+		if (movement.x != 0):
+			# check that decreasing movement won't go too far
+			if (sign(movement.x - (frc/GlobalFunctions.div_by_delta(delta))*sign(movement.x)) == sign(movement.x)):
+				movement.x -= (frc/GlobalFunctions.div_by_delta(delta))*sign(movement.x)
+			else:
+				movement.x -= movement.x
+
+func action_jump(animation: StringName = "roll",
+airJumpControl: bool = true, playSound: bool =true) -> void:
+	if forceRoll <= 0: # check to prevent jumping in roll tubes
+		curled = (character == Global.CHARACTERS.MIGHTY)
+		reflective = curled
+		animator.play(animation)
+		animator.advance(0)
+		movement.y = -jmp
+		jump_buffer = 0
+		if playSound:
+			sfx[0].play()
+			
+		air_control = airJumpControl
+		cameraDragLerp = 1
+		disconect_from_floor()
+		set_state(STATES.JUMP)
+
+func emit_enemy_bounce() -> void:
+	emit_signal("enemy_bounced")
+
+func action_water_run_handle() -> void:
+	var dash:AnimatedSprite2D = $WaterSurface
+	# check for water (check that collision has the water tag)
+	var touchWater: bool = false
+	var colCheck: KinematicCollision2D = move_and_collide(Vector2.DOWN.rotated(rotation),true)
+	if colCheck:
+		touchWater = colCheck.get_collider().get_collision_layer_value(23)
+	
+
+	# enable dash dust if touching water
+	dash.visible = (get_collision_mask_value(23) and touchWater and ground)
+	dash.scale.x = sign(movement.x)
+	dash.position.y = hitbox.shape.size.y/2.0
+
+	# play water run sound
+	if get_collision_mask_value(23) and touchWater and ground:
+		if !sfx[29].playing:
+			sfx[29].play()
+	else:
+		sfx[29].stop()
+
+func handle_animation_speed(gSpeed: float = groundSpeed) -> void:
+	match(animator.current_animation):
+		"walk", "run", "peelOut":
+			var duration: float = floor(max(0,8.0-abs(gSpeed/60.0)))
+			animator.speed_scale = (1.0/(duration+1.0))*(60.0/10.0)
+		"roll":
+			var duration: float = floor(max(0,4.0-abs(gSpeed/60.0)))
+			animator.speed_scale = (1.0/(duration+1.0))*(60.0/10.0)
+		"push":
+			var duration: float = floor(max(0,8.0-abs(gSpeed/60.0)) * 4)
+			animator.speed_scale = (1.0/(duration+1.0))*(60.0/10.0)
+		"spinDash": #animate at 60fps (fps were animated at 0.1 seconds)
+			animator.speed_scale = 60.0/10.0
+		"dropDash":
+			animator.speed_scale = 20.0/10.0
+		"climb":
+			animator.speed_scale = -movement.y/(40.0*(1.0+float(is_super)))
+		_:
+			animator.speed_scale = 1
+
+
+func _on_tree_exiting() -> void:
+	Global.players.erase(self)
+	if partner and partner.partner == self:
+		partner.partner = null

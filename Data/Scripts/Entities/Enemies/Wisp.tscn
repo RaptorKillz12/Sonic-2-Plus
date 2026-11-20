@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cxflei1nuvbmq"]
+
+[ext_resource type="Script" uid="uid://bgujlcu8w7l1g" path="res://Data/Scripts/Enemies/wisp.gd" id="1_4u37n"]
+[ext_resource type="Texture2D" uid="uid://dbhadxblkwq2" path="res://Data/Sprites/Enemies/Whisp.png" id="2_xv2le"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5jm3"]
+atlas = ExtResource("2_xv2le")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8n3n"]
+atlas = ExtResource("2_xv2le")
+region = Rect2(24, 0, 24, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p307g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5jm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8n3n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Wisp" type="CharacterBody2D" unique_id=1264352373 groups=["Enemy"]]
+collision_layer = 16384
+collision_mask = 0
+script = ExtResource("1_4u37n")
+
+[node name="CollissionMask" type="CollisionShape2D" parent="." unique_id=2107429911]
+shape = SubResource("1")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1100798671]
+collision_layer = 0
+collision_mask = 528384
+
+[node name="HitBox" type="CollisionShape2D" parent="DamageArea" unique_id=833942999]
+modulate = Color(1, 0, 0, 1)
+shape = SubResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1495824323]
+sprite_frames = SubResource("SpriteFrames_p307g")
+autoplay = "default"
+frame_progress = 0.462076
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1285571283]
+
+[connection signal="area_entered" from="DamageArea" to="." method="_on_DamageArea_area_entered"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_body_exited"]

@@ -1,0 +1,142 @@
+extends Node2D
+
+## The current Zone ID, for Global.ZONES
+@export var zone_id: Global.ZONES = 0 as Global.ZONES
+
+## If true, play the level card animator and use the Zone Name Text
+@export var playLevelCard: bool = true
+@export_group("Title Card Properties")
+## Text to use in the Zone Name label.
+@export var zone_name_overide: String = ""
+## Text to use in the Zone label.
+@export var zone_text: String = "Zone"
+## Act ID
+@export var act_number: int = 1
+
+@export_group("Music")
+@export var music: AudioStream = preload("res://Data/Music/EmeraldHill.ogg")
+@export var music2P: AudioStream = preload("res://Data/Music/EmeraldHill2.ogg")
+@export var F_music: AudioStream = preload("res://Data/Music/EmeraldHill_F.ogg")
+@export var F_music2P: AudioStream = preload("res://Data/Music/EmeraldHill2_F.ogg")
+@export var invmusic: AudioStream = preload("res://Data/Music/Invincibility.ogg")
+@export var F_invmusic: AudioStream = preload("res://Data/Music/Invincibility_F.ogg")
+@export var boss_theme: AudioStream = preload("res://Data/Music/Boss.ogg")
+
+## SiIvagunner
+@export var silvagunner_music: AudioStream
+
+@export_group("Features")
+## Animals dropped from Badniks in this act.
+@export_enum("Bird","Squirrel",
+"Rabbit", "Chicken",
+"Penguin", "Seal",
+"Pig", "Eagle",
+"Mouse", "Monkey",
+"Turtle","Bear",
+"Beaver","Fox")var animal1: int = 0
+## Animals dropped from Badniks in this act.
+@export_enum("Bird", "Squirrel",
+"Rabbit", "Chicken",
+"Penguin", "Seal",
+"Pig", "Eagle",
+"Mouse", "Monkey",
+"Turtle", "Bear",
+"Beaver","Fox")var animal2: int = 1
+## If 0, the number of rings will be calculated automatically.
+@export var ringsForPerfect: int = 0
+@export_subgroup("Optional")
+@export var waterSourceColor: Texture2D = preload("res://Data/Sprites/Palettes/BasePal.png")
+@export var waterReplaceColor: Texture2D = preload("res://Data/Sprites/Palettes/WetPal.png")
+@export var wind_force: Vector2 = Vector2.ZERO
+@export var end_cutscene: bool = false
+
+@export_group("Scrolling")
+# Boundries
+@export var defaultLeftBoundry: int  = 0
+@export var defaultTopBoundry: int  = 0
+@export var defaultRightBoundry: int = 16384
+@export var defaultBottomBoundry: int = 2048
+
+## If true, the top and bottom boundary will be ignored.
+@export var y_wrap: bool = false
+
+var zone_loader: String = "res://Data/Stages/Presentation/ZoneLoader.tscn"
+var twoPlayerWindow: PackedScene  = preload("res://Data/Stages/TwoPlayerScreenView.tscn")
+
+func _ready() -> void:
+	level_reset_data()
+	Global.saved_zone_id = zone_id as Global.ZONES
+
+	# Setup Boundries
+	Global.y_wrap = y_wrap
+	Global.hardBorderLeft  = defaultLeftBoundry
+	Global.hardBorderRight = defaultRightBoundry
+	Global.hardBorderTop    = defaultTopBoundry
+	Global.hardBorderBottom  = defaultBottomBoundry
+
+	call_deferred("setup_hud_properties")
+	if Global.two_player_mode == true:
+		var twoPlayerScene: Control = twoPlayerWindow.instantiate()
+		add_child(twoPlayerScene)
+
+func setup_hud_properties() -> void:
+	if Global.hud:
+		Global.hud.playLevelCard = playLevelCard
+		Global.hud.end_cutscene = end_cutscene
+		Global.hud.waterSourceColor = waterSourceColor
+		Global.hud.waterReplaceColor = waterReplaceColor
+		if ringsForPerfect <= 0:
+			ringsForPerfect = get_tree().get_nodes_in_group("Rings").size()
+			print(str(ringsForPerfect) + " rings to perfect.")
+		Global.hud.ringsForPerfect = ringsForPerfect
+		Global.pause.get_node("PauseMenu/TextureRect3/Label").text = str(ringsForPerfect)
+		
+		if !zone_name_overide: zone_name_overide = Global.zone_names[zone_id]
+		Global.hud.initialize_hud(zone_name_overide,zone_text,act_number)
+
+# used for stage starts, also used for returning from special stages
+func level_reset_data(_playCard: bool = true) -> void:
+	Global.stage_cleared = false
+	Global.fightingBoss = false
+	SoundDriver.music.stop()
+	# music handling
+	var level_theme: AudioStream = null
+	if SoundDriver.music != null:
+		if music != null:
+			if !Global.two_player_mode:
+				level_theme = music
+				SoundDriver.set_level_music(level_theme,F_music)
+				SoundDriver.set_invincible_music(invmusic,F_invmusic)
+			else:
+				level_theme = music2P
+				SoundDriver.set_level_music(level_theme,F_music2P)
+				SoundDriver.set_invincible_music(invmusic,F_invmusic)
+			SoundDriver.music.stream_paused = false
+			SoundDriver.themes[SoundDriver.THEME.NORMAL] = level_theme
+	
+	if boss_theme:
+		SoundDriver.themes[SoundDriver.THEME.BOSS] = boss_theme
+	
+	SoundDriver.currentTheme = SoundDriver.THEME.NORMAL
+	SoundDriver.playMusic(level_theme,true)
+	
+	if Global.saved_checkpoint < 0:
+		Global.levelTime = 0
+		Global.levelTimeP2 = 0
+
+	#Clear Object Arrays used within levels
+	var index: int = 0
+	while index < len(Global.slot_machines):
+		if !is_instance_valid(Global.slot_machines[index]):
+			Global.slot_machines.remove_at(index)
+		else:
+			index +=1
+	
+	# set next zone
+	Global.next_zone_pointer = zone_loader
+	
+	# set animals
+	Global.animals = [animal1,animal2]
+	# if global hud and play card, run hud ready script
+	if is_instance_valid(Global.hud): #_playCard and
+		$HUD._ready()

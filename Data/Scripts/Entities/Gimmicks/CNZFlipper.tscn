@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3dq6cs7sku84"]
+
+[ext_resource type="Texture2D" uid="uid://d1lesuu8bmb3e" path="res://Data/Sprites/Gimmicks/CNZFlippers.png" id="1_fxy2p"]
+[ext_resource type="Script" uid="uid://c17x1bvpk1kxb" path="res://Data/Scripts/Gimmicks/cnz_flipper.gd" id="1_yq1xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4xse"]
+size = Vector2(16, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4pm5"]
+size = Vector2(56, 24)
+
+[node name="CnzFlipper" type="StaticBody2D"]
+collision_layer = 8192
+collision_mask = 8192
+script = ExtResource("1_yq1xs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fxy2p")
+hframes = 3
+vframes = 2
+
+[node name="AngledCollision" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-24, -8, 24, 12, 24, 20, -24, 8)
+
+[node name="VeritcalCollison" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_h4xse")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -4)
+shape = SubResource("RectangleShape2D_h4pm5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

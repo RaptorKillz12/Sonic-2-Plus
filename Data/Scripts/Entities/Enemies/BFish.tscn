@@ -1,0 +1,132 @@
+[gd_scene load_steps=14 format=3 uid="uid://b5bc364w4mjww"]
+
+[ext_resource type="Script" uid="uid://cnc5c3d7pyk1n" path="res://Data/Scripts/Enemies/BFish.gd" id="1_8ytre"]
+[ext_resource type="Texture2D" uid="uid://duqbkmg0cgbf7" path="res://Data/Sprites/Enemies/BFish.png" id="2_8mvhu"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(30, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63p67"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rce35"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utpa1"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kat4"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1e4g"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0sl3"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd6ee"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dmdf"]
+atlas = ExtResource("2_8mvhu")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3aeah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63p67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rce35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utpa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kat4")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1e4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0sl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd6ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dmdf")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4se4"]
+size = Vector2(112, 90)
+
+[node name="BFish" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 16384
+collision_mask = 0
+script = ExtResource("1_8ytre")
+
+[node name="CollissionMask" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="DamageArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 528384
+
+[node name="HitBox" type="CollisionShape2D" parent="DamageArea"]
+modulate = Color(1, 0, 0, 1)
+shape = SubResource("1")
+
+[node name="Sprite2D" type="Node2D" parent="."]
+
+[node name="BFishSprite2" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_3aeah")
+autoplay = "default"
+
+[node name="PlayerCheck" type="Area2D" parent="Sprite2D/BFishSprite2"]
+visible = false
+collision_layer = 0
+collision_mask = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/BFishSprite2/PlayerCheck"]
+position = Vector2(-56, 0)
+shape = SubResource("RectangleShape2D_f4se4")
+
+[node name="Sample" type="Sprite2D" parent="Sprite2D"]
+visible = false
+texture = ExtResource("2_8mvhu")
+hframes = 4
+vframes = 2
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+visible = false
+position = Vector2(1.90735e-06, -1.90735e-06)
+rect = Rect2(-160, -112, 320, 224)
+
+[connection signal="area_entered" from="DamageArea" to="." method="_on_DamageArea_area_entered"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Sprite2D/BFishSprite2/PlayerCheck" to="." method="_on_player_check_body_entered"]
+[connection signal="body_exited" from="Sprite2D/BFishSprite2/PlayerCheck" to="." method="_on_player_check_body_exited"]

@@ -1,0 +1,62 @@
+extends Control
+
+@onready var viewport1: SubViewport = $CanvasLayer/SubViewportContainer/SubViewport
+@onready var viewport2: SubViewport = $CanvasLayer/SubViewportContainer2/SubViewport
+
+@onready var cameraPlayer1: Camera2D = $CanvasLayer/SubViewportContainer/SubViewport/CameraP1
+@onready var cameraPlayer2: Camera2D = $CanvasLayer/SubViewportContainer2/SubViewport/CameraP2
+
+# Parallax Layers
+var parallaxBackgrounds: Array[String] = [
+	"res://Data/Stages/Backgrounds/00-EmeraldHill.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/01-HiddenPalace.tscn",
+	"res://Data/Stages/Backgrounds/02-HillTop.tscn",
+	"res://Data/Stages/Backgrounds/03-ChemicalPlant.tscn",
+	"res://Data/Stages/Backgrounds/04-OilOcean.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/05-NeoGreenHill.tscn",
+	"res://Data/Stages/Backgrounds/06-Metropolis.tscn",
+	"res://Data/Stages/Backgrounds/07-DustHill.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/08-WoodGadget.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/09-CasinoNight.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/10-JewelGrotto.tscn",
+	"res://Data/Stages/Backgrounds/11-WinterHill.tscn",
+	"res://Data/Stages/Backgrounds/12-SandShower.tscn",	# Two-Player zone
+	"res://Data/Stages/Backgrounds/13-TropicalJungle.tscn"
+	# Sky Fortress and Death Egg are excluded from Two-Player Mode
+]
+
+func _ready() -> void:
+	var parallax: String = parallaxBackgrounds[min(Global.saved_zone_id,parallaxBackgrounds.size()-1)]
+	var scene: PackedScene = load(parallax)
+	var instance: ParallaxBackground = scene.instantiate()
+	$CanvasLayer/SubViewportContainer/SubViewport.add_child(instance)
+	instance = scene.instantiate()
+	$CanvasLayer/SubViewportContainer2/SubViewport.add_child(instance)
+	
+	call_deferred("_all_players_ready")
+	viewport1.world_2d = get_viewport().world_2d
+	viewport2.world_2d = get_viewport().world_2d
+	
+	var resolution: Vector2i = Global.aspectResolutions[Global.aspectRatio]
+	$CanvasLayer/SubViewportContainer.size.x = resolution.x
+	$CanvasLayer/SubViewportContainer2.size.x = resolution.x
+	$CanvasLayer/SubViewportContainer/SubViewport.size = Vector2i(resolution.x,112)
+	$CanvasLayer/SubViewportContainer2/SubViewport.size = Vector2i(resolution.x,112)
+	$CanvasLayer/SubViewportContainer/SubViewport.size_2d_override =  Vector2i(resolution.x,224)
+	$CanvasLayer/SubViewportContainer2/SubViewport.size_2d_override =  Vector2i(resolution.x,224)
+
+func _all_players_ready() -> void:
+	if Global.players.size() < 1:
+		Global.TwoPlayer = false
+		queue_free()
+
+func _physics_process(_delta: float) -> void:
+	cameraPlayer1.global_position = Global.players[0].camera.global_position
+	cameraPlayer1.limit_left = Global.players[0].camera.limit_left
+	cameraPlayer1.limit_bottom = Global.players[0].camera.limit_bottom
+	cameraPlayer1.limit_right = Global.players[0].camera.limit_right
+	if Global.players.size() > 1:
+		cameraPlayer2.global_position = Global.players[1].camera.global_position
+		cameraPlayer2.limit_left = Global.players[1].camera.limit_left
+		cameraPlayer2.limit_bottom = Global.players[1].camera.limit_bottom
+		cameraPlayer2.limit_right = Global.players[1].camera.limit_right

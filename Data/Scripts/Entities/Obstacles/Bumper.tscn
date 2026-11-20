@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwybbnboecmkw"]
+
+[ext_resource type="Script" uid="uid://cm4dj6awr1s37" path="res://Data/Scripts/Objects/Bumper.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://twldqgya2vgk" path="res://Data/Sprites/Obstacles/bumpers.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://twp8cryjv0r6" path="res://Data/SoundFX/Objects/s2br_Bumper.wav" id="3_7wf1r"]
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ptb3"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc46i"]
+atlas = ExtResource("2")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx5j5"]
+atlas = ExtResource("2")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ptb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc46i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx5j5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bumper" type="StaticBody2D"]
+collision_layer = 65536
+collision_mask = 8192
+script = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.968627, 0, 1, 1)
+shape = SubResource("5")
+
+[node name="Bumper" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("4")
+frame = 2
+frame_progress = 1.0
+
+[node name="BumperSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7wf1r")
+bus = &"SFX"

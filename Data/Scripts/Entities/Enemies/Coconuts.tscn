@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://4rs745vaqki1"]
+
+[ext_resource type="Script" uid="uid://3gloyms7qm4e" path="res://Data/Scripts/Enemies/Coconuts.gd" id="1_gao0t"]
+[ext_resource type="Texture2D" uid="uid://hxgmxp3teiaf" path="res://Data/Sprites/Enemies/Coconuts.png" id="2_uq5tp"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(17.5, 27)
+
+[sub_resource type="Animation" id="Animation_8txuh"]
+resource_name = "CLIM\\B"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coconuts:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_ughn5"]
+resource_name = "THROW"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coconuts:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 1]
+}
+
+[sub_resource type="Animation" id="Animation_mjoop"]
+resource_name = "RESET"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coconuts:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gqdot"]
+_data = {
+&"Climb": SubResource("Animation_8txuh"),
+&"Throw": SubResource("Animation_ughn5"),
+&"Wait": SubResource("Animation_mjoop")
+}
+
+[node name="Coconuts" type="CharacterBody2D" unique_id=156792235 groups=["Enemy"]]
+collision_layer = 16384
+collision_mask = 0
+script = ExtResource("1_gao0t")
+
+[node name="CollissionMask" type="CollisionShape2D" parent="." unique_id=1861241704]
+position = Vector2(5, -4)
+shape = SubResource("1")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1392330831]
+collision_layer = 0
+collision_mask = 528384
+
+[node name="HitBox" type="CollisionShape2D" parent="DamageArea" unique_id=499776677]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(5, -4)
+shape = SubResource("1")
+
+[node name="coconuts" type="Sprite2D" parent="." unique_id=137136741]
+position = Vector2(2, 4)
+texture = ExtResource("2_uq5tp")
+hframes = 3
+
+[node name="ThrowPoint" type="Node2D" parent="coconuts" unique_id=1977845861]
+unique_name_in_owner = true
+position = Vector2(7, -20)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1596806158]
+libraries/ = SubResource("AnimationLibrary_gqdot")
+
+[node name="Timers" type="Node" parent="." unique_id=1364118110]
+
+[node name="StateTimer" type="Timer" parent="Timers" unique_id=1366169546]
+autostart = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1970522168]
+visible = false
+position = Vector2(2.27374e-13, -2.27374e-13)
+rect = Rect2(-160, -112, 320, 224)
+
+[connection signal="area_entered" from="DamageArea" to="." method="_on_DamageArea_area_entered"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timers/StateTimer" to="." method="_on_state_timer_timeout"]

@@ -25,10 +25,10 @@ boot_splash/image="res://icon.png"
 
 [autoload]
 
-Global="*res://Scripts/Global/Global.gd"
-GlobalFunctions="*res://Scripts/Global/GlobalFunctions.gd"
-Main="*res://Scene/Main.tscn"
-SoundDriver="*res://Scripts/Global/SoundDriver.gd"
+Global="*res://Data/Scripts/Global/Global.gd"
+GlobalFunctions="*res://Data/Scripts/Global/GlobalFunctions.gd"
+Main="*res://Data/Stages/Main.tscn"
+SoundDriver="*res://Data/Scripts/Global/SoundDriver.gd"
 
 [debug]
 
@@ -55,13 +55,13 @@ movie_writer/movie_file="/storage/emulated/0/test.ogv"
 [file_customization]
 
 folder_colors={
-"res://Entitites3D/": "red",
-"res://Graphics/Fonts/": "yellow"
+"res://Data/Scripts/Entities3D/": "red",
+"res://Data/Sprites/Fonts/": "yellow"
 }
 
 [gui]
 
-theme/custom_font="res://Graphics/Fonts/small_font.png"
+theme/custom_font="res://Data/Sprites/Fonts/small_font.png"
 
 [importer_defaults]
 

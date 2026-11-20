@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp4s5qc2tt2ne"]
+
+[ext_resource type="Texture2D" uid="uid://bcaotly0i273h" path="res://Data/Sprites/Objects_Zone/NGHZ_PillarLength.png" id="1_g4uct"]
+[ext_resource type="Script" uid="uid://cfqn8dffdgmue" path="res://Data/Scripts/Gimmicks/arz_rising_pillar.gd" id="1_t51va"]
+[ext_resource type="Texture2D" uid="uid://iyttgag21vi2" path="res://Data/Sprites/Objects_Zone/NGHZ_PillarCaps.png" id="2_ei4nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc0pn"]
+size = Vector2(32, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfwws"]
+size = Vector2(192, 128)
+
+[node name="ARZRisingPillar" type="StaticBody2D"]
+z_index = -2
+collision_layer = 270336
+collision_mask = 4096
+script = ExtResource("1_t51va")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48)
+shape = SubResource("RectangleShape2D_kc0pn")
+
+[node name="TopSprite" type="Sprite2D" parent="."]
+position = Vector2(-32, -96)
+texture = ExtResource("2_ei4nu")
+centered = false
+vframes = 2
+
+[node name="PillarSprite" type="Sprite2D" parent="."]
+position = Vector2(-16, -80)
+texture = ExtResource("1_g4uct")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 64)
+
+[node name="BottomSprite" type="Sprite2D" parent="."]
+position = Vector2(-32, -16)
+texture = ExtResource("2_ei4nu")
+centered = false
+vframes = 2
+frame = 1
+
+[node name="PlayerCheck" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCheck"]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_qfwws")
+
+[connection signal="body_entered" from="PlayerCheck" to="." method="_on_player_check_body_entered"]
+[connection signal="body_exited" from="PlayerCheck" to="." method="_on_player_check_body_exited"]

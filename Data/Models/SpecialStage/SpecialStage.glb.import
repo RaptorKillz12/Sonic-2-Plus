@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bfqn8cun070vp"
+path="res://.godot/imported/SpecialStage.glb-ba4861db6672a5014990e5c6605dd424.scn"
+
+[deps]
+
+source_file="res://Data/Models/SpecialStage/SpecialStage.glb"
+dest_files=["res://.godot/imported/SpecialStage.glb-ba4861db6672a5014990e5c6605dd424.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Color1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/Models/SpecialStage/Materials/Color1.tres",
+"use_external/path": "uid://dsj5jspojm7uw"
+},
+"Color2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/Models/SpecialStage/Materials/Color2.tres",
+"use_external/path": "uid://dfs842p8fj03b"
+},
+"Flag": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/Models/SpecialStage/Materials/Flag.tres",
+"use_external/path": "uid://jcfwnib3s02r"
+},
+"Lights": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/Models/SpecialStage/Materials/Lights.tres",
+"use_external/path": "uid://dfd2e2rfd0elp"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

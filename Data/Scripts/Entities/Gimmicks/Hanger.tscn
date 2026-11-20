@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2qs2ji487f1t"]
+
+[ext_resource type="Script" uid="uid://b3dlgsscem205" path="res://Data/Scripts/Objects/hanger_2.gd" id="1_gymur"]
+[ext_resource type="AudioStream" uid="uid://q41osdy626gj" path="res://Data/SoundFX/Player/s2br_Grab.wav" id="2_kjrtt"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(16, 10)
+
+[node name="Hanger" type="Area2D"]
+process_priority = -1
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource("1_gymur")
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="Grab" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kjrtt")
+volume_db = 6.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://uh2c8jbp8qwd"]
+
+[ext_resource type="Texture2D" uid="uid://dxcdt4qimdnl7" path="res://Data/Sprites/Palettes/CPZ_Pal_Dry.png" id="2_pf8vr"]
+[ext_resource type="Shader" uid="uid://y2o3yrr3tdag" path="res://Data/Shaders/PaletteSwap.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://6dck5afialg7" path="res://Data/Sprites/Palettes/DEZ_Pal.png" id="3_5d6ew"]
+
+[resource]
+shader = ExtResource("3")
+shader_parameter/amount = 64.0
+shader_parameter/originalPalette = ExtResource("2_pf8vr")
+shader_parameter/swapPalette = ExtResource("3_5d6ew")
