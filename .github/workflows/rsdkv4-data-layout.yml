@@ -2,6 +2,11 @@ name: Reorganize project into RSDKv4-style Data layout
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - rsdkv4-reorganization
+    paths:
+      - '.github/workflows/rsdkv4-data-layout.yml'
 
 permissions:
   contents: write
@@ -100,7 +105,7 @@ jobs:
           from pathlib import Path
           import re
           p = Path("project.godot").read_text(encoding="utf-8")
-          refs = re.findall(r'res://[^"\s]+', p)
+          refs = re.findall(r'res://[^"\\s]+', p)
           missing = [x for x in refs if not Path(x[6:]).exists() and not x.startswith("res://.godot/")]
           if missing:
               raise SystemExit("Missing project.godot paths: " + ", ".join(missing))
