@@ -126,6 +126,13 @@ jobs:
                   else:
                       bucket="Global"
                   add(f, sprites/bucket/folder/f.relative_to(src))
+          # Shared fonts and the extra WFZ graphics are retained under Global
+          # because the requested sprite root uses zone abbreviations only.
+          add(sprites/"Fonts", sprites/"Global"/"Fonts")
+          add(sprites/"WFZ", sprites/"Global"/"WFZ")
+          for loose in sprites.glob("Light_Glow*"):
+              if loose.is_file(): add(loose, sprites/"Global"/loose.name)
+
           # Existing player/title/special folders remain as named.
           # Any legacy menu sprite folder is distinct from Game/Menu UI textures.
           add(sprites/"Menus", sprites/"Global"/"MenuSprites")
