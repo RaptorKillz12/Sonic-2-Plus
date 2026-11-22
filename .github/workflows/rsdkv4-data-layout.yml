@@ -108,7 +108,7 @@ jobs:
           from pathlib import Path
           import re
           project = Path("project.godot").read_text(encoding="utf-8")
-          refs = re.findall(r'res://[^"\\s]+', project)
+          refs = re.findall(r'res://[^"\s]+', project)
           missing = [ref for ref in refs if not Path(ref[6:]).exists() and not ref.startswith("res://.godot/")]
           if missing:
               raise SystemExit("Missing project.godot paths: " + ", ".join(missing))
