@@ -7,7 +7,7 @@ path="res://.godot/imported/2PlayerText.png-6e7ca7849ba713460ba28f09ce4daa1e.fon
 
 [deps]
 
-source_file="res://Data/Sprites/Fonts/2PlayerText.png"
+source_file="res://Data/Sprites/Global/Fonts/2PlayerText.png"
 dest_files=["res://.godot/imported/2PlayerText.png-6e7ca7849ba713460ba28f09ce4daa1e.fontdata"]
 
 [params]

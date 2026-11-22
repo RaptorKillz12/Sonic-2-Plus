@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cymf2w6itqsjk"]
 
 [ext_resource type="TileSet" uid="uid://bk1ere21h4285" path="res://Data/Stages/LSelect/Tileset/Menus.tres" id="1_2wysr"]
-[ext_resource type="FontFile" uid="uid://dbiyiqdov7fag" path="res://Data/Sprites/Fonts/mid_font.png" id="1_kd5bv"]
-[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="2_4wis2"]
+[ext_resource type="FontFile" uid="uid://dbiyiqdov7fag" path="res://Data/Sprites/Global/Fonts/mid_font.png" id="1_kd5bv"]
+[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Global/Fonts/small_font.png" id="2_4wis2"]
 [ext_resource type="Script" uid="uid://cd1s75dw208xp" path="res://Data/Scripts/Menu/DemoCredits.gd" id="4_3jtjl"]
 
 [node name="DemoCredits" type="Node2D" unique_id=1684582765]

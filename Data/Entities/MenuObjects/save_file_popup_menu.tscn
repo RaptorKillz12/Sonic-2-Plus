@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bm5ga1ew172sj" path="res://Data/Scripts/Menu/save_file_popup_menu.gd" id="1_3mokx"]
 [ext_resource type="Texture2D" uid="uid://pybphols1sb2" path="res://Data/Game/Menu/MenuBox.png" id="2_4stxo"]
 [ext_resource type="Texture2D" uid="uid://b2m8w8il8ycx8" path="res://Data/Game/Menu/CharacterPreviews.png" id="3_4stxo"]
-[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="4_0d7rg"]
+[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Global/Fonts/small_font.png" id="4_0d7rg"]
 [ext_resource type="Texture2D" uid="uid://bhldf71m4a4w7" path="res://Data/Game/Menu/MenuBanner.png" id="4_g52pm"]
 [ext_resource type="Texture2D" uid="uid://d3g0w6uwq7bvj" path="res://Data/Game/Menu/Icons_All.png" id="5_cf63m"]
 [ext_resource type="Texture2D" uid="uid://bf2lhfxal46gj" path="res://Data/Game/Menu/ButtonUp.png" id="5_g52pm"]

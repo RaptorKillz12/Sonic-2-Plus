@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3qxfn5v4xwcr"
-path="res://.godot/imported/WGZ_Swing.png-9118d47b673066eb6f2942c90b66603d.ctex"
+uid="uid://clu1dtqoy456h"
+path="res://.godot/imported/WGZ_Blocks.png-cc3b528fe55933721d7e1add4f9a4f31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Obstacles/WGZ_Swing.png"
-dest_files=["res://.godot/imported/WGZ_Swing.png-9118d47b673066eb6f2942c90b66603d.ctex"]
+source_file="res://Data/Sprites/Global/WFZ/Tiles/WGZ/WGZ_Blocks.png"
+dest_files=["res://.godot/imported/WGZ_Blocks.png-cc3b528fe55933721d7e1add4f9a4f31.ctex"]
 
 [params]
 

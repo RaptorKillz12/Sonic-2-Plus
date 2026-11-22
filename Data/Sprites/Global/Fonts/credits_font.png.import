@@ -7,7 +7,7 @@ path="res://.godot/imported/credits_font.png-94213a9b44de9c40cd87d4b0a20cb427.fo
 
 [deps]
 
-source_file="res://Data/Sprites/Fonts/credits_font.png"
+source_file="res://Data/Sprites/Global/Fonts/credits_font.png"
 dest_files=["res://.godot/imported/credits_font.png-94213a9b44de9c40cd87d4b0a20cb427.fontdata"]
 
 [params]

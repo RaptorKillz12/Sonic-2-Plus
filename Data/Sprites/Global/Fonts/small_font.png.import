@@ -7,7 +7,7 @@ path="res://.godot/imported/small_font.png-62d5a8b2d86f2c466425e37aa153cb4e.font
 
 [deps]
 
-source_file="res://Data/Sprites/Fonts/small_font.png"
+source_file="res://Data/Sprites/Global/Fonts/small_font.png"
 dest_files=["res://.godot/imported/small_font.png-62d5a8b2d86f2c466425e37aa153cb4e.fontdata"]
 
 [params]

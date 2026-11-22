@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd3504rrs08jh"
-path="res://.godot/imported/WGZ_HillTops.png-c884cf7cb3e571f8e9e07f90e592a89a.ctex"
+uid="uid://d3qxfn5v4xwcr"
+path="res://.godot/imported/WGZ_Swing.png-9118d47b673066eb6f2942c90b66603d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Backgrounds/WGZ/WGZ_HillTops.png"
-dest_files=["res://.godot/imported/WGZ_HillTops.png-c884cf7cb3e571f8e9e07f90e592a89a.ctex"]
+source_file="res://Data/Sprites/Global/WFZ/Obstacles/WGZ_Swing.png"
+dest_files=["res://.godot/imported/WGZ_Swing.png-9118d47b673066eb6f2942c90b66603d.ctex"]
 
 [params]
 

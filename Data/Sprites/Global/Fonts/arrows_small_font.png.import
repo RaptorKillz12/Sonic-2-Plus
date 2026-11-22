@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq8re1op17rxw"
-path="res://.godot/imported/WGZ_BG_Top.png-76abd2213830ebd3e9921b0cc6e336c4.ctex"
+uid="uid://dhygmoxun35w1"
+path="res://.godot/imported/arrows_small_font.png-c63ac0edf2376800c22b3807a16803a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Backgrounds/WGZ/WGZ_BG_Top.png"
-dest_files=["res://.godot/imported/WGZ_BG_Top.png-76abd2213830ebd3e9921b0cc6e336c4.ctex"]
+source_file="res://Data/Sprites/Global/Fonts/arrows_small_font.png"
+dest_files=["res://.godot/imported/arrows_small_font.png-c63ac0edf2376800c22b3807a16803a8.ctex"]
 
 [params]
 

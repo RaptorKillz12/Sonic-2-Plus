@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2xskcomtpo2x"]
 
 [ext_resource type="Script" uid="uid://qfdpnkjdbh2q" path="res://Data/Scripts/Menu/controller_menu.gd" id="1_vjcje"]
-[ext_resource type="FontFile" uid="uid://dbiyiqdov7fag" path="res://Data/Sprites/Fonts/mid_font.png" id="2_vjcje"]
+[ext_resource type="FontFile" uid="uid://dbiyiqdov7fag" path="res://Data/Sprites/Global/Fonts/mid_font.png" id="2_vjcje"]
 [ext_resource type="Script" uid="uid://ot3ubey0rie6" path="res://Data/Scripts/Menu/ControlBindButton.gd" id="3_xxoep"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xxoep"]

@@ -7,7 +7,7 @@ path="res://.godot/imported/mid_font.png-ac433a2aa85d068b989b86ee0fa866a3.fontda
 
 [deps]
 
-source_file="res://Data/Sprites/Fonts/mid_font.png"
+source_file="res://Data/Sprites/Global/Fonts/mid_font.png"
 dest_files=["res://.godot/imported/mid_font.png-ac433a2aa85d068b989b86ee0fa866a3.fontdata"]
 
 [params]

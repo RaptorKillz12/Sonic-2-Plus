@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duqfnuydavynf"
-path="res://.godot/imported/WGZ_BouncyBranch.png-05462a3b2a4eab90630a9644bebec7b2.ctex"
+uid="uid://cixcldjw2ruxa"
+path="res://.godot/imported/WGZ_SwingChain.png-9300cfc7035b62b8e83e5ef47a328d56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Objects_Zone/WGZ_BouncyBranch.png"
-dest_files=["res://.godot/imported/WGZ_BouncyBranch.png-05462a3b2a4eab90630a9644bebec7b2.ctex"]
+source_file="res://Data/Sprites/Global/WFZ/Obstacles/WGZ_SwingChain.png"
+dest_files=["res://.godot/imported/WGZ_SwingChain.png-9300cfc7035b62b8e83e5ef47a328d56.ctex"]
 
 [params]
 

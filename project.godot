@@ -68,7 +68,7 @@ folder_colors={
 
 [gui]
 
-theme/custom_font="res://Data/Sprites/Fonts/small_font.png"
+theme/custom_font="res://Data/Sprites/Global/Fonts/small_font.png"
 
 [importer_defaults]
 

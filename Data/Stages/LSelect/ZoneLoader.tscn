@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://tr33s3gs3j3n"]
 
 [ext_resource type="Script" uid="uid://cmv1njb8nwqsf" path="res://Data/Scripts/Menu/zone_loader.gd" id="1_3r84a"]
-[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="2_q51dt"]
+[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Global/Fonts/small_font.png" id="2_q51dt"]
 
 [node name="ZoneLoader" type="CanvasLayer" unique_id=1769504970]
 script = ExtResource("1_3r84a")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd3h6qs42ia2p"
-path="res://.godot/imported/WGZ_BG.png-80788991ccce78048e8e7cc827dd781a.ctex"
+uid="uid://r4e6d5t5c2wl"
+path="res://.godot/imported/bridge_log_WGZ.png-9b3b614463d59ce1e67c9f17a58885df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Backgrounds/WGZ/WGZ_BG.png"
-dest_files=["res://.godot/imported/WGZ_BG.png-80788991ccce78048e8e7cc827dd781a.ctex"]
+source_file="res://Data/Sprites/Global/WFZ/Gimmicks/bridge_log_WGZ.png"
+dest_files=["res://.godot/imported/bridge_log_WGZ.png-9b3b614463d59ce1e67c9f17a58885df.ctex"]
 
 [params]
 

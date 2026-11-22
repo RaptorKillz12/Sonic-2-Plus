@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rw1redg56k65"
-path="res://.godot/imported/WGZ_Saw.png-ad45af23198fa549109d934c81948df1.ctex"
+uid="uid://d2mbnnoh032lo"
+path="res://.godot/imported/Light_Glow.png-1ef959c1ecedb5f82f66201b0a5629db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/WFZ/Hazards/WGZ_Saw.png"
-dest_files=["res://.godot/imported/WGZ_Saw.png-ad45af23198fa549109d934c81948df1.ctex"]
+source_file="res://Data/Sprites/Global/Light_Glow.png"
+dest_files=["res://.godot/imported/Light_Glow.png-1ef959c1ecedb5f82f66201b0a5629db.ctex"]
 
 [params]
 

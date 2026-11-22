@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2mbnnoh032lo"
-path="res://.godot/imported/Light_Glow.png-1ef959c1ecedb5f82f66201b0a5629db.ctex"
+uid="uid://dd3504rrs08jh"
+path="res://.godot/imported/WGZ_HillTops.png-c884cf7cb3e571f8e9e07f90e592a89a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Data/Sprites/Light_Glow.png"
-dest_files=["res://.godot/imported/Light_Glow.png-1ef959c1ecedb5f82f66201b0a5629db.ctex"]
+source_file="res://Data/Sprites/Global/WFZ/Backgrounds/WGZ/WGZ_HillTops.png"
+dest_files=["res://.godot/imported/WGZ_HillTops.png-c884cf7cb3e571f8e9e07f90e592a89a.ctex"]
 
 [params]
 

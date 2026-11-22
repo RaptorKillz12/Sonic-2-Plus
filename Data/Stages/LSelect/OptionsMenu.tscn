@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b0kjaiaw0tt0l" path="res://Data/Scripts/Menu/options_menu.gd" id="1_qjo47"]
 [ext_resource type="PackedScene" uid="uid://b1ucupog3a1yg" path="res://Data/Stages/LSelect/options_menu_button.tscn" id="5_lbgyq"]
 [ext_resource type="AudioStream" uid="uid://uay8t1b3i1hi" path="res://Data/SoundFX/Stage/Gimmicks/s2br_Switch.wav" id="5_pyoer"]
-[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="6_k1rep"]
+[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Global/Fonts/small_font.png" id="6_k1rep"]
 [ext_resource type="AudioStream" uid="uid://jt28gfxybprb" path="res://Data/SoundFX/Stage/Objects/RingStereo.wav" id="7_xnorb"]
 [ext_resource type="Theme" uid="uid://qblf2beyokrn" path="res://Data/Game/Resources/TwoPlayerMenuTheme.tres" id="7_xnt8k"]
 

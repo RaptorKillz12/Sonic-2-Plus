@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://boupw1tkuwucr" path="res://Data/Scripts/Menu/two_player_results.gd" id="1_c5rcg"]
 [ext_resource type="TileSet" uid="uid://bk1ere21h4285" path="res://Data/Stages/LSelect/Tileset/Menus.tres" id="2_ybi1v"]
-[ext_resource type="FontFile" uid="uid://btb3lh3cpnc6x" path="res://Data/Sprites/Fonts/mid_font.png" id="3_xvsrq"]
+[ext_resource type="FontFile" uid="uid://btb3lh3cpnc6x" path="res://Data/Sprites/Global/Fonts/mid_font.png" id="3_xvsrq"]
 [ext_resource type="Theme" uid="uid://b5b5ux4822p0m" path="res://Data/Game/Resources/Standard_Font.tres" id="4_l5r1f"]
 [ext_resource type="Theme" uid="uid://qblf2beyokrn" path="res://Data/Game/Resources/TwoPlayerMenuTheme.tres" id="5_irhwp"]
 

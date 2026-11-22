@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1ucupog3a1yg"]
 
-[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="1_kpnpu"]
+[ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Global/Fonts/small_font.png" id="1_kpnpu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20cgu"]
 draw_center = false
