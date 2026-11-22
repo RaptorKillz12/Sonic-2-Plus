@@ -4,8 +4,8 @@ extends Node2D
 
 var SFX = preload("res://Data/SoundFX/Objects/s2br_CNZSlot.wav")
 
-var ringprize = preload("res://Data/Scripts/Entities/Gimmicks/Ring_Prize.tscn")
-var spikeprize = preload("res://Data/Scripts/Entities/Gimmicks/spike_prize.tscn")
+var ringprize = preload("res://Data/Entities/Gimmicks/Ring_Prize.tscn")
+var spikeprize = preload("res://Data/Entities/Gimmicks/spike_prize.tscn")
 
 const POINTS_TIME = 1.0
 

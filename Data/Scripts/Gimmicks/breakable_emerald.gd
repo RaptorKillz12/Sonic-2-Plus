@@ -2,7 +2,7 @@ extends StaticBody2D
 #variant of the breakable object
 
 var pieces: Vector2 = Vector2(2,2)
-var Piece: PackedScene = preload("res://Data/Scripts/Entities/Misc/BlockPiece.tscn")
+var Piece: PackedScene = preload("res://Data/Entities/Misc/BlockPiece.tscn")
 @export var sound: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
 @export var score: bool = true
 

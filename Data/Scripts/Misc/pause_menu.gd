@@ -1,7 +1,7 @@
 class_name PauseScene
 extends Control
 
-var yesno_menu_scene: PackedScene = preload("res://Data/Scripts/Entities/MenuObjects/yes_no_popup_menu.tscn")
+var yesno_menu_scene: PackedScene = preload("res://Data/Entities/MenuObjects/yes_no_popup_menu.tscn")
 
 var options_menu: PackedScene = preload("res://Data/Stages/Presentation/OptionsMenu.tscn")
 

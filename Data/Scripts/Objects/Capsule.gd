@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @onready var screenXSize: float = get_viewport_rect().size.x
 
-var animal_inst: PackedScene = preload("res://Data/Scripts/Entities/Misc/Animal.tscn")
+var animal_inst: PackedScene = preload("res://Data/Entities/Misc/Animal.tscn")
 var animals: Array = []
 var timer: float = 180.0/60.0
 

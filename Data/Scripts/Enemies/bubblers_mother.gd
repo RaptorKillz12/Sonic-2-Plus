@@ -1,6 +1,6 @@
 extends EnemyBase
 
-var projectile = preload("res://Data/Scripts/Entities/Enemies/Bubbler.tscn")
+var projectile = preload("res://Data/Entities/Enemies/Bubbler.tscn")
 var bullet = null
 var bubble_timer: float = 0.0
 

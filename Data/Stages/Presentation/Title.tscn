@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://qs5dmtxxf1w1"]
 
 [ext_resource type="Script" uid="uid://bh20dqq421i7d" path="res://Data/Scripts/Menu/Title.gd" id="1_jsjd7"]
-[ext_resource type="Texture2D" uid="uid://kowpuw3ugms1" path="res://Data/Sprites/title/TitleEmblem.png" id="2_7im3s"]
+[ext_resource type="Texture2D" uid="uid://kowpuw3ugms1" path="res://Data/Sprites/Title/TitleEmblem.png" id="2_7im3s"]
 [ext_resource type="FontFile" uid="uid://ml62eqfe7avn" path="res://Data/Sprites/Fonts/small_font.png" id="3_yuhp3"]
-[ext_resource type="Texture2D" uid="uid://bgbuxncngj8e4" path="res://Data/Sprites/title/TailsTitle.png" id="4_d2xjp"]
-[ext_resource type="Texture2D" uid="uid://de5i6e2h1ov1c" path="res://Data/Sprites/title/SonicTitle.png" id="5_tsdwn"]
+[ext_resource type="Texture2D" uid="uid://bgbuxncngj8e4" path="res://Data/Sprites/Title/TailsTitle.png" id="4_d2xjp"]
+[ext_resource type="Texture2D" uid="uid://de5i6e2h1ov1c" path="res://Data/Sprites/Title/SonicTitle.png" id="5_tsdwn"]
 [ext_resource type="AudioStream" uid="uid://jt28gfxybprb" path="res://Data/SoundFX/Objects/RingStereo.wav" id="6_fm38o"]
-[ext_resource type="Texture2D" uid="uid://cwy0vwatdiyhx" path="res://Data/Sprites/title/Press start.png" id="7_8n8qr"]
-[ext_resource type="PackedScene" uid="uid://0msnmityfdws" path="res://Data/Scripts/Entities/Misc/twinkle_star.tscn" id="8_yu50n"]
+[ext_resource type="Texture2D" uid="uid://cwy0vwatdiyhx" path="res://Data/Sprites/Title/Press start.png" id="7_8n8qr"]
+[ext_resource type="PackedScene" uid="uid://0msnmityfdws" path="res://Data/Entities/Misc/twinkle_star.tscn" id="8_yu50n"]
 [ext_resource type="AudioStream" uid="uid://uay8t1b3i1hi" path="res://Data/SoundFX/Gimmicks/s2br_Switch.wav" id="12_71qhx"]
 
 [sub_resource type="Animation" id="2"]

@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://c1xhc4uh26inb"]
+
+[ext_resource type="Script" uid="uid://bupr06iwc8aex" path="res://Data/Scripts/Misc/pause_menu.gd" id="1_0jcpr"]
+[ext_resource type="Texture2D" uid="uid://cx6e62r1wdwpy" path="res://Data/Game/Menu/Pause/assets.png" id="3_0jcpr"]
+[ext_resource type="PackedScene" uid="uid://b1ucupog3a1yg" path="res://Data/Stages/Presentation/assets/options_menu_button.tscn" id="4_0jcpr"]
+[ext_resource type="Texture2D" uid="uid://dt51ojxk80oqh" path="res://Data/Sprites/Items/Rings/Ring.tres" id="5_abihq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abihq"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(0, 256, 512, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qerl5"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(248, 0, 144, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26pf0"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(133, 181, 61, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwxwd"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(37, 73, 52, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ysfp"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(84, 22, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jcpr"]
+atlas = ExtResource("3_0jcpr")
+region = Rect2(1, 191, 78, 16)
+
+[node name="Pause" type="Control" unique_id=1168874349]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0jcpr")
+
+[node name="PauseCover" type="TextureRect" parent="." unique_id=1857160690]
+process_mode = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="PauseMenu" type="Control" parent="." unique_id=2071347491]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="PauseMenu" unique_id=2066879133]
+layout_mode = 0
+offset_left = -100.0
+offset_top = 128.0
+offset_right = 412.0
+offset_bottom = 168.0
+texture = SubResource("AtlasTexture_abihq")
+
+[node name="TextureRect" type="TextureRect" parent="PauseMenu" unique_id=2036384901]
+layout_mode = 0
+offset_left = 160.0
+offset_top = -56.0
+offset_right = 304.0
+offset_bottom = 200.0
+texture = SubResource("AtlasTexture_qerl5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=904923786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 184.0
+offset_top = 9.0
+offset_right = 184.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Continue" parent="PauseMenu/VBoxContainer" unique_id=1390657914 instance=ExtResource("4_0jcpr")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "continue"
+
+[node name="Restart" parent="PauseMenu/VBoxContainer" unique_id=2120541823 instance=ExtResource("4_0jcpr")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "restart"
+
+[node name="Quit" parent="PauseMenu/VBoxContainer" unique_id=1586281111 instance=ExtResource("4_0jcpr")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "quit"
+
+[node name="TextureRect3" type="TextureRect" parent="PauseMenu" unique_id=474605791]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 140.0
+offset_right = 237.0
+offset_bottom = 147.0
+texture = SubResource("AtlasTexture_26pf0")
+
+[node name="TextureRect" type="TextureRect" parent="PauseMenu/TextureRect3" unique_id=1354939956]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 8.0
+offset_right = 18.0
+offset_bottom = 28.0
+texture = ExtResource("5_abihq")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PauseMenu/TextureRect3" unique_id=682850524]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 23.0
+text = "000"
+
+[node name="TextureRect4" type="TextureRect" parent="PauseMenu" unique_id=1538865761]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.43500003
+offset_left = -68.0
+offset_top = 147.0
+offset_right = -16.0
+offset_bottom = 78.92
+texture = SubResource("AtlasTexture_vwxwd")
+
+[node name="Control" type="Control" parent="PauseMenu" unique_id=175592543]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/Control" unique_id=1984167792]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 142.0
+offset_right = 107.0
+offset_bottom = 166.0
+
+[node name="TextureRect" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=1551529506]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=2039778018]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=1403703519]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=790454051]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=952318910]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=230802827]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="PauseMenu/Control/HBoxContainer" unique_id=1436650861]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ysfp")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="PauseMenu" unique_id=310236307]
+layout_mode = 0
+offset_left = 178.0
+offset_top = -38.0
+offset_right = 256.0
+offset_bottom = -22.0
+texture = SubResource("AtlasTexture_0jcpr")
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=790286006]
+process_mode = 3
+bus = &"SFX"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

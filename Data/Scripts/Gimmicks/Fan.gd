@@ -14,7 +14,7 @@ var getFrame: float = 0.0
 var animSpeed: float = 0.0
 var pushPlayers: bool = true
 
-var Bubble = preload("res://Data/Scripts/Entities/Misc/Bubbles.tscn")
+var Bubble = preload("res://Data/Entities/Misc/Bubbles.tscn")
 enum DIRECTIONS{LEFT,VERTICAL,RIGHT}
 var direction = 0
 var names = ["Left","Vertical","Right"]

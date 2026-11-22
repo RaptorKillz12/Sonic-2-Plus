@@ -1,6 +1,6 @@
 extends "res://Data/Scripts/Objects/Hazard.gd"
 
-var projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/GenericProjectile.tscn")
+var projectile = preload("res://Data/Entities/Enemies/Projectiles/GenericProjectile.tscn")
 var bullet = null
 
 var landed = false

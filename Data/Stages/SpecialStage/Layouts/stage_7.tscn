@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bkjyltte0u76l" path="res://Data/Scripts/Special3D/special_stage_requirments.gd" id="1_vettb"]
 [ext_resource type="MeshLibrary" uid="uid://bh7gsa0o3u6j" path="res://Data/Game/Resources/SpecialStages.tres" id="2_xfme0"]
-[ext_resource type="PackedScene" uid="uid://dpl1a2gtxk5t2" path="res://Data/Scripts/Entities3D/ring_ss.tscn" id="3_rxxej"]
-[ext_resource type="PackedScene" uid="uid://bsbgvrhfhrpev" path="res://Data/Scripts/Entities3D/end_of_round.tscn" id="4_1wvph"]
-[ext_resource type="PackedScene" uid="uid://dblrkngio3lkk" path="res://Data/Scripts/Entities3D/ChaosEmerald.tscn" id="5_2wi7x"]
-[ext_resource type="PackedScene" uid="uid://d12iqp4cvtfy0" path="res://Data/Scripts/Entities3D/fix_chararcter_rotation.tscn" id="6_r0m4r"]
+[ext_resource type="PackedScene" uid="uid://dpl1a2gtxk5t2" path="res://Data/Entitites3D/ring_ss.tscn" id="3_rxxej"]
+[ext_resource type="PackedScene" uid="uid://bsbgvrhfhrpev" path="res://Data/Entitites3D/end_of_round.tscn" id="4_1wvph"]
+[ext_resource type="PackedScene" uid="uid://dblrkngio3lkk" path="res://Data/Entitites3D/ChaosEmerald.tscn" id="5_2wi7x"]
+[ext_resource type="PackedScene" uid="uid://d12iqp4cvtfy0" path="res://Data/Entitites3D/fix_chararcter_rotation.tscn" id="6_r0m4r"]
 
 [node name="Stage7" type="Node3D" unique_id=1721938570]
 script = ExtResource("1_vettb")

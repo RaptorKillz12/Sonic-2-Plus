@@ -14,7 +14,7 @@ const GRAVITY = 600
 @onready var bulletPoint: Node2D = $Redz/BulletPoint
 @onready var fire_weaver: Timer = $Timers/FireWeave
 
-var Projectile: PackedScene = preload("res://Data/Scripts/Entities/Enemies/Projectiles/RedzFire.tscn")
+var Projectile: PackedScene = preload("res://Data/Entities/Enemies/Projectiles/RedzFire.tscn")
 var bullet: Node2D = null
 var bulletSound: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Flamethrower.wav")
 

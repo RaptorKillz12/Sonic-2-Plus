@@ -1,7 +1,7 @@
 @tool
 extends BreakableBlock
 
-var tube_launcher = preload("res://Data/Scripts/Entities/Gimmicks/Invisible_launcher.tscn")
+var tube_launcher = preload("res://Data/Entities/Gimmicks/Invisible_launcher.tscn")
 
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():

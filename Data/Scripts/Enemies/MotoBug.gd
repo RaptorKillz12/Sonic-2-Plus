@@ -16,7 +16,7 @@ enum STATES{WALK,IDLE,DASH}
 var state: STATES = STATES.WALK
 
 var targets: Array[Player2D] = [] #Player objects, if any are detected.
-var Particle: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var Particle: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 func _ready() -> void:
 	flame_effect.hide()

@@ -3,7 +3,7 @@ extends Control
 @export var music = preload("res://Data/Music/MainMenu.ogg")
 var title_screen: String = "res://Data/Stages/Presentation/Title.tscn"
 
-var slider_menu_scene: PackedScene = preload("res://Data/Scripts/Entities/MenuObjects/slider_popup_menu.tscn")
+var slider_menu_scene: PackedScene = preload("res://Data/Entities/MenuObjects/slider_popup_menu.tscn")
 
 @onready var menu_text: VBoxContainer = $Menu
 @onready var sfx_volume_button: Button = $Menu/SFXVolumeButton

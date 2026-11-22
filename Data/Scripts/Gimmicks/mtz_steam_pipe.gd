@@ -4,7 +4,7 @@ extends AnimatableBody2D
 @export var spring_power: float = 600.0
 @export var spring_sfx = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
 
-var Projectile = preload("res://Data/Scripts/Entities/Hazards/SteamPuff.tscn")
+var Projectile = preload("res://Data/Entities/Hazards/SteamPuff.tscn")
 
 var players: Array[Player2D] = []
 

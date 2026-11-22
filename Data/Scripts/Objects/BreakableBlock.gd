@@ -3,7 +3,7 @@ class_name BreakableBlock
 extends StaticBody2D
 @export var pieces: Vector2i = Vector2i(2,2)
 @export var SpriteTexture = preload("res://Data/Sprites/Obstacles/Blocks/breakable_block.png")
-var Piece = preload("res://Data/Scripts/Entities/Misc/BlockPiece.tscn")
+var Piece = preload("res://Data/Entities/Misc/BlockPiece.tscn")
 @export var sound = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
 @export var strength_tier: Global.STRENGTH_TIER = Global.STRENGTH_TIER.NORMAL
 

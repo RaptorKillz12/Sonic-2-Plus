@@ -12,7 +12,7 @@ var forceDamage: bool = false
 var deathTimer: float = 4.0
 var defeated_flag: bool = false
 
-var Explosion: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var Explosion: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 var hoverOffset: float = 0.0
 
 signal got_hit

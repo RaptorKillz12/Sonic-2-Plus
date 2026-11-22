@@ -22,7 +22,7 @@ var active: bool = false
 var players: Array[Player2D] = [] # targets in the sensor area
 
 #Object projectile Controls
-var drop: PackedScene = preload("res://Data/Scripts/Entities/Items/Monitor.tscn")
+var drop: PackedScene = preload("res://Data/Entities/Items/Monitor.tscn")
 
 @onready var sprite: Sprite2D = $CharacterBody2D/CharacterSprite
 @onready var character: CharacterBody2D = $CharacterBody2D

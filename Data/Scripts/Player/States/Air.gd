@@ -1,6 +1,6 @@
 extends PlayerState
 
-var elecPart: PackedScene = preload("res://Data/Scripts/Entities/Misc/ElecParticles.tscn")
+var elecPart: PackedScene = preload("res://Data/Entities/Misc/ElecParticles.tscn")
 
 @export var isJump: bool = false
 

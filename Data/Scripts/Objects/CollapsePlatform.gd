@@ -3,7 +3,7 @@ extends Area2D
 # collapsing platform code by sharb
 
 # platform particle
-var PlatPart: PackedScene = preload("res://Data/Scripts/Entities/Misc/falling_block_plat.tscn")
+var PlatPart: PackedScene = preload("res://Data/Entities/Misc/falling_block_plat.tscn")
 
 # tilemap source to pull from
 @export_node_path("TileMapLayer") var tile: Variant

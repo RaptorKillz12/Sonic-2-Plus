@@ -18,7 +18,7 @@ extends Node2D
 @export var collapse_sound: AudioStream
 
 # platform particle
-var PlatPart = preload("res://Data/Scripts/Entities/Misc/falling_block_plat.tscn")
+var PlatPart = preload("res://Data/Entities/Misc/falling_block_plat.tscn")
 
 var tiles: TileMapLayer = null
 var offset: float = 0.0

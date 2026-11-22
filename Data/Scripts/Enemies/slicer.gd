@@ -14,7 +14,7 @@ var state_time: float = 1.0
 var throw_time: float = 999
 var move_dir: int = -1
 var thrown: bool = false
-var projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/SlicerProjectile.tscn")
+var projectile = preload("res://Data/Entities/Enemies/Projectiles/SlicerProjectile.tscn")
 
 @onready var colorMask = $Sprite2D/ColorMask
 @onready var sprite = $Sprite2D

@@ -20,12 +20,12 @@ var ray_length = 6.0  # Length for surface detection
 #Player parameters
 var character = Global.CHARACTERS.SONIC
 var playerSkins = [
-	preload("res://Data/Sprites/Special Stage/SS_Sonic_Test.tscn"),
-	preload("res://Data/Sprites/Special Stage/SS_Tails.tscn"),
-	preload("res://Data/Sprites/Special Stage/SS_Knuckles.tscn"),
-	preload("res://Data/Sprites/Special Stage/SS_Amy.tscn"),
-	preload("res://Data/Sprites/Special Stage/SS_Mighty.tscn"),
-	preload("res://Data/Sprites/Special Stage/SS_Sonic_Test.tscn")
+	preload("res://Data/Sprites/Special/SS_Sonic_Test.tscn"),
+	preload("res://Data/Sprites/Special/SS_Tails.tscn"),
+	preload("res://Data/Sprites/Special/SS_Knuckles.tscn"),
+	preload("res://Data/Sprites/Special/SS_Amy.tscn"),
+	preload("res://Data/Sprites/Special/SS_Mighty.tscn"),
+	preload("res://Data/Sprites/Special/SS_Sonic_Test.tscn")
 ]
 
 #Current Ring count

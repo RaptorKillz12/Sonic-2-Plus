@@ -1,6 +1,6 @@
 extends Node2D
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/NGHZ_Arrow.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/NGHZ_Arrow.tscn")
 var bullet = null
 
 enum STATES{IDLE,DETECT,FIRE}

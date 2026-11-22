@@ -5,7 +5,7 @@ extends Node2D
 @onready var head = $RexonHead
 @onready var bulletPoint = $RexonHead/BulletPoint
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/GenericProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/GenericProjectile.tscn")
 var bullet = null
 @export var bulletSound = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
 

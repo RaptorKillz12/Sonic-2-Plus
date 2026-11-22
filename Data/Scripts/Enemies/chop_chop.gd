@@ -13,7 +13,7 @@ var state = STATES.IDLE
 var stateTimer = 0.0
 
 var bubbleTimer = 0.0
-var Bubble = preload("res://Data/Scripts/Entities/Misc/Bubbles.tscn")
+var Bubble = preload("res://Data/Entities/Misc/Bubbles.tscn")
 var TargetPosition = Vector2.ZERO
 
 func _ready():

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://n2wl1ep1amyn"]
 
-[ext_resource type="Texture2D" uid="uid://gpe8aoxkxtdc" path="res://Data/Sprites/Menus/Sonic_3.webp" id="3_8lq1p"]
-[ext_resource type="Texture2D" uid="uid://c056gxpyitwdj" path="res://Data/Sprites/Menus/Proverb-of-Sonic.png" id="4_nmc5r"]
-[ext_resource type="Texture2D" uid="uid://dwa0120l0j6ey" path="res://Data/Sprites/Menus/Sonic-the-Hedgehog-2-JP-Logo.png" id="5_m1p11"]
-[ext_resource type="Texture2D" uid="uid://c0i83jutus7c5" path="res://Data/Sprites/Menus/Sonic-the-Hedgehog-2(1).png" id="6_mv6xw"]
-[ext_resource type="Texture2D" uid="uid://mepeqpyn7r3q" path="res://Data/Sprites/Menus/Tails_1.webp" id="7_px1r6"]
-[ext_resource type="Texture2D" uid="uid://cbu11xnc4cack" path="res://Data/Sprites/Menus/Sonic-the-Hedgehog-2.png" id="8_im8km"]
+[ext_resource type="Texture2D" uid="uid://gpe8aoxkxtdc" path="res://Data/Game/Menu/Sonic_3.webp" id="3_8lq1p"]
+[ext_resource type="Texture2D" uid="uid://c056gxpyitwdj" path="res://Data/Game/Menu/Proverb-of-Sonic.png" id="4_nmc5r"]
+[ext_resource type="Texture2D" uid="uid://dwa0120l0j6ey" path="res://Data/Game/Menu/Sonic-the-Hedgehog-2-JP-Logo.png" id="5_m1p11"]
+[ext_resource type="Texture2D" uid="uid://c0i83jutus7c5" path="res://Data/Game/Menu/Sonic-the-Hedgehog-2(1).png" id="6_mv6xw"]
+[ext_resource type="Texture2D" uid="uid://mepeqpyn7r3q" path="res://Data/Game/Menu/Tails_1.webp" id="7_px1r6"]
+[ext_resource type="Texture2D" uid="uid://cbu11xnc4cack" path="res://Data/Game/Menu/Sonic-the-Hedgehog-2.png" id="8_im8km"]
 
 [sub_resource type="Animation" id="Animation_0e48y"]
 length = 0.001

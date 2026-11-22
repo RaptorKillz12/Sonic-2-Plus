@@ -3,7 +3,7 @@ extends Node3D
 
 var player
 
-var Particle = preload("res://Data/Scripts/Entities3D/AnimatedParticle3D.tscn")
+var Particle = preload("res://Data/Entitites3D/AnimatedParticle3D.tscn")
 var sfx = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

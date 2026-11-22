@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/GenericProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/GenericProjectile.tscn")
 @export var bulletSound = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
 @export var shots_remaining: int = 1
 

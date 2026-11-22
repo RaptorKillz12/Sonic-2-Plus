@@ -4,7 +4,7 @@ extends Node2D
 @export var speed: float = 1.0
 @export var number_of_teeth: int = 8
 
-var tooth = preload("res://Data/Scripts/Entities/Gimmicks/mtz_giant_cog_tooth.tscn")
+var tooth = preload("res://Data/Entities/Gimmicks/mtz_giant_cog_tooth.tscn")
 
 func _ready() -> void:
 	direction = direction*2-1

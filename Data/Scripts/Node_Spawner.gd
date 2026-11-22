@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var resource = preload("res://Data/Scripts/Entities/Items/Ring.tscn")
+@export var resource = preload("res://Data/Entities/Items/Ring.tscn")
 @onready var isOnScreen = $VisibleOnScreenNotifier2D
 
 func _ready() -> void:

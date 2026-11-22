@@ -3,7 +3,7 @@ extends EnemyBase
 @export var movement_time: float = 1.0
 
 var target_position: Vector2 = Vector2.ZERO
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/AsteronProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/AsteronProjectile.tscn")
 
 var bullet_stats: Array[Vector2] = [
 	Vector2(0,-360),

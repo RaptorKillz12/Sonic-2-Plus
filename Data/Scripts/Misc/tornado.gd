@@ -15,7 +15,7 @@ extends CharacterBody2D
 @export var boom_sfx: AudioStream = preload("res://Data/SoundFX/Boss/s2br_SmallExplosion.wav")
 
 ## Scene instantiated when the Tornado is on a timer.
-var explosion: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var explosion: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 var parenter_pilots: Array[int] = [
 	Global.CHARACTERS.TAILS, #NONE

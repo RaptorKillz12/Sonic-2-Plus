@@ -9,7 +9,7 @@ const SHOOT_WAIT_TIME = 2.0
 var targets = [] # targets in the sensor area
 var currentTarget = null # The target picked from targets. used to remember the player.
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/GenericProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/GenericProjectile.tscn")
 var bullet = null
 
 @onready var bulletPoint = $Sprite2D/BulletPoint

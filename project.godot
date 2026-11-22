@@ -55,7 +55,7 @@ movie_writer/movie_file="/storage/emulated/0/test.ogv"
 [file_customization]
 
 folder_colors={
-"res://Data/Scripts/Entities3D/": "red",
+"res://Data/Entitites3D/": "red",
 "res://Data/Sprites/Fonts/": "yellow"
 }
 

@@ -4,7 +4,7 @@ extends Node2D
 
 var bubbleTimer: float = 0
 var bigBubbleTimer: float = 5
-var Bubble = preload("res://Data/Scripts/Entities/Misc/Bubbles.tscn")
+var Bubble = preload("res://Data/Entities/Misc/Bubbles.tscn")
 
 func _process(delta):
 	if Global.waterLevel > 0:

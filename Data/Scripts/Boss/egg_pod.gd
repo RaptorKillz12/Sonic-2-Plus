@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 ## Scene instantiated when the Tornado is on a timer.
-var explosion = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var explosion = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 @export var pop_sfx = preload("res://Data/SoundFX/Boss/s2br_SmallExplosion.wav") 
 
 @onready var animation = $AnimationPlayer

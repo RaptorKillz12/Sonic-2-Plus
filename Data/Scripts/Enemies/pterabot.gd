@@ -1,7 +1,7 @@
 @tool
 extends EnemyBase
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/PterabotProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/PterabotProjectile.tscn")
 
 @export var bulletSound = preload("res://Data/SoundFX/Gimmicks/s2br_ArrowFire.wav")
 ## Not a thing in Sonic 2. Do not use.

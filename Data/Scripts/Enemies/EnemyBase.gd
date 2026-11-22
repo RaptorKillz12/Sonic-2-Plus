@@ -3,8 +3,8 @@ class_name EnemyBase extends CharacterBody2D
 @export_enum("Normal", "Fire", "Elec", "Water") var damageType: int = 0
 var playerHit: Array[Player2D] = []
 
-var Explosion: PackedScene = preload("res://Data/Scripts/Entities/Misc/BadnickSmoke.tscn")
-var Animal: PackedScene = preload("res://Data/Scripts/Entities/Misc/Animal.tscn")
+var Explosion: PackedScene = preload("res://Data/Entities/Misc/BadnickSmoke.tscn")
+var Animal: PackedScene = preload("res://Data/Entities/Misc/Animal.tscn")
 var forceDamage: bool = false
 
 signal destroyed

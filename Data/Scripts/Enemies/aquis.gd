@@ -7,7 +7,7 @@ extends EnemyBase
 @onready var bulletPoint = %BulletPoint
 @onready var animator = $AnimationPlayer
 
-var Projectile = preload("res://Data/Scripts/Entities/Enemies/Projectiles/AquisProjectile.tscn")
+var Projectile = preload("res://Data/Entities/Enemies/Projectiles/AquisProjectile.tscn")
 var bullet = null
 
 ## Movement seed cap

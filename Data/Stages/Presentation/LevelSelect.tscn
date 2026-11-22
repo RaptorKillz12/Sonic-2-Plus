@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://clrlv6ptk740e" path="res://Data/Scripts/Menu/LevelSelect.gd" id="1_wpw10"]
 [ext_resource type="TileSet" uid="uid://bk1ere21h4285" path="res://Data/Stages/Tileset/Menus.tres" id="2_bjhen"]
 [ext_resource type="Theme" uid="uid://b5b5ux4822p0m" path="res://Data/Game/Resources/Standard_Font.tres" id="3_rfyoh"]
-[ext_resource type="Texture2D" uid="uid://dm4ejufaxy62s" path="res://Data/Sprites/Menus/MiniCharacters.png" id="4_lljmf"]
-[ext_resource type="Texture2D" uid="uid://d3g0w6uwq7bvj" path="res://Data/Sprites/Menus/Icons_All.png" id="5_h64eu"]
+[ext_resource type="Texture2D" uid="uid://dm4ejufaxy62s" path="res://Data/Game/Menu/MiniCharacters.png" id="4_lljmf"]
+[ext_resource type="Texture2D" uid="uid://d3g0w6uwq7bvj" path="res://Data/Game/Menu/Icons_All.png" id="5_h64eu"]
 [ext_resource type="AudioStream" uid="uid://uay8t1b3i1hi" path="res://Data/SoundFX/Gimmicks/s2br_Switch.wav" id="6_u8i0a"]
 
 [node name="CharacterSelect" type="Node2D"]

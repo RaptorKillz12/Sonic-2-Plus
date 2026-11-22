@@ -3,7 +3,7 @@ var active: bool = false
 ## This is now setup at runtime, basically useless.
 @export var checkpoint_id: int = 0
 
-var specialStageEntry: PackedScene = preload("res://Data/Scripts/Entities/Items/CheckpointStars.tscn")
+var specialStageEntry: PackedScene = preload("res://Data/Entities/Items/CheckpointStars.tscn")
 
 var player_memory: Array[Player2D] = [] #List of Players that have triggered this Checkpoint
 

@@ -11,7 +11,7 @@ extends EnemyBase
 @export var climb_pause_time: float = 0.5
 
 @onready var animator: AnimationPlayer = $AnimationPlayer
-var coconut_scene: PackedScene = preload("res://Data/Scripts/Entities/Enemies/Projectiles/CoconutProjectile.tscn")
+var coconut_scene: PackedScene = preload("res://Data/Entities/Enemies/Projectiles/CoconutProjectile.tscn")
 enum STATE{IDLE,CLIMB,THROW}
 var state: STATE = STATE.IDLE
 ## Which climbing routine to do

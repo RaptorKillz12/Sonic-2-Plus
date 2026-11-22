@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bma2174bd2vai"]
 
-[ext_resource type="Texture2D" uid="uid://chcgf78a1t8ik" path="res://Data/Sprites/Special Stage/SS_BG.png" id="1_mx8be"]
+[ext_resource type="Texture2D" uid="uid://chcgf78a1t8ik" path="res://Data/Sprites/Special/SS_BG.png" id="1_mx8be"]
 [ext_resource type="Script" uid="uid://cencvxfcrxw0v" path="res://Data/Scripts/Level/SpecialStage.gd" id="1_x3k1r"]
 [ext_resource type="PackedScene" uid="uid://dts8c45ta62by" path="res://Data/Stages/SpecialStage/Layouts/stage_2.tscn" id="3_kp4wp"]
-[ext_resource type="PackedScene" uid="uid://c8ubncxkma30o" path="res://Data/Scripts/Entities3D/special_stage_character.tscn" id="3_rcx61"]
-[ext_resource type="PackedScene" uid="uid://cyx38ouxk43dn" path="res://Data/Scripts/Entities3D/SpecialHUD.tscn" id="3_ydt6i"]
+[ext_resource type="PackedScene" uid="uid://c8ubncxkma30o" path="res://Data/Entitites3D/special_stage_character.tscn" id="3_rcx61"]
+[ext_resource type="PackedScene" uid="uid://cyx38ouxk43dn" path="res://Data/Entitites3D/SpecialHUD.tscn" id="3_ydt6i"]
 [ext_resource type="PackedScene" uid="uid://dvybt2lxf6xt2" path="res://Data/Stages/SpecialStage/Layouts/stage_3.tscn" id="4_3506h"]
 [ext_resource type="PackedScene" uid="uid://l72eke5vhwtl" path="res://Data/Stages/SpecialStage/Layouts/stage_4.tscn" id="5_mo8jp"]
 [ext_resource type="PackedScene" uid="uid://vnfel652ionu" path="res://Data/Stages/SpecialStage/Layouts/stage_1.tscn" id="5_vd00g"]

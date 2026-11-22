@@ -17,7 +17,7 @@ var currentPoint = 4
 var laser_y: float = 128
 
 var animationPriority = ["default","move","laugh","hit","exploded"]
-var laser: = preload("res://Data/Scripts/Entities/Boss/Bouncer Eggman/bouncer_eggman_laser.tscn")
+var laser: = preload("res://Data/Entities/Boss/Bouncer Eggman/bouncer_eggman_laser.tscn")
 
 func _ready():
 	# move to the set currentPoint position before the boss starts (plus 128 pixels higher)

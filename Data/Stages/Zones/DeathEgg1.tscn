@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Data/Scripts/Level/Level.gd" id="1_yyvsh"]
 [ext_resource type="AudioStream" uid="uid://b0gx23e4wj7s3" path="res://Data/Music/DeathEgg.ogg" id="2_fqqc2"]
 [ext_resource type="PackedScene" uid="uid://d2ectm23ulm50" path="res://Data/Stages/Backgrounds/16-DeathEgg.tscn" id="3_d6uqq"]
-[ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Data/Scripts/Entities/Misc/HUD.tscn" id="5_1knt1"]
-[ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Data/Scripts/Entities/MainObjects/Player.tscn" id="6_1scnv"]
+[ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Data/Entities/Misc/HUD.tscn" id="5_1knt1"]
+[ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Data/Entities/MainObjects/Player.tscn" id="6_1scnv"]
 [ext_resource type="TileSet" uid="uid://degtrdfi1sc00" path="res://Data/Stages/Tileset/Levels/CPZ.tres" id="6_381yj"]
-[ext_resource type="PackedScene" uid="uid://blwewyk2fnrew" path="res://Data/Scripts/Entities/Gimmicks/Shutter.tscn" id="7_vgox6"]
+[ext_resource type="PackedScene" uid="uid://blwewyk2fnrew" path="res://Data/Entities/Gimmicks/Shutter.tscn" id="7_vgox6"]
 
 [node name="DeathEgg1" type="Node2D" unique_id=1207712683]
 script = ExtResource("1_yyvsh")

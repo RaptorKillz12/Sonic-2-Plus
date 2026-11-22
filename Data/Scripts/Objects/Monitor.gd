@@ -31,7 +31,7 @@ var twoPlayerItems: Array[ITEMTYPES] = [
 	ITEMTYPES.LIFEP2
 ]
 
-var Explosion: PackedScene = preload("res://Data/Scripts/Entities/Misc/BadnickSmoke.tscn")
+var Explosion: PackedScene = preload("res://Data/Entities/Misc/BadnickSmoke.tscn")
 
 signal destroyed
 

@@ -7,7 +7,7 @@ var player: Player2D
 var magnet: Area2D = null
 var magnetShape: CollisionShape2D = null
 var ringacceleration: Array[float] = [0.75,0.1875]
-var Particle: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var Particle: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 func _ready() -> void:
 	if Global.object_table.has(get_path()):

@@ -73,7 +73,7 @@ var next_zone_pointer: String = ""
 var object_table: Array[String] = []
 
 # score instace for add_score_object()
-var Score: PackedScene = preload("res://Data/Scripts/Entities/Misc/Score.tscn")
+var Score: PackedScene = preload("res://Data/Entities/Misc/Score.tscn")
 # order for score combo
 const SCORE_COMBO: Array[int] = [1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,5]
 

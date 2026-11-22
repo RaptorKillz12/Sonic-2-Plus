@@ -3,7 +3,7 @@ extends Node2D
 
 @export var sinkingSpeed = 16
 
-var Platform = preload("res://Data/Scripts/Entities/Obstacles/InvisiblePlatform.tscn")
+var Platform = preload("res://Data/Entities/Obstacles/InvisiblePlatform.tscn")
 var playerPlatforms = [] #one node per player
 var weightVals = [] # How long each player's been standing on their respective platform.
 var restPos = 0 #Position the invisible platforms move up to.

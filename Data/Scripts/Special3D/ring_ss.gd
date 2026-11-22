@@ -6,7 +6,7 @@ var lifetime = MAX_LIFETIME
 var velocity = Vector2.ZERO
 var player
 
-var Particle = preload("res://Data/Scripts/Entities3D/AnimatedParticle3D.tscn")
+var Particle = preload("res://Data/Entitites3D/AnimatedParticle3D.tscn")
 
 @onready var floor_ray = $RayCast3D
 @onready var shadow_sprite = $CharacterShadow

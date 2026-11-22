@@ -138,13 +138,13 @@ const waterPhysicsList: Array = [
 ]
 # ================
 
-var Ring: PackedScene = preload("res://Data/Scripts/Entities/Items/Ring.tscn")
+var Ring: PackedScene = preload("res://Data/Entities/Items/Ring.tscn")
 var ringChannel: int = 0
 
-var Particle: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
-var Bubble: PackedScene = preload("res://Data/Scripts/Entities/Misc/Bubbles.tscn")
-var CountDown: PackedScene = preload("res://Data/Scripts/Entities/Misc/CountDownTimer.tscn")
-var RotatingParticle: PackedScene = preload("res://Data/Scripts/Entities/Misc/RotatingParticle.tscn")
+var Particle: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
+var Bubble: PackedScene = preload("res://Data/Entities/Misc/Bubbles.tscn")
+var CountDown: PackedScene = preload("res://Data/Entities/Misc/CountDownTimer.tscn")
+var RotatingParticle: PackedScene = preload("res://Data/Entities/Misc/RotatingParticle.tscn")
 
 var superSprite: Texture2D
 @onready var normalSprite: Texture2D = $Sonic/Sprite2D.texture
@@ -253,7 +253,7 @@ var inputMemory: Array[Array] = []
 var memoryPosition: int = 0
 const INPUT_MEMORY_LENGTH = 20
 
-var Player: PackedScene = load("res://Data/Scripts/Entities/MainObjects/Player.tscn")
+var Player: PackedScene = load("res://Data/Entities/MainObjects/Player.tscn")
 
 #An array of, well, Arrays, in order of Global.CHARACTERS, skipping 0.
 var playerskins: Array[PackedScene] = [

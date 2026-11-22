@@ -4,7 +4,7 @@ extends Node2D
 @export_range (1, 128) var wormCount = 6
 @export var gloopSound = preload("res://Data/SoundFX/Gimmicks/MegaMackGloop.ogg")
 
-var child = preload("res://Data/Scripts/Entities/ZoneObjects/MackWorms.tscn")
+var child = preload("res://Data/Entities/ZoneObjects/MackWorms.tscn")
 var origin = Vector2.ZERO
 
 enum STATES{BOTTOM,UP_TUBE,TOP,DOWN_TUBE,ARCHING}

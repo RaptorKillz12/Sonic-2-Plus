@@ -7,7 +7,7 @@ const GRAVITY = 600
 @export var idle_time: float = 1.0
 @export var move_speed: float = 60
 
-var diggingParticle: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var diggingParticle: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 var breakingSound: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
 
 #Two types of behavior.

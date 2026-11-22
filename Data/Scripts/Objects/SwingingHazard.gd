@@ -22,7 +22,7 @@ var hazard: Area2D = null
 
 var active: bool = true
 
-var explosion: PackedScene = preload("res://Data/Scripts/Entities/Misc/GenericParticle.tscn")
+var explosion: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
