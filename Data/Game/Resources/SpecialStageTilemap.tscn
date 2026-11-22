@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://6jrt4weciuuf"]
 
-[ext_resource type="PackedScene" uid="uid://bfqn8cun070vp" path="res://Data/Models/SpecialStage/SpecialStage.glb" id="1_wb6ni"]
+[ext_resource type="PackedScene" uid="uid://bfqn8cun070vp" path="res://Data/Game/Models/SpecialStage/SpecialStage.glb" id="1_wb6ni"]
 
 [node name="SpecialStage" instance=ExtResource("1_wb6ni")]
 

@@ -1,9 +1,9 @@
 [gd_resource type="MeshLibrary" format=4 uid="uid://bh7gsa0o3u6j"]
 
-[ext_resource type="Material" uid="uid://dsj5jspojm7uw" path="res://Data/Models/SpecialStage/Materials/Color1.tres" id="1_jc0t4"]
-[ext_resource type="Material" uid="uid://dfs842p8fj03b" path="res://Data/Models/SpecialStage/Materials/Color2.tres" id="2_lybrk"]
-[ext_resource type="Material" uid="uid://dfd2e2rfd0elp" path="res://Data/Models/SpecialStage/Materials/Lights.tres" id="3_6ni56"]
-[ext_resource type="Material" uid="uid://jcfwnib3s02r" path="res://Data/Models/SpecialStage/Materials/Flag.tres" id="4_dsqig"]
+[ext_resource type="Material" uid="uid://dsj5jspojm7uw" path="res://Data/Game/Models/SpecialStage/Materials/Color1.tres" id="1_jc0t4"]
+[ext_resource type="Material" uid="uid://dfs842p8fj03b" path="res://Data/Game/Models/SpecialStage/Materials/Color2.tres" id="2_lybrk"]
+[ext_resource type="Material" uid="uid://dfd2e2rfd0elp" path="res://Data/Game/Models/SpecialStage/Materials/Lights.tres" id="3_6ni56"]
+[ext_resource type="Material" uid="uid://jcfwnib3s02r" path="res://Data/Game/Models/SpecialStage/Materials/Flag.tres" id="4_dsqig"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ipsg1"]
 _surfaces = [{

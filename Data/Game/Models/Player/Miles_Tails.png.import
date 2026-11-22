@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://begmqs3lbml7q"
-path.etc2="res://.godot/imported/Knuckles_Knuckles.png-f66db18d16732c4bec1b1657b1366c1a.etc2.ctex"
+uid="uid://bn8tg1nm8522h"
+path.etc2="res://.godot/imported/Miles_Tails.png-73ac1fd80b124afdcfc414cbe32f40df.etc2.ctex"
 metadata={
 "imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "41d2d60f365c6ccdfb64c0e95876da0e"
+"md5": "1d196558f15d50053464ed0621979890"
 }
 
 [deps]
 
-source_file="res://Data/Models/Player/Knuckles_Knuckles.png"
-dest_files=["res://.godot/imported/Knuckles_Knuckles.png-f66db18d16732c4bec1b1657b1366c1a.etc2.ctex"]
+source_file="res://Data/Game/Models/Player/Miles_Tails.png"
+dest_files=["res://.godot/imported/Miles_Tails.png-73ac1fd80b124afdcfc414cbe32f40df.etc2.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djgc60ig1v7rb"
-path="res://.godot/imported/Sonic.glb-038c2ff66986ac1de485ba5ff1df3f21.scn"
+uid="uid://coulja3t41ofa"
+path="res://.godot/imported/Knuckles.glb-f0ea20d36d31b040b376352a477c1a48.scn"
 
 [deps]
 
-source_file="res://Data/Models/Player/Sonic.glb"
-dest_files=["res://.godot/imported/Sonic.glb-038c2ff66986ac1de485ba5ff1df3f21.scn"]
+source_file="res://Data/Game/Models/Player/Knuckles.glb"
+dest_files=["res://.godot/imported/Knuckles.glb-f0ea20d36d31b040b376352a477c1a48.scn"]
 
 [params]
 

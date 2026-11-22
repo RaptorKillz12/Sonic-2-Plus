@@ -13,7 +13,7 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Data/Models/SpecialStage/SpecialStage_Checkpoint.png"
+source_file="res://Data/Game/Models/SpecialStage/SpecialStage_Checkpoint.png"
 dest_files=["res://.godot/imported/SpecialStage_Checkpoint.png-7f03057b59fba1cee0b97bfb64b07c64.ctex"]
 
 [params]

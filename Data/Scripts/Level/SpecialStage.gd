@@ -5,9 +5,9 @@ extends Node3D
 ## TODO
 @onready var stage: SpecialProperties = $stage_layout/Stage1
 
-var primary_material: StandardMaterial3D = preload("res://Data/Models/SpecialStage/Materials/Color1.tres")
-var secondary_material: StandardMaterial3D = preload("res://Data/Models/SpecialStage/Materials/Color2.tres")
-var lights_material: StandardMaterial3D = preload("res://Data/Models/SpecialStage/Materials/Lights.tres")
+var primary_material: StandardMaterial3D = preload("res://Data/Game/Models/SpecialStage/Materials/Color1.tres")
+var secondary_material: StandardMaterial3D = preload("res://Data/Game/Models/SpecialStage/Materials/Color2.tres")
+var lights_material: StandardMaterial3D = preload("res://Data/Game/Models/SpecialStage/Materials/Lights.tres")
 
 var current_round: int = 0
 

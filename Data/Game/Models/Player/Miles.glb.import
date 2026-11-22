@@ -8,7 +8,7 @@ path="res://.godot/imported/Miles.glb-39f5fdbd76f9da794b744b491368a178.scn"
 
 [deps]
 
-source_file="res://Data/Models/Player/Miles.glb"
+source_file="res://Data/Game/Models/Player/Miles.glb"
 dest_files=["res://.godot/imported/Miles.glb-39f5fdbd76f9da794b744b491368a178.scn"]
 
 [params]
