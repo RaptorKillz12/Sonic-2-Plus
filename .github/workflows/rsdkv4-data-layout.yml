@@ -162,10 +162,6 @@ jobs:
           # Rewrite exact res:// path references in all tracked text resources.
           replacements=sorted(((a,b) for a,b in planned.items()), key=lambda x:len(x[0]), reverse=True)
           # Include directory-prefix replacements inferred from file moves.
-          prefix_map={}
-          for old,new in replacements:
-              od,nd=old.rsplit("/",1)[0],new.rsplit("/",1)[0]
-              if od!=nd and od not in prefix_map: prefix_map[od]=nd
           text_ext={".gd",".tscn",".tres",".godot",".import",".cfg",".json",".gdshader",".cs",".txt",".scn"}
           for p in Path(".").rglob("*"):
               if not p.is_file() or any(x in {".git",".godot"} for x in p.parts): continue
@@ -175,8 +171,6 @@ jobs:
               updated=original
               for old,new in replacements:
                   updated=updated.replace("res://"+old, "res://"+new)
-              for old,new in sorted(prefix_map.items(), key=lambda x:len(x[0]), reverse=True):
-                  updated=updated.replace("res://"+old+"/", "res://"+new+"/")
               if updated!=original: p.write_text(updated,encoding="utf-8")
 
           # Create only empty directory markers; never synthesize game assets.
