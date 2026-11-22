@@ -120,7 +120,7 @@ jobs:
                   stem=f.name
                   m=re.search(r"(EHZ|CPZ|ARZ|CNZ|HTZ|MCZ|OOZ|MTZ|MPZ|SCZ|WFZ|WGZ|DEZ|HPZ)", stem, re.I)
                   if m:
-                      bucket=zone_for(m.group(1))
+                      bucket={"MTZ":"MPZ","WGZ":"WFZ"}.get(m.group(1).upper(),m.group(1).upper())
                   elif folder=="Palettes":
                       bucket="Global"
                   else:
@@ -136,9 +136,9 @@ jobs:
           sfx=ROOT/"SoundFX"
           for f in sfx.rglob("*"):
               if not f.is_file(): continue
-              if any(part in {"Global","Stage","Boss"} for part in f.parts): continue
-              if f.parent.name=="Boss":
-                  add(f, sfx/"Boss"/f.name)
+              if "Global" in f.parts or "Stage" in f.parts: continue
+              if "Boss" in f.parts:
+                  add(f, sfx/"Stage"/"Boss"/f.name)
               elif f.stem.lower().startswith("menu"):
                   add(f, sfx/"Global"/"Menu"/f.name)
               else:
