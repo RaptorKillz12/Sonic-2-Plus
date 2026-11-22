@@ -34,6 +34,9 @@ jobs:
           moves = [
               ("Data/Scripts/Entities", "Data/Entities"),
               ("Data/Scripts/Entities3D", "Data/Entitites3D"),
+              ("Data/Sprites/Menus", "Data/Game/Menu"),
+              ("Data/Sprites/title", "Data/Sprites/Title"),
+              ("Data/Sprites/Special Stage", "Data/Sprites/Special"),
               ("Entities", "Data/Entities"),
               ("Entitites3D", "Data/Entitites3D"),
               ("Models", "Data/Game/Models"),
@@ -67,6 +70,9 @@ jobs:
           replacements = {
               "res://Data/Scripts/Entities/": "res://Data/Entities/",
               "res://Data/Scripts/Entities3D/": "res://Data/Entitites3D/",
+              "res://Data/Sprites/Menus/": "res://Data/Game/Menu/",
+              "res://Data/Sprites/title/": "res://Data/Sprites/Title/",
+              "res://Data/Sprites/Special Stage/": "res://Data/Sprites/Special/",
               "res://Entities/": "res://Data/Entities/",
               "res://Entitites3D/": "res://Data/Entitites3D/",
               "res://Models/": "res://Data/Game/Models/",
@@ -112,6 +118,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Match Sonic 2 RSDKv4 data organization"
+            git commit -m "Match Sonic 2 2013 Data folder organization"
             git push origin HEAD:rsdkv4-reorganization
           fi
