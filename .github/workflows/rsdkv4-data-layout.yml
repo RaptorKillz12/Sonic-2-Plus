@@ -41,6 +41,7 @@ jobs:
               ("Models", "Data/Models"),
               ("Shaders", "Data/Shaders"),
               ("Resources", "Data/Game/Resources"),
+              ("Data/Models", "Data/Game/Models"),
           ]
 
           for old, new in moves:
@@ -68,6 +69,7 @@ jobs:
               "res://Models/": "res://Data/Models/",
               "res://Shaders/": "res://Data/Shaders/",
               "res://Resources/": "res://Data/Game/Resources/",
+              "res://Data/Models/": "res://Data/Game/Models/",
           }
 
           for path in Path(".").rglob("*"):
@@ -116,6 +118,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Organize game assets under RSDKv4 Data layout"
+            git commit -m "Align Models with Data/Game while preserving Data/Scripts"
             git push origin HEAD:rsdkv4-reorganization
           fi
