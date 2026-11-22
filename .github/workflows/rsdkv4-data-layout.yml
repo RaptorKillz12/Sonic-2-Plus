@@ -1,13 +1,11 @@
-name: Reorganize project into Sonic 2 (2013) RSDKv4-style Data layout
+name: Reorganize Sonic 2 Plus Data assets
 
 on:
   workflow_dispatch:
   push:
-    branches:
-      - rsdkv4-reorganization
+    branches: [rsdkv4-reorganization]
     paths:
       - '.github/workflows/rsdkv4-data-layout.yml'
-      - 'project.godot'
 
 permissions:
   contents: write
@@ -20,104 +18,204 @@ jobs:
         with:
           ref: rsdkv4-reorganization
           fetch-depth: 0
-
-      - name: Separate entity scenes from scripts and update Godot paths
+      - name: Reorganize existing assets and rewrite references
         shell: bash
         run: |
           python3 <<'PY'
           from pathlib import Path
-          import shutil
+          import re, shutil
 
-          # These are Godot project categories, arranged to follow the
-          # Sonic 2 (2013) RSDKv4 data-folder concept without creating Data.rsdk.
-          # Scripts stay in Data/Scripts. Entity scene folders are separate.
-          moves = [
-              ("Data/Scripts/Entities", "Data/Entities"),
-              ("Data/Scripts/Entities3D", "Data/Entitites3D"),
-              ("Data/Sprites/Menus", "Data/Game/Menu"),
-              ("Data/Sprites/title", "Data/Sprites/Title"),
-              ("Data/Sprites/Special Stage", "Data/Sprites/Special"),
-              ("Entities", "Data/Entities"),
-              ("Entitites3D", "Data/Entitites3D"),
-              ("Models", "Data/Game/Models"),
-              ("Data/Models", "Data/Game/Models"),
-          ]
+          ROOT = Path("Data")
+          moves = {}
+          def add(src, dst):
+              src, dst = Path(src), Path(dst)
+              if src.is_file():
+                  moves[str(src)] = str(dst)
+              elif src.is_dir():
+                  for f in src.rglob("*"):
+                      if f.is_file():
+                          rel = f.relative_to(src)
+                          moves[str(f)] = str(dst / rel)
 
-          def move_or_merge(src: Path, dst: Path):
-              if not src.exists() or src.resolve() == dst.resolve():
-                  return
-              dst.parent.mkdir(parents=True, exist_ok=True)
-              if src.is_dir():
-                  if dst.exists() and not dst.is_dir():
-                      raise RuntimeError(f"Cannot merge directory into file: {dst}")
-                  if dst.exists():
-                      for item in list(src.iterdir()):
-                          target = dst / item.name
-                          if target.exists():
-                              raise RuntimeError(f"Move collision; refusing to overwrite: {target}")
-                          shutil.move(str(item), str(target))
-                      src.rmdir()
-                  else:
-                      shutil.move(str(src), str(dst))
+          def zone_for(token):
+              return {
+                  "EHZ":"Zone01", "CPZ":"Zone02", "ARZ":"Zone03",
+                  "CNZ":"Zone04", "HTZ":"Zone05", "MCZ":"Zone06",
+                  "OOZ":"Zone07", "MTZ":"Zone08", "MPZ":"Zone08",
+                  "SCZ":"Zone09", "WFZ":"Zone10", "WGZ":"Zone10",
+                  "DEZ":"Zone11", "HPZ":"Zone12"
+              }.get(token.upper(), "ZoneM")
+
+          # STAGES: presentation / special / named zone scenes.
+          stage = ROOT / "Stages"
+          for name in ["Main.tscn", "TwoPlayerScreenView.tscn", "crt_test.tscn"]:
+              add(stage / name, stage / "ZoneM" / name)
+          for f in (stage / "Presentation").rglob("*"):
+              if not f.is_file(): continue
+              n=f.name.lower()
+              if "credit" in n:
+                  bucket="Credits"
+              elif "levelselect" in n or "dataselect" in n:
+                  bucket="LSelect"
+              elif "twoplayer" in n or "options" in n or n in {"menu.tscn","back.tscn","zoneloader.tscn"} or "button" in n:
+                  bucket="Continue" if "continue" in n else "LSelect"
+              elif "title" in n or "poweredby" in n:
+                  bucket="Title"
               else:
-                  if dst.exists():
-                      raise RuntimeError(f"Move collision; refusing to overwrite: {dst}")
-                  shutil.move(str(src), str(dst))
-
-          for old_path, new_path in moves:
-              move_or_merge(Path(old_path), Path(new_path))
-
-          replacements = {
-              "res://Data/Scripts/Entities/": "res://Data/Entities/",
-              "res://Data/Scripts/Entities3D/": "res://Data/Entitites3D/",
-              "res://Data/Sprites/Menus/": "res://Data/Game/Menu/",
-              "res://Data/Sprites/title/": "res://Data/Sprites/Title/",
-              "res://Data/Sprites/Special Stage/": "res://Data/Sprites/Special/",
-              "res://Entities/": "res://Data/Entities/",
-              "res://Entitites3D/": "res://Data/Entitites3D/",
-              "res://Models/": "res://Data/Game/Models/",
-              "res://Data/Models/": "res://Data/Game/Models/",
+                  bucket="LSelect"
+              add(f, stage / bucket / f.name)
+          add(stage / "Cutscenes" / "Opening.tscn", stage / "Title" / "Opening.tscn")
+          for f in (stage / "Cutscenes").glob("*"):
+              if f.is_file() and f.name != "Opening.tscn":
+                  add(f, stage / "Ending" / f.name)
+          for f in (stage / "SpecialStage").rglob("*"):
+              if f.is_file(): add(f, stage / "Special" / f.relative_to(stage / "SpecialStage"))
+          # Existing zone scenes, named by their actual stage.
+          zone_names = {
+              "EmeraldHill":"Zone01", "ChemicalPlant":"Zone02",
+              "CasinoNight":"Zone04", "HillTop":"Zone05",
+              "OilOcean":"Zone07", "Metropolis":"Zone08",
+              "SkyFortress":"Zone10", "DeathEgg":"Zone11",
+              "Hidden Palace":"Zone12"
           }
+          for f in (stage / "Zones").glob("*"):
+              if not f.is_file(): continue
+              target="ZoneM"
+              for key, val in zone_names.items():
+                  if key.lower() in f.stem.lower(): target=val; break
+              add(f, stage / target / f.name)
+          # Zone-specific layouts; non-classic fan stages are kept in ZoneM.
+          for f in (stage / "level_layouts").glob("*"):
+              if not f.is_file(): continue
+              m=re.search(r"(?:layout_)?([a-z]+z)", f.stem, re.I)
+              target=zone_for(m.group(1)) if m else "ZoneM"
+              add(f, stage / target / "Layouts" / f.name)
+          for f in (stage / "Backgrounds").glob("*"):
+              if not f.is_file(): continue
+              stem=f.stem
+              m=re.search(r"(?:^|[-_])([A-Z]{2,4}Z)(?:[-_]|$)", stem, re.I)
+              if "Ending" in stem: target="Ending"
+              elif m: target=zone_for(m.group(1))
+              else:
+                  order=re.match(r"(\\d+)-", stem)
+                  idx=int(order.group(1)) if order else -1
+                  target={0:"Zone01",1:"Zone12",2:"Zone05",3:"Zone02",4:"Zone07",6:"Zone08",9:"Zone04",15:"Zone10",16:"Zone11",17:"Ending"}.get(idx,"ZoneM")
+              add(f, stage / target / "Backgrounds" / f.name)
+          # Tileset resources are retained inside the corresponding zone folder.
+          for f in (stage / "Tileset").rglob("*"):
+              if not f.is_file(): continue
+              m=re.search(r"(CNZ|CPZ|DHZ|EHZ|HPZ|HTZ|GCZ|MTZ|NGHZ|OOZ|SCZ|SSZ|WGZ)", f.stem, re.I)
+              target=zone_for(m.group(1)) if m else "ZoneM"
+              if "Menu" in f.stem: target="LSelect"
+              add(f, stage / target / "Tileset" / f.relative_to(stage / "Tileset"))
 
-          for path in Path(".").rglob("*"):
-              if not path.is_file() or any(part in {".git", ".godot", ".github"} for part in path.parts):
-                  continue
-              try:
-                  original = path.read_text(encoding="utf-8")
-              except (UnicodeDecodeError, OSError):
-                  continue
-              updated = original
-              for before, after in replacements.items():
-                  updated = updated.replace(before, after)
-              if updated != original:
-                  path.write_text(updated, encoding="utf-8", newline="")
+          # SPRITES: retain the exact target top-level categories. Move all source
+          # categories without losing files; sidecars travel with their asset.
+          sprites=ROOT/"Sprites"
+          for folder in ["Backgrounds","Boss","Enemies","Gimmicks","HUD","Hazards","Items","Misc","Objects_Zone","Obstacles","Palettes","Tiles","World3D","EditorUI"]:
+              src=sprites/folder
+              if not src.exists(): continue
+              for f in src.rglob("*"):
+                  if not f.is_file(): continue
+                  stem=f.name
+                  m=re.search(r"(EHZ|CPZ|ARZ|CNZ|HTZ|MCZ|OOZ|MTZ|MPZ|SCZ|WFZ|WGZ|DEZ|HPZ)", stem, re.I)
+                  if m:
+                      bucket=zone_for(m.group(1))
+                  elif folder=="Palettes":
+                      bucket="Global"
+                  else:
+                      bucket="Global"
+                  add(f, sprites/bucket/folder/f.relative_to(src))
+          # Existing player/title/special folders remain as named.
+          # Any legacy menu sprite folder is distinct from Game/Menu UI textures.
+          add(sprites/"Menus", sprites/"Global"/"MenuSprites")
+          add(sprites/"title", sprites/"Title")
 
-          # Ensure entity scenes are not nested beneath Scripts.
-          forbidden = [Path("Data/Scripts/Entities"), Path("Data/Scripts/Entities3D")]
-          remaining = [str(p) for p in forbidden if p.exists()]
-          if remaining:
-              raise RuntimeError("Entity folders remain inside Scripts: " + ", ".join(remaining))
+          # Sound effects: bosses stay Boss; explicitly named menu effects are
+          # separated; the rest are classified by clear stage prefixes or Global.
+          sfx=ROOT/"SoundFX"
+          for f in sfx.rglob("*"):
+              if not f.is_file(): continue
+              if any(part in {"Global","Stage","Boss"} for part in f.parts): continue
+              if f.parent.name=="Boss":
+                  add(f, sfx/"Boss"/f.name)
+              elif f.stem.lower().startswith("menu"):
+                  add(f, sfx/"Global"/"Menu"/f.name)
+              else:
+                  add(f, sfx/"Stage"/f.parent.name/f.name)
 
-          print("Entity folders separated; filenames and extensions preserved.")
-          PY
+          # Apply moves only after all destinations are planned; refuse collisions.
+          planned={}
+          for old,new in moves.items():
+              if old==new: continue
+              if new in planned and planned[new]!=old:
+                  raise RuntimeError(f"Destination collision: {new}")
+              planned[new]=old
+          for old,new in sorted(planned.items(), key=lambda x: (x[0].count("/"),x[0])):
+              src,dst=Path(old),Path(new)
+              if not src.exists(): continue
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              if dst.exists():
+                  raise RuntimeError(f"Refusing to overwrite {dst} (source {src})")
+              shutil.move(str(src),str(dst))
 
-      - name: Validate project references and commit
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-          project = Path("project.godot").read_text(encoding="utf-8")
-          refs = re.findall(r'res://[^"\s]+', project)
-          missing = [ref for ref in refs if not Path(ref[6:]).exists() and not ref.startswith("res://.godot/")]
+          # Rewrite exact res:// path references in all tracked text resources.
+          replacements=sorted(((a,b) for a,b in planned.items()), key=lambda x:len(x[0]), reverse=True)
+          # Include directory-prefix replacements inferred from file moves.
+          prefix_map={}
+          for old,new in replacements:
+              od,nd=old.rsplit("/",1)[0],new.rsplit("/",1)[0]
+              if od!=nd and od not in prefix_map: prefix_map[od]=nd
+          text_ext={".gd",".tscn",".tres",".godot",".import",".cfg",".json",".gdshader",".cs",".txt",".scn"}
+          for p in Path(".").rglob("*"):
+              if not p.is_file() or any(x in {".git",".godot"} for x in p.parts): continue
+              if p.suffix.lower() not in text_ext: continue
+              try: original=p.read_text(encoding="utf-8")
+              except (UnicodeDecodeError,OSError): continue
+              updated=original
+              for old,new in replacements:
+                  updated=updated.replace("res://"+old, "res://"+new)
+              for old,new in sorted(prefix_map.items(), key=lambda x:len(x[0]), reverse=True):
+                  updated=updated.replace("res://"+old+"/", "res://"+new+"/")
+              if updated!=original: p.write_text(updated,encoding="utf-8")
+
+          # Create only empty directory markers; never synthesize game assets.
+          expected = [
+            "Animations","Game/Demo","Game/Menu","Game/Models","Music","Palettes",
+            "SoundFX/Global","SoundFX/Stage","Sprites/ARZ","Sprites/CNZ","Sprites/CPZ",
+            "Sprites/Continue","Sprites/DEZ","Sprites/EHZ","Sprites/Ending","Sprites/Global",
+            "Sprites/HPZ","Sprites/HTZ","Sprites/LevelSelect","Sprites/MBZ","Sprites/MCZ",
+            "Sprites/MPZ","Sprites/OOZ","Sprites/Players","Sprites/SCZ","Sprites/Special",
+            "Sprites/Title","Stages/Continue","Stages/Credits","Stages/Ending","Stages/LSelect",
+            "Stages/Special","Stages/Title"] + [f"Stages/Zone{i:02d}" for i in range(1,13)] + ["Stages/ZoneM"]
+          for d in expected:
+              p=ROOT/d
+              if not p.exists():
+                  p.mkdir(parents=True,exist_ok=True)
+                  (p/".gitkeep").write_text("")
+
+          # Check every textual res:// path that is a literal path.
+          missing=[]
+          for p in Path(".").rglob("*"):
+              if not p.is_file() or p.suffix.lower() not in text_ext: continue
+              try: s=p.read_text(encoding="utf-8")
+              except (UnicodeDecodeError,OSError): continue
+              for ref in re.findall(r'res://[^"\\s)]+',s):
+                  clean=ref[6:].split("::")[0]
+                  if clean and not clean.startswith(".godot/") and not Path(clean).exists():
+                      missing.append((str(p),ref))
           if missing:
-              raise SystemExit("Missing project.godot paths: " + ", ".join(missing))
-          print(f"Validated {len(refs)} project.godot resource paths.")
+              print("Unresolved resource references (first 50):")
+              for item in missing[:50]: print(*item)
+              raise SystemExit(f"{len(missing)} unresolved res:// references; aborting commit")
+          print(f"Moved {len(planned)} existing files; validated project resource references.")
           PY
+      - name: Commit migration
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Match Sonic 2 2013 Data folder organization"
+            git commit -m "Reorganize Data assets into requested Sonic 2 Plus layout"
             git push origin HEAD:rsdkv4-reorganization
           fi
