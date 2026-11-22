@@ -97,7 +97,7 @@ jobs:
               if "Ending" in stem: target="Ending"
               elif m: target=zone_for(m.group(1))
               else:
-                  order=re.match(r"(\\d+)-", stem)
+                  order=re.match(r"(\d+)-", stem)
                   idx=int(order.group(1)) if order else -1
                   target={0:"Zone01",1:"Zone12",2:"Zone05",3:"Zone02",4:"Zone07",6:"Zone08",9:"Zone04",15:"Zone10",16:"Zone11",17:"Ending"}.get(idx,"ZoneM")
               add(f, stage / target / "Backgrounds" / f.name)
@@ -194,7 +194,7 @@ jobs:
               if not p.is_file() or p.suffix.lower() not in text_ext: continue
               try: s=p.read_text(encoding="utf-8")
               except (UnicodeDecodeError,OSError): continue
-              for ref in re.findall(r'res://[^"\\s)]+',s):
+              for ref in re.findall(r'res://[^"\s)]+',s):
                   clean=ref[6:].split("::")[0]
                   if clean and not clean.startswith(".godot/") and not Path(clean).exists():
                       missing.append((str(p),ref))
