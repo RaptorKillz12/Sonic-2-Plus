@@ -1,4 +1,4 @@
-name: Reorganize project into RSDKv4-style Data layout
+name: Reorganize project into Sonic 2 (2013) RSDKv4-style Data layout
 
 on:
   workflow_dispatch:
@@ -21,95 +21,89 @@ jobs:
           ref: rsdkv4-reorganization
           fetch-depth: 0
 
-      - name: Move files and update Godot paths
+      - name: Separate entity scenes from scripts and update Godot paths
         shell: bash
         run: |
           python3 <<'PY'
           from pathlib import Path
           import shutil
 
-          # RSDK-style Data categories; existing filenames/extensions are untouched.
+          # These are Godot project categories, arranged to follow the
+          # Sonic 2 (2013) RSDKv4 data-folder concept without creating Data.rsdk.
+          # Scripts stay in Data/Scripts. Entity scene folders are separate.
           moves = [
-              ("Audio/Soundtrack", "Data/Music"),
-              ("Audio/SFX", "Data/SoundFX"),
-              ("Graphics", "Data/Sprites"),
-              ("Scene", "Data/Stages"),
-              ("Tileset", "Data/Stages/Tileset"),
-              ("Scripts", "Data/Scripts"),
-              ("Entities", "Data/Scripts/Entities"),
-              ("Entitites3D", "Data/Scripts/Entities3D"),
-              ("Models", "Data/Models"),
-              ("Shaders", "Data/Shaders"),
-              ("Resources", "Data/Game/Resources"),
+              ("Data/Scripts/Entities", "Data/Entities"),
+              ("Data/Scripts/Entities3D", "Data/Entitites3D"),
+              ("Entities", "Data/Entities"),
+              ("Entitites3D", "Data/Entitites3D"),
+              ("Models", "Data/Game/Models"),
               ("Data/Models", "Data/Game/Models"),
           ]
 
-          for old, new in moves:
-              src, dst = Path(old), Path(new)
-              if not src.exists():
-                  continue
+          def move_or_merge(src: Path, dst: Path):
+              if not src.exists() or src.resolve() == dst.resolve():
+                  return
               dst.parent.mkdir(parents=True, exist_ok=True)
-              if dst.exists():
-                  raise RuntimeError(f"Destination already exists: {dst}")
-              shutil.move(str(src), str(dst))
+              if src.is_dir():
+                  if dst.exists() and not dst.is_dir():
+                      raise RuntimeError(f"Cannot merge directory into file: {dst}")
+                  if dst.exists():
+                      for item in list(src.iterdir()):
+                          target = dst / item.name
+                          if target.exists():
+                              raise RuntimeError(f"Move collision; refusing to overwrite: {target}")
+                          shutil.move(str(item), str(target))
+                      src.rmdir()
+                  else:
+                      shutil.move(str(src), str(dst))
+              else:
+                  if dst.exists():
+                      raise RuntimeError(f"Move collision; refusing to overwrite: {dst}")
+                  shutil.move(str(src), str(dst))
 
-          audio = Path("Audio")
-          if audio.exists() and not any(audio.iterdir()):
-              audio.rmdir()
+          for old_path, new_path in moves:
+              move_or_merge(Path(old_path), Path(new_path))
 
           replacements = {
-              "res://Audio/Soundtrack/": "res://Data/Music/",
-              "res://Audio/SFX/": "res://Data/SoundFX/",
-              "res://Graphics/": "res://Data/Sprites/",
-              "res://Scene/": "res://Data/Stages/",
-              "res://Tileset/": "res://Data/Stages/Tileset/",
-              "res://Scripts/": "res://Data/Scripts/",
-              "res://Entities/": "res://Data/Scripts/Entities/",
-              "res://Entitites3D/": "res://Data/Scripts/Entities3D/",
-              "res://Models/": "res://Data/Models/",
-              "res://Shaders/": "res://Data/Shaders/",
-              "res://Resources/": "res://Data/Game/Resources/",
+              "res://Data/Scripts/Entities/": "res://Data/Entities/",
+              "res://Data/Scripts/Entities3D/": "res://Data/Entitites3D/",
+              "res://Entities/": "res://Data/Entities/",
+              "res://Entitites3D/": "res://Data/Entitites3D/",
+              "res://Models/": "res://Data/Game/Models/",
               "res://Data/Models/": "res://Data/Game/Models/",
           }
 
           for path in Path(".").rglob("*"):
-              if not path.is_file() or ".git" in path.parts or ".godot" in path.parts or ".github" in path.parts:
+              if not path.is_file() or any(part in {".git", ".godot", ".github"} for part in path.parts):
                   continue
               try:
-                  raw = path.read_bytes()
-                  original = raw.decode("utf-8")
+                  original = path.read_text(encoding="utf-8")
               except (UnicodeDecodeError, OSError):
                   continue
               updated = original
-              for old, new in replacements.items():
-                  updated = updated.replace(old, new)
+              for before, after in replacements.items():
+                  updated = updated.replace(before, after)
               if updated != original:
                   path.write_text(updated, encoding="utf-8", newline="")
 
-          leftovers = []
-          for path in Path(".").rglob("*"):
-              if not path.is_file() or ".git" in path.parts or ".godot" in path.parts or ".github" in path.parts:
-                  continue
-              try:
-                  data = path.read_text(encoding="utf-8")
-              except (UnicodeDecodeError, OSError):
-                  continue
-              if any(old in data for old in replacements):
-                  leftovers.append(str(path))
-          if leftovers:
-              raise RuntimeError("Unconverted old paths: " + ", ".join(leftovers[:40]))
-          print("Files moved and Godot resource paths updated.")
+          # Ensure entity scenes are not nested beneath Scripts.
+          forbidden = [Path("Data/Scripts/Entities"), Path("Data/Scripts/Entities3D")]
+          remaining = [str(p) for p in forbidden if p.exists()]
+          if remaining:
+              raise RuntimeError("Entity folders remain inside Scripts: " + ", ".join(remaining))
+
+          print("Entity folders separated; filenames and extensions preserved.")
           PY
 
-      - name: Validate and commit
+      - name: Validate project references and commit
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
-          p = Path("project.godot").read_text(encoding="utf-8")
-          refs = re.findall(r'res://[^"\s]+', p)
-          missing = [x for x in refs if not Path(x[6:]).exists() and not x.startswith("res://.godot/")]
+          project = Path("project.godot").read_text(encoding="utf-8")
+          refs = re.findall(r'res://[^"\\s]+', project)
+          missing = [ref for ref in refs if not Path(ref[6:]).exists() and not ref.startswith("res://.godot/")]
           if missing:
               raise SystemExit("Missing project.godot paths: " + ", ".join(missing))
           print(f"Validated {len(refs)} project.godot resource paths.")
@@ -118,6 +112,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Align Models with Data/Game while preserving Data/Scripts"
+            git commit -m "Match Sonic 2 RSDKv4 data organization"
             git push origin HEAD:rsdkv4-reorganization
           fi
