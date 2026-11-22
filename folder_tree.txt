@@ -1,5 +1,5 @@
 Sonic-2-Plus — sonic-2-plus-separate
-2338 files | 129 folders
+2337 files | 129 folders
 
 Audio/ (278)
   SFX/ (190)
@@ -12,14 +12,6 @@ Audio/ (278)
       vent.wav.import
       waterfall.wav
       waterfall.wav.import
-      Audio/SFX/Ambiance/conveyor.wav
-      Audio/SFX/Ambiance/conveyor.wav.import
-      Audio/SFX/Ambiance/Earthquake.wav
-      Audio/SFX/Ambiance/Earthquake.wav.import
-      Audio/SFX/Ambiance/vent.wav
-      Audio/SFX/Ambiance/vent.wav.import
-      Audio/SFX/Ambiance/waterfall.wav
-      Audio/SFX/Ambiance/waterfall.wav.import
     Boss/ (12)
       s2br_BossExplosion.wav
       s2br_BossExplosion.wav.import
@@ -33,18 +25,6 @@ Audio/ (278)
       s2br_SmallExplosion.wav.import
       s2br_SmallLaser.wav
       s2br_SmallLaser.wav.import
-      Audio/SFX/Boss/s2br_BossExplosion.wav
-      Audio/SFX/Boss/s2br_BossExplosion.wav.import
-      Audio/SFX/Boss/s2br_BossHit.wav
-      Audio/SFX/Boss/s2br_BossHit.wav.import
-      Audio/SFX/Boss/s2br_helicopter.wav
-      Audio/SFX/Boss/s2br_helicopter.wav.import
-      Audio/SFX/Boss/s2br_Motor.wav
-      Audio/SFX/Boss/s2br_Motor.wav.import
-      Audio/SFX/Boss/s2br_SmallExplosion.wav
-      Audio/SFX/Boss/s2br_SmallExplosion.wav.import
-      Audio/SFX/Boss/s2br_SmallLaser.wav
-      Audio/SFX/Boss/s2br_SmallLaser.wav.import
     Gimmicks/ (28)
       BigFan.wav
       BigFan.wav.import
@@ -74,34 +54,6 @@ Audio/ (278)
       SpikesClash.wav.import
       Warp.wav
       Warp.wav.import
-      Audio/SFX/Gimmicks/BigFan.wav
-      Audio/SFX/Gimmicks/BigFan.wav.import
-      Audio/SFX/Gimmicks/HTZ_Liftclick.wav
-      Audio/SFX/Gimmicks/HTZ_Liftclick.wav.import
-      Audio/SFX/Gimmicks/MegaMackGloop.ogg
-      Audio/SFX/Gimmicks/MegaMackGloop.ogg.import
-      Audio/SFX/Gimmicks/OOZ_Lid_Pop.wav
-      Audio/SFX/Gimmicks/OOZ_Lid_Pop.wav.import
-      Audio/SFX/Gimmicks/PoweringUp.wav
-      Audio/SFX/Gimmicks/PoweringUp.wav.import
-      Audio/SFX/Gimmicks/s2br_ArrowFire.wav
-      Audio/SFX/Gimmicks/s2br_ArrowFire.wav.import
-      Audio/SFX/Gimmicks/s2br_Collapse.wav
-      Audio/SFX/Gimmicks/s2br_Collapse.wav.import
-      Audio/SFX/Gimmicks/s2br_DoorLatchwav.wav
-      Audio/SFX/Gimmicks/s2br_DoorLatchwav.wav.import
-      Audio/SFX/Gimmicks/s2br_Drawbridge_Drop.wav
-      Audio/SFX/Gimmicks/s2br_Drawbridge_Drop.wav.import
-      Audio/SFX/Gimmicks/s2br_Spring.wav
-      Audio/SFX/Gimmicks/s2br_Spring.wav.import
-      Audio/SFX/Gimmicks/s2br_Switch.wav
-      Audio/SFX/Gimmicks/s2br_Switch.wav.import
-      Audio/SFX/Gimmicks/SmallFan.wav
-      Audio/SFX/Gimmicks/SmallFan.wav.import
-      Audio/SFX/Gimmicks/SpikesClash.wav
-      Audio/SFX/Gimmicks/SpikesClash.wav.import
-      Audio/SFX/Gimmicks/Warp.wav
-      Audio/SFX/Gimmicks/Warp.wav.import
     Misc/ (26)
       Emerald.wav
       Emerald.wav.import
@@ -129,32 +81,6 @@ Audio/ (278)
       s2br_UFO.wav.import
       Sega.wav
       Sega.wav.import
-      Audio/SFX/Misc/Emerald.wav
-      Audio/SFX/Misc/Emerald.wav.import
-      Audio/SFX/Misc/Flash.wav
-      Audio/SFX/Misc/Flash.wav.import
-      Audio/SFX/Misc/MenuAccept.wav
-      Audio/SFX/Misc/MenuAccept.wav.import
-      Audio/SFX/Misc/MenuBleep.wav
-      Audio/SFX/Misc/MenuBleep.wav.import
-      Audio/SFX/Misc/MenuWoosh.wav
-      Audio/SFX/Misc/MenuWoosh.wav.import
-      Audio/SFX/Misc/s2br_Beep.wav
-      Audio/SFX/Misc/s2br_Beep.wav.import
-      Audio/SFX/Misc/s2br_Error.wav
-      Audio/SFX/Misc/s2br_Error.wav.import
-      Audio/SFX/Misc/s2br_SpecialWarp.wav
-      Audio/SFX/Misc/s2br_SpecialWarp.wav.import
-      Audio/SFX/Misc/s2br_Tally.wav
-      Audio/SFX/Misc/s2br_Tally.wav.import
-      Audio/SFX/Misc/s2br_Teleport.wav
-      Audio/SFX/Misc/s2br_Teleport.wav.import
-      Audio/SFX/Misc/s2br_Twinkle.wav
-      Audio/SFX/Misc/s2br_Twinkle.wav.import
-      Audio/SFX/Misc/s2br_UFO.wav
-      Audio/SFX/Misc/s2br_UFO.wav.import
-      Audio/SFX/Misc/Sega.wav
-      Audio/SFX/Misc/Sega.wav.import
     Objects/ (50)
       BuzzSaw.wav
       BuzzSaw.wav.import
@@ -206,56 +132,6 @@ Audio/ (278)
       s2br_Spikes.wav.import
       SpecialRing.wav
       SpecialRing.wav.import
-      Audio/SFX/Objects/BuzzSaw.wav
-      Audio/SFX/Objects/BuzzSaw.wav.import
-      Audio/SFX/Objects/ChemJump.wav
-      Audio/SFX/Objects/ChemJump.wav.import
-      Audio/SFX/Objects/CNZ_BigBumper.wav
-      Audio/SFX/Objects/CNZ_BigBumper.wav.import
-      Audio/SFX/Objects/CNZ_Bonus.wav
-      Audio/SFX/Objects/CNZ_Bonus.wav.import
-      Audio/SFX/Objects/CNZ_Booster.wav
-      Audio/SFX/Objects/CNZ_Booster.wav.import
-      Audio/SFX/Objects/CNZ_Elevator.wav
-      Audio/SFX/Objects/CNZ_Elevator.wav.import
-      Audio/SFX/Objects/CNZ_Flipper.wav
-      Audio/SFX/Objects/CNZ_Flipper.wav.import
-      Audio/SFX/Objects/RingStereo.wav
-      Audio/SFX/Objects/RingStereo.wav.import
-      Audio/SFX/Objects/s2br_BigLaser.wav
-      Audio/SFX/Objects/s2br_BigLaser.wav.import
-      Audio/SFX/Objects/s2br_Bumper.wav
-      Audio/SFX/Objects/s2br_Bumper.wav.import
-      Audio/SFX/Objects/s2br_Checkpoint.wav
-      Audio/SFX/Objects/s2br_Checkpoint.wav.import
-      Audio/SFX/Objects/s2br_CNZSlot.wav
-      Audio/SFX/Objects/s2br_CNZSlot.wav.import
-      Audio/SFX/Objects/s2br_Destroy.wav
-      Audio/SFX/Objects/s2br_Destroy.wav.import
-      Audio/SFX/Objects/s2br_Flamethrower.wav
-      Audio/SFX/Objects/s2br_Flamethrower.wav.import
-      Audio/SFX/Objects/s2br_LoseRings.wav
-      Audio/SFX/Objects/s2br_LoseRings.wav.import
-      Audio/SFX/Objects/s2br_MegaMack.wav
-      Audio/SFX/Objects/s2br_MegaMack.wav.import
-      Audio/SFX/Objects/s2br_Points.wav
-      Audio/SFX/Objects/s2br_Points.wav.import
-      Audio/SFX/Objects/s2br_Projectile.wav
-      Audio/SFX/Objects/s2br_Projectile.wav.import
-      Audio/SFX/Objects/s2br_RingLeft.wav
-      Audio/SFX/Objects/s2br_RingLeft.wav.import
-      Audio/SFX/Objects/s2br_RingRight.wav
-      Audio/SFX/Objects/s2br_RingRight.wav.import
-      Audio/SFX/Objects/s2br_Signpost.wav
-      Audio/SFX/Objects/s2br_Signpost.wav.import
-      Audio/SFX/Objects/s2br_Signpost2P.wav
-      Audio/SFX/Objects/s2br_Signpost2P.wav.import
-      Audio/SFX/Objects/s2br_SlowSmash.wav
-      Audio/SFX/Objects/s2br_SlowSmash.wav.import
-      Audio/SFX/Objects/s2br_Spikes.wav
-      Audio/SFX/Objects/s2br_Spikes.wav.import
-      Audio/SFX/Objects/SpecialRing.wav
-      Audio/SFX/Objects/SpecialRing.wav.import
     Player/ (66)
       BubbleShield.wav
       BubbleShield.wav.import
@@ -323,72 +199,6 @@ Audio/ (278)
       Slide.wav.import
       WaterRun.wav
       WaterRun.wav.import
-      Audio/SFX/Player/BubbleShield.wav
-      Audio/SFX/Player/BubbleShield.wav.import
-      Audio/SFX/Player/BubbleUse.wav
-      Audio/SFX/Player/BubbleUse.wav.import
-      Audio/SFX/Player/DropDash.wav
-      Audio/SFX/Player/DropDash.wav.import
-      Audio/SFX/Player/InstShield.wav
-      Audio/SFX/Player/InstShield.wav.import
-      Audio/SFX/Player/s2br_AirGulp.wav
-      Audio/SFX/Player/s2br_AirGulp.wav.import
-      Audio/SFX/Player/s2br_AirWarning.wav
-      Audio/SFX/Player/s2br_AirWarning.wav.import
-      Audio/SFX/Player/s2br_Bloop.wav
-      Audio/SFX/Player/s2br_Bloop.wav.import
-      Audio/SFX/Player/s2br_Brake.wav
-      Audio/SFX/Player/s2br_Brake.wav.import
-      Audio/SFX/Player/s2br_BubbleAb.wav
-      Audio/SFX/Player/s2br_BubbleAb.wav.import
-      Audio/SFX/Player/s2br_DashRelease.wav
-      Audio/SFX/Player/s2br_DashRelease.wav.import
-      Audio/SFX/Player/s2br_Death.wav
-      Audio/SFX/Player/s2br_Death.wav.import
-      Audio/SFX/Player/s2br_Drown.wav
-      Audio/SFX/Player/s2br_Drown.wav.import
-      Audio/SFX/Player/s2br_FlameAb.wav
-      Audio/SFX/Player/s2br_FlameAb.wav.import
-      Audio/SFX/Player/s2br_GetBubbleSh.wav
-      Audio/SFX/Player/s2br_GetBubbleSh.wav.import
-      Audio/SFX/Player/s2br_GetFlameSh.wav
-      Audio/SFX/Player/s2br_GetFlameSh.wav.import
-      Audio/SFX/Player/s2br_GetLightSh.wav
-      Audio/SFX/Player/s2br_GetLightSh.wav.import
-      Audio/SFX/Player/s2br_Grab.wav
-      Audio/SFX/Player/s2br_Grab.wav.import
-      Audio/SFX/Player/s2br_Jump.wav
-      Audio/SFX/Player/s2br_Jump.wav.import
-      Audio/SFX/Player/s2br_Land.wav
-      Audio/SFX/Player/s2br_Land.wav.import
-      Audio/SFX/Player/s2br_LightAb.wav
-      Audio/SFX/Player/s2br_LightAb.wav.import
-      Audio/SFX/Player/s2br_MetalBrake.wav
-      Audio/SFX/Player/s2br_MetalBrake.wav.import
-      Audio/SFX/Player/s2br_MetalJump.wav
-      Audio/SFX/Player/s2br_MetalJump.wav.import
-      Audio/SFX/Player/s2br_Roll.wav
-      Audio/SFX/Player/s2br_Roll.wav.import
-      Audio/SFX/Player/s2br_Shield.wav
-      Audio/SFX/Player/s2br_Shield.wav.import
-      Audio/SFX/Player/s2br_SpindashRev.wav
-      Audio/SFX/Player/s2br_SpindashRev.wav.import
-      Audio/SFX/Player/s2br_Splash.wav
-      Audio/SFX/Player/s2br_Splash.wav.import
-      Audio/SFX/Player/s2br_Stab.wav
-      Audio/SFX/Player/s2br_Stab.wav.import
-      Audio/SFX/Player/s2br_Stomp.wav
-      Audio/SFX/Player/s2br_Stomp.wav.import
-      Audio/SFX/Player/s2br_TailsFly.wav
-      Audio/SFX/Player/s2br_TailsFly.wav.import
-      Audio/SFX/Player/s2br_TailsTired.wav
-      Audio/SFX/Player/s2br_TailsTired.wav.import
-      Audio/SFX/Player/s2br_TurnSuper.wav
-      Audio/SFX/Player/s2br_TurnSuper.wav.import
-      Audio/SFX/Player/Slide.wav
-      Audio/SFX/Player/Slide.wav.import
-      Audio/SFX/Player/WaterRun.wav
-      Audio/SFX/Player/WaterRun.wav.import
   Soundtrack/ (88)
     1Up.ogg
     1Up.ogg.import
@@ -478,157 +288,57 @@ Audio/ (278)
     WingFortress_F.ogg.import
     WingFortress.ogg
     WingFortress.ogg.import
-    Audio/Soundtrack/1Up.ogg
-    Audio/Soundtrack/1Up.ogg.import
-    Audio/Soundtrack/ActComplete.ogg
-    Audio/Soundtrack/ActComplete.ogg.import
-    Audio/Soundtrack/AquaticRuin_F.ogg
-    Audio/Soundtrack/AquaticRuin_F.ogg.import
-    Audio/Soundtrack/AquaticRuin.ogg
-    Audio/Soundtrack/AquaticRuin.ogg.import
-    Audio/Soundtrack/Boss.ogg
-    Audio/Soundtrack/Boss.ogg.import
-    Audio/Soundtrack/CasinoNight_F.ogg
-    Audio/Soundtrack/CasinoNight_F.ogg.import
-    Audio/Soundtrack/CasinoNight.ogg
-    Audio/Soundtrack/CasinoNight.ogg.import
-    Audio/Soundtrack/CasinoNight2_F.ogg
-    Audio/Soundtrack/CasinoNight2_F.ogg.import
-    Audio/Soundtrack/CasinoNight2.ogg
-    Audio/Soundtrack/CasinoNight2.ogg.import
-    Audio/Soundtrack/ChemicalPlant_F.ogg
-    Audio/Soundtrack/ChemicalPlant_F.ogg.import
-    Audio/Soundtrack/ChemicalPlant.ogg
-    Audio/Soundtrack/ChemicalPlant.ogg.import
-    Audio/Soundtrack/Continue.ogg
-    Audio/Soundtrack/Continue.ogg.import
-    Audio/Soundtrack/Credits.ogg
-    Audio/Soundtrack/Credits.ogg.import
-    Audio/Soundtrack/DeathEgg.ogg
-    Audio/Soundtrack/DeathEgg.ogg.import
-    Audio/Soundtrack/Drowning.ogg
-    Audio/Soundtrack/Drowning.ogg.import
-    Audio/Soundtrack/EmeraldHill_F.ogg
-    Audio/Soundtrack/EmeraldHill_F.ogg.import
-    Audio/Soundtrack/EmeraldHill.ogg
-    Audio/Soundtrack/EmeraldHill.ogg.import
-    Audio/Soundtrack/EmeraldHill2_F.ogg
-    Audio/Soundtrack/EmeraldHill2_F.ogg.import
-    Audio/Soundtrack/EmeraldHill2.ogg
-    Audio/Soundtrack/EmeraldHill2.ogg.import
-    Audio/Soundtrack/Ending.ogg
-    Audio/Soundtrack/Ending.ogg.import
-    Audio/Soundtrack/Extra.ogg
-    Audio/Soundtrack/Extra.ogg.import
-    Audio/Soundtrack/FinalBoss.ogg
-    Audio/Soundtrack/FinalBoss.ogg.import
-    Audio/Soundtrack/GameOver.ogg
-    Audio/Soundtrack/GameOver.ogg.import
-    Audio/Soundtrack/HillTop_F.ogg
-    Audio/Soundtrack/HillTop_F.ogg.import
-    Audio/Soundtrack/HillTop.ogg
-    Audio/Soundtrack/HillTop.ogg.import
-    Audio/Soundtrack/Invincibility_F.ogg
-    Audio/Soundtrack/Invincibility_F.ogg.import
-    Audio/Soundtrack/Invincibility.ogg
-    Audio/Soundtrack/Invincibility.ogg.import
-    Audio/Soundtrack/MainMenu.ogg
-    Audio/Soundtrack/MainMenu.ogg.import
-    Audio/Soundtrack/Metropolis_F.ogg
-    Audio/Soundtrack/Metropolis_F.ogg.import
-    Audio/Soundtrack/Metropolis.ogg
-    Audio/Soundtrack/Metropolis.ogg.import
-    Audio/Soundtrack/MysticCave_F.ogg
-    Audio/Soundtrack/MysticCave_F.ogg.import
-    Audio/Soundtrack/MysticCave.ogg
-    Audio/Soundtrack/MysticCave.ogg.import
-    Audio/Soundtrack/MysticCave2_F.ogg
-    Audio/Soundtrack/MysticCave2_F.ogg.import
-    Audio/Soundtrack/MysticCave2.ogg
-    Audio/Soundtrack/MysticCave2.ogg.import
-    Audio/Soundtrack/OilOcean_F.ogg
-    Audio/Soundtrack/OilOcean_F.ogg.import
-    Audio/Soundtrack/OilOcean.ogg
-    Audio/Soundtrack/OilOcean.ogg.import
-    Audio/Soundtrack/Options.ogg
-    Audio/Soundtrack/Options.ogg.import
-    Audio/Soundtrack/Results.ogg
-    Audio/Soundtrack/Results.ogg.import
-    Audio/Soundtrack/SkyChase.ogg
-    Audio/Soundtrack/SkyChase.ogg.import
-    Audio/Soundtrack/SpecialStage.ogg
-    Audio/Soundtrack/SpecialStage.ogg.import
-    Audio/Soundtrack/Super.ogg
-    Audio/Soundtrack/Super.ogg.import
-    Audio/Soundtrack/Titlescreen.ogg
-    Audio/Soundtrack/Titlescreen.ogg.import
-    Audio/Soundtrack/WingFortress_F.ogg
-    Audio/Soundtrack/WingFortress_F.ogg.import
-    Audio/Soundtrack/WingFortress.ogg
-    Audio/Soundtrack/WingFortress.ogg.import
 Entities/ (250)
-  PhysicsObject.tscn
   Backgrounds/ (1)
     GHZWaterfall.tscn
-    Entities/Backgrounds/GHZWaterfall.tscn
   Boss/ (19)
-    BossBase.tscn
-    BossBoundrySetter.tscn
-    eggman_mechless.tscn
-    RobotnikTemplate.tscn
     Boss Components/ (5)
       DrillEggmanCar.tscn
       DrillEggmanDrill.tscn
       DrillEggmanWheel.tscn
       HelicopterEggman.tscn
       PoisonEggman_water_pump.tscn
-      Entities/Boss/Boss Components/DrillEggmanCar.tscn
-      Entities/Boss/Boss Components/DrillEggmanDrill.tscn
-      Entities/Boss/Boss Components/DrillEggmanWheel.tscn
-      Entities/Boss/Boss Components/HelicopterEggman.tscn
-      Entities/Boss/Boss Components/PoisonEggman_water_pump.tscn
     Bouncer Eggman/ (3)
       bouncer_eggman_laser.tscn
       BouncerEggman.tscn
       egg_pod.tscn
-      Entities/Boss/Bouncer Eggman/bouncer_eggman_laser.tscn
-      Entities/Boss/Bouncer Eggman/BouncerEggman.tscn
-      Entities/Boss/Bouncer Eggman/egg_pod.tscn
     Laser_Eggman/ (2)
       LaserHolder.tscn
       scz_boss_platform.tscn
-      Entities/Boss/Laser_Eggman/LaserHolder.tscn
-      Entities/Boss/Laser_Eggman/scz_boss_platform.tscn
     Poison Eggman/ (1)
       PoisonEggman.tscn
-      Entities/Boss/Poison Eggman/PoisonEggman.tscn
     SilverSonic/ (2)
       eggman_window.tscn
       SilverSonic.tscn
-      Entities/Boss/SilverSonic/eggman_window.tscn
-      Entities/Boss/SilverSonic/SilverSonic.tscn
     Submarine Eggman/ (1)
       GetawaySubmarine.tscn
-      Entities/Boss/Submarine Eggman/GetawaySubmarine.tscn
     Wrecking Eggman/ (1)
       WreckingEggman.tscn
-      Entities/Boss/Wrecking Eggman/WreckingEggman.tscn
-    Entities/Boss/BossBase.tscn
-    Entities/Boss/BossBoundrySetter.tscn
-    Entities/Boss/eggman_mechless.tscn
-    Entities/Boss/RobotnikTemplate.tscn
+    BossBase.tscn
+    BossBoundrySetter.tscn
+    eggman_mechless.tscn
+    RobotnikTemplate.tscn
   Cutscene/ (5)
     custscene_tails.tscn
     cutscene_Animal.tscn
     cutscene_Eggman.tscn
     cutscene_knuckles.tscn
     cutscene_sonic.tscn
-    Entities/Cutscene/custscene_tails.tscn
-    Entities/Cutscene/cutscene_Animal.tscn
-    Entities/Cutscene/cutscene_Eggman.tscn
-    Entities/Cutscene/cutscene_knuckles.tscn
-    Entities/Cutscene/cutscene_sonic.tscn
   Enemies/ (51)
+    Projectiles/ (13)
+      AquisProjectile.tscn
+      AsteronProjectile.tscn
+      BuzzBomberProjectile.tscn
+      CoconutProjectile.tscn
+      EnemyProjectileBase.tscn
+      GenericProjectile.tscn
+      NGHZ_Arrow.tscn
+      pterabot_projectile.gd
+      pterabot_projectile.gd.uid
+      PterabotProjectile.tscn
+      RedzFire.tscn
+      ScratchProjectile.tscn
+      SlicerProjectile.tscn
     Aquis.tscn
     Asteron.tscn
     Balkerie.tscn
@@ -667,71 +377,6 @@ Entities/ (250)
     TurtleoidPilot.tscn
     turtloid.tscn
     Wisp.tscn
-    Projectiles/ (13)
-      AquisProjectile.tscn
-      AsteronProjectile.tscn
-      BuzzBomberProjectile.tscn
-      CoconutProjectile.tscn
-      EnemyProjectileBase.tscn
-      GenericProjectile.tscn
-      NGHZ_Arrow.tscn
-      pterabot_projectile.gd
-      pterabot_projectile.gd.uid
-      PterabotProjectile.tscn
-      RedzFire.tscn
-      ScratchProjectile.tscn
-      SlicerProjectile.tscn
-      Entities/Enemies/Projectiles/AquisProjectile.tscn
-      Entities/Enemies/Projectiles/AsteronProjectile.tscn
-      Entities/Enemies/Projectiles/BuzzBomberProjectile.tscn
-      Entities/Enemies/Projectiles/CoconutProjectile.tscn
-      Entities/Enemies/Projectiles/EnemyProjectileBase.tscn
-      Entities/Enemies/Projectiles/GenericProjectile.tscn
-      Entities/Enemies/Projectiles/NGHZ_Arrow.tscn
-      Entities/Enemies/Projectiles/pterabot_projectile.gd
-      Entities/Enemies/Projectiles/pterabot_projectile.gd.uid
-      Entities/Enemies/Projectiles/PterabotProjectile.tscn
-      Entities/Enemies/Projectiles/RedzFire.tscn
-      Entities/Enemies/Projectiles/ScratchProjectile.tscn
-      Entities/Enemies/Projectiles/SlicerProjectile.tscn
-    Entities/Enemies/Aquis.tscn
-    Entities/Enemies/Asteron.tscn
-    Entities/Enemies/Balkerie.tscn
-    Entities/Enemies/BBat.tscn
-    Entities/Enemies/BFish.tscn
-    Entities/Enemies/Bouncer.tscn
-    Entities/Enemies/Bubbler.tscn
-    Entities/Enemies/BubblersMother.tscn
-    Entities/Enemies/BuzzBomber.tscn
-    Entities/Enemies/Chomper.tscn
-    Entities/Enemies/ChopChop.tscn
-    Entities/Enemies/Coconuts.tscn
-    Entities/Enemies/Crawl.tscn
-    Entities/Enemies/Crawlton_Head.tscn
-    Entities/Enemies/crawlton.tscn
-    Entities/Enemies/EnemyBase.tscn
-    Entities/Enemies/EradiGator.tscn
-    Entities/Enemies/Flasher.tscn
-    Entities/Enemies/Grabber.tscn
-    Entities/Enemies/Grounder.tscn
-    Entities/Enemies/MotoBug.tscn
-    Entities/Enemies/Nebula.tscn
-    Entities/Enemies/Octus.tscn
-    Entities/Enemies/Orbinaut.tscn
-    Entities/Enemies/PropellerShaft.tscn
-    Entities/Enemies/Pterabot.tscn
-    Entities/Enemies/Redz.tscn
-    Entities/Enemies/Rexon.tscn
-    Entities/Enemies/RexonHead.tscn
-    Entities/Enemies/SandCrawl.tscn
-    Entities/Enemies/Scratch.tscn
-    Entities/Enemies/ShellCracker.tscn
-    Entities/Enemies/Slicer.tscn
-    Entities/Enemies/Spiny.tscn
-    Entities/Enemies/Stegway.tscn
-    Entities/Enemies/TurtleoidPilot.tscn
-    Entities/Enemies/turtloid.tscn
-    Entities/Enemies/Wisp.tscn
   Gimmicks/ (54)
     ArrowShooter.tscn
     ARZ_RisingPillar.tscn
@@ -787,60 +432,6 @@ Entities/ (250)
     WaterLevel.tscn
     WaterSlide.tscn
     WindCurrent.tscn
-    Entities/Gimmicks/ArrowShooter.tscn
-    Entities/Gimmicks/ARZ_RisingPillar.tscn
-    Entities/Gimmicks/Bridge.tscn
-    Entities/Gimmicks/BubbleGenerator.tscn
-    Entities/Gimmicks/cnz_bonus_bumper.tscn
-    Entities/Gimmicks/CNZ_CharacterReels.tscn
-    Entities/Gimmicks/cnz_pressure_spring.tscn
-    Entities/Gimmicks/cnz_slot.tscn
-    Entities/Gimmicks/CNZBarrel.tscn
-    Entities/Gimmicks/CNZFlipper.tscn
-    Entities/Gimmicks/CNZTrampolineBarrel.tscn
-    Entities/Gimmicks/ConveyorBelt.tscn
-    Entities/Gimmicks/Corkscrew_HTube.tscn
-    Entities/Gimmicks/CorkscrewLoop.tscn
-    Entities/Gimmicks/CPZTippingPipe.tscn
-    Entities/Gimmicks/fan.tscn
-    Entities/Gimmicks/ForceRoll.tscn
-    Entities/Gimmicks/Geyser.tscn
-    Entities/Gimmicks/giant_fan.tscn
-    Entities/Gimmicks/Hanger.tscn
-    Entities/Gimmicks/hanging_Bar.tscn
-    Entities/Gimmicks/hanging_vine.tscn
-    Entities/Gimmicks/HangingBar.tscn
-    Entities/Gimmicks/HTZSeeSaw.tscn
-    Entities/Gimmicks/Invisible_launcher.tscn
-    Entities/Gimmicks/LeverSpring.tscn
-    Entities/Gimmicks/mtz_giant_cog_tooth.tscn
-    Entities/Gimmicks/mtz_giant_cog.tscn
-    Entities/Gimmicks/mtz_pipe.tscn
-    Entities/Gimmicks/mtz_vertical_converyor_belt.tscn
-    Entities/Gimmicks/MTZSteamPipe.tscn
-    Entities/Gimmicks/Oil.tscn
-    Entities/Gimmicks/OilSlick.tscn
-    Entities/Gimmicks/OOZ_launcher.tscn
-    Entities/Gimmicks/OOZ_Lid.tscn
-    Entities/Gimmicks/Ring_Prize.tscn
-    Entities/Gimmicks/ScrewPlatform.tscn
-    Entities/Gimmicks/scz_launcher.tscn
-    Entities/Gimmicks/scz_rising_platforms_test.tscn
-    Entities/Gimmicks/SetWaterLevel.tscn
-    Entities/Gimmicks/shifting_platform.tscn
-    Entities/Gimmicks/Shutter.tscn
-    Entities/Gimmicks/SpeedBooster.tscn
-    Entities/Gimmicks/spike_prize.tscn
-    Entities/Gimmicks/Spring.tscn
-    Entities/Gimmicks/Switch.tscn
-    Entities/Gimmicks/Teleporter.tscn
-    Entities/Gimmicks/Trampoline.tscn
-    Entities/Gimmicks/tube_spring.tscn
-    Entities/Gimmicks/VerticalShutter.tscn
-    Entities/Gimmicks/WaterBar.tscn
-    Entities/Gimmicks/WaterLevel.tscn
-    Entities/Gimmicks/WaterSlide.tscn
-    Entities/Gimmicks/WindCurrent.tscn
   Hazards/ (24)
     BurnerFlames.tscn
     Crusher.tscn
@@ -866,30 +457,6 @@ Entities/ (250)
     SwingingHazard.tscn
     Tilemap_crusher.tscn
     wgz_saw.tscn
-    Entities/Hazards/BurnerFlames.tscn
-    Entities/Hazards/Crusher.tscn
-    Entities/Hazards/dhz_spiked_platform.tscn
-    Entities/Hazards/DHZChainedTrap.tscn
-    Entities/Hazards/ghz_ball.tscn
-    Entities/Hazards/ghz_log_spike_group.tscn
-    Entities/Hazards/GHZ_LogSpike.tscn
-    Entities/Hazards/Lava.tscn
-    Entities/Hazards/MTZ_MiniCrusher.tscn
-    Entities/Hazards/MultiRotatingSpikes.tscn
-    Entities/Hazards/OOZ_Spiker.tscn
-    Entities/Hazards/saw_WGZ.tscn
-    Entities/Hazards/Saw.tscn
-    Entities/Hazards/scz_h_laser.tscn
-    Entities/Hazards/scz_propeller.tscn
-    Entities/Hazards/Sol.tscn
-    Entities/Hazards/spear_block.tscn
-    Entities/Hazards/Spear.tscn
-    Entities/Hazards/SpikeBall.tscn
-    Entities/Hazards/Spikes.tscn
-    Entities/Hazards/SteamPuff.tscn
-    Entities/Hazards/SwingingHazard.tscn
-    Entities/Hazards/Tilemap_crusher.tscn
-    Entities/Hazards/wgz_saw.tscn
   Items/ (6)
     Checkpoint.tscn
     CheckpointStars.tscn
@@ -897,12 +464,6 @@ Entities/ (250)
     Monitor.tscn
     Ring.tscn
     SpecialStageRing.tscn
-    Entities/Items/Checkpoint.tscn
-    Entities/Items/CheckpointStars.tscn
-    Entities/Items/LampPost.tscn
-    Entities/Items/Monitor.tscn
-    Entities/Items/Ring.tscn
-    Entities/Items/SpecialStageRing.tscn
   MainObjects/ (7)
     BoundrySetter.tscn
     Capsule.tscn
@@ -911,13 +472,6 @@ Entities/ (250)
     LayerSwitcher.tscn
     Player.tscn
     Signpost_New.tscn
-    Entities/MainObjects/BoundrySetter.tscn
-    Entities/MainObjects/Capsule.tscn
-    Entities/MainObjects/GoalArea.tscn
-    Entities/MainObjects/GoalPost.tscn
-    Entities/MainObjects/LayerSwitcher.tscn
-    Entities/MainObjects/Player.tscn
-    Entities/MainObjects/Signpost_New.tscn
   MenuObjects/ (11)
     delete_file_popup_menu.tscn
     Delete_save_panel.tscn
@@ -930,17 +484,6 @@ Entities/ (250)
     yes_no_popup_menu.gd
     yes_no_popup_menu.gd.uid
     yes_no_popup_menu.tscn
-    Entities/MenuObjects/delete_file_popup_menu.tscn
-    Entities/MenuObjects/Delete_save_panel.tscn
-    Entities/MenuObjects/general_popup_menu.tscn
-    Entities/MenuObjects/Level_Select_popup_menu.tscn
-    Entities/MenuObjects/no_save_panel.tscn
-    Entities/MenuObjects/save_file_popup_menu.tscn
-    Entities/MenuObjects/SavePanel.tscn
-    Entities/MenuObjects/slider_popup_menu.tscn
-    Entities/MenuObjects/yes_no_popup_menu.gd
-    Entities/MenuObjects/yes_no_popup_menu.gd.uid
-    Entities/MenuObjects/yes_no_popup_menu.tscn
   Misc/ (20)
     Animal.tscn
     BadnickSmoke.tscn
@@ -962,26 +505,6 @@ Entities/ (250)
     Score.tscn
     Tornado.tscn
     twinkle_star.tscn
-    Entities/Misc/Animal.tscn
-    Entities/Misc/BadnickSmoke.tscn
-    Entities/Misc/BlockPiece.tscn
-    Entities/Misc/Bubbles.tscn
-    Entities/Misc/character_cameo.tscn
-    Entities/Misc/ControllerMenu.tscn
-    Entities/Misc/CountDownTimer.tscn
-    Entities/Misc/ElecParticles.tscn
-    Entities/Misc/falling_block_plat.tscn
-    Entities/Misc/GenericParticle.tscn
-    Entities/Misc/HUD.tscn
-    Entities/Misc/orbit_test.gd
-    Entities/Misc/orbit_test.gd.uid
-    Entities/Misc/OrbitTest.tscn
-    Entities/Misc/PauseMenu.tscn
-    Entities/Misc/player_reset_field.tscn
-    Entities/Misc/RotatingParticle.tscn
-    Entities/Misc/Score.tscn
-    Entities/Misc/Tornado.tscn
-    Entities/Misc/twinkle_star.tscn
   Obstacles/ (22)
     AscendingStairBlocks.tscn
     BreakableBlock.tscn
@@ -1005,28 +528,6 @@ Entities/ (250)
     SwingingPlatform.tscn
     vent_entrance.tscn
     ZipLinePlatform.tscn
-    Entities/Obstacles/AscendingStairBlocks.tscn
-    Entities/Obstacles/BreakableBlock.tscn
-    Entities/Obstacles/BreakableEmerald.tscn
-    Entities/Obstacles/BreakableFloor.tscn
-    Entities/Obstacles/BreakableTubeLauncher.tscn
-    Entities/Obstacles/BreakableWall.tscn
-    Entities/Obstacles/Bumper.tscn
-    Entities/Obstacles/DrawBridge.tscn
-    Entities/Obstacles/Elevator.tscn
-    Entities/Obstacles/ForceAngleSides.tscn
-    Entities/Obstacles/HexBumper.tscn
-    Entities/Obstacles/InvisibleBarrier.tscn
-    Entities/Obstacles/InvisiblePlatform.tscn
-    Entities/Obstacles/MovingStairBlocks.tscn
-    Entities/Obstacles/mtz_cup_platform.tscn
-    Entities/Obstacles/MultiRotatingPlatforms.tscn
-    Entities/Obstacles/ooz_ball.tscn
-    Entities/Obstacles/Platform.tscn
-    Entities/Obstacles/RotatingSolidBlocks.tscn
-    Entities/Obstacles/SwingingPlatform.tscn
-    Entities/Obstacles/vent_entrance.tscn
-    Entities/Obstacles/ZipLinePlatform.tscn
   ZoneObjects/ (29)
     clucker_base.tscn
     CNZ-big_bumper.tscn
@@ -1057,36 +558,7 @@ Entities/ (250)
     SCZ_conveyor_belt.tscn
     scz_turret_platform.tscn
     scz_wall_panel.tscn
-    Entities/ZoneObjects/clucker_base.tscn
-    Entities/ZoneObjects/CNZ-big_bumper.tscn
-    Entities/ZoneObjects/CNZ-triangle_bumper.tscn
-    Entities/ZoneObjects/DHZ_brick_block.tscn
-    Entities/ZoneObjects/DHZ_Platform_Spawner.tscn
-    Entities/ZoneObjects/DHZ_SpikeBlock.tscn
-    Entities/ZoneObjects/DHZ_Stomper.tscn
-    Entities/ZoneObjects/EHZ_collapsing_platform.tscn
-    Entities/ZoneObjects/HPZ_Platform_Spawner.tscn
-    Entities/ZoneObjects/HPZ_pulsating_orb.tscn
-    Entities/ZoneObjects/HPZCollapsingPlatform.tscn
-    Entities/ZoneObjects/MackWorms.tscn
-    Entities/ZoneObjects/MackWormSpawner.tscn
-    Entities/ZoneObjects/MCZ_CollapsePlatformLeft.tscn
-    Entities/ZoneObjects/MCZ_CollapsePlatformRight.tscn
-    Entities/ZoneObjects/MTZ_ButtonActivatedPlatform.tscn
-    Entities/ZoneObjects/MTZ_SmallCog.tscn
-    Entities/ZoneObjects/MTZ_WallSpring.tscn
-    Entities/ZoneObjects/NGHZ_Bottomless_Pillar.tscn
-    Entities/ZoneObjects/NGHZ_FallingPillarPiece.tscn
-    Entities/ZoneObjects/NGHZ_FloatingPillar.tscn
-    Entities/ZoneObjects/NGHZCollapsingPlatform.tscn
-    Entities/ZoneObjects/OOZ_CollapsingPlatformLeft.tscn
-    Entities/ZoneObjects/OOZ_CollapsingplatformRight.tscn
-    Entities/ZoneObjects/OOZ_Platform_Spawner.tscn
-    Entities/ZoneObjects/OOZ_Platform_SpawnerLeft.tscn
-    Entities/ZoneObjects/SCZ_conveyor_belt.tscn
-    Entities/ZoneObjects/scz_turret_platform.tscn
-    Entities/ZoneObjects/scz_wall_panel.tscn
-  Entities/PhysicsObject.tscn
+  PhysicsObject.tscn
 Entitites3D/ (10)
   AnimatedParticle3D.tscn
   bomb_ss.tscn
@@ -1098,35 +570,17 @@ Entitites3D/ (10)
   special_stage_character.tscn
   SpecialHUD.tscn
   SS_Bumper.tscn
-  Entitites3D/AnimatedParticle3D.tscn
-  Entitites3D/bomb_ss.tscn
-  Entitites3D/ChaosEmerald.tscn
-  Entitites3D/end_of_round.tscn
-  Entitites3D/fix_chararcter_rotation.tscn
-  Entitites3D/monitor_Object.tscn
-  Entitites3D/ring_ss.tscn
-  Entitites3D/special_stage_character.tscn
-  Entitites3D/SpecialHUD.tscn
-  Entitites3D/SS_Bumper.tscn
 Graphics/ (999)
-  Light_Glow.png
-  Light_Glow.png.import
   Backgrounds/ (89)
     CPZ/ (2)
       CPZBGBlocks.png
       CPZBGBlocks.png.import
-      Graphics/Backgrounds/CPZ/CPZBGBlocks.png
-      Graphics/Backgrounds/CPZ/CPZBGBlocks.png.import
     DHZ/ (2)
       DHZBGBlocks.png
       DHZBGBlocks.png.import
-      Graphics/Backgrounds/DHZ/DHZBGBlocks.png
-      Graphics/Backgrounds/DHZ/DHZBGBlocks.png.import
     EGZ/ (2)
       CCZ_Sky.png
       CCZ_Sky.png.import
-      Graphics/Backgrounds/EGZ/CCZ_Sky.png
-      Graphics/Backgrounds/EGZ/CCZ_Sky.png.import
     EHZ/ (21)
       EHZ_BG_B.png
       EHZ_BG_B.png.import
@@ -1149,27 +603,6 @@ Graphics/ (999)
       EHZ_BG.png
       EHZ_BG.png.import
       EHZ_BG2.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_B.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_B.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_C.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_C.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_D.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_D.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_E.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_E.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_F.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_F.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_G.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_G.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_H.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_H.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_I.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_I.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG_J.png
-      Graphics/Backgrounds/EHZ/EHZ_BG_J.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG.png
-      Graphics/Backgrounds/EHZ/EHZ_BG.png.import
-      Graphics/Backgrounds/EHZ/EHZ_BG2.png.import
     GHZWaterfall/ (6)
       HPZWaterfall_Bottom.png
       HPZWaterfall_Bottom.png.import
@@ -1177,12 +610,6 @@ Graphics/ (999)
       HPZWaterfall_Length.png.import
       HPZWaterfall_Top.png
       HPZWaterfall_Top.png.import
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Bottom.png
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Bottom.png.import
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Length.png
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Length.png.import
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Top.png
-      Graphics/Backgrounds/GHZWaterfall/HPZWaterfall_Top.png.import
     HPZ/ (8)
       HPZ_BGE.png
       HPZ_BGE.png.import
@@ -1192,14 +619,6 @@ Graphics/ (999)
       HPZ_BGG.png.import
       HPZBGBlocks.png
       HPZBGBlocks.png.import
-      Graphics/Backgrounds/HPZ/HPZ_BGE.png
-      Graphics/Backgrounds/HPZ/HPZ_BGE.png.import
-      Graphics/Backgrounds/HPZ/HPZ_BGF.png
-      Graphics/Backgrounds/HPZ/HPZ_BGF.png.import
-      Graphics/Backgrounds/HPZ/HPZ_BGG.png
-      Graphics/Backgrounds/HPZ/HPZ_BGG.png.import
-      Graphics/Backgrounds/HPZ/HPZBGBlocks.png
-      Graphics/Backgrounds/HPZ/HPZBGBlocks.png.import
     HTZ/ (22)
       HTZ_BGA.png
       HTZ_BGA.png.import
@@ -1223,62 +642,26 @@ Graphics/ (999)
       HTZ_BGJ.png.import
       HTZ_BGK.png
       HTZ_BGK.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGA.png
-      Graphics/Backgrounds/HTZ/HTZ_BGA.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGB.png
-      Graphics/Backgrounds/HTZ/HTZ_BGB.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGC.png
-      Graphics/Backgrounds/HTZ/HTZ_BGC.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGD.png
-      Graphics/Backgrounds/HTZ/HTZ_BGD.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGE.png
-      Graphics/Backgrounds/HTZ/HTZ_BGE.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGF.png
-      Graphics/Backgrounds/HTZ/HTZ_BGF.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGG.png
-      Graphics/Backgrounds/HTZ/HTZ_BGG.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGH.png
-      Graphics/Backgrounds/HTZ/HTZ_BGH.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGI.png
-      Graphics/Backgrounds/HTZ/HTZ_BGI.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGJ.png
-      Graphics/Backgrounds/HTZ/HTZ_BGJ.png.import
-      Graphics/Backgrounds/HTZ/HTZ_BGK.png
-      Graphics/Backgrounds/HTZ/HTZ_BGK.png.import
     JGZ/ (2)
       JGZ_BG.png
       JGZ_BG.png.import
-      Graphics/Backgrounds/JGZ/JGZ_BG.png
-      Graphics/Backgrounds/JGZ/JGZ_BG.png.import
     MTZ/ (4)
       GCZ_BG.png
       GCZ_BG.png.import
       MTZ_BG.png
       MTZ_BG.png.import
-      Graphics/Backgrounds/MTZ/GCZ_BG.png
-      Graphics/Backgrounds/MTZ/GCZ_BG.png.import
-      Graphics/Backgrounds/MTZ/MTZ_BG.png
-      Graphics/Backgrounds/MTZ/MTZ_BG.png.import
     NGHZ/ (2)
       NGHZ_BGTiles.png
       NGHZ_BGTiles.png.import
-      Graphics/Backgrounds/NGHZ/NGHZ_BGTiles.png
-      Graphics/Backgrounds/NGHZ/NGHZ_BGTiles.png.import
     OOZ/ (2)
       OOZ_BGTiles.png
       OOZ_BGTiles.png.import
-      Graphics/Backgrounds/OOZ/OOZ_BGTiles.png
-      Graphics/Backgrounds/OOZ/OOZ_BGTiles.png.import
     SCZ/ (2)
       SCZ_BG.png
       SCZ_BG.png.import
-      Graphics/Backgrounds/SCZ/SCZ_BG.png
-      Graphics/Backgrounds/SCZ/SCZ_BG.png.import
     SSZ/ (2)
       SSZ_BG.png
       SSZ_BG.png.import
-      Graphics/Backgrounds/SSZ/SSZ_BG.png
-      Graphics/Backgrounds/SSZ/SSZ_BG.png.import
     WGZ/ (12)
       Clouds1.png
       Clouds1.png.import
@@ -1292,19 +675,34 @@ Graphics/ (999)
       WGZ_BG.png.import
       WGZ_HillTops.png
       WGZ_HillTops.png.import
-      Graphics/Backgrounds/WGZ/Clouds1.png
-      Graphics/Backgrounds/WGZ/Clouds1.png.import
-      Graphics/Backgrounds/WGZ/Clouds2.png
-      Graphics/Backgrounds/WGZ/Clouds2.png.import
-      Graphics/Backgrounds/WGZ/Clouds3.png
-      Graphics/Backgrounds/WGZ/Clouds3.png.import
-      Graphics/Backgrounds/WGZ/WGZ_BG_Top.png
-      Graphics/Backgrounds/WGZ/WGZ_BG_Top.png.import
-      Graphics/Backgrounds/WGZ/WGZ_BG.png
-      Graphics/Backgrounds/WGZ/WGZ_BG.png.import
-      Graphics/Backgrounds/WGZ/WGZ_HillTops.png
-      Graphics/Backgrounds/WGZ/WGZ_HillTops.png.import
   Boss/ (58)
+    CPZ/ (12)
+      Boss_Mack.png
+      Boss_Mack.png.import
+      Boss_PoisonEggman_Attach.png
+      Boss_PoisonEggman_Attach.png.import
+      Boss_PoisonEggman_Jar.png
+      Boss_PoisonEggman_Jar.png.import
+      Boss_PoisonEggman_Pump.png
+      Boss_PoisonEggman_Pump.png.import
+      Boss_PoisonEggmanHTube.png
+      Boss_PoisonEggmanHTube.png.import
+      Boss_PoisonEggmanVTube.png
+      Boss_PoisonEggmanVTube.png.import
+    MTZ/ (8)
+      Boss_BouncerEggman_Pod.png
+      Boss_BouncerEggman_Pod.png.import
+      Boss_BouncerEggmanLaser.png
+      Boss_BouncerEggmanLaser.png.import
+      Boss_Eggpod_Pop.png
+      Boss_Eggpod_Pop.png.import
+      Eggmobile_Laser.png
+      Eggmobile_Laser.png.import
+    OOZ/ (4)
+      Boss_SubMarineEggman_Flash.png
+      Boss_SubMarineEggman_Flash.png.import
+      Boss_SubMarineEggman.png
+      Boss_SubMarineEggman.png.import
     Boss_DrillEggman_Flash.png
     Boss_DrillEggman_Flash.png.import
     Boss_DrillEggman_Parts.png
@@ -1339,100 +737,11 @@ Graphics/ (999)
     SilverSonic.png.import
     TractorBeam.png
     TractorBeam.png.import
-    CPZ/ (12)
-      Boss_Mack.png
-      Boss_Mack.png.import
-      Boss_PoisonEggman_Attach.png
-      Boss_PoisonEggman_Attach.png.import
-      Boss_PoisonEggman_Jar.png
-      Boss_PoisonEggman_Jar.png.import
-      Boss_PoisonEggman_Pump.png
-      Boss_PoisonEggman_Pump.png.import
-      Boss_PoisonEggmanHTube.png
-      Boss_PoisonEggmanHTube.png.import
-      Boss_PoisonEggmanVTube.png
-      Boss_PoisonEggmanVTube.png.import
-      Graphics/Boss/CPZ/Boss_Mack.png
-      Graphics/Boss/CPZ/Boss_Mack.png.import
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Attach.png
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Attach.png.import
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Jar.png
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Jar.png.import
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Pump.png
-      Graphics/Boss/CPZ/Boss_PoisonEggman_Pump.png.import
-      Graphics/Boss/CPZ/Boss_PoisonEggmanHTube.png
-      Graphics/Boss/CPZ/Boss_PoisonEggmanHTube.png.import
-      Graphics/Boss/CPZ/Boss_PoisonEggmanVTube.png
-      Graphics/Boss/CPZ/Boss_PoisonEggmanVTube.png.import
-    MTZ/ (8)
-      Boss_BouncerEggman_Pod.png
-      Boss_BouncerEggman_Pod.png.import
-      Boss_BouncerEggmanLaser.png
-      Boss_BouncerEggmanLaser.png.import
-      Boss_Eggpod_Pop.png
-      Boss_Eggpod_Pop.png.import
-      Eggmobile_Laser.png
-      Eggmobile_Laser.png.import
-      Graphics/Boss/MTZ/Boss_BouncerEggman_Pod.png
-      Graphics/Boss/MTZ/Boss_BouncerEggman_Pod.png.import
-      Graphics/Boss/MTZ/Boss_BouncerEggmanLaser.png
-      Graphics/Boss/MTZ/Boss_BouncerEggmanLaser.png.import
-      Graphics/Boss/MTZ/Boss_Eggpod_Pop.png
-      Graphics/Boss/MTZ/Boss_Eggpod_Pop.png.import
-      Graphics/Boss/MTZ/Eggmobile_Laser.png
-      Graphics/Boss/MTZ/Eggmobile_Laser.png.import
-    OOZ/ (4)
-      Boss_SubMarineEggman_Flash.png
-      Boss_SubMarineEggman_Flash.png.import
-      Boss_SubMarineEggman.png
-      Boss_SubMarineEggman.png.import
-      Graphics/Boss/OOZ/Boss_SubMarineEggman_Flash.png
-      Graphics/Boss/OOZ/Boss_SubMarineEggman_Flash.png.import
-      Graphics/Boss/OOZ/Boss_SubMarineEggman.png
-      Graphics/Boss/OOZ/Boss_SubMarineEggman.png.import
-    Graphics/Boss/Boss_DrillEggman_Flash.png
-    Graphics/Boss/Boss_DrillEggman_Flash.png.import
-    Graphics/Boss/Boss_DrillEggman_Parts.png
-    Graphics/Boss/Boss_DrillEggman_Parts.png.import
-    Graphics/Boss/Boss_DrillEggman.png
-    Graphics/Boss/Boss_DrillEggman.png.import
-    Graphics/Boss/DEZWindow.png
-    Graphics/Boss/DEZWindow.png.import
-    Graphics/Boss/Eggman.png
-    Graphics/Boss/Eggman.png.import
-    Graphics/Boss/Eggmobile_Top.png
-    Graphics/Boss/Eggmobile_Top.png.import
-    Graphics/Boss/Eggmobile.png
-    Graphics/Boss/Eggmobile.png.import
-    Graphics/Boss/EggmobileFlash.png
-    Graphics/Boss/EggmobileFlash.png.import
-    Graphics/Boss/EggmobileLaser.png
-    Graphics/Boss/EggmobileLaser.png.import
-    Graphics/Boss/EHZ_Chopper.png
-    Graphics/Boss/EHZ_Chopper.png.import
-    Graphics/Boss/Jet.png
-    Graphics/Boss/Jet.png.import
-    Graphics/Boss/Robotnik_GetawaySubmarine.png
-    Graphics/Boss/Robotnik_GetawaySubmarine.png.import
-    Graphics/Boss/Robotnik.png
-    Graphics/Boss/Robotnik.png.import
-    Graphics/Boss/Sack.png
-    Graphics/Boss/Sack.png.import
-    Graphics/Boss/SilverSonic_Particles.png
-    Graphics/Boss/SilverSonic_Particles.png.import
-    Graphics/Boss/SilverSonic.png
-    Graphics/Boss/SilverSonic.png.import
-    Graphics/Boss/TractorBeam.png
-    Graphics/Boss/TractorBeam.png.import
   EditorUI/ (4)
     layer_switchers.png
     layer_switchers.png.import
     WaterPath.png
     WaterPath.png.import
-    Graphics/EditorUI/layer_switchers.png
-    Graphics/EditorUI/layer_switchers.png.import
-    Graphics/EditorUI/WaterPath.png
-    Graphics/EditorUI/WaterPath.png.import
   Enemies/ (126)
     Aquis_Spit.png
     Aquis_Spit.png.import
@@ -1560,132 +869,6 @@ Graphics/ (999)
     Turtloid.png.import
     Whisp.png
     Whisp.png.import
-    Graphics/Enemies/Aquis_Spit.png
-    Graphics/Enemies/Aquis_Spit.png.import
-    Graphics/Enemies/Aquis.png
-    Graphics/Enemies/Aquis.png.import
-    Graphics/Enemies/Asteron_Bullets.png
-    Graphics/Enemies/Asteron_Bullets.png.import
-    Graphics/Enemies/Asteron.png
-    Graphics/Enemies/Asteron.png.import
-    Graphics/Enemies/Balkerie.png
-    Graphics/Enemies/Balkerie.png.import
-    Graphics/Enemies/Ball.png
-    Graphics/Enemies/Ball.png.import
-    Graphics/Enemies/BBat.png
-    Graphics/Enemies/BBat.png.import
-    Graphics/Enemies/BBatRazor.png
-    Graphics/Enemies/BBatRazor.png.import
-    Graphics/Enemies/BFish.png
-    Graphics/Enemies/BFish.png.import
-    Graphics/Enemies/Bubbler_bullet.png
-    Graphics/Enemies/Bubbler_bullet.png.import
-    Graphics/Enemies/BubblerChild.png
-    Graphics/Enemies/BubblerChild.png.import
-    Graphics/Enemies/BubblerMother.png
-    Graphics/Enemies/BubblerMother.png.import
-    Graphics/Enemies/buzzBomber.png.import
-    Graphics/Enemies/BuzzerFlame.png
-    Graphics/Enemies/BuzzerFlame.png.import
-    Graphics/Enemies/BuzzerS2BR_Bullet.png
-    Graphics/Enemies/BuzzerS2BR_Bullet.png.import
-    Graphics/Enemies/BuzzerS2BR.png
-    Graphics/Enemies/BuzzerS2BR.png.import
-    Graphics/Enemies/CHIPPA.png
-    Graphics/Enemies/CHIPPA.png.import
-    Graphics/Enemies/chomper.png.import
-    Graphics/Enemies/ChopChop.png
-    Graphics/Enemies/ChopChop.png.import
-    Graphics/Enemies/CoconutBullet.png
-    Graphics/Enemies/CoconutBullet.png.import
-    Graphics/Enemies/Coconuts.png
-    Graphics/Enemies/Coconuts.png.import
-    Graphics/Enemies/Crawl_Dirt.png
-    Graphics/Enemies/Crawl_Dirt.png.import
-    Graphics/Enemies/Crawl_Mobile.png
-    Graphics/Enemies/Crawl_Mobile.png.import
-    Graphics/Enemies/Crawl_Stationary.png
-    Graphics/Enemies/Crawl_Stationary.png.import
-    Graphics/Enemies/Crawlton.png
-    Graphics/Enemies/Crawlton.png.import
-    Graphics/Enemies/Flasher_Light.png
-    Graphics/Enemies/Flasher_Light.png.import
-    Graphics/Enemies/Flasher.png
-    Graphics/Enemies/Flasher.png.import
-    Graphics/Enemies/Gator.png
-    Graphics/Enemies/Gator.png.import
-    Graphics/Enemies/Grabber.png
-    Graphics/Enemies/Grabber.png.import
-    Graphics/Enemies/Grounder.png
-    Graphics/Enemies/Grounder.png.import
-    Graphics/Enemies/GrounderBrick.png
-    Graphics/Enemies/GrounderBrick.png.import
-    Graphics/Enemies/Masher.png
-    Graphics/Enemies/Masher.png.import
-    Graphics/Enemies/MotobugSmoke.png
-    Graphics/Enemies/MotobugSmoke.png.import
-    Graphics/Enemies/Motoroller.png
-    Graphics/Enemies/Motoroller.png.import
-    Graphics/Enemies/Nebula.png
-    Graphics/Enemies/Nebula.png.import
-    Graphics/Enemies/NebulaBullet.png
-    Graphics/Enemies/NebulaBullet.png.import
-    Graphics/Enemies/Octus_Bullets.png
-    Graphics/Enemies/Octus_Bullets.png.import
-    Graphics/Enemies/Octus.png
-    Graphics/Enemies/Octus.png.import
-    Graphics/Enemies/PropellerShaft.png
-    Graphics/Enemies/PropellerShaft.png.import
-    Graphics/Enemies/Pterabot.png
-    Graphics/Enemies/Pterabot.png.import
-    Graphics/Enemies/Redz.png
-    Graphics/Enemies/Redz.png.import
-    Graphics/Enemies/RedzFire.png
-    Graphics/Enemies/RedzFire.png.import
-    Graphics/Enemies/Rexon.png
-    Graphics/Enemies/Rexon.png.import
-    Graphics/Enemies/Scratch_Bullet.png
-    Graphics/Enemies/Scratch_Bullet.png.import
-    Graphics/Enemies/Scratch.png
-    Graphics/Enemies/Scratch.png.import
-    Graphics/Enemies/Shellcracker_Claw.png
-    Graphics/Enemies/Shellcracker_Claw.png.import
-    Graphics/Enemies/Shellcracker_Seg.png
-    Graphics/Enemies/Shellcracker_Seg.png.import
-    Graphics/Enemies/Shellcracker.png
-    Graphics/Enemies/Shellcracker.png.import
-    Graphics/Enemies/Slicer_Claws.png
-    Graphics/Enemies/Slicer_Claws.png.import
-    Graphics/Enemies/Slicer_color.png
-    Graphics/Enemies/Slicer_color.png.import
-    Graphics/Enemies/Slicer.png
-    Graphics/Enemies/Slicer.png.import
-    Graphics/Enemies/Sol.png
-    Graphics/Enemies/Sol.png.import
-    Graphics/Enemies/SolFire.png
-    Graphics/Enemies/SolFire.png.import
-    Graphics/Enemies/SpikeBall.png
-    Graphics/Enemies/SpikeBall.png.import
-    Graphics/Enemies/Spiker.png
-    Graphics/Enemies/Spiker.png.import
-    Graphics/Enemies/SpikerLegs.png
-    Graphics/Enemies/SpikerLegs.png.import
-    Graphics/Enemies/Spiny_Floor.png
-    Graphics/Enemies/Spiny_Floor.png.import
-    Graphics/Enemies/Spiny_Wall.png
-    Graphics/Enemies/Spiny_Wall.png.import
-    Graphics/Enemies/Stegway_Flame.png
-    Graphics/Enemies/Stegway_Flame.png.import
-    Graphics/Enemies/stegway.png
-    Graphics/Enemies/stegway.png.import
-    Graphics/Enemies/Turtloid_Bullet.png
-    Graphics/Enemies/Turtloid_Bullet.png.import
-    Graphics/Enemies/Turtloid_Fire.png
-    Graphics/Enemies/Turtloid_Fire.png.import
-    Graphics/Enemies/Turtloid.png
-    Graphics/Enemies/Turtloid.png.import
-    Graphics/Enemies/Whisp.png
-    Graphics/Enemies/Whisp.png.import
   Fonts/ (10)
     2PlayerText.png
     2PlayerText.png.import
@@ -1697,16 +880,6 @@ Graphics/ (999)
     mid_font.png.import
     small_font.png
     small_font.png.import
-    Graphics/Fonts/2PlayerText.png
-    Graphics/Fonts/2PlayerText.png.import
-    Graphics/Fonts/arrows_small_font.png
-    Graphics/Fonts/arrows_small_font.png.import
-    Graphics/Fonts/credits_font.png
-    Graphics/Fonts/credits_font.png.import
-    Graphics/Fonts/mid_font.png
-    Graphics/Fonts/mid_font.png.import
-    Graphics/Fonts/small_font.png
-    Graphics/Fonts/small_font.png.import
   Gimmicks/ (128)
     bridge_log_2.png
     bridge_log_2.png.import
@@ -1836,134 +1009,6 @@ Graphics/ (999)
     WaterSurface1.png.import
     WaterSurface2.png
     WaterSurface2.png.import
-    Graphics/Gimmicks/bridge_log_2.png
-    Graphics/Gimmicks/bridge_log_2.png.import
-    Graphics/Gimmicks/bridge_log_3.png
-    Graphics/Gimmicks/bridge_log_3.png.import
-    Graphics/Gimmicks/bridge_log_WGZ.png
-    Graphics/Gimmicks/bridge_log_WGZ.png.import
-    Graphics/Gimmicks/bridge_log.png
-    Graphics/Gimmicks/bridge_log.png.import
-    Graphics/Gimmicks/BurnerFlame.png
-    Graphics/Gimmicks/BurnerFlame.png.import
-    Graphics/Gimmicks/button.png
-    Graphics/Gimmicks/button.png.import
-    Graphics/Gimmicks/CNZ_Bonus.png
-    Graphics/Gimmicks/CNZ_Bonus.png.import
-    Graphics/Gimmicks/CNZ_ImpulseSpring_Body.png
-    Graphics/Gimmicks/CNZ_ImpulseSpring_Body.png.import
-    Graphics/Gimmicks/CNZ_Slots.png
-    Graphics/Gimmicks/CNZ_Slots.png.import
-    Graphics/Gimmicks/CNZ_SpikePrize.png
-    Graphics/Gimmicks/CNZ_SpikePrize.png.import
-    Graphics/Gimmicks/CNZBarrel.png
-    Graphics/Gimmicks/CNZBarrel.png.import
-    Graphics/Gimmicks/CNZFlippers.png
-    Graphics/Gimmicks/CNZFlippers.png.import
-    Graphics/Gimmicks/CNZHexBumper.png
-    Graphics/Gimmicks/CNZHexBumper.png.import
-    Graphics/Gimmicks/CNZImpulseSpring.png
-    Graphics/Gimmicks/CNZImpulseSpring.png.import
-    Graphics/Gimmicks/CollapsingPlatform.png
-    Graphics/Gimmicks/CollapsingPlatform.png.import
-    Graphics/Gimmicks/CollapsingPlatformOOZ.png
-    Graphics/Gimmicks/CollapsingPlatformOOZ.png.import
-    Graphics/Gimmicks/ConveyorBelt.png
-    Graphics/Gimmicks/ConveyorBelt.png.import
-    Graphics/Gimmicks/Corkscrew.png
-    Graphics/Gimmicks/Corkscrew.png.import
-    Graphics/Gimmicks/CPZ_FlipPipe.png
-    Graphics/Gimmicks/CPZ_FlipPipe.png.import
-    Graphics/Gimmicks/CPZTubeCap.png
-    Graphics/Gimmicks/CPZTubeCap.png.import
-    Graphics/Gimmicks/CurrentPole.png
-    Graphics/Gimmicks/CurrentPole.png.import
-    Graphics/Gimmicks/DHZ_Crate.png
-    Graphics/Gimmicks/DHZ_Crate.png.import
-    Graphics/Gimmicks/DHZ_HangSwitch.png
-    Graphics/Gimmicks/DHZ_HangSwitch.png.import
-    Graphics/Gimmicks/DHZ_VineHook.png
-    Graphics/Gimmicks/DHZ_VineHook.png.import
-    Graphics/Gimmicks/DHZ_VineLength.png
-    Graphics/Gimmicks/DHZ_VineLength.png.import
-    Graphics/Gimmicks/HangingBar.png
-    Graphics/Gimmicks/HangingBar.png.import
-    Graphics/Gimmicks/HorizontalBarAlt.png
-    Graphics/Gimmicks/HorizontalBarAlt.png.import
-    Graphics/Gimmicks/HPZGeyser_Extend.png
-    Graphics/Gimmicks/HPZGeyser_Extend.png.import
-    Graphics/Gimmicks/HPZGeyser.png
-    Graphics/Gimmicks/HPZGeyser.png.import
-    Graphics/Gimmicks/HTZ_SeeSaw.png
-    Graphics/Gimmicks/HTZ_SeeSaw.png.import
-    Graphics/Gimmicks/ICZTrampoline.png
-    Graphics/Gimmicks/ICZTrampoline.png.import
-    Graphics/Gimmicks/ICZTrampolineRingAnim.png
-    Graphics/Gimmicks/ICZTrampolineRingAnim.png.import
-    Graphics/Gimmicks/large_turbine.png
-    Graphics/Gimmicks/large_turbine.png.import
-    Graphics/Gimmicks/LeverSpring.png
-    Graphics/Gimmicks/LeverSpring.png.import
-    Graphics/Gimmicks/MTZ_CupPlatform.png
-    Graphics/Gimmicks/MTZ_CupPlatform.png.import
-    Graphics/Gimmicks/MTZ_GiantCog.png
-    Graphics/Gimmicks/MTZ_GiantCog.png.import
-    Graphics/Gimmicks/MTZ_SteamPipe.png
-    Graphics/Gimmicks/MTZ_SteamPipe.png.import
-    Graphics/Gimmicks/NGHZWater01.png
-    Graphics/Gimmicks/NGHZWater01.png.import
-    Graphics/Gimmicks/NGHZWater02.png
-    Graphics/Gimmicks/NGHZWater02.png.import
-    Graphics/Gimmicks/OOZ_Cannon.png
-    Graphics/Gimmicks/OOZ_Cannon.png.import
-    Graphics/Gimmicks/OOZ_Fans.png
-    Graphics/Gimmicks/OOZ_Fans.png.import
-    Graphics/Gimmicks/OOZ_LidTop.png
-    Graphics/Gimmicks/OOZ_LidTop.png.import
-    Graphics/Gimmicks/OOZ_Pillar.png
-    Graphics/Gimmicks/OOZ_Pillar.png.import
-    Graphics/Gimmicks/OOZ_PressureSpring.png
-    Graphics/Gimmicks/OOZ_PressureSpring.png.import
-    Graphics/Gimmicks/Screw.png
-    Graphics/Gimmicks/Screw.png.import
-    Graphics/Gimmicks/ScrewPipe.png
-    Graphics/Gimmicks/ScrewPipe.png.import
-    Graphics/Gimmicks/SCZ_Chain.png
-    Graphics/Gimmicks/SCZ_Chain.png.import
-    Graphics/Gimmicks/SCZ_GrabBlocks.png
-    Graphics/Gimmicks/SCZ_GrabBlocks.png.import
-    Graphics/Gimmicks/SCZ_Hook.png
-    Graphics/Gimmicks/SCZ_Hook.png.import
-    Graphics/Gimmicks/SCZ_Launcher.png
-    Graphics/Gimmicks/SCZ_Launcher.png.import
-    Graphics/Gimmicks/SCZ_ShiftingPlatform1.png
-    Graphics/Gimmicks/SCZ_ShiftingPlatform1.png.import
-    Graphics/Gimmicks/SCZ_Sliding_Platform.png
-    Graphics/Gimmicks/SCZ_Sliding_Platform.png.import
-    Graphics/Gimmicks/Slots.png
-    Graphics/Gimmicks/Slots.png.import
-    Graphics/Gimmicks/SmallTurbines.png
-    Graphics/Gimmicks/SmallTurbines.png.import
-    Graphics/Gimmicks/speed_booster.png
-    Graphics/Gimmicks/speed_booster.png.import
-    Graphics/Gimmicks/springs_red.png
-    Graphics/Gimmicks/springs_red.png.import
-    Graphics/Gimmicks/springs_yellow.png
-    Graphics/Gimmicks/springs_yellow.png.import
-    Graphics/Gimmicks/Teleporter.png
-    Graphics/Gimmicks/Teleporter.png.import
-    Graphics/Gimmicks/TeleporterBeam.png
-    Graphics/Gimmicks/TeleporterBeam.png.import
-    Graphics/Gimmicks/Tube.png
-    Graphics/Gimmicks/Tube.png.import
-    Graphics/Gimmicks/TubeConnector.png
-    Graphics/Gimmicks/TubeConnector.png.import
-    Graphics/Gimmicks/TubeEnd.png
-    Graphics/Gimmicks/TubeEnd.png.import
-    Graphics/Gimmicks/WaterSurface1.png
-    Graphics/Gimmicks/WaterSurface1.png.import
-    Graphics/Gimmicks/WaterSurface2.png
-    Graphics/Gimmicks/WaterSurface2.png.import
   Hazards/ (24)
     DHZ_SpikeBall.png
     DHZ_SpikeBall.png.import
@@ -1989,31 +1034,21 @@ Graphics/ (999)
     spikes.png.import
     WGZ_Saw.png
     WGZ_Saw.png.import
-    Graphics/Hazards/DHZ_SpikeBall.png
-    Graphics/Hazards/DHZ_SpikeBall.png.import
-    Graphics/Hazards/DHZ_SpikePlat.png
-    Graphics/Hazards/DHZ_SpikePlat.png.import
-    Graphics/Hazards/MTZ_Spear.png
-    Graphics/Hazards/MTZ_Spear.png.import
-    Graphics/Hazards/MTZ_Steam.png
-    Graphics/Hazards/MTZ_Steam.png.import
-    Graphics/Hazards/OOZ_Spiker.png
-    Graphics/Hazards/OOZ_Spiker.png.import
-    Graphics/Hazards/sawblade.png
-    Graphics/Hazards/sawblade.png.import
-    Graphics/Hazards/SCZ_HLaserBeam.png
-    Graphics/Hazards/SCZ_HLaserBeam.png.import
-    Graphics/Hazards/SCZ_Propeller.png
-    Graphics/Hazards/SCZ_Propeller.png.import
-    Graphics/Hazards/SCZ_VertLaser.png
-    Graphics/Hazards/SCZ_VertLaser.png.import
-    Graphics/Hazards/SpikeLog.png
-    Graphics/Hazards/SpikeLog.png.import
-    Graphics/Hazards/spikes.png
-    Graphics/Hazards/spikes.png.import
-    Graphics/Hazards/WGZ_Saw.png
-    Graphics/Hazards/WGZ_Saw.png.import
   HUD/ (34)
+    LevelCards/ (12)
+      font/ (4)
+        s2br_TitleCardFont.png
+        s2br_TitleCardFont.png.import
+        TitleCard_Normal.png
+        TitleCard_Normal.png.import
+      ActCards.png
+      ActCards.png.import
+      Banner.png
+      Banner.png.import
+      EdgePattern.png
+      EdgePattern.png.import
+      TitleCardRetold.png
+      TitleCardRetold.png.import
     hud_gametimeover.png
     hud_gametimeover.png.import
     hud_lives_Miles.png
@@ -2036,55 +1071,19 @@ Graphics/ (999)
     YIcon_solo.png.import
     YIcon.png
     YIcon.png.import
-    LevelCards/ (12)
-      ActCards.png
-      ActCards.png.import
-      Banner.png
-      Banner.png.import
-      EdgePattern.png
-      EdgePattern.png.import
-      TitleCardRetold.png
-      TitleCardRetold.png.import
-      font/ (4)
-        s2br_TitleCardFont.png
-        s2br_TitleCardFont.png.import
-        TitleCard_Normal.png
-        TitleCard_Normal.png.import
-        Graphics/HUD/LevelCards/font/s2br_TitleCardFont.png
-        Graphics/HUD/LevelCards/font/s2br_TitleCardFont.png.import
-        Graphics/HUD/LevelCards/font/TitleCard_Normal.png
-        Graphics/HUD/LevelCards/font/TitleCard_Normal.png.import
-      Graphics/HUD/LevelCards/ActCards.png
-      Graphics/HUD/LevelCards/ActCards.png.import
-      Graphics/HUD/LevelCards/Banner.png
-      Graphics/HUD/LevelCards/Banner.png.import
-      Graphics/HUD/LevelCards/EdgePattern.png
-      Graphics/HUD/LevelCards/EdgePattern.png.import
-      Graphics/HUD/LevelCards/TitleCardRetold.png
-      Graphics/HUD/LevelCards/TitleCardRetold.png.import
-    Graphics/HUD/hud_gametimeover.png
-    Graphics/HUD/hud_gametimeover.png.import
-    Graphics/HUD/hud_lives_Miles.png
-    Graphics/HUD/hud_lives_Miles.png.import
-    Graphics/HUD/hud_lives_numerals.png
-    Graphics/HUD/hud_lives_numerals.png.import
-    Graphics/HUD/hud_lives.png
-    Graphics/HUD/hud_lives.png.import
-    Graphics/HUD/hud_numerals.png
-    Graphics/HUD/hud_numerals.png.import
-    Graphics/HUD/hud_pause.png
-    Graphics/HUD/hud_pause.png.import
-    Graphics/HUD/hud_results_text.png
-    Graphics/HUD/hud_results_text.png.import
-    Graphics/HUD/hud_text.png
-    Graphics/HUD/hud_text.png.import
-    Graphics/HUD/InputMap.png
-    Graphics/HUD/InputMap.png.import
-    Graphics/HUD/YIcon_solo.png
-    Graphics/HUD/YIcon_solo.png.import
-    Graphics/HUD/YIcon.png
-    Graphics/HUD/YIcon.png.import
   Items/ (50)
+    Rings/ (11)
+      Ring.tres
+      Ring1.png
+      Ring1.png.import
+      Ring3.png
+      Ring3.png.import
+      Ring5.png
+      Ring5.png.import
+      Ring7.png
+      Ring7.png.import
+      RingSparkle.png
+      RingSparkle.png.import
     air_bubbles.png
     air_bubbles.png.import
     animals.png
@@ -2124,69 +1123,16 @@ Graphics/ (999)
     shield_plain.png.import
     starpost.png
     starpost.png.import
-    Rings/ (11)
-      Ring.tres
-      Ring1.png
-      Ring1.png.import
-      Ring3.png
-      Ring3.png.import
-      Ring5.png
-      Ring5.png.import
-      Ring7.png
-      Ring7.png.import
-      RingSparkle.png
-      RingSparkle.png.import
-      Graphics/Items/Rings/Ring.tres
-      Graphics/Items/Rings/Ring1.png
-      Graphics/Items/Rings/Ring1.png.import
-      Graphics/Items/Rings/Ring3.png
-      Graphics/Items/Rings/Ring3.png.import
-      Graphics/Items/Rings/Ring5.png
-      Graphics/Items/Rings/Ring5.png.import
-      Graphics/Items/Rings/Ring7.png
-      Graphics/Items/Rings/Ring7.png.import
-      Graphics/Items/Rings/RingSparkle.png
-      Graphics/Items/Rings/RingSparkle.png.import
-    Graphics/Items/air_bubbles.png
-    Graphics/Items/air_bubbles.png.import
-    Graphics/Items/animals.png
-    Graphics/Items/animals.png.import
-    Graphics/Items/Capsule.png
-    Graphics/Items/Capsule.png.import
-    Graphics/Items/ChaosEmeralds.png
-    Graphics/Items/ChaosEmeralds.png.import
-    Graphics/Items/GiantRing.png
-    Graphics/Items/GiantRing.png.import
-    Graphics/Items/goal_signs.png
-    Graphics/Items/goal_signs.png.import
-    Graphics/Items/invincible_stars.png
-    Graphics/Items/invincible_stars.png.import
-    Graphics/Items/lamppost.png
-    Graphics/Items/lamppost.png.import
-    Graphics/Items/MonitorIcons.png
-    Graphics/Items/MonitorIcons.png.import
-    Graphics/Items/monitors.png
-    Graphics/Items/monitors.png.import
-    Graphics/Items/rings.png
-    Graphics/Items/rings.png.import
-    Graphics/Items/RingSprite.tres
-    Graphics/Items/S2Shield.png
-    Graphics/Items/S2Shield.png.import
-    Graphics/Items/shield_bubble.png
-    Graphics/Items/shield_bubble.png.import
-    Graphics/Items/shield_fire.png
-    Graphics/Items/shield_fire.png.import
-    Graphics/Items/shield_insta.png
-    Graphics/Items/shield_insta.png.import
-    Graphics/Items/shield_lightning_spark.png
-    Graphics/Items/shield_lightning_spark.png.import
-    Graphics/Items/shield_lightning.png
-    Graphics/Items/shield_lightning.png.import
-    Graphics/Items/shield_plain.png
-    Graphics/Items/shield_plain.png.import
-    Graphics/Items/starpost.png
-    Graphics/Items/starpost.png.import
   Menus/ (57)
+    New Folder/ (4)
+      Save-Background.png
+      Save-Background.png.import
+      Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png
+      Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png.import
+    Pause/ (3)
+      assets.png
+      assets.png.import
+      pause assets.json
     AchivmentsPanel.png
     AchivmentsPanel.png.import
     ArrowL.png
@@ -2237,72 +1183,6 @@ Graphics/ (999)
     Sonic-the-Hedgehog-2(1).png.import
     Tails_1.webp
     Tails_1.webp.import
-    New Folder/ (4)
-      Save-Background.png
-      Save-Background.png.import
-      Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png
-      Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png.import
-      Graphics/Menus/New Folder/Save-Background.png
-      Graphics/Menus/New Folder/Save-Background.png.import
-      Graphics/Menus/New Folder/Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png
-      Graphics/Menus/New Folder/Sega Genesis - Sonic the Hedgehog 2 - Miscellaneous - Options_Level Select Menu Background (1).png.import
-    Pause/ (3)
-      assets.png
-      assets.png.import
-      pause assets.json
-      Graphics/Menus/Pause/assets.png
-      Graphics/Menus/Pause/assets.png.import
-      Graphics/Menus/Pause/pause assets.json
-    Graphics/Menus/AchivmentsPanel.png
-    Graphics/Menus/AchivmentsPanel.png.import
-    Graphics/Menus/ArrowL.png
-    Graphics/Menus/ArrowL.png.import
-    Graphics/Menus/ArrowR.png
-    Graphics/Menus/ArrowR.png.import
-    Graphics/Menus/ButtonDown.png
-    Graphics/Menus/ButtonDown.png.import
-    Graphics/Menus/buttons.png
-    Graphics/Menus/buttons.png.import
-    Graphics/Menus/ButtonUp.png
-    Graphics/Menus/ButtonUp.png.import
-    Graphics/Menus/CharacterPreviews.png
-    Graphics/Menus/CharacterPreviews.png.import
-    Graphics/Menus/DataBox.png
-    Graphics/Menus/DataBox.png.import
-    Graphics/Menus/Icons_All.png
-    Graphics/Menus/Icons_All.png.import
-    Graphics/Menus/image2.png
-    Graphics/Menus/image2.png.import
-    Graphics/Menus/MenuBanner.png
-    Graphics/Menus/MenuBanner.png.import
-    Graphics/Menus/MenuBGTiles.png
-    Graphics/Menus/MenuBGTiles.png.import
-    Graphics/Menus/MenuBox.png
-    Graphics/Menus/MenuBox.png.import
-    Graphics/Menus/MenuEmeralds.png
-    Graphics/Menus/MenuEmeralds.png.import
-    Graphics/Menus/MiniCharacters.png
-    Graphics/Menus/MiniCharacters.png.import
-    Graphics/Menus/Nosave.png
-    Graphics/Menus/Nosave.png.import
-    Graphics/Menus/Playericons.png
-    Graphics/Menus/Playericons.png.import
-    Graphics/Menus/Proverb-of-Sonic.png
-    Graphics/Menus/Proverb-of-Sonic.png.import
-    Graphics/Menus/Robotnik_Del.png
-    Graphics/Menus/Robotnik_Del.png.import
-    Graphics/Menus/SaveSlot.png
-    Graphics/Menus/SaveSlot.png.import
-    Graphics/Menus/Sonic_3.webp
-    Graphics/Menus/Sonic_3.webp.import
-    Graphics/Menus/Sonic-the-Hedgehog-2-JP-Logo.png
-    Graphics/Menus/Sonic-the-Hedgehog-2-JP-Logo.png.import
-    Graphics/Menus/Sonic-the-Hedgehog-2.png
-    Graphics/Menus/Sonic-the-Hedgehog-2.png.import
-    Graphics/Menus/Sonic-the-Hedgehog-2(1).png
-    Graphics/Menus/Sonic-the-Hedgehog-2(1).png.import
-    Graphics/Menus/Tails_1.webp
-    Graphics/Menus/Tails_1.webp.import
   Misc/ (50)
     AmyCameo.png
     AmyCameo.png.import
@@ -2354,56 +1234,6 @@ Graphics/ (999)
     water_splash.png.import
     WaterSurfaceSplash.png
     WaterSurfaceSplash.png.import
-    Graphics/Misc/AmyCameo.png
-    Graphics/Misc/AmyCameo.png.import
-    Graphics/Misc/animals.png
-    Graphics/Misc/animals.png.import
-    Graphics/Misc/Checkpoint_Stars.png
-    Graphics/Misc/Checkpoint_Stars.png.import
-    Graphics/Misc/CountDown.png
-    Graphics/Misc/CountDown.png.import
-    Graphics/Misc/DashDust.png
-    Graphics/Misc/DashDust.png.import
-    Graphics/Misc/DropDashDust.png
-    Graphics/Misc/DropDashDust.png.import
-    Graphics/Misc/explosion1.png
-    Graphics/Misc/explosion1.png.import
-    Graphics/Misc/explosion2.png
-    Graphics/Misc/explosion2.png.import
-    Graphics/Misc/explosion3.png
-    Graphics/Misc/explosion3.png.import
-    Graphics/Misc/explosion5.png
-    Graphics/Misc/explosion5.png.import
-    Graphics/Misc/HPZRocks.png
-    Graphics/Misc/HPZRocks.png.import
-    Graphics/Misc/Kris.png
-    Graphics/Misc/Kris.png.import
-    Graphics/Misc/MetalCameo.png
-    Graphics/Misc/MetalCameo.png.import
-    Graphics/Misc/NGHZRocks.png
-    Graphics/Misc/NGHZRocks.png.import
-    Graphics/Misc/RistarCameo.png
-    Graphics/Misc/RistarCameo.png.import
-    Graphics/Misc/score_popup.png
-    Graphics/Misc/score_popup.png.import
-    Graphics/Misc/skid_dust.png
-    Graphics/Misc/skid_dust.png.import
-    Graphics/Misc/SuperSparkles.png
-    Graphics/Misc/SuperSparkles.png.import
-    Graphics/Misc/Tornado_Blade.png
-    Graphics/Misc/Tornado_Blade.png.import
-    Graphics/Misc/Tornado_Fire.png
-    Graphics/Misc/Tornado_Fire.png.import
-    Graphics/Misc/Tornado_Jet.png
-    Graphics/Misc/Tornado_Jet.png.import
-    Graphics/Misc/Tornado_Main.png
-    Graphics/Misc/Tornado_Main.png.import
-    Graphics/Misc/Tornado_Sonic.png
-    Graphics/Misc/Tornado_Sonic.png.import
-    Graphics/Misc/water_splash.png
-    Graphics/Misc/water_splash.png.import
-    Graphics/Misc/WaterSurfaceSplash.png
-    Graphics/Misc/WaterSurfaceSplash.png.import
   Objects_Zone/ (65)
     ArrowShooter.png
     ArrowShooter.png.import
@@ -2470,72 +1300,54 @@ Graphics/ (999)
     SCZ_Vent.png.import
     WGZ_BouncyBranch.png
     WGZ_BouncyBranch.png.import
-    Graphics/Objects_Zone/ArrowShooter.png
-    Graphics/Objects_Zone/ArrowShooter.png.import
-    Graphics/Objects_Zone/Clucker_Base.png
-    Graphics/Objects_Zone/Clucker_Base.png.import
-    Graphics/Objects_Zone/CNZ_Elevator.png
-    Graphics/Objects_Zone/CNZ_Elevator.png.import
-    Graphics/Objects_Zone/CNZ_MovingBlock.png
-    Graphics/Objects_Zone/CNZ_MovingBlock.png.import
-    Graphics/Objects_Zone/CPZ_FloatingPlatform.png
-    Graphics/Objects_Zone/CPZ_FloatingPlatform.png.import
-    Graphics/Objects_Zone/CPZPlatformMv.png
-    Graphics/Objects_Zone/CPZPlatformMv.png.import
-    Graphics/Objects_Zone/DHZ_Bricks.png
-    Graphics/Objects_Zone/DHZ_Bricks.png.import
-    Graphics/Objects_Zone/DHZ_Platform.png
-    Graphics/Objects_Zone/DHZ_Platform.png.import
-    Graphics/Objects_Zone/HPZ_Block.png
-    Graphics/Objects_Zone/HPZ_Block.png.import
-    Graphics/Objects_Zone/HPZ_Elevator.png
-    Graphics/Objects_Zone/HPZ_Elevator.png.import
-    Graphics/Objects_Zone/HPZ_Emerald.png
-    Graphics/Objects_Zone/HPZ_Emerald.png.import
-    Graphics/Objects_Zone/HPZ_Orb.png
-    Graphics/Objects_Zone/HPZ_Orb.png.import
-    Graphics/Objects_Zone/HTZ_ZipPlatform.png
-    Graphics/Objects_Zone/HTZ_ZipPlatform.png.import
-    Graphics/Objects_Zone/HTZ_ZipVines.png
-    Graphics/Objects_Zone/HTZ_ZipVines.png.import
-    Graphics/Objects_Zone/MackWorm.png
-    Graphics/Objects_Zone/MackWorm.png.import
-    Graphics/Objects_Zone/MTZ_Elevator.png
-    Graphics/Objects_Zone/MTZ_Elevator.png.import
-    Graphics/Objects_Zone/MTZ_Platform.png
-    Graphics/Objects_Zone/MTZ_Platform.png.import
-    Graphics/Objects_Zone/MTZ_Shutter.png.import
-    Graphics/Objects_Zone/MTZ_SmallCog.png
-    Graphics/Objects_Zone/MTZ_SmallCog.png.import
-    Graphics/Objects_Zone/NGHZ_Pillar.png
-    Graphics/Objects_Zone/NGHZ_Pillar.png.import
-    Graphics/Objects_Zone/NGHZ_PillarCap.png
-    Graphics/Objects_Zone/NGHZ_PillarCap.png.import
-    Graphics/Objects_Zone/NGHZ_PillarCaps.png
-    Graphics/Objects_Zone/NGHZ_PillarCaps.png.import
-    Graphics/Objects_Zone/NGHZ_PillarLength.png
-    Graphics/Objects_Zone/NGHZ_PillarLength.png.import
-    Graphics/Objects_Zone/NGHZ_Platform.png
-    Graphics/Objects_Zone/NGHZ_Platform.png.import
-    Graphics/Objects_Zone/NGHZ_TallBlock.png
-    Graphics/Objects_Zone/NGHZ_TallBlock.png.import
-    Graphics/Objects_Zone/OOZ_Elevator.png
-    Graphics/Objects_Zone/OOZ_Elevator.png.import
-    Graphics/Objects_Zone/OOZ_Plat.png
-    Graphics/Objects_Zone/OOZ_Plat.png.import
-    Graphics/Objects_Zone/SCZ_ConveryorWheel.png
-    Graphics/Objects_Zone/SCZ_ConveryorWheel.png.import
-    Graphics/Objects_Zone/SCZ_Platform.png
-    Graphics/Objects_Zone/SCZ_Platform.png.import
-    Graphics/Objects_Zone/SCZ_Turret_Platform.png
-    Graphics/Objects_Zone/SCZ_Turret_Platform.png.import
-    Graphics/Objects_Zone/SCZ_V_Fan.png
-    Graphics/Objects_Zone/SCZ_V_Fan.png.import
-    Graphics/Objects_Zone/SCZ_Vent.png
-    Graphics/Objects_Zone/SCZ_Vent.png.import
-    Graphics/Objects_Zone/WGZ_BouncyBranch.png
-    Graphics/Objects_Zone/WGZ_BouncyBranch.png.import
   Obstacles/ (76)
+    Blocks/ (24)
+      breakable_block.png
+      breakable_block.png.import
+      cork_block.png
+      cork_block.png.import
+      CPZ Block.png
+      CPZ Block.png.import
+      EHZ_TunnelBlocks.png
+      EHZ_TunnelBlocks.png.import
+      HTZ_Boulder.png
+      HTZ_Boulder.png.import
+      moving_block_2.png
+      moving_block_2.png.import
+      moving_block.png
+      moving_block.png.import
+      MTZ_SpearBlock.png
+      MTZ_SpearBlock.png.import
+      OOZ_BreakableBlocks.png
+      OOZ_BreakableBlocks.png.import
+      pushblock.png
+      pushblock.png.import
+      small_block.png
+      small_block.png.import
+      small_block2.png
+      small_block2.png.import
+    BreakFloors/ (8)
+      HTZ_BreakableFloor1.png
+      HTZ_BreakableFloor1.png.import
+      HTZ_BreakableFloor2.png
+      HTZ_BreakableFloor2.png.import
+      HTZ_BreakableFloor3.png
+      HTZ_BreakableFloor3.png.import
+      HTZ_BreakableFloor4.png
+      HTZ_BreakableFloor4.png.import
+    Walls/ (12)
+      HTZ_Shutter.png
+      HTZ_Shutter.png.import
+      MTZ_Shutter.png
+      MTZ_Shutter.png.import
+      shutter.png
+      shutter.png.import
+      shutter2.png
+      shutter2.png.import
+      shutter3.png
+      shutter3.png.import
+      shutterCNZ.png
+      shutterCNZ.png.import
     bumpers.png
     bumpers.png.import
     Crusher.png
@@ -2568,129 +1380,6 @@ Graphics/ (999)
     WGZ_Swing.png.import
     WGZ_SwingChain.png
     WGZ_SwingChain.png.import
-    Blocks/ (24)
-      breakable_block.png
-      breakable_block.png.import
-      cork_block.png
-      cork_block.png.import
-      CPZ Block.png
-      CPZ Block.png.import
-      EHZ_TunnelBlocks.png
-      EHZ_TunnelBlocks.png.import
-      HTZ_Boulder.png
-      HTZ_Boulder.png.import
-      moving_block_2.png
-      moving_block_2.png.import
-      moving_block.png
-      moving_block.png.import
-      MTZ_SpearBlock.png
-      MTZ_SpearBlock.png.import
-      OOZ_BreakableBlocks.png
-      OOZ_BreakableBlocks.png.import
-      pushblock.png
-      pushblock.png.import
-      small_block.png
-      small_block.png.import
-      small_block2.png
-      small_block2.png.import
-      Graphics/Obstacles/Blocks/breakable_block.png
-      Graphics/Obstacles/Blocks/breakable_block.png.import
-      Graphics/Obstacles/Blocks/cork_block.png
-      Graphics/Obstacles/Blocks/cork_block.png.import
-      Graphics/Obstacles/Blocks/CPZ Block.png
-      Graphics/Obstacles/Blocks/CPZ Block.png.import
-      Graphics/Obstacles/Blocks/EHZ_TunnelBlocks.png
-      Graphics/Obstacles/Blocks/EHZ_TunnelBlocks.png.import
-      Graphics/Obstacles/Blocks/HTZ_Boulder.png
-      Graphics/Obstacles/Blocks/HTZ_Boulder.png.import
-      Graphics/Obstacles/Blocks/moving_block_2.png
-      Graphics/Obstacles/Blocks/moving_block_2.png.import
-      Graphics/Obstacles/Blocks/moving_block.png
-      Graphics/Obstacles/Blocks/moving_block.png.import
-      Graphics/Obstacles/Blocks/MTZ_SpearBlock.png
-      Graphics/Obstacles/Blocks/MTZ_SpearBlock.png.import
-      Graphics/Obstacles/Blocks/OOZ_BreakableBlocks.png
-      Graphics/Obstacles/Blocks/OOZ_BreakableBlocks.png.import
-      Graphics/Obstacles/Blocks/pushblock.png
-      Graphics/Obstacles/Blocks/pushblock.png.import
-      Graphics/Obstacles/Blocks/small_block.png
-      Graphics/Obstacles/Blocks/small_block.png.import
-      Graphics/Obstacles/Blocks/small_block2.png
-      Graphics/Obstacles/Blocks/small_block2.png.import
-    BreakFloors/ (8)
-      HTZ_BreakableFloor1.png
-      HTZ_BreakableFloor1.png.import
-      HTZ_BreakableFloor2.png
-      HTZ_BreakableFloor2.png.import
-      HTZ_BreakableFloor3.png
-      HTZ_BreakableFloor3.png.import
-      HTZ_BreakableFloor4.png
-      HTZ_BreakableFloor4.png.import
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor1.png
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor1.png.import
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor2.png
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor2.png.import
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor3.png
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor3.png.import
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor4.png
-      Graphics/Obstacles/BreakFloors/HTZ_BreakableFloor4.png.import
-    Walls/ (12)
-      HTZ_Shutter.png
-      HTZ_Shutter.png.import
-      MTZ_Shutter.png
-      MTZ_Shutter.png.import
-      shutter.png
-      shutter.png.import
-      shutter2.png
-      shutter2.png.import
-      shutter3.png
-      shutter3.png.import
-      shutterCNZ.png
-      shutterCNZ.png.import
-      Graphics/Obstacles/Walls/HTZ_Shutter.png
-      Graphics/Obstacles/Walls/HTZ_Shutter.png.import
-      Graphics/Obstacles/Walls/MTZ_Shutter.png
-      Graphics/Obstacles/Walls/MTZ_Shutter.png.import
-      Graphics/Obstacles/Walls/shutter.png
-      Graphics/Obstacles/Walls/shutter.png.import
-      Graphics/Obstacles/Walls/shutter2.png
-      Graphics/Obstacles/Walls/shutter2.png.import
-      Graphics/Obstacles/Walls/shutter3.png
-      Graphics/Obstacles/Walls/shutter3.png.import
-      Graphics/Obstacles/Walls/shutterCNZ.png
-      Graphics/Obstacles/Walls/shutterCNZ.png.import
-    Graphics/Obstacles/bumpers.png
-    Graphics/Obstacles/bumpers.png.import
-    Graphics/Obstacles/Crusher.png
-    Graphics/Obstacles/Crusher.png.import
-    Graphics/Obstacles/DHZ_Bridge.png
-    Graphics/Obstacles/DHZ_Bridge.png.import
-    Graphics/Obstacles/DHZ_SwingChain.png
-    Graphics/Obstacles/DHZ_SwingChain.png.import
-    Graphics/Obstacles/GHZ_Ball_Prev.png
-    Graphics/Obstacles/GHZ_Ball_Prev.png.import
-    Graphics/Obstacles/GHZ_Ball.png
-    Graphics/Obstacles/GHZ_Ball.png.import
-    Graphics/Obstacles/MTZ_Crusher.png
-    Graphics/Obstacles/MTZ_Crusher.png.import
-    Graphics/Obstacles/NGHZSwing.png
-    Graphics/Obstacles/NGHZSwing.png.import
-    Graphics/Obstacles/OOZ_Ball.png
-    Graphics/Obstacles/OOZ_Ball.png.import
-    Graphics/Obstacles/OOZ_Chain.png
-    Graphics/Obstacles/OOZ_Chain.png.import
-    Graphics/Obstacles/OOZ_Swing.png
-    Graphics/Obstacles/OOZ_Swing.png.import
-    Graphics/Obstacles/platform_64_2.png
-    Graphics/Obstacles/platform_64_2.png.import
-    Graphics/Obstacles/SwingChain.png
-    Graphics/Obstacles/SwingChain.png.import
-    Graphics/Obstacles/SwingPole.png
-    Graphics/Obstacles/SwingPole.png.import
-    Graphics/Obstacles/WGZ_Swing.png
-    Graphics/Obstacles/WGZ_Swing.png.import
-    Graphics/Obstacles/WGZ_SwingChain.png
-    Graphics/Obstacles/WGZ_SwingChain.png.import
   Palettes/ (51)
     BasePal.png
     BasePal.png.import
@@ -2743,58 +1432,15 @@ Graphics/ (999)
     SuperTails.png.import
     WetPal.png
     WetPal.png.import
-    Graphics/Palettes/BasePal.png
-    Graphics/Palettes/BasePal.png.import
-    Graphics/Palettes/CNZ_Palcycle.png
-    Graphics/Palettes/CNZ_Palcycle.png.import
-    Graphics/Palettes/CPZ_Pal_Dry.png
-    Graphics/Palettes/CPZ_Pal_Dry.png.import
-    Graphics/Palettes/CPZ_Pal_Wet.png
-    Graphics/Palettes/CPZ_Pal_Wet.png.import
-    Graphics/Palettes/CPZFlashPal.png
-    Graphics/Palettes/CPZFlashPal.png.import
-    Graphics/Palettes/DEZ_Pal.png
-    Graphics/Palettes/DEZ_Pal.png.import
-    Graphics/Palettes/EHZ_Palette.png
-    Graphics/Palettes/EHZ_Palette.png.import
-    Graphics/Palettes/ehz_waterpal.png
-    Graphics/Palettes/ehz_waterpal.png.import
-    Graphics/Palettes/HPZ_Pal_Dry.png
-    Graphics/Palettes/HPZ_Pal_Dry.png.import
-    Graphics/Palettes/HPZ_Pal_Wet.png
-    Graphics/Palettes/HPZ_Pal_Wet.png.import
-    Graphics/Palettes/hpz_Waterfallpal.png
-    Graphics/Palettes/hpz_Waterfallpal.png.import
-    Graphics/Palettes/HTZ_Palette.png
-    Graphics/Palettes/HTZ_Palette.png.import
-    Graphics/Palettes/HyperSonicPal.png
-    Graphics/Palettes/HyperSonicPal.png.import
-    Graphics/Palettes/MTZ_Conveyor.png
-    Graphics/Palettes/MTZ_Conveyor.png.import
-    Graphics/Palettes/NGHZ_Pal_Dry.png
-    Graphics/Palettes/NGHZ_Pal_Dry.png.import
-    Graphics/Palettes/NGHZ_Pal_Wet.png
-    Graphics/Palettes/NGHZ_Pal_Wet.png.import
-    Graphics/Palettes/OOZ_Waterfallpal.png
-    Graphics/Palettes/OOZ_Waterfallpal.png.import
-    Graphics/Palettes/SCZ_Palcycle.png
-    Graphics/Palettes/SCZ_Palcycle.png.import
-    Graphics/Palettes/SEGAPal.png
-    Graphics/Palettes/SEGAPal.png.import
-    Graphics/Palettes/SuperAmy.png
-    Graphics/Palettes/SuperAmy.png.import
-    Graphics/Palettes/SuperKnuckles.png
-    Graphics/Palettes/SuperKnuckles.png.import
-    Graphics/Palettes/SuperRedSonic.png.import
-    Graphics/Palettes/SuperSonicPal_old.png
-    Graphics/Palettes/SuperSonicPal_old.png.import
-    Graphics/Palettes/SuperSonicPal.png
-    Graphics/Palettes/SuperSonicPal.png.import
-    Graphics/Palettes/SuperTails.png
-    Graphics/Palettes/SuperTails.png.import
-    Graphics/Palettes/WetPal.png
-    Graphics/Palettes/WetPal.png.import
   Players/ (25)
+    PlayerAnimations/ (7)
+      Amy.tscn
+      Knuckles.tscn
+      Mighty.tscn
+      Ray.tscn
+      Sonic_Old.tscn
+      Sonic.tscn
+      Tails.tscn
     Amy.png
     Amy.png.import
     Knuckles.png
@@ -2813,39 +1459,6 @@ Graphics/ (999)
     SuperSonic.png.import
     Tails.png
     Tails.png.import
-    PlayerAnimations/ (7)
-      Amy.tscn
-      Knuckles.tscn
-      Mighty.tscn
-      Ray.tscn
-      Sonic_Old.tscn
-      Sonic.tscn
-      Tails.tscn
-      Graphics/Players/PlayerAnimations/Amy.tscn
-      Graphics/Players/PlayerAnimations/Knuckles.tscn
-      Graphics/Players/PlayerAnimations/Mighty.tscn
-      Graphics/Players/PlayerAnimations/Ray.tscn
-      Graphics/Players/PlayerAnimations/Sonic_Old.tscn
-      Graphics/Players/PlayerAnimations/Sonic.tscn
-      Graphics/Players/PlayerAnimations/Tails.tscn
-    Graphics/Players/Amy.png
-    Graphics/Players/Amy.png.import
-    Graphics/Players/Knuckles.png
-    Graphics/Players/Knuckles.png.import
-    Graphics/Players/Mighty.png
-    Graphics/Players/Mighty.png.import
-    Graphics/Players/Ray.png
-    Graphics/Players/Ray.png.import
-    Graphics/Players/Sonic_Beta_Super.png
-    Graphics/Players/Sonic_Beta_Super.png.import
-    Graphics/Players/Sonic_Beta.png
-    Graphics/Players/Sonic_Beta.png.import
-    Graphics/Players/Sonic.png
-    Graphics/Players/Sonic.png.import
-    Graphics/Players/SuperSonic.png
-    Graphics/Players/SuperSonic.png.import
-    Graphics/Players/Tails.png
-    Graphics/Players/Tails.png.import
   Special Stage/ (32)
     Explosion_SS.png
     Explosion_SS.png.import
@@ -2879,57 +1492,15 @@ Graphics/ (999)
     SS_Tails.tscn
     TestMat.png
     TestMat.png.import
-    Graphics/Special Stage/Explosion_SS.png
-    Graphics/Special Stage/Explosion_SS.png.import
-    Graphics/Special Stage/Rings_SS.png
-    Graphics/Special Stage/Rings_SS.png.import
-    Graphics/Special Stage/SS_Amy.png
-    Graphics/Special Stage/SS_Amy.png.import
-    Graphics/Special Stage/SS_Amy.tscn
-    Graphics/Special Stage/SS_BG.png
-    Graphics/Special Stage/SS_BG.png.import
-    Graphics/Special Stage/SS_Bombs.png
-    Graphics/Special Stage/SS_Bombs.png.import
-    Graphics/Special Stage/SS_HUD_Banner.png
-    Graphics/Special Stage/SS_HUD_Banner.png.import
-    Graphics/Special Stage/SS_HUD_Font.png
-    Graphics/Special Stage/SS_HUD_Font.png.import
-    Graphics/Special Stage/SS_HUD_Sprites.png
-    Graphics/Special Stage/SS_HUD_Sprites.png.import
-    Graphics/Special Stage/SS_Knuckles.png
-    Graphics/Special Stage/SS_Knuckles.png.import
-    Graphics/Special Stage/SS_Knuckles.tscn
-    Graphics/Special Stage/SS_Mighty.png
-    Graphics/Special Stage/SS_Mighty.png.import
-    Graphics/Special Stage/SS_Mighty.tscn
-    Graphics/Special Stage/SS_Ray.tscn
-    Graphics/Special Stage/SS_Sonic_Test.tscn
-    Graphics/Special Stage/SS_Sonic.png
-    Graphics/Special Stage/SS_Sonic.png.import
-    Graphics/Special Stage/SS_Tails.png
-    Graphics/Special Stage/SS_Tails.png.import
-    Graphics/Special Stage/SS_Tails.tscn
-    Graphics/Special Stage/TestMat.png
-    Graphics/Special Stage/TestMat.png.import
   Tiles/ (68)
-    CollissionTiles.png
-    CollissionTiles.png.import
-    MCZPlatform.tres
-    OOZPlatform.tres
     CNZ/ (4)
       CNZ_Blocks.png
       CNZ_Blocks.png.import
       CNZF_Blocks.png
       CNZF_Blocks.png.import
-      Graphics/Tiles/CNZ/CNZ_Blocks.png
-      Graphics/Tiles/CNZ/CNZ_Blocks.png.import
-      Graphics/Tiles/CNZ/CNZF_Blocks.png
-      Graphics/Tiles/CNZ/CNZF_Blocks.png.import
     CPZ/ (2)
       CPZ_Blocks_Redux.png
       CPZ_Blocks_Redux.png.import
-      Graphics/Tiles/CPZ/CPZ_Blocks_Redux.png
-      Graphics/Tiles/CPZ/CPZ_Blocks_Redux.png.import
     DHZ/ (6)
       DHZ_Blocks.png
       DHZ_Blocks.png.import
@@ -2937,21 +1508,11 @@ Graphics/ (999)
       DHZ_CrushTiles.png.import
       DHZBGBlocks.png
       DHZBGBlocks.png.import
-      Graphics/Tiles/DHZ/DHZ_Blocks.png
-      Graphics/Tiles/DHZ/DHZ_Blocks.png.import
-      Graphics/Tiles/DHZ/DHZ_CrushTiles.png
-      Graphics/Tiles/DHZ/DHZ_CrushTiles.png.import
-      Graphics/Tiles/DHZ/DHZBGBlocks.png
-      Graphics/Tiles/DHZ/DHZBGBlocks.png.import
     EGZ/ (4)
       EGZ_FanAnim.png
       EGZ_FanAnim.png.import
       EGZ.png
       EGZ.png.import
-      Graphics/Tiles/EGZ/EGZ_FanAnim.png
-      Graphics/Tiles/EGZ/EGZ_FanAnim.png.import
-      Graphics/Tiles/EGZ/EGZ.png
-      Graphics/Tiles/EGZ/EGZ.png.import
     EHZ_HTZ/ (14)
       EHZ_AniTiles.png
       EHZ_AniTiles.png.import
@@ -2967,20 +1528,6 @@ Graphics/ (999)
       HTZ_Lava.png.import
       HTZ_Zips.png
       HTZ_Zips.png.import
-      Graphics/Tiles/EHZ_HTZ/EHZ_AniTiles.png
-      Graphics/Tiles/EHZ_HTZ/EHZ_AniTiles.png.import
-      Graphics/Tiles/EHZ_HTZ/EHZ_Blocks.png
-      Graphics/Tiles/EHZ_HTZ/EHZ_Blocks.png.import
-      Graphics/Tiles/EHZ_HTZ/EHZ_Platform_Large.png
-      Graphics/Tiles/EHZ_HTZ/EHZ_Platform_Large.png.import
-      Graphics/Tiles/EHZ_HTZ/EHZ_Platform_Small.png
-      Graphics/Tiles/EHZ_HTZ/EHZ_Platform_Small.png.import
-      Graphics/Tiles/EHZ_HTZ/EHZFalls_Blocks.png
-      Graphics/Tiles/EHZ_HTZ/EHZFalls_Blocks.png.import
-      Graphics/Tiles/EHZ_HTZ/HTZ_Lava.png
-      Graphics/Tiles/EHZ_HTZ/HTZ_Lava.png.import
-      Graphics/Tiles/EHZ_HTZ/HTZ_Zips.png
-      Graphics/Tiles/EHZ_HTZ/HTZ_Zips.png.import
     HPZ/ (12)
       Bridge_Log_HPZ1.png
       Bridge_Log_HPZ1.png.import
@@ -2994,56 +1541,28 @@ Graphics/ (999)
       HPZOrbGreen.png.import
       HPZOrbPurple.png
       HPZOrbPurple.png.import
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ1.png
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ1.png.import
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ2.png
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ2.png.import
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ3.png
-      Graphics/Tiles/HPZ/Bridge_Log_HPZ3.png.import
-      Graphics/Tiles/HPZ/HPZ_Blocks.png
-      Graphics/Tiles/HPZ/HPZ_Blocks.png.import
-      Graphics/Tiles/HPZ/HPZOrbGreen.png
-      Graphics/Tiles/HPZ/HPZOrbGreen.png.import
-      Graphics/Tiles/HPZ/HPZOrbPurple.png
-      Graphics/Tiles/HPZ/HPZOrbPurple.png.import
     MTZ/ (4)
       GCZ_Blocks.png
       GCZ_Blocks.png.import
       MTZ_BlocksNew.png
       MTZ_BlocksNew.png.import
-      Graphics/Tiles/MTZ/GCZ_Blocks.png
-      Graphics/Tiles/MTZ/GCZ_Blocks.png.import
-      Graphics/Tiles/MTZ/MTZ_BlocksNew.png
-      Graphics/Tiles/MTZ/MTZ_BlocksNew.png.import
     NGHZ/ (2)
       NGHZ_Blocks.png
       NGHZ_Blocks.png.import
-      Graphics/Tiles/NGHZ/NGHZ_Blocks.png
-      Graphics/Tiles/NGHZ/NGHZ_Blocks.png.import
     OOZ/ (2)
       OOZ_Blocks.png
       OOZ_Blocks.png.import
-      Graphics/Tiles/OOZ/OOZ_Blocks.png
-      Graphics/Tiles/OOZ/OOZ_Blocks.png.import
     SCZ/ (4)
       SCZ_AnimatedBlocks.png
       SCZ_AnimatedBlocks.png.import
       SCZ.png
       SCZ.png.import
-      Graphics/Tiles/SCZ/SCZ_AnimatedBlocks.png
-      Graphics/Tiles/SCZ/SCZ_AnimatedBlocks.png.import
-      Graphics/Tiles/SCZ/SCZ.png
-      Graphics/Tiles/SCZ/SCZ.png.import
     SSZ/ (2)
       SSZ.png
       SSZ.png.import
-      Graphics/Tiles/SSZ/SSZ.png
-      Graphics/Tiles/SSZ/SSZ.png.import
     WGZ/ (2)
       WGZ_Blocks.png
       WGZ_Blocks.png.import
-      Graphics/Tiles/WGZ/WGZ_Blocks.png
-      Graphics/Tiles/WGZ/WGZ_Blocks.png.import
     WorldsTiles/ (6)
       Island_01.png
       Island_01.png.import
@@ -3051,16 +1570,10 @@ Graphics/ (999)
       Platform.png.import
       PlatformSmall.png
       PlatformSmall.png.import
-      Graphics/Tiles/WorldsTiles/Island_01.png
-      Graphics/Tiles/WorldsTiles/Island_01.png.import
-      Graphics/Tiles/WorldsTiles/Platform.png
-      Graphics/Tiles/WorldsTiles/Platform.png.import
-      Graphics/Tiles/WorldsTiles/PlatformSmall.png
-      Graphics/Tiles/WorldsTiles/PlatformSmall.png.import
-    Graphics/Tiles/CollissionTiles.png
-    Graphics/Tiles/CollissionTiles.png.import
-    Graphics/Tiles/MCZPlatform.tres
-    Graphics/Tiles/OOZPlatform.tres
+    CollissionTiles.png
+    CollissionTiles.png.import
+    MCZPlatform.tres
+    OOZPlatform.tres
   title/ (32)
     DashLines.png
     DashLines.png.import
@@ -3094,38 +1607,6 @@ Graphics/ (999)
     TitleMenu.png.import
     TitleStar.png
     TitleStar.png.import
-    Graphics/title/DashLines.png
-    Graphics/title/DashLines.png.import
-    Graphics/title/LogoMask.png
-    Graphics/title/LogoMask.png.import
-    Graphics/title/Press start.png
-    Graphics/title/Press start.png.import
-    Graphics/title/SEGA_BG.png
-    Graphics/title/SEGA_BG.png.import
-    Graphics/title/Sega-Dash.png
-    Graphics/title/Sega-Dash.png.import
-    Graphics/title/Sega.png
-    Graphics/title/Sega.png.import
-    Graphics/title/SonicTitle.png
-    Graphics/title/SonicTitle.png.import
-    Graphics/title/SonicWorldsLogo.png
-    Graphics/title/SonicWorldsLogo.png.import
-    Graphics/title/SonicWorldsLogoMask.png
-    Graphics/title/SonicWorldsLogoMask.png.import
-    Graphics/title/TailsTitle.png
-    Graphics/title/TailsTitle.png.import
-    Graphics/title/Title_RETOLD.png
-    Graphics/title/Title_RETOLD.png.import
-    Graphics/title/TitleBanner.png
-    Graphics/title/TitleBanner.png.import
-    Graphics/title/TitleEmblem_Final.png
-    Graphics/title/TitleEmblem_Final.png.import
-    Graphics/title/TitleEmblem.png
-    Graphics/title/TitleEmblem.png.import
-    Graphics/title/TitleMenu.png
-    Graphics/title/TitleMenu.png.import
-    Graphics/title/TitleStar.png
-    Graphics/title/TitleStar.png.import
   World3D/ (18)
     _f_dd.png
     _f_dd.png.import
@@ -3145,26 +1626,8 @@ Graphics/ (999)
     _f_s.png.import
     _f.png
     _f.png.import
-    Graphics/World3D/_f_dd.png
-    Graphics/World3D/_f_dd.png.import
-    Graphics/World3D/_f_n.png
-    Graphics/World3D/_f_n.png.import
-    Graphics/World3D/_f_r_dd.png
-    Graphics/World3D/_f_r_dd.png.import
-    Graphics/World3D/_f_r_n.png
-    Graphics/World3D/_f_r_n.png.import
-    Graphics/World3D/_f_r.png
-    Graphics/World3D/_f_r.png.import
-    Graphics/World3D/_f_s_dd.png
-    Graphics/World3D/_f_s_dd.png.import
-    Graphics/World3D/_f_s_n.png
-    Graphics/World3D/_f_s_n.png.import
-    Graphics/World3D/_f_s.png
-    Graphics/World3D/_f_s.png.import
-    Graphics/World3D/_f.png
-    Graphics/World3D/_f.png.import
-  Graphics/Light_Glow.png
-  Graphics/Light_Glow.png.import
+  Light_Glow.png
+  Light_Glow.png.import
 Models/ (20)
   Player/ (12)
     Knuckles_Knuckles.png
@@ -3179,57 +1642,27 @@ Models/ (20)
     Sonic_Sonic.png.import
     Sonic.glb
     Sonic.glb.import
-    Models/Player/Knuckles_Knuckles.png
-    Models/Player/Knuckles_Knuckles.png.import
-    Models/Player/Knuckles.glb
-    Models/Player/Knuckles.glb.import
-    Models/Player/Miles_Tails.png
-    Models/Player/Miles_Tails.png.import
-    Models/Player/Miles.glb
-    Models/Player/Miles.glb.import
-    Models/Player/Sonic_Sonic.png
-    Models/Player/Sonic_Sonic.png.import
-    Models/Player/Sonic.glb
-    Models/Player/Sonic.glb.import
   SpecialStage/ (8)
-    SpecialStage_Checkpoint.png
-    SpecialStage_Checkpoint.png.import
-    SpecialStage.glb
-    SpecialStage.glb.import
     Materials/ (4)
       Color1.tres
       Color2.tres
       Flag.tres
       Lights.tres
-      Models/SpecialStage/Materials/Color1.tres
-      Models/SpecialStage/Materials/Color2.tres
-      Models/SpecialStage/Materials/Flag.tres
-      Models/SpecialStage/Materials/Lights.tres
-    Models/SpecialStage/SpecialStage_Checkpoint.png
-    Models/SpecialStage/SpecialStage_Checkpoint.png.import
-    Models/SpecialStage/SpecialStage.glb
-    Models/SpecialStage/SpecialStage.glb.import
+    SpecialStage_Checkpoint.png
+    SpecialStage_Checkpoint.png.import
+    SpecialStage.glb
+    SpecialStage.glb.import
 Resources/ (7)
+  3DMaterials/ (1)
+    Shadow.tres
+  animated_sprites/ (1)
+    buzzer_flame.tres
   SpecialHUD.tres
   SpecialStages.tres
   SpecialStageTilemap.tscn
   Standard_Font.tres
   TwoPlayerMenuTheme.tres
-  3DMaterials/ (1)
-    Shadow.tres
-    Resources/3DMaterials/Shadow.tres
-  animated_sprites/ (1)
-    buzzer_flame.tres
-    Resources/animated_sprites/buzzer_flame.tres
-  Resources/SpecialHUD.tres
-  Resources/SpecialStages.tres
-  Resources/SpecialStageTilemap.tscn
-  Resources/Standard_Font.tres
-  Resources/TwoPlayerMenuTheme.tres
 Scene/ (108)
-  crt_test.tscn
-  Main.tscn
-  TwoPlayerScreenView.tscn
   Backgrounds/ (20)
     00-EmeraldHill.tscn
     01-HiddenPalace.tscn
@@ -3251,37 +1684,12 @@ Scene/ (108)
     15-SkyFortress.tscn
     16-DeathEgg.tscn
     17-Ending.tscn
-    Scene/Backgrounds/00-EmeraldHill.tscn
-    Scene/Backgrounds/01-HiddenPalace.tscn
-    Scene/Backgrounds/02-HillTop.tscn
-    Scene/Backgrounds/03-ChemicalPlant.tscn
-    Scene/Backgrounds/04-OilOcean.tscn
-    Scene/Backgrounds/05-NeoGreenHill.tscn
-    Scene/Backgrounds/05-NeoGreenHill(High).tscn
-    Scene/Backgrounds/06-Metropolis.tscn
-    Scene/Backgrounds/07-DustHill.tscn
-    Scene/Backgrounds/08-WoodGadget.tscn
-    Scene/Backgrounds/09-CasinoNight.tscn
-    Scene/Backgrounds/09-CasinoNightF.tscn
-    Scene/Backgrounds/10-JewelGrotto.tscn
-    Scene/Backgrounds/11-WinterHill.tscn
-    Scene/Backgrounds/12-SandShower.tscn
-    Scene/Backgrounds/13-TropicalJungle.tscn
-    Scene/Backgrounds/14-CyberCity.tscn
-    Scene/Backgrounds/15-SkyFortress.tscn
-    Scene/Backgrounds/16-DeathEgg.tscn
-    Scene/Backgrounds/17-Ending.tscn
   Cutscenes/ (5)
     dez_cutscene_handler.gd
     dez_cutscene_handler.gd.uid
     island_timer.gd
     island_timer.gd.uid
     Opening.tscn
-    Scene/Cutscenes/dez_cutscene_handler.gd
-    Scene/Cutscenes/dez_cutscene_handler.gd.uid
-    Scene/Cutscenes/island_timer.gd
-    Scene/Cutscenes/island_timer.gd.uid
-    Scene/Cutscenes/Opening.tscn
   level_layouts/ (31)
     htz_1_quake_tiles.scn
     htz_1_quake_tiles.tscn
@@ -3314,38 +1722,10 @@ Scene/ (108)
     layout_wgz_1.scn
     layout_wgz_2.scn
     scz_cover_tiles.scn
-    Scene/level_layouts/htz_1_quake_tiles.scn
-    Scene/level_layouts/htz_1_quake_tiles.tscn
-    Scene/level_layouts/htz_2_quake_tiles.scn
-    Scene/level_layouts/layout_cnz_1_new.scn
-    Scene/level_layouts/layout_cnz_1.scn
-    Scene/level_layouts/layout_cnz_2_new.scn
-    Scene/level_layouts/layout_cnz_2.scn
-    Scene/level_layouts/layout_cpz_1.scn
-    Scene/level_layouts/layout_cpz_2.scn
-    Scene/level_layouts/layout_dez_2.scn
-    Scene/level_layouts/layout_dhz_1.scn
-    Scene/level_layouts/layout_dhz_2.scn
-    Scene/level_layouts/layout_egz.scn
-    Scene/level_layouts/layout_ehz_1.scn
-    Scene/level_layouts/layout_ehz_2.scn
-    Scene/level_layouts/layout_ghz_1.scn
-    Scene/level_layouts/layout_ghz_2.scn
-    Scene/level_layouts/layout_hpz_1.scn
-    Scene/level_layouts/layout_hpz_2.scn
-    Scene/level_layouts/layout_htz_1.scn
-    Scene/level_layouts/layout_htz_2.scn
-    Scene/level_layouts/layout_mtz_1.scn
-    Scene/level_layouts/layout_mtz_2.scn
-    Scene/level_layouts/layout_nghz_1.scn
-    Scene/level_layouts/layout_nghz_2.scn
-    Scene/level_layouts/layout_ooz_1.scn
-    Scene/level_layouts/layout_ooz_2.scn
-    Scene/level_layouts/layout_sfz_2.scn
-    Scene/level_layouts/layout_wgz_1.scn
-    Scene/level_layouts/layout_wgz_2.scn
-    Scene/level_layouts/scz_cover_tiles.scn
   Presentation/ (16)
+    assets/ (2)
+      options_menu_button.tscn
+      title_menu_button.tscn
     Back.tscn
     d.gd
     d.gd.uid
@@ -3360,28 +1740,7 @@ Scene/ (108)
     TwoPlayerMenu.tscn
     TwoPlayerResults.tscn
     ZoneLoader.tscn
-    assets/ (2)
-      options_menu_button.tscn
-      title_menu_button.tscn
-      Scene/Presentation/assets/options_menu_button.tscn
-      Scene/Presentation/assets/title_menu_button.tscn
-    Scene/Presentation/Back.tscn
-    Scene/Presentation/d.gd
-    Scene/Presentation/d.gd.uid
-    Scene/Presentation/DataSelectMenu.tscn
-    Scene/Presentation/DemoCredits.tscn
-    Scene/Presentation/IntroCredits.tscn
-    Scene/Presentation/LevelSelect.tscn
-    Scene/Presentation/Menu.tscn
-    Scene/Presentation/OptionsMenu.tscn
-    Scene/Presentation/PoweredByWorlds.tscn
-    Scene/Presentation/Title.tscn
-    Scene/Presentation/TwoPlayerMenu.tscn
-    Scene/Presentation/TwoPlayerResults.tscn
-    Scene/Presentation/ZoneLoader.tscn
   SpecialStage/ (10)
-    SpecialStage.tscn
-    SpecialStageResult.tscn
     Layouts/ (8)
       stage_1.tscn
       stage_2.tscn
@@ -3391,16 +1750,8 @@ Scene/ (108)
       stage_6.tscn
       stage_7.tscn
       stage_8.tscn
-      Scene/SpecialStage/Layouts/stage_1.tscn
-      Scene/SpecialStage/Layouts/stage_2.tscn
-      Scene/SpecialStage/Layouts/stage_3.tscn
-      Scene/SpecialStage/Layouts/stage_4.tscn
-      Scene/SpecialStage/Layouts/stage_5.tscn
-      Scene/SpecialStage/Layouts/stage_6.tscn
-      Scene/SpecialStage/Layouts/stage_7.tscn
-      Scene/SpecialStage/Layouts/stage_8.tscn
-    Scene/SpecialStage/SpecialStage.tscn
-    Scene/SpecialStage/SpecialStageResult.tscn
+    SpecialStage.tscn
+    SpecialStageResult.tscn
   Zones/ (23)
     CasinoNight1.tscn
     CasinoNight2.tscn
@@ -3425,37 +1776,10 @@ Scene/ (108)
     OilOceanAct2.tscn
     SkyFortress1.tscn
     SkyFortress2.tscn
-    Scene/Zones/CasinoNight1.tscn
-    Scene/Zones/CasinoNight2.tscn
-    Scene/Zones/ChemicalPlant.tscn
-    Scene/Zones/ChemicalPlant2.tscn
-    Scene/Zones/CyberCity.tscn
-    Scene/Zones/DeathEgg1.tscn
-    Scene/Zones/DeathEgg2.tscn
-    Scene/Zones/DustHill1.tscn
-    Scene/Zones/DustHill2.tscn
-    Scene/Zones/EmeraldHill1.tscn
-    Scene/Zones/EmeraldHill2.tscn
-    Scene/Zones/Hidden Palace 1.tscn
-    Scene/Zones/HillTop1.tscn
-    Scene/Zones/HillTop2.tscn
-    Scene/Zones/Metropolis1.tscn
-    Scene/Zones/Metropolis2.tscn
-    Scene/Zones/Metropolis3.tscn
-    Scene/Zones/NeoGreenHill1.tscn
-    Scene/Zones/NeoGreenHill2.tscn
-    Scene/Zones/OilOcean.tscn
-    Scene/Zones/OilOceanAct2.tscn
-    Scene/Zones/SkyFortress1.tscn
-    Scene/Zones/SkyFortress2.tscn
-  Scene/crt_test.tscn
-  Scene/Main.tscn
-  Scene/TwoPlayerScreenView.tscn
+  crt_test.tscn
+  Main.tscn
+  TwoPlayerScreenView.tscn
 Scripts/ (606)
-  Node_Spawner.gd
-  Node_Spawner.gd.uid
-  PropertiesLookup.gd
-  PropertiesLookup.gd.uid
   Backgrounds/ (18)
     15_death_egg.gd
     15_death_egg.gd.uid
@@ -3475,24 +1799,6 @@ Scripts/ (606)
     TileMap.gd.uid
     WGZ_Parallax.gd
     WGZ_Parallax.gd.uid
-    Scripts/Backgrounds/15_death_egg.gd
-    Scripts/Backgrounds/15_death_egg.gd.uid
-    Scripts/Backgrounds/alignChildren.gd
-    Scripts/Backgrounds/alignChildren.gd.uid
-    Scripts/Backgrounds/GHZWaterfall.gd
-    Scripts/Backgrounds/GHZWaterfall.gd.uid
-    Scripts/Backgrounds/HTZ_ParallaxBackground.gd
-    Scripts/Backgrounds/HTZ_ParallaxBackground.gd.uid
-    Scripts/Backgrounds/Island_ParallaxBackground.gd
-    Scripts/Backgrounds/Island_ParallaxBackground.gd.uid
-    Scripts/Backgrounds/OOZ_Parallax.gd
-    Scripts/Backgrounds/OOZ_Parallax.gd.uid
-    Scripts/Backgrounds/parallax_layer_autoscroll.gd
-    Scripts/Backgrounds/parallax_layer_autoscroll.gd.uid
-    Scripts/Backgrounds/TileMap.gd
-    Scripts/Backgrounds/TileMap.gd.uid
-    Scripts/Backgrounds/WGZ_Parallax.gd
-    Scripts/Backgrounds/WGZ_Parallax.gd.uid
   Boss/ (38)
     BossBase.gd
     BossBase.gd.uid
@@ -3532,44 +1838,6 @@ Scripts/ (606)
     Sky_Fortress_Laser.gd.uid
     WreckingEggman.gd
     WreckingEggman.gd.uid
-    Scripts/Boss/BossBase.gd
-    Scripts/Boss/BossBase.gd.uid
-    Scripts/Boss/BossBoundrySetter.gd
-    Scripts/Boss/BossBoundrySetter.gd.uid
-    Scripts/Boss/bouncer_eggman.gd
-    Scripts/Boss/bouncer_eggman.gd.uid
-    Scripts/Boss/DrillEggman_Car.gd
-    Scripts/Boss/DrillEggman_Car.gd.uid
-    Scripts/Boss/DrillEggmanDrill.gd
-    Scripts/Boss/DrillEggmanDrill.gd.uid
-    Scripts/Boss/DrillEggmanWheel.gd
-    Scripts/Boss/DrillEggmanWheel.gd.uid
-    Scripts/Boss/egg_pod.gd
-    Scripts/Boss/egg_pod.gd.uid
-    Scripts/Boss/eggman_mechless.gd
-    Scripts/Boss/eggman_mechless.gd.uid
-    Scripts/Boss/eggman_window.gd
-    Scripts/Boss/eggman_window.gd.uid
-    Scripts/Boss/eggpod_controller.gd
-    Scripts/Boss/eggpod_controller.gd.uid
-    Scripts/Boss/getaway_submarine.gd
-    Scripts/Boss/getaway_submarine.gd.uid
-    Scripts/Boss/HelicopterEggman.gd
-    Scripts/Boss/HelicopterEggman.gd.uid
-    Scripts/Boss/poison_eggman_water_pump.gd
-    Scripts/Boss/poison_eggman_water_pump.gd.uid
-    Scripts/Boss/poison_eggman.gd
-    Scripts/Boss/poison_eggman.gd.uid
-    Scripts/Boss/PoisonEggman_Jar.gd
-    Scripts/Boss/PoisonEggman_Jar.gd.uid
-    Scripts/Boss/RobotnikTemplate.gd
-    Scripts/Boss/RobotnikTemplate.gd.uid
-    Scripts/Boss/silver_sonic.gd
-    Scripts/Boss/silver_sonic.gd.uid
-    Scripts/Boss/Sky_Fortress_Laser.gd
-    Scripts/Boss/Sky_Fortress_Laser.gd.uid
-    Scripts/Boss/WreckingEggman.gd
-    Scripts/Boss/WreckingEggman.gd.uid
   Enemies/ (96)
     aquis_projectile.gd
     aquis_projectile.gd.uid
@@ -3667,102 +1935,6 @@ Scripts/ (606)
     turtloid.gd.uid
     wisp.gd
     wisp.gd.uid
-    Scripts/Enemies/aquis_projectile.gd
-    Scripts/Enemies/aquis_projectile.gd.uid
-    Scripts/Enemies/aquis.gd
-    Scripts/Enemies/aquis.gd.uid
-    Scripts/Enemies/asteron.gd
-    Scripts/Enemies/asteron.gd.uid
-    Scripts/Enemies/balkerie.gd
-    Scripts/Enemies/balkerie.gd.uid
-    Scripts/Enemies/BBat.gd
-    Scripts/Enemies/BBat.gd.uid
-    Scripts/Enemies/BFish.gd
-    Scripts/Enemies/BFish.gd.uid
-    Scripts/Enemies/bouncer.gd
-    Scripts/Enemies/bouncer.gd.uid
-    Scripts/Enemies/bubbler.gd
-    Scripts/Enemies/bubbler.gd.uid
-    Scripts/Enemies/bubblers_mother.gd
-    Scripts/Enemies/bubblers_mother.gd.uid
-    Scripts/Enemies/BuzzBomber.gd
-    Scripts/Enemies/BuzzBomber.gd.uid
-    Scripts/Enemies/chop_chop.gd
-    Scripts/Enemies/chop_chop.gd.uid
-    Scripts/Enemies/claw_attack.gd
-    Scripts/Enemies/claw_attack.gd.uid
-    Scripts/Enemies/CoconutProjectile.gd
-    Scripts/Enemies/CoconutProjectile.gd.uid
-    Scripts/Enemies/Coconuts.gd
-    Scripts/Enemies/Coconuts.gd.uid
-    Scripts/Enemies/crawl.gd
-    Scripts/Enemies/crawl.gd.uid
-    Scripts/Enemies/crawlton_head.gd
-    Scripts/Enemies/crawlton_head.gd.uid
-    Scripts/Enemies/crawlton.gd
-    Scripts/Enemies/crawlton.gd.uid
-    Scripts/Enemies/EnemyBase.gd
-    Scripts/Enemies/EnemyBase.gd.uid
-    Scripts/Enemies/EnemyProjectileBase.gd
-    Scripts/Enemies/EnemyProjectileBase.gd.uid
-    Scripts/Enemies/flasher.gd
-    Scripts/Enemies/flasher.gd.uid
-    Scripts/Enemies/Gator.gd
-    Scripts/Enemies/Gator.gd.uid
-    Scripts/Enemies/generic_projectile.gd
-    Scripts/Enemies/generic_projectile.gd.uid
-    Scripts/Enemies/grabber_enemy.gd
-    Scripts/Enemies/grabber_enemy.gd.uid
-    Scripts/Enemies/grabber_main.gd
-    Scripts/Enemies/grabber_main.gd.uid
-    Scripts/Enemies/grounder.gd
-    Scripts/Enemies/grounder.gd.uid
-    Scripts/Enemies/mack_worm_spawner.gd
-    Scripts/Enemies/mack_worm_spawner.gd.uid
-    Scripts/Enemies/Masher_Parent.gd
-    Scripts/Enemies/Masher_Parent.gd.uid
-    Scripts/Enemies/Masher.gd
-    Scripts/Enemies/Masher.gd.uid
-    Scripts/Enemies/MotoBug.gd
-    Scripts/Enemies/MotoBug.gd.uid
-    Scripts/Enemies/nebula.gd
-    Scripts/Enemies/nebula.gd.uid
-    Scripts/Enemies/Octus.gd
-    Scripts/Enemies/Octus.gd.uid
-    Scripts/Enemies/Orbinaut.gd
-    Scripts/Enemies/Orbinaut.gd.uid
-    Scripts/Enemies/pterabot.gd
-    Scripts/Enemies/pterabot.gd.uid
-    Scripts/Enemies/redz_fire.gd
-    Scripts/Enemies/redz_fire.gd.uid
-    Scripts/Enemies/Redz.gd
-    Scripts/Enemies/Redz.gd.uid
-    Scripts/Enemies/rexon_head.gd
-    Scripts/Enemies/rexon_head.gd.uid
-    Scripts/Enemies/rexon.gd
-    Scripts/Enemies/rexon.gd.uid
-    Scripts/Enemies/sand_crawl.gd
-    Scripts/Enemies/sand_crawl.gd.uid
-    Scripts/Enemies/scratch.gd
-    Scripts/Enemies/scratch.gd.uid
-    Scripts/Enemies/shell_cracker.gd
-    Scripts/Enemies/shell_cracker.gd.uid
-    Scripts/Enemies/slicer_projectile.gd
-    Scripts/Enemies/slicer_projectile.gd.uid
-    Scripts/Enemies/slicer.gd
-    Scripts/Enemies/slicer.gd.uid
-    Scripts/Enemies/sol_area.gd
-    Scripts/Enemies/sol_area.gd.uid
-    Scripts/Enemies/solWeight.gd
-    Scripts/Enemies/solWeight.gd.uid
-    Scripts/Enemies/spiny.gd
-    Scripts/Enemies/spiny.gd.uid
-    Scripts/Enemies/Stegway.gd
-    Scripts/Enemies/Stegway.gd.uid
-    Scripts/Enemies/turtloid.gd
-    Scripts/Enemies/turtloid.gd.uid
-    Scripts/Enemies/wisp.gd
-    Scripts/Enemies/wisp.gd.uid
   Gimmicks/ (136)
     arrow_shooter.gd
     arrow_shooter.gd.uid
@@ -3900,142 +2072,6 @@ Scripts/ (606)
     ZipLinePlatform.gd.uid
     ZoomTubePath.gd
     ZoomTubePath.gd.uid
-    Scripts/Gimmicks/arrow_shooter.gd
-    Scripts/Gimmicks/arrow_shooter.gd.uid
-    Scripts/Gimmicks/arz_rising_pillar.gd
-    Scripts/Gimmicks/arz_rising_pillar.gd.uid
-    Scripts/Gimmicks/ascending_stair_blocks.gd
-    Scripts/Gimmicks/ascending_stair_blocks.gd.uid
-    Scripts/Gimmicks/breakable_emerald.gd
-    Scripts/Gimmicks/breakable_emerald.gd.uid
-    Scripts/Gimmicks/breakable_tube_launcher.gd
-    Scripts/Gimmicks/breakable_tube_launcher.gd.uid
-    Scripts/Gimmicks/Bridge.gd
-    Scripts/Gimmicks/Bridge.gd.uid
-    Scripts/Gimmicks/BubbleGenerator.gd
-    Scripts/Gimmicks/BubbleGenerator.gd.uid
-    Scripts/Gimmicks/cnz_big_bumper.gd
-    Scripts/Gimmicks/cnz_big_bumper.gd.uid
-    Scripts/Gimmicks/cnz_bonus_bumper.gd
-    Scripts/Gimmicks/cnz_bonus_bumper.gd.uid
-    Scripts/Gimmicks/cnz_character_reels.gd
-    Scripts/Gimmicks/cnz_character_reels.gd.uid
-    Scripts/Gimmicks/cnz_flipper.gd
-    Scripts/Gimmicks/cnz_flipper.gd.uid
-    Scripts/Gimmicks/cnz_pressure_spring.gd
-    Scripts/Gimmicks/cnz_pressure_spring.gd.uid
-    Scripts/Gimmicks/cnz_slot.gd
-    Scripts/Gimmicks/cnz_slot.gd.uid
-    Scripts/Gimmicks/cnz_triangle_bumper.gd
-    Scripts/Gimmicks/cnz_triangle_bumper.gd.uid
-    Scripts/Gimmicks/CNZBarrel.gd
-    Scripts/Gimmicks/CNZBarrel.gd.uid
-    Scripts/Gimmicks/CNZBarrelChild.gd
-    Scripts/Gimmicks/CNZBarrelChild.gd.uid
-    Scripts/Gimmicks/ConveyorBelt.gd
-    Scripts/Gimmicks/ConveyorBelt.gd.uid
-    Scripts/Gimmicks/corkscrew_h_tube.gd
-    Scripts/Gimmicks/corkscrew_h_tube.gd.uid
-    Scripts/Gimmicks/CorkscrewLoop.gd
-    Scripts/Gimmicks/CorkscrewLoop.gd.uid
-    Scripts/Gimmicks/cpz_tipping_pipe.gd
-    Scripts/Gimmicks/cpz_tipping_pipe.gd.uid
-    Scripts/Gimmicks/draw_bridge.gd
-    Scripts/Gimmicks/draw_bridge.gd.uid
-    Scripts/Gimmicks/Earthquakes.gd
-    Scripts/Gimmicks/Earthquakes.gd.uid
-    Scripts/Gimmicks/Fan.gd
-    Scripts/Gimmicks/Fan.gd.uid
-    Scripts/Gimmicks/floating_pillar.gd
-    Scripts/Gimmicks/floating_pillar.gd.uid
-    Scripts/Gimmicks/geyser.gd
-    Scripts/Gimmicks/geyser.gd.uid
-    Scripts/Gimmicks/hanging_bar.gd
-    Scripts/Gimmicks/hanging_bar.gd.uid
-    Scripts/Gimmicks/hanging_vine.gd
-    Scripts/Gimmicks/hanging_vine.gd.uid
-    Scripts/Gimmicks/htz_see_saw.gd
-    Scripts/Gimmicks/htz_see_saw.gd.uid
-    Scripts/Gimmicks/lever_spring.gd
-    Scripts/Gimmicks/lever_spring.gd.uid
-    Scripts/Gimmicks/MovingStairBlocks.gd
-    Scripts/Gimmicks/MovingStairBlocks.gd.uid
-    Scripts/Gimmicks/mtz_cup_platform.gd
-    Scripts/Gimmicks/mtz_cup_platform.gd.uid
-    Scripts/Gimmicks/mtz_giant_cog_tooth.gd
-    Scripts/Gimmicks/mtz_giant_cog_tooth.gd.uid
-    Scripts/Gimmicks/mtz_giant_cog.gd
-    Scripts/Gimmicks/mtz_giant_cog.gd.uid
-    Scripts/Gimmicks/mtz_pipe.gd
-    Scripts/Gimmicks/mtz_pipe.gd.uid
-    Scripts/Gimmicks/mtz_steam_pipe.gd
-    Scripts/Gimmicks/mtz_steam_pipe.gd.uid
-    Scripts/Gimmicks/mtz_vertical_converyor_belt.gd
-    Scripts/Gimmicks/mtz_vertical_converyor_belt.gd.uid
-    Scripts/Gimmicks/nghz_falling_pillar_piece.gd
-    Scripts/Gimmicks/nghz_falling_pillar_piece.gd.uid
-    Scripts/Gimmicks/oil.gd
-    Scripts/Gimmicks/oil.gd.uid
-    Scripts/Gimmicks/ooz_launcher.gd
-    Scripts/Gimmicks/ooz_launcher.gd.uid
-    Scripts/Gimmicks/ooz_lid.gd
-    Scripts/Gimmicks/ooz_lid.gd.uid
-    Scripts/Gimmicks/player_reset_field.gd
-    Scripts/Gimmicks/player_reset_field.gd.uid
-    Scripts/Gimmicks/prize.gd
-    Scripts/Gimmicks/prize.gd.uid
-    Scripts/Gimmicks/ScrewPlatform.gd
-    Scripts/Gimmicks/ScrewPlatform.gd.uid
-    Scripts/Gimmicks/scz_launcher.gd
-    Scripts/Gimmicks/scz_launcher.gd.uid
-    Scripts/Gimmicks/SCZ_Rising_platform_Child.gd
-    Scripts/Gimmicks/SCZ_Rising_platform_Child.gd.uid
-    Scripts/Gimmicks/scz_rising_platforms.gd
-    Scripts/Gimmicks/scz_rising_platforms.gd.uid
-    Scripts/Gimmicks/scz_turret_platform.gd
-    Scripts/Gimmicks/scz_turret_platform.gd.uid
-    Scripts/Gimmicks/scz_wall_panel.gd
-    Scripts/Gimmicks/scz_wall_panel.gd.uid
-    Scripts/Gimmicks/SetWaterLevel.gd
-    Scripts/Gimmicks/SetWaterLevel.gd.uid
-    Scripts/Gimmicks/shifting_platform_child.gd
-    Scripts/Gimmicks/shifting_platform_child.gd.uid
-    Scripts/Gimmicks/shifting_platform.gd
-    Scripts/Gimmicks/shifting_platform.gd.uid
-    Scripts/Gimmicks/Shutter.gd
-    Scripts/Gimmicks/Shutter.gd.uid
-    Scripts/Gimmicks/spear_block.gd
-    Scripts/Gimmicks/spear_block.gd.uid
-    Scripts/Gimmicks/SpeedBooster.gd
-    Scripts/Gimmicks/SpeedBooster.gd.uid
-    Scripts/Gimmicks/SpinningBarrel.gd
-    Scripts/Gimmicks/SpinningBarrel.gd.uid
-    Scripts/Gimmicks/Spring.gd
-    Scripts/Gimmicks/Spring.gd.uid
-    Scripts/Gimmicks/steam_puff.gd
-    Scripts/Gimmicks/steam_puff.gd.uid
-    Scripts/Gimmicks/Teleporter.gd
-    Scripts/Gimmicks/Teleporter.gd.uid
-    Scripts/Gimmicks/TeleporterOrb.gd
-    Scripts/Gimmicks/TeleporterOrb.gd.uid
-    Scripts/Gimmicks/Trampoline.gd
-    Scripts/Gimmicks/Trampoline.gd.uid
-    Scripts/Gimmicks/TrampolineChild.gd
-    Scripts/Gimmicks/TrampolineChild.gd.uid
-    Scripts/Gimmicks/tube_spring.gd
-    Scripts/Gimmicks/tube_spring.gd.uid
-    Scripts/Gimmicks/vertical_shutter.gd
-    Scripts/Gimmicks/vertical_shutter.gd.uid
-    Scripts/Gimmicks/WaterBar.gd
-    Scripts/Gimmicks/WaterBar.gd.uid
-    Scripts/Gimmicks/WaterLevel.gd
-    Scripts/Gimmicks/WaterLevel.gd.uid
-    Scripts/Gimmicks/WindCurrent.gd
-    Scripts/Gimmicks/WindCurrent.gd.uid
-    Scripts/Gimmicks/ZipLinePlatform.gd
-    Scripts/Gimmicks/ZipLinePlatform.gd.uid
-    Scripts/Gimmicks/ZoomTubePath.gd
-    Scripts/Gimmicks/ZoomTubePath.gd.uid
   Global/ (8)
     Global.gd
     Global.gd.uid
@@ -4045,14 +2081,6 @@ Scripts/ (606)
     Main.gd.uid
     SoundDriver.gd
     SoundDriver.gd.uid
-    Scripts/Global/Global.gd
-    Scripts/Global/Global.gd.uid
-    Scripts/Global/GlobalFunctions.gd
-    Scripts/Global/GlobalFunctions.gd.uid
-    Scripts/Global/Main.gd
-    Scripts/Global/Main.gd.uid
-    Scripts/Global/SoundDriver.gd
-    Scripts/Global/SoundDriver.gd.uid
   Level/ (16)
     BoundrySetter.gd
     BoundrySetter.gd.uid
@@ -4070,22 +2098,6 @@ Scripts/ (606)
     TwoPlayerScreenView.gd.uid
     water_overlay_new.gd
     water_overlay_new.gd.uid
-    Scripts/Level/BoundrySetter.gd
-    Scripts/Level/BoundrySetter.gd.uid
-    Scripts/Level/Hook_Camera.gd
-    Scripts/Level/Hook_Camera.gd.uid
-    Scripts/Level/Level.gd
-    Scripts/Level/Level.gd.uid
-    Scripts/Level/Menu.gd
-    Scripts/Level/Menu.gd.uid
-    Scripts/Level/PoweredByWorlds.gd
-    Scripts/Level/PoweredByWorlds.gd.uid
-    Scripts/Level/SpecialStage.gd
-    Scripts/Level/SpecialStage.gd.uid
-    Scripts/Level/TwoPlayerScreenView.gd
-    Scripts/Level/TwoPlayerScreenView.gd.uid
-    Scripts/Level/water_overlay_new.gd
-    Scripts/Level/water_overlay_new.gd.uid
   Menu/ (38)
     control_map.gd
     control_map.gd.uid
@@ -4125,44 +2137,6 @@ Scripts/ (606)
     two_player_results.gd.uid
     zone_loader.gd
     zone_loader.gd.uid
-    Scripts/Menu/control_map.gd
-    Scripts/Menu/control_map.gd.uid
-    Scripts/Menu/ControlBindButton.gd
-    Scripts/Menu/ControlBindButton.gd.uid
-    Scripts/Menu/controller_menu.gd
-    Scripts/Menu/controller_menu.gd.uid
-    Scripts/Menu/data_select_panel.gd
-    Scripts/Menu/data_select_panel.gd.uid
-    Scripts/Menu/delete_file_popup_menu.gd
-    Scripts/Menu/delete_file_popup_menu.gd.uid
-    Scripts/Menu/DemoCredits.gd
-    Scripts/Menu/DemoCredits.gd.uid
-    Scripts/Menu/general_popup_menu.gd
-    Scripts/Menu/general_popup_menu.gd.uid
-    Scripts/Menu/level_select_popup_menu.gd
-    Scripts/Menu/level_select_popup_menu.gd.uid
-    Scripts/Menu/LevelSelect.gd
-    Scripts/Menu/LevelSelect.gd.uid
-    Scripts/Menu/no_save_panel.gd
-    Scripts/Menu/no_save_panel.gd.uid
-    Scripts/Menu/options_menu.gd
-    Scripts/Menu/options_menu.gd.uid
-    Scripts/Menu/save_file_popup_menu.gd
-    Scripts/Menu/save_file_popup_menu.gd.uid
-    Scripts/Menu/save_panel.gd
-    Scripts/Menu/save_panel.gd.uid
-    Scripts/Menu/slider_popup_menu.gd
-    Scripts/Menu/slider_popup_menu.gd.uid
-    Scripts/Menu/title_menu_button.gd
-    Scripts/Menu/title_menu_button.gd.uid
-    Scripts/Menu/Title.gd
-    Scripts/Menu/Title.gd.uid
-    Scripts/Menu/two_player_menu.gd
-    Scripts/Menu/two_player_menu.gd.uid
-    Scripts/Menu/two_player_results.gd
-    Scripts/Menu/two_player_results.gd.uid
-    Scripts/Menu/zone_loader.gd
-    Scripts/Menu/zone_loader.gd.uid
   Misc/ (36)
     AltSpawn.gd
     AltSpawn.gd.uid
@@ -4200,43 +2174,18 @@ Scripts/ (606)
     tornado.gd.uid
     twinkle_star.gd
     twinkle_star.gd.uid
-    Scripts/Misc/AltSpawn.gd
-    Scripts/Misc/AltSpawn.gd.uid
-    Scripts/Misc/Animal.gd
-    Scripts/Misc/Animal.gd.uid
-    Scripts/Misc/BadnickSmoke.gd
-    Scripts/Misc/BadnickSmoke.gd.uid
-    Scripts/Misc/BreakableBlockPiece.gd
-    Scripts/Misc/BreakableBlockPiece.gd.uid
-    Scripts/Misc/BubbleCountDown.gd
-    Scripts/Misc/BubbleCountDown.gd.uid
-    Scripts/Misc/Bubbles.gd
-    Scripts/Misc/Bubbles.gd.uid
-    Scripts/Misc/character_cameo_Root.gd
-    Scripts/Misc/character_cameo_Root.gd.uid
-    Scripts/Misc/FreeOnAnimationCompletion.gd
-    Scripts/Misc/FreeOnAnimationCompletion.gd.uid
-    Scripts/Misc/HUD.gd
-    Scripts/Misc/HUD.gd.uid
-    Scripts/Misc/path_follow_2d.gd
-    Scripts/Misc/path_follow_2d.gd.uid
-    Scripts/Misc/pause_menu.gd
-    Scripts/Misc/pause_menu.gd.uid
-    Scripts/Misc/Perfect.gd
-    Scripts/Misc/Perfect.gd.uid
-    Scripts/Misc/RotatingParticle.gd
-    Scripts/Misc/RotatingParticle.gd.uid
-    Scripts/Misc/Score.gd
-    Scripts/Misc/Score.gd.uid
-    Scripts/Misc/slot_machine_manager.gd
-    Scripts/Misc/slot_machine_manager.gd.uid
-    Scripts/Misc/SpecialStageResult.gd
-    Scripts/Misc/SpecialStageResult.gd.uid
-    Scripts/Misc/tornado.gd
-    Scripts/Misc/tornado.gd.uid
-    Scripts/Misc/twinkle_star.gd
-    Scripts/Misc/twinkle_star.gd.uid
   Objects/ (126)
+    StateMovers/ (10)
+      StateMover.gd
+      StateMover.gd.uid
+      StateMoverMaster.gd
+      StateMoverMaster.gd.uid
+      StateMoverPathFollower.gd
+      StateMoverPathFollower.gd.uid
+      StateMoverPositional.gd
+      StateMoverPositional.gd.uid
+      StateMoverTranslational.gd
+      StateMoverTranslational.gd.uid
     breakable_floor.gd
     breakable_floor.gd.uid
     BreakableBlock.gd
@@ -4353,164 +2302,7 @@ Scripts/ (606)
     WaterSlide.gd.uid
     ZSwitch.gd
     ZSwitch.gd.uid
-    StateMovers/ (10)
-      StateMover.gd
-      StateMover.gd.uid
-      StateMoverMaster.gd
-      StateMoverMaster.gd.uid
-      StateMoverPathFollower.gd
-      StateMoverPathFollower.gd.uid
-      StateMoverPositional.gd
-      StateMoverPositional.gd.uid
-      StateMoverTranslational.gd
-      StateMoverTranslational.gd.uid
-      Scripts/Objects/StateMovers/StateMover.gd
-      Scripts/Objects/StateMovers/StateMover.gd.uid
-      Scripts/Objects/StateMovers/StateMoverMaster.gd
-      Scripts/Objects/StateMovers/StateMoverMaster.gd.uid
-      Scripts/Objects/StateMovers/StateMoverPathFollower.gd
-      Scripts/Objects/StateMovers/StateMoverPathFollower.gd.uid
-      Scripts/Objects/StateMovers/StateMoverPositional.gd
-      Scripts/Objects/StateMovers/StateMoverPositional.gd.uid
-      Scripts/Objects/StateMovers/StateMoverTranslational.gd
-      Scripts/Objects/StateMovers/StateMoverTranslational.gd.uid
-    Scripts/Objects/breakable_floor.gd
-    Scripts/Objects/breakable_floor.gd.uid
-    Scripts/Objects/BreakableBlock.gd
-    Scripts/Objects/BreakableBlock.gd.uid
-    Scripts/Objects/BreakableWall.gd
-    Scripts/Objects/BreakableWall.gd.uid
-    Scripts/Objects/Bumper.gd
-    Scripts/Objects/Bumper.gd.uid
-    Scripts/Objects/burner_flames.gd
-    Scripts/Objects/burner_flames.gd.uid
-    Scripts/Objects/Capsule.gd
-    Scripts/Objects/Capsule.gd.uid
-    Scripts/Objects/CapsuleButton.gd
-    Scripts/Objects/CapsuleButton.gd.uid
-    Scripts/Objects/checkpoint_stars.gd
-    Scripts/Objects/checkpoint_stars.gd.uid
-    Scripts/Objects/Checkpoint.gd
-    Scripts/Objects/Checkpoint.gd.uid
-    Scripts/Objects/CollapsePlatform.gd
-    Scripts/Objects/CollapsePlatform.gd.uid
-    Scripts/Objects/Crusher.gd
-    Scripts/Objects/Crusher.gd.uid
-    Scripts/Objects/dhz_chained_trap.gd
-    Scripts/Objects/dhz_chained_trap.gd.uid
-    Scripts/Objects/dhz_spike_block.gd
-    Scripts/Objects/dhz_spike_block.gd.uid
-    Scripts/Objects/dhz_spiked_platform.gd
-    Scripts/Objects/dhz_spiked_platform.gd.uid
-    Scripts/Objects/Elevator.gd
-    Scripts/Objects/Elevator.gd.uid
-    Scripts/Objects/FallingBlockPlat.gd
-    Scripts/Objects/FallingBlockPlat.gd.uid
-    Scripts/Objects/ForceAngleSides.gd
-    Scripts/Objects/ForceAngleSides.gd.uid
-    Scripts/Objects/ForceRoll.gd
-    Scripts/Objects/ForceRoll.gd.uid
-    Scripts/Objects/ghz_log_spike_group.gd
-    Scripts/Objects/ghz_log_spike_group.gd.uid
-    Scripts/Objects/ghz_log_spike.gd
-    Scripts/Objects/ghz_log_spike.gd.uid
-    Scripts/Objects/GiantFan.gd
-    Scripts/Objects/GiantFan.gd.uid
-    Scripts/Objects/goal_area.gd
-    Scripts/Objects/goal_area.gd.uid
-    Scripts/Objects/GoalPost.gd
-    Scripts/Objects/GoalPost.gd.uid
-    Scripts/Objects/hanger_2.gd
-    Scripts/Objects/hanger_2.gd.uid
-    Scripts/Objects/Hazard.gd
-    Scripts/Objects/Hazard.gd.uid
-    Scripts/Objects/hex_bumper.gd
-    Scripts/Objects/hex_bumper.gd.uid
-    Scripts/Objects/hpz_pulsating_orb.gd
-    Scripts/Objects/hpz_pulsating_orb.gd.uid
-    Scripts/Objects/invisible_launcher.gd
-    Scripts/Objects/invisible_launcher.gd.uid
-    Scripts/Objects/invisible_platform.gd
-    Scripts/Objects/invisible_platform.gd.uid
-    Scripts/Objects/InvisibleBarrier.gd
-    Scripts/Objects/InvisibleBarrier.gd.uid
-    Scripts/Objects/Lava.gd
-    Scripts/Objects/Lava.gd.uid
-    Scripts/Objects/LayerSwitcher.gd
-    Scripts/Objects/LayerSwitcher.gd.uid
-    Scripts/Objects/Monitor.gd
-    Scripts/Objects/Monitor.gd.uid
-    Scripts/Objects/mtz_button_activated_platform.gd
-    Scripts/Objects/mtz_button_activated_platform.gd.uid
-    Scripts/Objects/mtz_small_cog.gd
-    Scripts/Objects/mtz_small_cog.gd.uid
-    Scripts/Objects/mtz_wall_spring.gd
-    Scripts/Objects/mtz_wall_spring.gd.uid
-    Scripts/Objects/multi_rotating_Hazards.gd
-    Scripts/Objects/multi_rotating_Hazards.gd.uid
-    Scripts/Objects/multi_rotating_platforms.gd
-    Scripts/Objects/multi_rotating_platforms.gd.uid
-    Scripts/Objects/OilSlick.gd
-    Scripts/Objects/OilSlick.gd.uid
-    Scripts/Objects/OOZ_Lid_Motion.gd
-    Scripts/Objects/OOZ_Lid_Motion.gd.uid
-    Scripts/Objects/ooz_spiker.gd
-    Scripts/Objects/ooz_spiker.gd.uid
-    Scripts/Objects/PhysicsObject.gd
-    Scripts/Objects/PhysicsObject.gd.uid
-    Scripts/Objects/Platform.gd
-    Scripts/Objects/Platform.gd.uid
-    Scripts/Objects/PlatformChild.gd
-    Scripts/Objects/PlatformChild.gd.uid
-    Scripts/Objects/Ring.gd
-    Scripts/Objects/Ring.gd.uid
-    Scripts/Objects/rotating_solid_blocks.gd
-    Scripts/Objects/rotating_solid_blocks.gd.uid
-    Scripts/Objects/scz_h_laser.gd
-    Scripts/Objects/scz_h_laser.gd.uid
-    Scripts/Objects/scz_propeller.gd
-    Scripts/Objects/scz_propeller.gd.uid
-    Scripts/Objects/SpecialStageRing.gd
-    Scripts/Objects/SpecialStageRing.gd.uid
-    Scripts/Objects/Spikes.gd
-    Scripts/Objects/Spikes.gd.uid
-    Scripts/Objects/SwingingHazard.gd
-    Scripts/Objects/SwingingHazard.gd.uid
-    Scripts/Objects/SwingingPlatform.gd
-    Scripts/Objects/SwingingPlatform.gd.uid
-    Scripts/Objects/Switch.gd
-    Scripts/Objects/Switch.gd.uid
-    Scripts/Objects/tilemap_crusher.gd
-    Scripts/Objects/tilemap_crusher.gd.uid
-    Scripts/Objects/tornado_mover.gd
-    Scripts/Objects/tornado_mover.gd.uid
-    Scripts/Objects/vent_entrance.gd
-    Scripts/Objects/vent_entrance.gd.uid
-    Scripts/Objects/WaterSlide.gd
-    Scripts/Objects/WaterSlide.gd.uid
-    Scripts/Objects/ZSwitch.gd
-    Scripts/Objects/ZSwitch.gd.uid
   Player/ (54)
-    ElecParticle.gd
-    ElecParticle.gd.uid
-    InstaShieldHitbox.gd
-    InstaShieldHitbox.gd.uid
-    player_after_images.gd
-    player_after_images.gd.uid
-    player_skin.gd
-    player_skin.gd.uid
-    Player.gd
-    Player.gd.uid
-    ShieldAnimations.gd
-    ShieldAnimations.gd.uid
-    State.gd
-    State.gd.uid
-    TailsAnimator.gd
-    TailsAnimator.gd.uid
-    TailsFlightHitArea.gd
-    TailsFlightHitArea.gd.uid
-    TailsSpriteSettings.gd
-    TailsSpriteSettings.gd.uid
     States/ (34)
       Air.gd
       Air.gd.uid
@@ -4546,60 +2338,26 @@ Scripts/ (606)
       SuperStart.gd.uid
       WallClimb.gd
       WallClimb.gd.uid
-      Scripts/Player/States/Air.gd
-      Scripts/Player/States/Air.gd.uid
-      Scripts/Player/States/AmyHammerSwing.gd
-      Scripts/Player/States/AmyHammerSwing.gd.uid
-      Scripts/Player/States/Animation.gd
-      Scripts/Player/States/Animation.gd.uid
-      Scripts/Player/States/CorkScrew.gd
-      Scripts/Player/States/CorkScrew.gd.uid
-      Scripts/Player/States/Die.gd
-      Scripts/Player/States/Die.gd.uid
-      Scripts/Player/States/Fly.gd
-      Scripts/Player/States/Fly.gd.uid
-      Scripts/Player/States/Glide.gd
-      Scripts/Player/States/Glide.gd.uid
-      Scripts/Player/States/Hang.gd
-      Scripts/Player/States/Hang.gd.uid
-      Scripts/Player/States/Hit.gd
-      Scripts/Player/States/Hit.gd.uid
-      Scripts/Player/States/JumpCancel.gd
-      Scripts/Player/States/JumpCancel.gd.uid
-      Scripts/Player/States/Normal.gd
-      Scripts/Player/States/Normal.gd.uid
-      Scripts/Player/States/PeelOut.gd
-      Scripts/Player/States/PeelOut.gd.uid
-      Scripts/Player/States/Respawn.gd
-      Scripts/Player/States/Respawn.gd.uid
-      Scripts/Player/States/Roll.gd
-      Scripts/Player/States/Roll.gd.uid
-      Scripts/Player/States/SpinDash.gd
-      Scripts/Player/States/SpinDash.gd.uid
-      Scripts/Player/States/SuperStart.gd
-      Scripts/Player/States/SuperStart.gd.uid
-      Scripts/Player/States/WallClimb.gd
-      Scripts/Player/States/WallClimb.gd.uid
-    Scripts/Player/ElecParticle.gd
-    Scripts/Player/ElecParticle.gd.uid
-    Scripts/Player/InstaShieldHitbox.gd
-    Scripts/Player/InstaShieldHitbox.gd.uid
-    Scripts/Player/player_after_images.gd
-    Scripts/Player/player_after_images.gd.uid
-    Scripts/Player/player_skin.gd
-    Scripts/Player/player_skin.gd.uid
-    Scripts/Player/Player.gd
-    Scripts/Player/Player.gd.uid
-    Scripts/Player/ShieldAnimations.gd
-    Scripts/Player/ShieldAnimations.gd.uid
-    Scripts/Player/State.gd
-    Scripts/Player/State.gd.uid
-    Scripts/Player/TailsAnimator.gd
-    Scripts/Player/TailsAnimator.gd.uid
-    Scripts/Player/TailsFlightHitArea.gd
-    Scripts/Player/TailsFlightHitArea.gd.uid
-    Scripts/Player/TailsSpriteSettings.gd
-    Scripts/Player/TailsSpriteSettings.gd.uid
+    ElecParticle.gd
+    ElecParticle.gd.uid
+    InstaShieldHitbox.gd
+    InstaShieldHitbox.gd.uid
+    player_after_images.gd
+    player_after_images.gd.uid
+    player_skin.gd
+    player_skin.gd.uid
+    Player.gd
+    Player.gd.uid
+    ShieldAnimations.gd
+    ShieldAnimations.gd.uid
+    State.gd
+    State.gd.uid
+    TailsAnimator.gd
+    TailsAnimator.gd.uid
+    TailsFlightHitArea.gd
+    TailsFlightHitArea.gd.uid
+    TailsSpriteSettings.gd
+    TailsSpriteSettings.gd.uid
   Scene/ (12)
     cutscene_animal.gd
     cutscene_animal.gd.uid
@@ -4613,18 +2371,6 @@ Scripts/ (606)
     IntroCutsceneDeleter.gd.uid
     opening.gd
     opening.gd.uid
-    Scripts/Scene/cutscene_animal.gd
-    Scripts/Scene/cutscene_animal.gd.uid
-    Scripts/Scene/cutscene_character.gd
-    Scripts/Scene/cutscene_character.gd.uid
-    Scripts/Scene/cutscene_eggman.gd
-    Scripts/Scene/cutscene_eggman.gd.uid
-    Scripts/Scene/CutsceneTextProcessor.gd
-    Scripts/Scene/CutsceneTextProcessor.gd.uid
-    Scripts/Scene/IntroCutsceneDeleter.gd
-    Scripts/Scene/IntroCutsceneDeleter.gd.uid
-    Scripts/Scene/opening.gd
-    Scripts/Scene/opening.gd.uid
   Special3D/ (22)
     animated_particle_3d.gd
     animated_particle_3d.gd.uid
@@ -4648,38 +2394,21 @@ Scripts/ (606)
     special_stage_requirments.gd.uid
     ss_bumper.gd
     ss_bumper.gd.uid
-    Scripts/Special3D/animated_particle_3d.gd
-    Scripts/Special3D/animated_particle_3d.gd.uid
-    Scripts/Special3D/banner_thumb.gd
-    Scripts/Special3D/banner_thumb.gd.uid
-    Scripts/Special3D/bomb_ss.gd
-    Scripts/Special3D/bomb_ss.gd.uid
-    Scripts/Special3D/chaos_emerald.gd
-    Scripts/Special3D/chaos_emerald.gd.uid
-    Scripts/Special3D/end_of_round.gd
-    Scripts/Special3D/end_of_round.gd.uid
-    Scripts/Special3D/fix_chararcter_rotation.gd
-    Scripts/Special3D/fix_chararcter_rotation.gd.uid
-    Scripts/Special3D/ring_ss.gd
-    Scripts/Special3D/ring_ss.gd.uid
-    Scripts/Special3D/special_hud.gd
-    Scripts/Special3D/special_hud.gd.uid
-    Scripts/Special3D/special_stage_character.gd
-    Scripts/Special3D/special_stage_character.gd.uid
-    Scripts/Special3D/special_stage_requirments.gd
-    Scripts/Special3D/special_stage_requirments.gd.uid
-    Scripts/Special3D/ss_bumper.gd
-    Scripts/Special3D/ss_bumper.gd.uid
   World3D/ (2)
     world3D.gd
     world3D.gd.uid
-    Scripts/World3D/world3D.gd
-    Scripts/World3D/world3D.gd.uid
-  Scripts/Node_Spawner.gd
-  Scripts/Node_Spawner.gd.uid
-  Scripts/PropertiesLookup.gd
-  Scripts/PropertiesLookup.gd.uid
+  Node_Spawner.gd
+  Node_Spawner.gd.uid
+  PropertiesLookup.gd
+  PropertiesLookup.gd.uid
 Shaders/ (20)
+  Materials/ (6)
+    CNZ_Palcycle.tres
+    DEZ Palsetter.tres
+    HPZ_Palcycle.tres
+    HTZ Palsetter.tres
+    OOZ_OilPalette.tres
+    SCZ_PalCycle.tres
   Greyscale.gdshader
   Greyscale.gdshader.uid
   PaletteSwap.gdshader
@@ -4694,38 +2423,7 @@ Shaders/ (20)
   Waterpalette.gdshader
   Waterpalette.gdshader.uid
   WaterPalette.tres
-  Materials/ (6)
-    CNZ_Palcycle.tres
-    DEZ Palsetter.tres
-    HPZ_Palcycle.tres
-    HTZ Palsetter.tres
-    OOZ_OilPalette.tres
-    SCZ_PalCycle.tres
-    Shaders/Materials/CNZ_Palcycle.tres
-    Shaders/Materials/DEZ Palsetter.tres
-    Shaders/Materials/HPZ_Palcycle.tres
-    Shaders/Materials/HTZ Palsetter.tres
-    Shaders/Materials/OOZ_OilPalette.tres
-    Shaders/Materials/SCZ_PalCycle.tres
-  Shaders/Greyscale.gdshader
-  Shaders/Greyscale.gdshader.uid
-  Shaders/PaletteSwap.gdshader
-  Shaders/PaletteSwap.gdshader.uid
-  Shaders/PaletteSwapRow_Timerbased.gdshader
-  Shaders/PaletteSwapRow_Timerbased.gdshader.uid
-  Shaders/PaletteSwapRow.gdshader
-  Shaders/PaletteSwapRow.gdshader.uid
-  Shaders/PlayerPalette.tres
-  Shaders/vhs_crt.gdshader
-  Shaders/vhs_crt.gdshader.uid
-  Shaders/Waterpalette.gdshader
-  Shaders/Waterpalette.gdshader.uid
-  Shaders/WaterPalette.tres
 Tileset/ (19)
-  Island.tres
-  Menus.tres
-  PalmTreeTileMetaData.json
-  TileMetaData.json
   Levels/ (15)
     CNZ.tres
     CNZF.tres
@@ -4742,48 +2440,25 @@ Tileset/ (19)
     SCZ.tres
     SSZ.tres
     WGZ.tres
-    Tileset/Levels/CNZ.tres
-    Tileset/Levels/CNZF.tres
-    Tileset/Levels/CPZ.tres
-    Tileset/Levels/DefaultCollissionTileMap.json
-    Tileset/Levels/DHZ.tres
-    Tileset/Levels/EHZ_HTZ_Tiles.tres
-    Tileset/Levels/GCZ.tres
-    Tileset/Levels/HPZ_Tiles.tres
-    Tileset/Levels/MTZ_Tiles.tres
-    Tileset/Levels/NGHZ.tres
-    Tileset/Levels/OOZ.tres
-    Tileset/Levels/PalmTreePanic.json
-    Tileset/Levels/SCZ.tres
-    Tileset/Levels/SSZ.tres
-    Tileset/Levels/WGZ.tres
-  Tileset/Island.tres
-  Tileset/Menus.tres
-  Tileset/PalmTreeTileMetaData.json
-  Tileset/TileMetaData.json
+  Island.tres
+  Menus.tres
+  PalmTreeTileMetaData.json
+  TileMetaData.json
 Tools/ (7)
-  untitled.txt
   Graphics/ (3)
     AnimatedTextureDrawer.gd
     AnimatedTextureDrawer.gd.uid
     AnimatedTextureDrawer.tscn
-    Tools/Graphics/AnimatedTextureDrawer.gd
-    Tools/Graphics/AnimatedTextureDrawer.gd.uid
-    Tools/Graphics/AnimatedTextureDrawer.tscn
   Timing/ (3)
     ProcessTimer.gd
     ProcessTimer.gd.uid
     ProcessTimer.tscn
-    Tools/Timing/ProcessTimer.gd
-    Tools/Timing/ProcessTimer.gd.uid
-    Tools/Timing/ProcessTimer.tscn
-  Tools/untitled.txt
+  untitled.txt
 .gitattributes
 .gitignore
 .nomedia
 default_bus_layout.tres
 default_env.tres
-folder_tree.txt
 icon.ico
 icon.png
 icon.png.import
