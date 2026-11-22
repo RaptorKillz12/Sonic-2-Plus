@@ -194,7 +194,7 @@ jobs:
               if not p.is_file() or p.suffix.lower() not in text_ext: continue
               try: s=p.read_text(encoding="utf-8")
               except (UnicodeDecodeError,OSError): continue
-              for ref in re.findall(r'res://[^"\s)]+',s):
+              for ref in re.findall(r'res://[^"]+',s):
                   clean=ref[6:].split("::")[0]
                   if clean and not clean.startswith(".godot/") and not Path(clean).exists():
                       missing.append((str(p),ref))
