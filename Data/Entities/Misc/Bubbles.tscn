@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cd27rgk5o5jg2"]
 
-[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Items/air_bubbles.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Global/Items/air_bubbles.png" id="1"]
 [ext_resource type="Script" uid="uid://cv5sf6208a6dh" path="res://Data/Scripts/Misc/Bubbles.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://1njf2n5mf43y" path="res://Data/Sprites/Misc/CountDown.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://1njf2n5mf43y" path="res://Data/Sprites/Global/Misc/CountDown.png" id="3"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(4, 4)

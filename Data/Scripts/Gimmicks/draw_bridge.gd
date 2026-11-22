@@ -3,7 +3,7 @@ extends Node2D
 
 ## The direction the bridge will rotate when acivated.
 @export_enum("Counter-Clockwise","Clockwise","Open") var behavior = 0
-@export var sfx: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Drawbridge_Drop.wav")
+@export var sfx: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Drawbridge_Drop.wav")
 
 var trigger = false
 var intialRotation = 0.0

@@ -5,7 +5,7 @@ extends Area2D
 @export_enum("left", "right") var boostDirection = 0
 var dirMemory = boostDirection
 @export var speed = 16
-@export var sfx = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
+@export var sfx = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Spring.wav")
 @export var visible_sprite: bool = true
 
 var players =[]

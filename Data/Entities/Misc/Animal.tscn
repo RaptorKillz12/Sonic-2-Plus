@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4tpimm5phefe"]
 
 [ext_resource type="Script" uid="uid://ru3ad1vx6etd" path="res://Data/Scripts/Misc/Animal.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b5cdl1i7foiua" path="res://Data/Sprites/Misc/animals.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b5cdl1i7foiua" path="res://Data/Sprites/Global/Misc/animals.png" id="2"]
 
 [node name="Animal" type="Node2D" unique_id=1796674391]
 z_index = 1

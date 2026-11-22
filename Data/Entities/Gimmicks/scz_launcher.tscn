@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jfg4a5smuc5b"]
 
 [ext_resource type="Script" uid="uid://d057anjvpg2gy" path="res://Data/Scripts/Gimmicks/scz_launcher.gd" id="1_7gavv"]
-[ext_resource type="Texture2D" uid="uid://pym1vlfcofaf" path="res://Data/Sprites/Gimmicks/SCZ_Launcher.png" id="1_fcsur"]
+[ext_resource type="Texture2D" uid="uid://pym1vlfcofaf" path="res://Data/Sprites/SCZ/Gimmicks/SCZ_Launcher.png" id="1_fcsur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6bgn"]
 size = Vector2(26, 16)

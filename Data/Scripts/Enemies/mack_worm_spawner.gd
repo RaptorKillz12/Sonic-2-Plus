@@ -2,7 +2,7 @@ extends Node2D
 
 @export_enum("Tube Up", "Tube Down", "Arc Clockwise", "Arc CounterClowise") var behavior = 0
 @export_range (1, 128) var wormCount = 6
-@export var gloopSound = preload("res://Data/SoundFX/Gimmicks/MegaMackGloop.ogg")
+@export var gloopSound = preload("res://Data/SoundFX/Stage/Gimmicks/MegaMackGloop.ogg")
 
 var child = preload("res://Data/Entities/ZoneObjects/MackWorms.tscn")
 var origin = Vector2.ZERO

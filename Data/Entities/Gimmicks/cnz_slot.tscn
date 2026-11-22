@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://maxhev4qup18"]
 
-[ext_resource type="Texture2D" uid="uid://4knghu3g2j37" path="res://Data/Sprites/Gimmicks/CNZ_Slots.png" id="1_1sglj"]
+[ext_resource type="Texture2D" uid="uid://4knghu3g2j37" path="res://Data/Sprites/CNZ/Gimmicks/CNZ_Slots.png" id="1_1sglj"]
 [ext_resource type="Script" uid="uid://ctyaufaji0jrl" path="res://Data/Scripts/Gimmicks/cnz_slot.gd" id="1_mem5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_870o4"]

@@ -8,7 +8,7 @@ const HOVER_TIME = 0.5
 @onready var OnScreen = $VisibleOnScreenNotifier2D
 @onready var Flames = $BurnerFlames
 
-var SFX = preload("res://Data/SoundFX/Gimmicks/OOZ_Lid_Pop.wav")
+var SFX = preload("res://Data/SoundFX/Stage/Gimmicks/OOZ_Lid_Pop.wav")
 var timer = POP_TIME
 
 enum STATES{IDLE,HOVERING,LANDING}

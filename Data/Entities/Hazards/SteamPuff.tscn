@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cphkn88v7csse"]
 
 [ext_resource type="Script" uid="uid://jf3vfso3lvf7" path="res://Data/Scripts/Gimmicks/steam_puff.gd" id="1_nu8qf"]
-[ext_resource type="Texture2D" uid="uid://dyuermj20f7x1" path="res://Data/Sprites/Hazards/MTZ_Steam.png" id="2_nu8qf"]
+[ext_resource type="Texture2D" uid="uid://dyuermj20f7x1" path="res://Data/Sprites/MPZ/Hazards/MTZ_Steam.png" id="2_nu8qf"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 8)

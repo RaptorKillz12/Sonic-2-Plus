@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://btyydkc7grjn0"]
 
 [ext_resource type="Script" uid="uid://drirohw11qcwm" path="res://Data/Scripts/Objects/scz_propeller.gd" id="1_fnyla"]
-[ext_resource type="Texture2D" uid="uid://kfbc2r5nqg3t" path="res://Data/Sprites/Hazards/SCZ_Propeller.png" id="2_fnyla"]
-[ext_resource type="AudioStream" uid="uid://bkbl2b78aww0y" path="res://Data/SoundFX/Ambiance/conveyor.wav" id="3_hck2u"]
+[ext_resource type="Texture2D" uid="uid://kfbc2r5nqg3t" path="res://Data/Sprites/SCZ/Hazards/SCZ_Propeller.png" id="2_fnyla"]
+[ext_resource type="AudioStream" uid="uid://bkbl2b78aww0y" path="res://Data/SoundFX/Stage/Ambiance/conveyor.wav" id="3_hck2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hck2u"]
 size = Vector2(16, 128)

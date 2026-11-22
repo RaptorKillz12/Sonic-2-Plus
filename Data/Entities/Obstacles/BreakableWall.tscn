@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://deeopkxf5fwh4"]
 
 [ext_resource type="Script" uid="uid://cqdbdr0hmj5jm" path="res://Data/Scripts/Objects/BreakableWall.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://cixivj8j3fvsx" path="res://Data/Sprites/Obstacles/Blocks/small_block2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cixivj8j3fvsx" path="res://Data/Sprites/Global/Obstacles/Blocks/small_block2.png" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)

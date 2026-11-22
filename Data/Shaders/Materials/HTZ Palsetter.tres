@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://bws13u5msvx7f"]
 
 [ext_resource type="Shader" uid="uid://drq4hwqwwn03c" path="res://Data/Shaders/PaletteSwapRow.gdshader" id="1_ypaqw"]
-[ext_resource type="Texture2D" uid="uid://broqmyyho0amc" path="res://Data/Sprites/Palettes/HTZ_Palette.png" id="2_4c62w"]
+[ext_resource type="Texture2D" uid="uid://broqmyyho0amc" path="res://Data/Sprites/HTZ/Palettes/HTZ_Palette.png" id="2_4c62w"]
 
 [resource]
 shader = ExtResource("1_ypaqw")

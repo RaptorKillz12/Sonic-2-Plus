@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mrkujxuspvgk"]
 
-[ext_resource type="Texture2D" uid="uid://cpxfvraydnlyp" path="res://Data/Sprites/Gimmicks/Slots.png" id="1_4p5e2"]
+[ext_resource type="Texture2D" uid="uid://cpxfvraydnlyp" path="res://Data/Sprites/Global/Gimmicks/Slots.png" id="1_4p5e2"]
 
 [node name="CnzCharacterReels" type="Node2D" groups=["SlotMachine"]]
 

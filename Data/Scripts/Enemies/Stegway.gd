@@ -5,7 +5,7 @@ const DASH_CHARGE_TIME = 0.5 #Time to rev before charaging a player
 
 @export var idle_time: float = 1.0
 @export var move_speed: float = 60
-@export var revSound: AudioStream = preload("res://Data/SoundFX/Player/s2br_SpindashRev.wav")
+@export var revSound: AudioStream = preload("res://Data/SoundFX/Stage/Player/s2br_SpindashRev.wav")
 @export_enum("Left","Right")var direction: int = 0
 
 @onready var sprite_node: Sprite2D = $Stegway

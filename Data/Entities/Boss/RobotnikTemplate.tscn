@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bcoqgftnr4isn"]
 
 [ext_resource type="Script" uid="uid://cxi6sccejwrhj" path="res://Data/Scripts/Boss/RobotnikTemplate.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://6ds1jcc8jmyf" path="res://Data/Sprites/Boss/Eggmobile.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://c31pi0okhicpx" path="res://Data/Sprites/Boss/Eggmobile_Top.png" id="4_qaw8p"]
-[ext_resource type="Texture2D" uid="uid://d0i06mnbra5yc" path="res://Data/Sprites/Boss/Robotnik.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://dam0q6u1k8paq" path="res://Data/Sprites/Boss/Jet.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://bf0ytf63vlq5c" path="res://Data/Sprites/Boss/EggmobileFlash.png" id="7"]
-[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Boss/s2br_BossHit.wav" id="7_23kef"]
-[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Boss/s2br_BossExplosion.wav" id="8_xm5st"]
+[ext_resource type="Texture2D" uid="uid://6ds1jcc8jmyf" path="res://Data/Sprites/Global/Boss/Eggmobile.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c31pi0okhicpx" path="res://Data/Sprites/Global/Boss/Eggmobile_Top.png" id="4_qaw8p"]
+[ext_resource type="Texture2D" uid="uid://d0i06mnbra5yc" path="res://Data/Sprites/Global/Boss/Robotnik.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dam0q6u1k8paq" path="res://Data/Sprites/Global/Boss/Jet.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bf0ytf63vlq5c" path="res://Data/Sprites/Global/Boss/EggmobileFlash.png" id="7"]
+[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Stage/Boss/s2br_BossHit.wav" id="7_23kef"]
+[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Stage/Boss/s2br_BossExplosion.wav" id="8_xm5st"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gg6r"]
 atlas = ExtResource("5")

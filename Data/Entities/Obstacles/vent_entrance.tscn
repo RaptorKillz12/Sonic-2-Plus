@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbbho8eh17vq4"]
 
-[ext_resource type="Texture2D" uid="uid://dqsgpnn51ny4i" path="res://Data/Sprites/Objects_Zone/SCZ_Vent.png" id="1_5x48f"]
+[ext_resource type="Texture2D" uid="uid://dqsgpnn51ny4i" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_Vent.png" id="1_5x48f"]
 [ext_resource type="Script" uid="uid://3fxdkjl5s3q8" path="res://Data/Scripts/Objects/vent_entrance.gd" id="1_ffpk6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffpk6"]

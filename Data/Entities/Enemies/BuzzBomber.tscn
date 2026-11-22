@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ds7bmlo2s41ji"]
 
 [ext_resource type="Script" uid="uid://bui0v3x7qyfew" path="res://Data/Scripts/Enemies/BuzzBomber.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://djb53bxylig4n" path="res://Data/Sprites/Enemies/BuzzerS2BR.png" id="3_334mt"]
+[ext_resource type="Texture2D" uid="uid://djb53bxylig4n" path="res://Data/Sprites/Global/Enemies/BuzzerS2BR.png" id="3_334mt"]
 [ext_resource type="SpriteFrames" uid="uid://bt3tc4nx84w4k" path="res://Data/Game/Resources/animated_sprites/buzzer_flame.tres" id="3_iypji"]
 
 [sub_resource type="RectangleShape2D" id="1"]

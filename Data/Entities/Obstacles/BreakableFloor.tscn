@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bt7aqgv2h8os6"]
 
 [ext_resource type="Script" uid="uid://daxlfijxufr8y" path="res://Data/Scripts/Objects/breakable_floor.gd" id="1_yxa47"]
-[ext_resource type="Texture2D" uid="uid://ck8ve7pl35fv" path="res://Data/Sprites/Obstacles/BreakFloors/HTZ_BreakableFloor1.png" id="2_jt6dt"]
+[ext_resource type="Texture2D" uid="uid://ck8ve7pl35fv" path="res://Data/Sprites/HTZ/Obstacles/BreakFloors/HTZ_BreakableFloor1.png" id="2_jt6dt"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 16)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cxxmrbgw17gnw"]
 
-[ext_resource type="Texture2D" uid="uid://d1cdsc21qx80t" path="res://Data/Sprites/Gimmicks/CNZBarrel.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://d1cdsc21qx80t" path="res://Data/Sprites/CNZ/Gimmicks/CNZBarrel.png" id="1"]
 [ext_resource type="Script" uid="uid://c3iyuxmlrcden" path="res://Data/Scripts/Gimmicks/CNZBarrelChild.gd" id="2"]
 [ext_resource type="Script" uid="uid://4nc661rouvaj" path="res://Data/Scripts/Gimmicks/CNZBarrel.gd" id="3"]
 

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bjuh5cvbt06af"]
 
-[ext_resource type="Texture2D" uid="uid://cot8xrd84iivq" path="res://Data/Sprites/Items/Capsule.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cot8xrd84iivq" path="res://Data/Sprites/Global/Items/Capsule.png" id="1"]
 [ext_resource type="Script" uid="uid://cq13kfnsorn6s" path="res://Data/Scripts/Objects/Capsule.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://nmefqhyltnjt" path="res://Data/Sprites/Misc/explosion2.png" id="3"]
-[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Objects/s2br_Destroy.wav" id="3_abcs2"]
+[ext_resource type="Texture2D" uid="uid://nmefqhyltnjt" path="res://Data/Sprites/Global/Misc/explosion2.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Stage/Objects/s2br_Destroy.wav" id="3_abcs2"]
 [ext_resource type="Material" uid="uid://bveqi5m5ihsgj" path="res://Data/Shaders/PlayerPalette.tres" id="4"]
-[ext_resource type="Texture2D" uid="uid://bqfqsky24yfn" path="res://Data/Sprites/Misc/explosion1.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://ccakrp1d6v3ms" path="res://Data/Sprites/Misc/explosion5.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bqfqsky24yfn" path="res://Data/Sprites/Global/Misc/explosion1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ccakrp1d6v3ms" path="res://Data/Sprites/Global/Misc/explosion5.png" id="9"]
 [ext_resource type="Script" uid="uid://ci85gsn14la8d" path="res://Data/Scripts/Objects/CapsuleButton.gd" id="10"]
 
 [sub_resource type="Animation" id="28"]

@@ -63,9 +63,9 @@ var bonus_stage_saved_data: Array = []
 
 
 ## Scene when resetting the game
-const start_scene: String = "res://Data/Stages/Presentation/Title.tscn"
+const start_scene: String = "res://Data/Stages/Title/Title.tscn"
 ## the current zone in the queue
-var current_zone_pointer: String = "res://Data/Stages/Zones/EmeraldHill1.tscn"
+var current_zone_pointer: String = "res://Data/Stages/Zone01/EmeraldHill1.tscn"
 ## The next zone in the queue
 var next_zone_pointer: String = ""
 
@@ -461,7 +461,7 @@ func loadNextLevel() -> void:
 		if !two_player_mode:
 			save_coin_count()
 			SaveGameFile()
-	await Main.change_scene("res://Data/Stages/Presentation/ZoneLoader.tscn")
+	await Main.change_scene("res://Data/Stages/LSelect/ZoneLoader.tscn")
 
 func save_coin_count() -> void:
 	totalCoins += temporary_coins

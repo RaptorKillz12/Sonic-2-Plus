@@ -44,7 +44,7 @@ func _process(_delta):
 		$Acept.play()
 		match selected:
 			0:
-				Main.change_scene("res://Data/Stages/Presentation/DataSelectMenu.tscn")
+				Main.change_scene("res://Data/Stages/LSelect/DataSelectMenu.tscn")
 			1:
 				print("OPTIONS")
 			2:

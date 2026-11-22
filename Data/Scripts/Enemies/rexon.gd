@@ -7,7 +7,7 @@ extends Node2D
 
 var Projectile = preload("res://Data/Entities/Enemies/Projectiles/GenericProjectile.tscn")
 var bullet = null
-@export var bulletSound = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
+@export var bulletSound = preload("res://Data/SoundFX/Stage/Objects/s2br_Projectile.wav")
 
 var children:Array[Node2D] = [] #List of nodes for each child and the head
 var childPositions:Array[Vector2] = [Vector2.ZERO] #position of each child and the head

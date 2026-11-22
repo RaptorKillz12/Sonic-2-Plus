@@ -5,11 +5,11 @@ extends Node2D
 
 @export var music = preload("res://Data/Music/s2br_Options.ogg")
 
-var title_scene: String = "res://Data/Stages/Presentation/Title.tscn"
-var zone_loader: String = "res://Data/Stages/Presentation/ZoneLoader.tscn"
+var title_scene: String = "res://Data/Stages/Title/Title.tscn"
+var zone_loader: String = "res://Data/Stages/LSelect/ZoneLoader.tscn"
 
-var sfx_Select = preload("res://Data/SoundFX/Gimmicks/s2br_Switch.wav")
-var sfx_Confirm = preload("res://Data/SoundFX/Objects/s2br_Checkpoint.wav")
+var sfx_Select = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Switch.wav")
+var sfx_Confirm = preload("res://Data/SoundFX/Stage/Objects/s2br_Checkpoint.wav")
 
 enum MENU_STATE{CHARACTER_SELECT,OPTIONS,ZONE_SELECT,DECIDED}
 var state = 0

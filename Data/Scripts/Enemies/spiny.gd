@@ -1,6 +1,6 @@
 extends EnemyBase
 
-@export var bulletSound = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
+@export var bulletSound = preload("res://Data/SoundFX/Stage/Objects/s2br_Projectile.wav")
 
 const SPEED = 25.0 #Walk speed
 const MAX_MOVE_TIME = 4.0 #time to move in each direction

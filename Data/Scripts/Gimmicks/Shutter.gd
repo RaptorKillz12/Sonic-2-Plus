@@ -3,7 +3,7 @@ class_name Cutscene_Eggman
 extends CharacterBody2D
 
 ## Texture2D that the object will be rendered with. Also determines collision size.
-@export var texture: Texture2D = preload("res://Data/Sprites/Obstacles/Walls/shutter.png")
+@export var texture: Texture2D = preload("res://Data/Sprites/Global/Obstacles/Walls/shutter.png")
 @export_enum("left","right","node_deletion")var side: int = 0
 @export_node_path var node_path: NodePath
 

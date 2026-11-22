@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://503ojkyystkg"]
 
-[ext_resource type="Texture2D" uid="uid://ddq585jejgxw1" path="res://Data/Sprites/Objects_Zone/SCZ_ConveryorWheel.png" id="1_qj3f5"]
+[ext_resource type="Texture2D" uid="uid://ddq585jejgxw1" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_ConveryorWheel.png" id="1_qj3f5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bq748"]
 atlas = ExtResource("1_qj3f5")

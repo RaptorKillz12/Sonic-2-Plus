@@ -5,7 +5,7 @@
 extends Node2D
 
 # The texture to draw your animated rings from - frames must be arranged horizontally and spaced evenly
-@export var spriteTexture = preload("res://Data/Sprites/Gimmicks/ICZTrampolineRingAnim.png")
+@export var spriteTexture = preload("res://Data/Sprites/Global/Gimmicks/ICZTrampolineRingAnim.png")
 
 # The total number of frames in your texture animation
 @export var spriteFrameCount = 17

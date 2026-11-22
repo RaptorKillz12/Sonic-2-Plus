@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 
-var sfx = preload("res://Data/SoundFX/Gimmicks/SpikesClash.wav")
+var sfx = preload("res://Data/SoundFX/Stage/Gimmicks/SpikesClash.wav")
 
 func _ready() -> void:
 	if direction <= 0:

@@ -1,7 +1,7 @@
 @tool
 extends Node2D
 
-@export var platformSprite = preload("res://Data/Sprites/Obstacles/Blocks/CPZ Block.png")
+@export var platformSprite = preload("res://Data/Sprites/CPZ/Obstacles/Blocks/CPZ Block.png")
 @export_enum("two","four") var childCount = 1
 @export var speed: float = 1.0 # How fast to move
 @export_enum("Clockwise","Counter-Clockwise") var direction = 0

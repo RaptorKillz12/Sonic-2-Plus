@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj3cnj8gdelnn"]
 
 [ext_resource type="Script" uid="uid://c6elkb3o5xbgm" path="res://Data/Scripts/Objects/scz_h_laser.gd" id="1_8n832"]
-[ext_resource type="Texture2D" uid="uid://dtvurvh4ul6qi" path="res://Data/Sprites/Boss/MTZ/Boss_BouncerEggmanLaser.png" id="2_rxqj2"]
-[ext_resource type="AudioStream" uid="uid://jrifawtuotyd" path="res://Data/SoundFX/Boss/s2br_SmallLaser.wav" id="2_t540j"]
+[ext_resource type="Texture2D" uid="uid://dtvurvh4ul6qi" path="res://Data/Sprites/Global/Boss/MTZ/Boss_BouncerEggmanLaser.png" id="2_rxqj2"]
+[ext_resource type="AudioStream" uid="uid://jrifawtuotyd" path="res://Data/SoundFX/Stage/Boss/s2br_SmallLaser.wav" id="2_t540j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t540j"]
 size = Vector2(64, 16)

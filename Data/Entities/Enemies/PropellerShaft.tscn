@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4cnm1ick0ilt"]
 
 [ext_resource type="Script" uid="uid://btpe51l5imfjy" path="res://Data/Scripts/Enemies/EnemyBase.gd" id="1_hb6tl"]
-[ext_resource type="Texture2D" uid="uid://tc2fqtaofvrf" path="res://Data/Sprites/Enemies/PropellerShaft.png" id="2_wwhug"]
+[ext_resource type="Texture2D" uid="uid://tc2fqtaofvrf" path="res://Data/Sprites/Global/Enemies/PropellerShaft.png" id="2_wwhug"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 32)

@@ -2,7 +2,7 @@
 extends AnimatableBody2D
 
 ## Texture2D that the object will be rendered with. Also determines collision size.
-@export var platform_sprite: Texture2D = preload("res://Data/Sprites/Objects_Zone/MTZ_Elevator.png")
+@export var platform_sprite: Texture2D = preload("res://Data/Sprites/MPZ/Objects_Zone/MTZ_Elevator.png")
 ## The button that triggers the motion of this platform.
 @export var button: StaticBody2D = null
 ## The target position relative to the starting position.

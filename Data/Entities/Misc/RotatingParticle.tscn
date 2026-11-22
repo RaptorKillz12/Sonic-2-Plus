@@ -1,11 +1,11 @@
 [gd_scene load_steps=66 format=3 uid="uid://bdue0s7indv8w"]
 
-[ext_resource type="Texture2D" uid="uid://bihgasvpr4jyb" path="res://Data/Sprites/Items/invincible_stars.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bihgasvpr4jyb" path="res://Data/Sprites/Global/Items/invincible_stars.png" id="1"]
 [ext_resource type="Script" uid="uid://4yihqu3m6vxy" path="res://Data/Scripts/Misc/RotatingParticle.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://bu6a2evw5s7ne" path="res://Data/Sprites/Misc/water_splash.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://bu207ncbrfjm3" path="res://Data/Sprites/Misc/skid_dust.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://7hwanyy5pso6" path="res://Data/Sprites/Misc/SuperSparkles.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://bcighbbtky5cp" path="res://Data/Sprites/Misc/DropDashDust.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bu6a2evw5s7ne" path="res://Data/Sprites/Global/Misc/water_splash.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bu207ncbrfjm3" path="res://Data/Sprites/Global/Misc/skid_dust.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://7hwanyy5pso6" path="res://Data/Sprites/Global/Misc/SuperSparkles.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bcighbbtky5cp" path="res://Data/Sprites/Global/Misc/DropDashDust.png" id="6"]
 
 [sub_resource type="AtlasTexture" id="118"]
 atlas = ExtResource("6")

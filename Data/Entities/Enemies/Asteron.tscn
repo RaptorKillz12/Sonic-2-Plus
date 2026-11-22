@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://e10hbuo7yk8s"]
 
 [ext_resource type="Script" uid="uid://cm8n7l3mge1ev" path="res://Data/Scripts/Enemies/asteron.gd" id="1_wn121"]
-[ext_resource type="Texture2D" uid="uid://b5c1sd0nbv4r3" path="res://Data/Sprites/Enemies/Asteron.png" id="2_wn121"]
+[ext_resource type="Texture2D" uid="uid://b5c1sd0nbv4r3" path="res://Data/Sprites/Global/Enemies/Asteron.png" id="2_wn121"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 24)

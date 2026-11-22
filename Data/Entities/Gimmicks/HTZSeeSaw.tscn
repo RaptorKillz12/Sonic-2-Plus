@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://85umccwskeyx"]
 
-[ext_resource type="Texture2D" uid="uid://d6m23ulvmhff" path="res://Data/Sprites/Gimmicks/HTZ_SeeSaw.png" id="1_og7mm"]
+[ext_resource type="Texture2D" uid="uid://d6m23ulvmhff" path="res://Data/Sprites/HTZ/Gimmicks/HTZ_SeeSaw.png" id="1_og7mm"]
 [ext_resource type="Script" uid="uid://c820diatwmpeq" path="res://Data/Scripts/Gimmicks/htz_see_saw.gd" id="1_tvndd"]
 [ext_resource type="PackedScene" uid="uid://dsr3tet7m2ufv" path="res://Data/Entities/Hazards/Sol.tscn" id="3_t28x7"]
 

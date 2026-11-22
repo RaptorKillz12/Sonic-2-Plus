@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var music = preload("res://Data/Music/s2br_2PResults.ogg")
-var zone_loader: String = "res://Data/Stages/Presentation/ZoneLoader.tscn"
-var two_player_menu: String = "res://Data/Stages/Presentation/TwoPlayerMenu.tscn"
+var zone_loader: String = "res://Data/Stages/LSelect/ZoneLoader.tscn"
+var two_player_menu: String = "res://Data/Stages/LSelect/TwoPlayerMenu.tscn"
 
 var results = 0 #Winner of the current act, or zone if zone is complete.
 var endScene = false

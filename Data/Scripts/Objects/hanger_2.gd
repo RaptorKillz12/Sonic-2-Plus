@@ -5,7 +5,7 @@ extends Area2D
 ## Allow directional input on this vine/bar
 @export var directional_input: bool = true
 ## Optionally set sound to play when making contact
-@export var grabSound: AudioStream = preload("res://Data/SoundFX/Player/s2br_Grab.wav")
+@export var grabSound: AudioStream = preload("res://Data/SoundFX/Stage/Player/s2br_Grab.wav")
 ## Press down to drop off the object instead of jump.
 @export var press_down_to_drop: bool = true
 ## Not yet implimented

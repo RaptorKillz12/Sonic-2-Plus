@@ -1,12 +1,12 @@
 [gd_scene load_steps=26 format=3 uid="uid://bleoc0gltofoh"]
 
 [ext_resource type="Script" uid="uid://ddj0lyd1uxk4l" path="res://Data/Scripts/Gimmicks/Teleporter.gd" id="1_slfda"]
-[ext_resource type="Texture2D" uid="uid://77onhgopdvvh" path="res://Data/Sprites/Gimmicks/Teleporter.png" id="2_x0857"]
+[ext_resource type="Texture2D" uid="uid://77onhgopdvvh" path="res://Data/Sprites/Global/Gimmicks/Teleporter.png" id="2_x0857"]
 [ext_resource type="PackedScene" uid="uid://c1ldunfxhq0he" path="res://Data/Entities/Obstacles/ForceAngleSides.tscn" id="3_8fkwi"]
 [ext_resource type="Script" uid="uid://ccjgrnqs6yprb" path="res://Data/Scripts/Gimmicks/TeleporterOrb.gd" id="3_hoy6i"]
-[ext_resource type="Texture2D" uid="uid://cxns8hjb477bs" path="res://Data/Sprites/Gimmicks/TeleporterBeam.png" id="5_ckyv7"]
-[ext_resource type="AudioStream" uid="uid://c4m5p4gkb86p5" path="res://Data/SoundFX/Gimmicks/PoweringUp.wav" id="6_yj68g"]
-[ext_resource type="AudioStream" uid="uid://be532oskcheum" path="res://Data/SoundFX/Gimmicks/Warp.wav" id="7_eleuh"]
+[ext_resource type="Texture2D" uid="uid://cxns8hjb477bs" path="res://Data/Sprites/Global/Gimmicks/TeleporterBeam.png" id="5_ckyv7"]
+[ext_resource type="AudioStream" uid="uid://c4m5p4gkb86p5" path="res://Data/SoundFX/Stage/Gimmicks/PoweringUp.wav" id="6_yj68g"]
+[ext_resource type="AudioStream" uid="uid://be532oskcheum" path="res://Data/SoundFX/Stage/Gimmicks/Warp.wav" id="7_eleuh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_si173"]
 atlas = ExtResource("2_x0857")

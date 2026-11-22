@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 @export var power: float = 480
-var bounceSound: AudioStream = preload("res://Data/SoundFX/Objects/CNZ_BigBumper.wav")
+var bounceSound: AudioStream = preload("res://Data/SoundFX/Stage/Objects/CNZ_BigBumper.wav")
 
 #When a body(player) enters the area and it not controlled by an outside object,
 #Bounce off based on the angle of the player relative to the object.

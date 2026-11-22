@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c5bsudiuaxexk" path="res://Data/Scripts/Player/player_skin.gd" id="1_5niup"]
 [ext_resource type="Texture2D" uid="uid://c05fsbnx0p7xf" path="res://Data/Sprites/Players/Tails.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://dlomjk6vm15ep" path="res://Data/Sprites/Misc/DashDust.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dlomjk6vm15ep" path="res://Data/Sprites/Global/Misc/DashDust.png" id="3"]
 [ext_resource type="Script" uid="uid://nuug3t5ikkw1" path="res://Data/Scripts/Player/TailsAnimator.gd" id="4"]
 [ext_resource type="Script" uid="uid://cd5v27g17hp0v" path="res://Data/Scripts/Player/TailsSpriteSettings.gd" id="5"]
 [ext_resource type="Shader" uid="uid://drq4hwqwwn03c" path="res://Data/Shaders/PaletteSwapRow.gdshader" id="5_5niup"]
-[ext_resource type="Texture2D" uid="uid://dh6fghheeip4i" path="res://Data/Sprites/Palettes/SuperTails.png" id="6_1lxhp"]
-[ext_resource type="Texture2D" uid="uid://dvqglf8dididc" path="res://Data/Sprites/Items/shield_plain.png" id="6_kof51"]
+[ext_resource type="Texture2D" uid="uid://dh6fghheeip4i" path="res://Data/Sprites/Global/Palettes/SuperTails.png" id="6_1lxhp"]
+[ext_resource type="Texture2D" uid="uid://dvqglf8dididc" path="res://Data/Sprites/Global/Items/shield_plain.png" id="6_kof51"]
 
 [sub_resource type="Animation" id="86"]
 length = 0.001

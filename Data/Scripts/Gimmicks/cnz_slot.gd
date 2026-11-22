@@ -2,7 +2,7 @@ extends Node2D
 
 @export_enum("Points Only", "Slot Machine") var type = 0
 
-var SFX = preload("res://Data/SoundFX/Objects/s2br_CNZSlot.wav")
+var SFX = preload("res://Data/SoundFX/Stage/Objects/s2br_CNZSlot.wav")
 
 var ringprize = preload("res://Data/Entities/Gimmicks/Ring_Prize.tscn")
 var spikeprize = preload("res://Data/Entities/Gimmicks/spike_prize.tscn")

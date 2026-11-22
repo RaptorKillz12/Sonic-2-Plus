@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c55d2dd4iyrmr"]
 
 [ext_resource type="Script" uid="uid://b45g8vn5km626" path="res://Data/Scripts/Gimmicks/scz_rising_platforms.gd" id="1_hlgyk"]
-[ext_resource type="Texture2D" uid="uid://dtv7xi5dr4gnq" path="res://Data/Sprites/Gimmicks/SCZ_Sliding_Platform.png" id="2_v7pxy"]
+[ext_resource type="Texture2D" uid="uid://dtv7xi5dr4gnq" path="res://Data/Sprites/SCZ/Gimmicks/SCZ_Sliding_Platform.png" id="2_v7pxy"]
 [ext_resource type="Script" uid="uid://c7c77xy5pfkto" path="res://Data/Scripts/Gimmicks/SCZ_Rising_platform_Child.gd" id="2_wo0qf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r204o"]

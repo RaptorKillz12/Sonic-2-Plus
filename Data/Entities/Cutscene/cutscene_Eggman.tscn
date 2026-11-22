@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cuoyniqg8gua3"]
 
 [ext_resource type="Script" uid="uid://c4ue5qwul4rd8" path="res://Data/Scripts/Scene/cutscene_eggman.gd" id="1_44o7g"]
-[ext_resource type="Texture2D" uid="uid://6ds1jcc8jmyf" path="res://Data/Sprites/Boss/Eggmobile.png" id="1_vvqax"]
-[ext_resource type="Texture2D" uid="uid://d0i06mnbra5yc" path="res://Data/Sprites/Boss/Robotnik.png" id="2_i4grn"]
-[ext_resource type="Texture2D" uid="uid://c31pi0okhicpx" path="res://Data/Sprites/Boss/Eggmobile_Top.png" id="3_hxbva"]
-[ext_resource type="Texture2D" uid="uid://dam0q6u1k8paq" path="res://Data/Sprites/Boss/Jet.png" id="4_doqox"]
+[ext_resource type="Texture2D" uid="uid://6ds1jcc8jmyf" path="res://Data/Sprites/Global/Boss/Eggmobile.png" id="1_vvqax"]
+[ext_resource type="Texture2D" uid="uid://d0i06mnbra5yc" path="res://Data/Sprites/Global/Boss/Robotnik.png" id="2_i4grn"]
+[ext_resource type="Texture2D" uid="uid://c31pi0okhicpx" path="res://Data/Sprites/Global/Boss/Eggmobile_Top.png" id="3_hxbva"]
+[ext_resource type="Texture2D" uid="uid://dam0q6u1k8paq" path="res://Data/Sprites/Global/Boss/Jet.png" id="4_doqox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3oj5"]
 

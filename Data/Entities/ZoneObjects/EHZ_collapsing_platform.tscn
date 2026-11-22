@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://di23q55vk6wuq"]
 
 [ext_resource type="Script" uid="uid://blmu8j1jhwnr4" path="res://Data/Scripts/Objects/CollapsePlatform.gd" id="1_kotj7"]
-[ext_resource type="TileSet" uid="uid://uplqwsi0o4gi" path="res://Data/Stages/Tileset/Levels/EHZ_HTZ_Tiles.tres" id="2_tt4vf"]
+[ext_resource type="TileSet" uid="uid://uplqwsi0o4gi" path="res://Data/Stages/Zone01/Tileset/Levels/EHZ_HTZ_Tiles.tres" id="2_tt4vf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ia0sb"]
 size = Vector2(96, 16)

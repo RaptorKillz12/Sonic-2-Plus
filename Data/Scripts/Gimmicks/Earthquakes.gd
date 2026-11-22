@@ -8,7 +8,7 @@ var movementTimer = 0.0
 var delayTimer = 0.0
 var soundTimer = 0.5
 
-var rumbling = preload("res://Data/SoundFX/Ambiance/Earthquake.wav")
+var rumbling = preload("res://Data/SoundFX/Stage/Ambiance/Earthquake.wav")
 var direction = -1
 
 var bodies = []

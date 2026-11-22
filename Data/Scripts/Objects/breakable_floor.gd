@@ -1,9 +1,9 @@
 @tool
 extends StaticBody2D
-@export var SpriteTexture = preload("res://Data/Sprites/Obstacles/BreakFloors/HTZ_BreakableFloor1.png")
+@export var SpriteTexture = preload("res://Data/Sprites/HTZ/Obstacles/BreakFloors/HTZ_BreakableFloor1.png")
 @export var pieces = Vector2(2,1)
 var Piece = preload("res://Data/Entities/Misc/BlockPiece.tscn")
-@export var sound = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+@export var sound = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 @export_enum("Standard","Fragile") var type = 0
 
 var launchXSpeed = -1

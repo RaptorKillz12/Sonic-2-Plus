@@ -1,7 +1,7 @@
 extends EnemyBase
 
 var Projectile: PackedScene = preload("res://Data/Entities/Enemies/Projectiles/ScratchProjectile.tscn")
-@export var bulletSound: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
+@export var bulletSound: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_Projectile.wav")
 
 var state: int = 0
 var state_timer: float = 0.0

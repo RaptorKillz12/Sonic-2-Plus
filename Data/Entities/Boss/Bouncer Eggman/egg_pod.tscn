@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://blngoqqusgqxd"]
 
-[ext_resource type="Texture2D" uid="uid://mrmr81qhx4tv" path="res://Data/Sprites/Boss/MTZ/Boss_BouncerEggman_Pod.png" id="1_encq2"]
+[ext_resource type="Texture2D" uid="uid://mrmr81qhx4tv" path="res://Data/Sprites/Global/Boss/MTZ/Boss_BouncerEggman_Pod.png" id="1_encq2"]
 [ext_resource type="Script" uid="uid://crt4bpydocp5k" path="res://Data/Scripts/Boss/egg_pod.gd" id="1_etgrn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18i66"]

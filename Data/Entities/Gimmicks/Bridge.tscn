@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bg66ofhfkxsx6"]
 
-[ext_resource type="Texture2D" uid="uid://nko5dxiqulro" path="res://Data/Sprites/Gimmicks/bridge_log.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://nko5dxiqulro" path="res://Data/Sprites/Global/Gimmicks/bridge_log.png" id="1"]
 [ext_resource type="Script" uid="uid://df4rqxn0kgy8l" path="res://Data/Scripts/Gimmicks/Bridge.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]

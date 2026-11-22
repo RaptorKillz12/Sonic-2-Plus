@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqcgjcw101xxo"]
 
 [ext_resource type="Script" uid="uid://cba5ejca33cn8" path="res://Data/Scripts/Enemies/MotoBug.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://cxgi4y30ctnyx" path="res://Data/Sprites/Enemies/Motoroller.png" id="2_580bb"]
+[ext_resource type="Texture2D" uid="uid://cxgi4y30ctnyx" path="res://Data/Sprites/Global/Enemies/Motoroller.png" id="2_580bb"]
 [ext_resource type="SpriteFrames" uid="uid://bt3tc4nx84w4k" path="res://Data/Game/Resources/animated_sprites/buzzer_flame.tres" id="4_1jjky"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_thy44"]

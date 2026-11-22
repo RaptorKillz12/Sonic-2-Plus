@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bbnywgk4cq5cq"]
 
 [ext_resource type="Script" uid="uid://cblw3nrvpht6b" path="res://Data/Scripts/Objects/GiantFan.gd" id="1_k2y5a"]
-[ext_resource type="Texture2D" uid="uid://dy7u1jfi3c250" path="res://Data/Sprites/Objects_Zone/SCZ_V_Fan.png" id="2_hi1tv"]
-[ext_resource type="AudioStream" uid="uid://bvb5adxlfhcxl" path="res://Data/SoundFX/Gimmicks/BigFan.wav" id="3_s1t6n"]
+[ext_resource type="Texture2D" uid="uid://dy7u1jfi3c250" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_V_Fan.png" id="2_hi1tv"]
+[ext_resource type="AudioStream" uid="uid://bvb5adxlfhcxl" path="res://Data/SoundFX/Stage/Gimmicks/BigFan.wav" id="3_s1t6n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_55ikm"]
 atlas = ExtResource("2_hi1tv")

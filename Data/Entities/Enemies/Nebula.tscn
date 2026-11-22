@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b10okfgw0fy2x"]
 
 [ext_resource type="Script" uid="uid://c6sp3i2tyeefx" path="res://Data/Scripts/Enemies/nebula.gd" id="1_ysmyy"]
-[ext_resource type="Texture2D" uid="uid://da627obqkxqln" path="res://Data/Sprites/Enemies/Nebula.png" id="2_cerh8"]
+[ext_resource type="Texture2D" uid="uid://da627obqkxqln" path="res://Data/Sprites/Global/Enemies/Nebula.png" id="2_cerh8"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(28, 28)

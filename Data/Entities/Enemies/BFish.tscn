@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b5bc364w4mjww"]
 
 [ext_resource type="Script" uid="uid://cnc5c3d7pyk1n" path="res://Data/Scripts/Enemies/BFish.gd" id="1_8ytre"]
-[ext_resource type="Texture2D" uid="uid://duqbkmg0cgbf7" path="res://Data/Sprites/Enemies/BFish.png" id="2_8mvhu"]
+[ext_resource type="Texture2D" uid="uid://duqbkmg0cgbf7" path="res://Data/Sprites/Global/Enemies/BFish.png" id="2_8mvhu"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(30, 22)

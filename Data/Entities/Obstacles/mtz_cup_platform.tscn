@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvvexinc3k3y0"]
 
-[ext_resource type="Texture2D" uid="uid://ck4vtw20re4md" path="res://Data/Sprites/Gimmicks/MTZ_CupPlatform.png" id="1_ahh3w"]
+[ext_resource type="Texture2D" uid="uid://ck4vtw20re4md" path="res://Data/Sprites/MPZ/Gimmicks/MTZ_CupPlatform.png" id="1_ahh3w"]
 [ext_resource type="Script" uid="uid://cb0cbdxo1emnk" path="res://Data/Scripts/Gimmicks/mtz_cup_platform.gd" id="1_wl7im"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wl7im"]

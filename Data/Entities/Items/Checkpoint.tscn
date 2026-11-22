@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bct374kjctkxr"]
 
-[ext_resource type="Texture2D" uid="uid://b0rrjr0vqj386" path="res://Data/Sprites/Items/starpost.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b0rrjr0vqj386" path="res://Data/Sprites/Global/Items/starpost.png" id="1"]
 [ext_resource type="Script" uid="uid://bxbwfbciuhr7r" path="res://Data/Scripts/Objects/Checkpoint.gd" id="2"]
-[ext_resource type="AudioStream" uid="uid://bg4cj43hpx570" path="res://Data/SoundFX/Objects/s2br_Checkpoint.wav" id="3_aebg5"]
+[ext_resource type="AudioStream" uid="uid://bg4cj43hpx570" path="res://Data/SoundFX/Stage/Objects/s2br_Checkpoint.wav" id="3_aebg5"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 48)

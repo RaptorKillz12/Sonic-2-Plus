@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://depibnkc7jblc"]
 
 [ext_resource type="Script" uid="uid://cwcm0lgvpeo47" path="res://Data/Scripts/Enemies/EnemyProjectileBase.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://2xwabbrkhjjy" path="res://Data/Sprites/Enemies/BuzzerS2BR_Bullet.png" id="3_bdjws"]
+[ext_resource type="Texture2D" uid="uid://2xwabbrkhjjy" path="res://Data/Sprites/Global/Enemies/BuzzerS2BR_Bullet.png" id="3_bdjws"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(4, 4)

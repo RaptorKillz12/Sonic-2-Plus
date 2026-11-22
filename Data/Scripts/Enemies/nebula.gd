@@ -1,6 +1,6 @@
 extends EnemyBase
 
-@export var bulletSound = preload("res://Data/SoundFX/Gimmicks/s2br_ArrowFire.wav")
+@export var bulletSound = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_ArrowFire.wav")
 var Projectile = preload("res://Data/Entities/Enemies/Projectiles/PterabotProjectile.tscn")
 
 enum STATES{FLY,TARGET_PLAYER}

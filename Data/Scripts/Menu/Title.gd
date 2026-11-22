@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var music: AudioStream = preload("res://Data/Music/Titlescreen.ogg")
-var opening_cutscene: String = "res://Data/Stages/Cutscenes/Opening.tscn"
-var menu: String = "res://Data/Stages/Presentation/Menu.tscn"
+var opening_cutscene: String = "res://Data/Stages/Title/Opening.tscn"
+var menu: String = "res://Data/Stages/LSelect/Menu.tscn"
 
 
 @export var demo_flag: bool = false
@@ -20,7 +20,7 @@ var cheat_active: bool = false
 
 var BackgroundScene: PackedScene
 var parallaxBackgrounds: Array[StringName] = [
-	"res://Data/Stages/Backgrounds/17-Ending.tscn",
+	"res://Data/Stages/Ending/Backgrounds/17-Ending.tscn",
 ]
 var sceneInstance: ParallaxBackground = null
 

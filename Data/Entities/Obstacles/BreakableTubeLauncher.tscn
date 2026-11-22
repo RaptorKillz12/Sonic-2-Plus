@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c25uslo56f3u1"]
 
 [ext_resource type="Script" uid="uid://bf240115k3lrk" path="res://Data/Scripts/Gimmicks/breakable_tube_launcher.gd" id="1_dfght"]
-[ext_resource type="Texture2D" uid="uid://bv257m85p2es3" path="res://Data/Sprites/Obstacles/Blocks/OOZ_BreakableBlocks.png" id="2_hbmej"]
+[ext_resource type="Texture2D" uid="uid://bv257m85p2es3" path="res://Data/Sprites/OOZ/Obstacles/Blocks/OOZ_BreakableBlocks.png" id="2_hbmej"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 32)

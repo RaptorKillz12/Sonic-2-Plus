@@ -3,9 +3,9 @@ extends Node2D
 
 @export var length: int = 12
 @export var smoothDrop: bool = true #Turn to false to match sonic 1 bridges
-@export var texture: Texture2D = preload("res://Data/Sprites/Gimmicks/bridge_log.png")
-@export var texture2: Texture2D = preload("res://Data/Sprites/Gimmicks/bridge_log.png")
-@export var texture3: Texture2D = preload("res://Data/Sprites/Gimmicks/bridge_log.png")
+@export var texture: Texture2D = preload("res://Data/Sprites/Global/Gimmicks/bridge_log.png")
+@export var texture2: Texture2D = preload("res://Data/Sprites/Global/Gimmicks/bridge_log.png")
+@export var texture3: Texture2D = preload("res://Data/Sprites/Global/Gimmicks/bridge_log.png")
 
 var frameCount: int = 0 #Count up
 var frameDiff: Array[int] = [0,0,0,0,0,1,1,1,1,1]

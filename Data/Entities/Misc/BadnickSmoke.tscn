@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b8rfs0y4ldud2"]
 
 [ext_resource type="Script" uid="uid://jlaakv7f7ia5" path="res://Data/Scripts/Misc/BadnickSmoke.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://nc4htsilrkus" path="res://Data/Sprites/Misc/explosion3.png" id="2_xotpe"]
-[ext_resource type="Texture2D" uid="uid://ccakrp1d6v3ms" path="res://Data/Sprites/Misc/explosion5.png" id="5"]
-[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Objects/s2br_Destroy.wav" id="5_qguoe"]
-[ext_resource type="Texture2D" uid="uid://bqfqsky24yfn" path="res://Data/Sprites/Misc/explosion1.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://nmefqhyltnjt" path="res://Data/Sprites/Misc/explosion2.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://nc4htsilrkus" path="res://Data/Sprites/Global/Misc/explosion3.png" id="2_xotpe"]
+[ext_resource type="Texture2D" uid="uid://ccakrp1d6v3ms" path="res://Data/Sprites/Global/Misc/explosion5.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Stage/Objects/s2br_Destroy.wav" id="5_qguoe"]
+[ext_resource type="Texture2D" uid="uid://bqfqsky24yfn" path="res://Data/Sprites/Global/Misc/explosion1.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://nmefqhyltnjt" path="res://Data/Sprites/Global/Misc/explosion2.png" id="7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ya0q"]
 atlas = ExtResource("6")

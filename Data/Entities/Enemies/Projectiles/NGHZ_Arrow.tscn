@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxc6ksat00344"]
 
 [ext_resource type="Script" uid="uid://bklc6yvifgigq" path="res://Data/Scripts/Enemies/generic_projectile.gd" id="1_oo6go"]
-[ext_resource type="Texture2D" uid="uid://bpvmb7wv2yik6" path="res://Data/Sprites/Objects_Zone/ArrowShooter.png" id="2_nlokp"]
+[ext_resource type="Texture2D" uid="uid://bpvmb7wv2yik6" path="res://Data/Sprites/Global/Objects_Zone/ArrowShooter.png" id="2_nlokp"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 8)

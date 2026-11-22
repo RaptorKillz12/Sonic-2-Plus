@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var sfx: AudioStream = preload("res://Data/SoundFX/Objects/CNZ_Bonus.wav")
+var sfx: AudioStream = preload("res://Data/SoundFX/Stage/Objects/CNZ_Bonus.wav")
 
 var state: int = 0
 

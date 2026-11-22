@@ -14,8 +14,8 @@ var end_cutscene: bool = false
 enum STATES{INIT,INTRO,LEVEL,END_OF_LEVEL,CUTSCENE}
 var state: STATES = STATES.INIT
 
-var waterSourceColor: Texture2D = preload("res://Data/Sprites/Palettes/BasePal.png")
-var waterReplaceColor: Texture2D = preload("res://Data/Sprites/Palettes/WetPal.png")
+var waterSourceColor: Texture2D = preload("res://Data/Sprites/Global/Palettes/BasePal.png")
+var waterReplaceColor: Texture2D = preload("res://Data/Sprites/Global/Palettes/WetPal.png")
 
 ## The total number of rings required for a Perfect Bonus in this level. If 0, calculate automatically.
 var ringsForPerfect: int = 0
@@ -47,8 +47,8 @@ signal tally_clear
 
 var two_player_results: String = "res://Data/Stages/Presentation/two_player_results.tscn"
 var lifeTextures: Array[Texture2D] = [
-	preload("res://Data/Sprites/HUD/hud_lives.png"),
-	preload("res://Data/Sprites/HUD/hud_lives_Miles.png")
+	preload("res://Data/Sprites/Global/HUD/hud_lives.png"),
+	preload("res://Data/Sprites/Global/HUD/hud_lives_Miles.png")
 ]
 
 func _ready() -> void:

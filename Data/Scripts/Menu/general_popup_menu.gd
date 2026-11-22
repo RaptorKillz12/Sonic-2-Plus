@@ -3,9 +3,9 @@ extends Control
 
 @onready var animator: AnimationPlayer = $AnimationPlayer
 
-var sfx_select: AudioStream = preload("res://Data/SoundFX/Misc/MenuWoosh.wav")
-var sfx_confirm: AudioStream = preload("res://Data/SoundFX/Misc/MenuAccept.wav")
-var sfx_cancel: AudioStream = preload("res://Data/SoundFX/Misc/MenuBleep.wav")
+var sfx_select: AudioStream = preload("res://Data/SoundFX/Global/Menu/MenuWoosh.wav")
+var sfx_confirm: AudioStream = preload("res://Data/SoundFX/Global/Menu/MenuAccept.wav")
+var sfx_cancel: AudioStream = preload("res://Data/SoundFX/Global/Menu/MenuBleep.wav")
 
 var pass_var: Variant
 signal menu_exit(pass_var: Variant)

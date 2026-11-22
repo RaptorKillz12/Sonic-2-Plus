@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c5tyopn7hc5c"]
 
 [ext_resource type="Script" uid="uid://b8u6021q168mj" path="res://Data/Scripts/Objects/dhz_chained_trap.gd" id="1_2cisi"]
-[ext_resource type="Texture2D" uid="uid://cnv0x4k5u14co" path="res://Data/Sprites/Obstacles/DHZ_SwingChain.png" id="1_jpw3q"]
+[ext_resource type="Texture2D" uid="uid://cnv0x4k5u14co" path="res://Data/Sprites/Global/Obstacles/DHZ_SwingChain.png" id="1_jpw3q"]
 [ext_resource type="PackedScene" uid="uid://b5tqox7ea5irf" path="res://Data/Entities/Hazards/dhz_spiked_platform.tscn" id="2_ueb11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cisi"]

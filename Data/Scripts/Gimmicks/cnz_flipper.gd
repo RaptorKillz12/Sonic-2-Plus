@@ -3,7 +3,7 @@ extends StaticBody2D
 
 @export_enum("Angled","Vertical") var type: int = 0
 
-var flipsound: AudioStream = preload("res://Data/SoundFX/Objects/CNZ_Flipper.wav")
+var flipsound: AudioStream = preload("res://Data/SoundFX/Stage/Objects/CNZ_Flipper.wav")
 var players: Array[Player2D] = []
 var direction: int = 0
 var just_used: bool = false

@@ -8,7 +8,7 @@ const GRAVITY = 600
 @export var move_speed: float = 60
 
 var diggingParticle: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
-var breakingSound: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+var breakingSound: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 
 #Two types of behavior.
 #1: Move left and right until reaching a ledge.

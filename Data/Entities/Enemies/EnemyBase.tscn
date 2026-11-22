@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://da8b7n7dgsr43"]
 
 [ext_resource type="Script" uid="uid://btpe51l5imfjy" path="res://Data/Scripts/Enemies/EnemyBase.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://beqh6fywjj4lt" path="res://Data/Sprites/Enemies/Sol.png" id="2_3oo2o"]
+[ext_resource type="Texture2D" uid="uid://beqh6fywjj4lt" path="res://Data/Sprites/Global/Enemies/Sol.png" id="2_3oo2o"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)

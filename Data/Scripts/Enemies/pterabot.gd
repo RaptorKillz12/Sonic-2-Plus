@@ -3,7 +3,7 @@ extends EnemyBase
 
 var Projectile = preload("res://Data/Entities/Enemies/Projectiles/PterabotProjectile.tscn")
 
-@export var bulletSound = preload("res://Data/SoundFX/Gimmicks/s2br_ArrowFire.wav")
+@export var bulletSound = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_ArrowFire.wav")
 ## Not a thing in Sonic 2. Do not use.
 @export var flyDirection: float = 0.0 # (float,-180.0,180.0)
 ## Total distance travelled in pixels

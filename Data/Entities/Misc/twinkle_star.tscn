@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch4okg7wdcie" path="res://Data/Scripts/Misc/twinkle_star.gd" id="1_goc7e"]
 [ext_resource type="Texture2D" uid="uid://d0wdb3k17olg" path="res://Data/Sprites/Title/TitleStar.png" id="2_c6ryn"]
-[ext_resource type="AudioStream" uid="uid://1m5ytm03gc5h" path="res://Data/SoundFX/Misc/s2br_Twinkle.wav" id="3_5awlu"]
+[ext_resource type="AudioStream" uid="uid://1m5ytm03gc5h" path="res://Data/SoundFX/Stage/Misc/s2br_Twinkle.wav" id="3_5awlu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kbtnk"]
 atlas = ExtResource("2_c6ryn")

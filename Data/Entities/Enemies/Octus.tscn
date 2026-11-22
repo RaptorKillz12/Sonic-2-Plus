@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c8djwr7o6d6f7"]
 
 [ext_resource type="Script" uid="uid://8prnwdw3jol3" path="res://Data/Scripts/Enemies/Octus.gd" id="1_28rdy"]
-[ext_resource type="Texture2D" uid="uid://dpflrbq6o6eto" path="res://Data/Sprites/Enemies/Octus.png" id="2_dvyci"]
+[ext_resource type="Texture2D" uid="uid://dpflrbq6o6eto" path="res://Data/Sprites/Global/Enemies/Octus.png" id="2_dvyci"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(27.5, 24)

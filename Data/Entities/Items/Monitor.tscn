@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://gklj3ebdwveu"]
 
-[ext_resource type="Texture2D" uid="uid://bf6cekji71vif" path="res://Data/Sprites/Items/MonitorIcons.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://c8qtrmw44es3g" path="res://Data/Sprites/Items/monitors.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bf6cekji71vif" path="res://Data/Sprites/Global/Items/MonitorIcons.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c8qtrmw44es3g" path="res://Data/Sprites/Global/Items/monitors.png" id="2"]
 [ext_resource type="Script" uid="uid://bqv4t5o16bw8f" path="res://Data/Scripts/Objects/Monitor.gd" id="3"]
-[ext_resource type="AudioStream" uid="uid://jt28gfxybprb" path="res://Data/SoundFX/Objects/RingStereo.wav" id="5"]
-[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Objects/s2br_Destroy.wav" id="5_m8tvl"]
+[ext_resource type="AudioStream" uid="uid://jt28gfxybprb" path="res://Data/SoundFX/Stage/Objects/RingStereo.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://cnxhsj32uyrg0" path="res://Data/SoundFX/Stage/Objects/s2br_Destroy.wav" id="5_m8tvl"]
 [ext_resource type="Material" uid="uid://bveqi5m5ihsgj" path="res://Data/Shaders/PlayerPalette.tres" id="6"]
 
 [sub_resource type="RectangleShape2D" id="1"]

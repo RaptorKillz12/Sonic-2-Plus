@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cr0ig40i3kkmg"]
 
-[ext_resource type="Texture2D" uid="uid://bl0i4wir2nb2n" path="res://Data/Sprites/Boss/DEZWindow.png" id="1_rcmjm"]
+[ext_resource type="Texture2D" uid="uid://bl0i4wir2nb2n" path="res://Data/Sprites/DEZ/Boss/DEZWindow.png" id="1_rcmjm"]
 [ext_resource type="Script" uid="uid://bpb0lqubcuvfp" path="res://Data/Scripts/Boss/eggman_window.gd" id="2_igy0h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a11ke"]

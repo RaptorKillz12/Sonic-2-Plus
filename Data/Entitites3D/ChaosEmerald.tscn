@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dblrkngio3lkk"]
 
 [ext_resource type="Script" uid="uid://dkww65gup81nl" path="res://Data/Scripts/Special3D/chaos_emerald.gd" id="1_6o7xn"]
-[ext_resource type="Texture2D" uid="uid://cf4j1ed0nh7oq" path="res://Data/Sprites/Items/ChaosEmeralds.png" id="1_kac6w"]
+[ext_resource type="Texture2D" uid="uid://cf4j1ed0nh7oq" path="res://Data/Sprites/Global/Items/ChaosEmeralds.png" id="1_kac6w"]
 [ext_resource type="Material" uid="uid://v3sr4whl4pv" path="res://Data/Game/Resources/3DMaterials/Shadow.tres" id="3_hlpuh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cuuyf"]

@@ -16,7 +16,7 @@ const GRAVITY = 600
 
 var Projectile: PackedScene = preload("res://Data/Entities/Enemies/Projectiles/RedzFire.tscn")
 var bullet: Node2D = null
-var bulletSound: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Flamethrower.wav")
+var bulletSound: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_Flamethrower.wav")
 
 enum STATES{WALK,IDLE,SHOOT}
 

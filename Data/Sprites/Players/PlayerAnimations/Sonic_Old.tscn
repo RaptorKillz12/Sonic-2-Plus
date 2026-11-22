@@ -4,9 +4,9 @@
 [ext_resource type="Shader" uid="uid://drq4hwqwwn03c" path="res://Data/Shaders/PaletteSwapRow.gdshader" id="1_mki7d"]
 [ext_resource type="Texture2D" uid="uid://cqk04hqgn2v8b" path="res://Data/Sprites/Players/Sonic_Beta.png" id="2_f1p4t"]
 [ext_resource type="Texture2D" uid="uid://b8ug1pisnbbfm" path="res://Data/Sprites/Players/Sonic_Beta_Super.png" id="2_gqvge"]
-[ext_resource type="Texture2D" uid="uid://cb15hqvojyfdf" path="res://Data/Sprites/Palettes/SuperSonicPal_old.png" id="2_i8rn3"]
-[ext_resource type="Texture2D" uid="uid://dlomjk6vm15ep" path="res://Data/Sprites/Misc/DashDust.png" id="3_ucwrt"]
-[ext_resource type="Texture2D" uid="uid://dvqglf8dididc" path="res://Data/Sprites/Items/shield_plain.png" id="4_kiud2"]
+[ext_resource type="Texture2D" uid="uid://cb15hqvojyfdf" path="res://Data/Sprites/Global/Palettes/SuperSonicPal_old.png" id="2_i8rn3"]
+[ext_resource type="Texture2D" uid="uid://dlomjk6vm15ep" path="res://Data/Sprites/Global/Misc/DashDust.png" id="3_ucwrt"]
+[ext_resource type="Texture2D" uid="uid://dvqglf8dididc" path="res://Data/Sprites/Global/Items/shield_plain.png" id="4_kiud2"]
 
 [sub_resource type="Animation" id="86"]
 length = 0.001

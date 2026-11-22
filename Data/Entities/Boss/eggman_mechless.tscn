@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmsutfc5bals8"]
 
-[ext_resource type="Texture2D" uid="uid://d12r0uq1qch01" path="res://Data/Sprites/Boss/Eggman.png" id="1_5avtc"]
+[ext_resource type="Texture2D" uid="uid://d12r0uq1qch01" path="res://Data/Sprites/Global/Boss/Eggman.png" id="1_5avtc"]
 [ext_resource type="Script" uid="uid://b3qp1fbv3mhos" path="res://Data/Scripts/Boss/eggman_mechless.gd" id="1_rc3yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gduji"]

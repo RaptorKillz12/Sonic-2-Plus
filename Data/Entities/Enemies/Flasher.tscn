@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hl1q1loogiyw"]
 
 [ext_resource type="Script" uid="uid://bprtxc6dsfy3" path="res://Data/Scripts/Enemies/flasher.gd" id="1_3r5q2"]
-[ext_resource type="Texture2D" uid="uid://ddvy6g30rxrq3" path="res://Data/Sprites/Enemies/Flasher.png" id="2_ldsn8"]
+[ext_resource type="Texture2D" uid="uid://ddvy6g30rxrq3" path="res://Data/Sprites/Global/Enemies/Flasher.png" id="2_ldsn8"]
 [ext_resource type="Script" uid="uid://dy2gqcb551jcu" path="res://Data/Scripts/Objects/Hazard.gd" id="4_6kn75"]
 [ext_resource type="Texture2D" uid="uid://d2mbnnoh032lo" path="res://Data/Sprites/Light_Glow.png" id="4_cbqp0"]
 

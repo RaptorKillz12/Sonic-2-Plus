@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://4q0hpddgto2k"]
 
-[ext_resource type="Texture2D" uid="uid://c7218f78hwl8o" path="res://Data/Sprites/Gimmicks/springs_yellow.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c7218f78hwl8o" path="res://Data/Sprites/Global/Gimmicks/springs_yellow.png" id="1"]
 [ext_resource type="Script" uid="uid://dtfeg33iujjdr" path="res://Data/Scripts/Gimmicks/Spring.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]

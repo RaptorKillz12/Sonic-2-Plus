@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bpmdeyvoxjr88"]
 
 [ext_resource type="Script" uid="uid://b5rkq6aiemn7r" path="res://Data/Scripts/Special3D/ss_bumper.gd" id="1_76q2l"]
-[ext_resource type="Texture2D" uid="uid://twldqgya2vgk" path="res://Data/Sprites/Obstacles/bumpers.png" id="1_q2q5t"]
-[ext_resource type="AudioStream" uid="uid://twp8cryjv0r6" path="res://Data/SoundFX/Objects/s2br_Bumper.wav" id="3_0icid"]
+[ext_resource type="Texture2D" uid="uid://twldqgya2vgk" path="res://Data/Sprites/Global/Obstacles/bumpers.png" id="1_q2q5t"]
+[ext_resource type="AudioStream" uid="uid://twp8cryjv0r6" path="res://Data/SoundFX/Stage/Objects/s2br_Bumper.wav" id="3_0icid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_av47x"]
 atlas = ExtResource("1_q2q5t")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmyqbacdubk35"]
 
 [ext_resource type="Material" uid="uid://b2v0ktdlj41ql" path="res://Data/Shaders/Materials/CNZ_Palcycle.tres" id="1_1626i"]
-[ext_resource type="AudioStream" uid="uid://1q4psgyqteps" path="res://Data/SoundFX/Objects/CNZ_Flipper.wav" id="1_av6ei"]
+[ext_resource type="AudioStream" uid="uid://1q4psgyqteps" path="res://Data/SoundFX/Stage/Objects/CNZ_Flipper.wav" id="1_av6ei"]
 [ext_resource type="Script" uid="uid://dqju2j3jjmy1x" path="res://Data/Scripts/Objects/hex_bumper.gd" id="1_rxr32"]
-[ext_resource type="Texture2D" uid="uid://ks00b8vhgggx" path="res://Data/Sprites/Gimmicks/CNZHexBumper.png" id="2_neu4l"]
+[ext_resource type="Texture2D" uid="uid://ks00b8vhgggx" path="res://Data/Sprites/CNZ/Gimmicks/CNZHexBumper.png" id="2_neu4l"]
 
 [node name="HexBumper" type="StaticBody2D"]
 material = ExtResource("1_1626i")

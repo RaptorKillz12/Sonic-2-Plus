@@ -1,7 +1,7 @@
 extends Control
 
 @export var music = preload("res://Data/Music/MainMenu.ogg")
-var title_screen: String = "res://Data/Stages/Presentation/Title.tscn"
+var title_screen: String = "res://Data/Stages/Title/Title.tscn"
 
 var slider_menu_scene: PackedScene = preload("res://Data/Entities/MenuObjects/slider_popup_menu.tscn")
 

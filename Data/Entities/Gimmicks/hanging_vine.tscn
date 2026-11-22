@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bvv78uhl8idjs"]
 
 [ext_resource type="Script" uid="uid://boxk7eyab2sik" path="res://Data/Scripts/Gimmicks/hanging_vine.gd" id="1_drbiq"]
-[ext_resource type="Texture2D" uid="uid://safasvc4e7j8" path="res://Data/Sprites/Gimmicks/DHZ_VineLength.png" id="1_y7bl4"]
-[ext_resource type="Texture2D" uid="uid://31b52ioyj4vd" path="res://Data/Sprites/Gimmicks/DHZ_VineHook.png" id="2_kaq1y"]
+[ext_resource type="Texture2D" uid="uid://safasvc4e7j8" path="res://Data/Sprites/Global/Gimmicks/DHZ_VineLength.png" id="1_y7bl4"]
+[ext_resource type="Texture2D" uid="uid://31b52ioyj4vd" path="res://Data/Sprites/Global/Gimmicks/DHZ_VineHook.png" id="2_kaq1y"]
 [ext_resource type="PackedScene" uid="uid://b2qs2ji487f1t" path="res://Data/Entities/Gimmicks/Hanger.tscn" id="3_5sfhf"]
 
 [node name="HangingVine" type="Node2D" unique_id=898979233]

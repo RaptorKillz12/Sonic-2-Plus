@@ -5,12 +5,12 @@ extends StaticBody2D
 
 @export var counterWeight = true
 @export var counterWeightDamage = true
-@export var counterWeightSprite = preload("res://Data/Sprites/Enemies/CHIPPA.png")
+@export var counterWeightSprite = preload("res://Data/Sprites/Global/Enemies/CHIPPA.png")
 # Image should be a horizonal sprite sheet with each frame being of equal width and height.
 # It will cycle through frames at a consistent speed.
 
 @onready var sprite = $Sprite2D
-var springSound = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
+var springSound = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Spring.wav")
 
 const LOCK_TIME = 0.1 #Lock time after the See-Saw changes frame.
 

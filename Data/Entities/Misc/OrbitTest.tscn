@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fjvyccyenyxe"]
 
-[ext_resource type="Texture2D" uid="uid://cdpouu6cfwxce" path="res://Data/Sprites/Enemies/CHIPPA.png" id="1_ebdnc"]
-[ext_resource type="Texture2D" uid="uid://b6nbr2mujveni" path="res://Data/Sprites/Misc/Checkpoint_Stars.png" id="1_jnrra"]
+[ext_resource type="Texture2D" uid="uid://cdpouu6cfwxce" path="res://Data/Sprites/Global/Enemies/CHIPPA.png" id="1_ebdnc"]
+[ext_resource type="Texture2D" uid="uid://b6nbr2mujveni" path="res://Data/Sprites/Global/Misc/Checkpoint_Stars.png" id="1_jnrra"]
 [ext_resource type="Script" uid="uid://bp8s6nexfdnci" path="res://Data/Entities/Misc/orbit_test.gd" id="2_eeee8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ebdnc"]

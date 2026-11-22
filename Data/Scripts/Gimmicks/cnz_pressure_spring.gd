@@ -3,7 +3,7 @@ extends Node2D
 @export var max_launch_power: float = 24.0
 @export var min_launch_power: float = 4.0
 
-@export var sfx = preload("res://Data/SoundFX/Objects/CNZ_Booster.wav")
+@export var sfx = preload("res://Data/SoundFX/Stage/Objects/CNZ_Booster.wav")
 
 var players: Array[Player2D] = []
 var charge_time: float = 0.0

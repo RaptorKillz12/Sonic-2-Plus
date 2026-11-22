@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c76jmgw2ugsu4"]
 
-[ext_resource type="Texture2D" uid="uid://bb133balcd8eo" path="res://Data/Sprites/Gimmicks/CNZ_ImpulseSpring_Body.png" id="1_clffo"]
-[ext_resource type="Texture2D" uid="uid://cj4r82extcv50" path="res://Data/Sprites/Gimmicks/CNZImpulseSpring.png" id="1_dec7f"]
+[ext_resource type="Texture2D" uid="uid://bb133balcd8eo" path="res://Data/Sprites/CNZ/Gimmicks/CNZ_ImpulseSpring_Body.png" id="1_clffo"]
+[ext_resource type="Texture2D" uid="uid://cj4r82extcv50" path="res://Data/Sprites/CNZ/Gimmicks/CNZImpulseSpring.png" id="1_dec7f"]
 [ext_resource type="Script" uid="uid://cyf8dgenb5scg" path="res://Data/Scripts/Gimmicks/cnz_pressure_spring.gd" id="1_liq00"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clffo"]

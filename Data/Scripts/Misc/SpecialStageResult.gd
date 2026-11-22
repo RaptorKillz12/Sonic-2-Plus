@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var zone_loader:String ="res://Data/Stages/Presentation/ZoneLoader.tscn"
+var zone_loader:String ="res://Data/Stages/LSelect/ZoneLoader.tscn"
 
 enum STATE{IDLE,COUNTDOWN,SHOWTEXT,WAITTOEXIT,EXITING}
 var state: STATE = STATE.IDLE

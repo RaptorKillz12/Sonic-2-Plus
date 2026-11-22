@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://bmce2barbv10t"]
 
 [ext_resource type="Script" uid="uid://blmu8j1jhwnr4" path="res://Data/Scripts/Objects/CollapsePlatform.gd" id="1_qvhdy"]
-[ext_resource type="TileSet" uid="uid://dn42tsjf760q0" path="res://Data/Sprites/Tiles/MCZPlatform.tres" id="2_owoj1"]
+[ext_resource type="TileSet" uid="uid://dn42tsjf760q0" path="res://Data/Sprites/MCZ/Tiles/MCZPlatform.tres" id="2_owoj1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prqmq"]
 size = Vector2(64, 8)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7f14jop4aapu"]
 
-[ext_resource type="Texture2D" uid="uid://dnetb4qhu7qkm" path="res://Data/Sprites/Objects_Zone/SCZ_Platform.png" id="1_a7sv6"]
+[ext_resource type="Texture2D" uid="uid://dnetb4qhu7qkm" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_Platform.png" id="1_a7sv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77ws5"]
 size = Vector2(64, 24)

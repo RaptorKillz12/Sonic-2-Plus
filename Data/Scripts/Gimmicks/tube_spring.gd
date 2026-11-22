@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 @export_enum("Weak", "Strong") var power = 0 # The power of the spring when hopped on
-@export var springSound = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
+@export var springSound = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Spring.wav")
 
 @onready var animator = $AnimationPlayer
 

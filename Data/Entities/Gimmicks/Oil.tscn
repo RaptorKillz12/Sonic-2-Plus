@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvtk4rs7h7sup"]
 
 [ext_resource type="Script" uid="uid://ck1ulp5b8i57k" path="res://Data/Scripts/Gimmicks/oil.gd" id="1_ebvky"]
-[ext_resource type="Texture2D" uid="uid://bf6cekji71vif" path="res://Data/Sprites/Items/MonitorIcons.png" id="1_ukbot"]
+[ext_resource type="Texture2D" uid="uid://bf6cekji71vif" path="res://Data/Sprites/Global/Items/MonitorIcons.png" id="1_ukbot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_363g5"]
 size = Vector2(32, 16)

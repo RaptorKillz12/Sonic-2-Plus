@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cf61mtfkoftym"]
 
 [ext_resource type="Script" uid="uid://d0l7hoiqw00hj" path="res://Data/Scripts/Gimmicks/vertical_shutter.gd" id="1_ajbu6"]
-[ext_resource type="Texture2D" uid="uid://c4k0564yr0efx" path="res://Data/Sprites/Objects_Zone/MTZ_Platform.png" id="1_y14qk"]
+[ext_resource type="Texture2D" uid="uid://c4k0564yr0efx" path="res://Data/Sprites/MPZ/Objects_Zone/MTZ_Platform.png" id="1_y14qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajbu6"]
 size = Vector2(64, 24)

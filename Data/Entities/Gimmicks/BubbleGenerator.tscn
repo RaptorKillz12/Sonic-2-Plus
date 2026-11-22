@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cejf7f3r45h0c"]
 
-[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Items/air_bubbles.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Global/Items/air_bubbles.png" id="1"]
 [ext_resource type="Script" uid="uid://vgeyjd0uksuj" path="res://Data/Scripts/Gimmicks/BubbleGenerator.gd" id="2"]
 
 [sub_resource type="AtlasTexture" id="1"]

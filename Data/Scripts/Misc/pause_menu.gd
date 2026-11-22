@@ -3,11 +3,11 @@ extends Control
 
 var yesno_menu_scene: PackedScene = preload("res://Data/Entities/MenuObjects/yes_no_popup_menu.tscn")
 
-var options_menu: PackedScene = preload("res://Data/Stages/Presentation/OptionsMenu.tscn")
+var options_menu: PackedScene = preload("res://Data/Stages/LSelect/OptionsMenu.tscn")
 
-var sfx_move = preload("res://Data/SoundFX/Misc/MenuBleep.wav")
-var sfx_select = preload("res://Data/SoundFX/Misc/MenuAccept.wav")
-var sfx_back = preload("res://Data/SoundFX/Misc/MenuWoosh.wav")
+var sfx_move = preload("res://Data/SoundFX/Global/Menu/MenuBleep.wav")
+var sfx_select = preload("res://Data/SoundFX/Global/Menu/MenuAccept.wav")
+var sfx_back = preload("res://Data/SoundFX/Global/Menu/MenuWoosh.wav")
 
 @onready var sfx_player: AudioStreamPlayer = $SFXPlayer
 

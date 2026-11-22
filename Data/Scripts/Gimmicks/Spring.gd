@@ -18,10 +18,10 @@ var animList: Array[StringName] = ["SpringUp","SpringRight","SpringUpLeft","Spri
 var animID: int = 0
 const speed: Array[float] = [10,16]
 
-var springTextures: Array[Texture2D] = [preload("res://Data/Sprites/Gimmicks/springs_yellow.png"),preload("res://Data/Sprites/Gimmicks/springs_red.png")]
+var springTextures: Array[Texture2D] = [preload("res://Data/Sprites/Global/Gimmicks/springs_yellow.png"),preload("res://Data/Sprites/Global/Gimmicks/springs_red.png")]
 
 @export_group("Effect Properties")
-@export var spring_sfx: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
+@export var spring_sfx: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Spring.wav")
 
 func set_spring() -> void:
 	match (spring_direction):

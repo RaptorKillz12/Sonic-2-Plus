@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfhy1fchy4rxv"]
 
-[ext_resource type="Texture2D" uid="uid://d13acq6glp2ya" path="res://Data/Sprites/Gimmicks/CNZ_SpikePrize.png" id="1_e111p"]
+[ext_resource type="Texture2D" uid="uid://d13acq6glp2ya" path="res://Data/Sprites/CNZ/Gimmicks/CNZ_SpikePrize.png" id="1_e111p"]
 [ext_resource type="Script" uid="uid://p5ao64fb1kqm" path="res://Data/Scripts/Gimmicks/prize.gd" id="1_vji3b"]
-[ext_resource type="AudioStream" uid="uid://comgpug432nob" path="res://Data/SoundFX/Player/s2br_Stab.wav" id="2_jtd3c"]
+[ext_resource type="AudioStream" uid="uid://comgpug432nob" path="res://Data/SoundFX/Stage/Player/s2br_Stab.wav" id="2_jtd3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vji3b"]
 

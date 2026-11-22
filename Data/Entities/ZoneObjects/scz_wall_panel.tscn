@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://m0m4jno5v1di"]
 
-[ext_resource type="Texture2D" uid="uid://donuljeh5ce32" path="res://Data/Sprites/Gimmicks/SCZ_GrabBlocks.png" id="1_g58ej"]
+[ext_resource type="Texture2D" uid="uid://donuljeh5ce32" path="res://Data/Sprites/SCZ/Gimmicks/SCZ_GrabBlocks.png" id="1_g58ej"]
 [ext_resource type="Script" uid="uid://dq2r537o6iqnm" path="res://Data/Scripts/Gimmicks/scz_wall_panel.gd" id="1_s52kp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s52kp"]

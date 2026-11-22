@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://chyrwm1qwvlyt"]
 
-[ext_resource type="Texture2D" uid="uid://btd1piynn8ofj" path="res://Data/Sprites/Gimmicks/button.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://btd1piynn8ofj" path="res://Data/Sprites/Global/Gimmicks/button.png" id="1"]
 [ext_resource type="Script" uid="uid://ddvax8t18bxs" path="res://Data/Scripts/Objects/Switch.gd" id="2"]
-[ext_resource type="AudioStream" uid="uid://uay8t1b3i1hi" path="res://Data/SoundFX/Gimmicks/s2br_Switch.wav" id="3_82tya"]
+[ext_resource type="AudioStream" uid="uid://uay8t1b3i1hi" path="res://Data/SoundFX/Stage/Gimmicks/s2br_Switch.wav" id="3_82tya"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(31, 8)

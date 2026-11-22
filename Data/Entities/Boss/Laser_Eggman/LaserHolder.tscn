@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cyyvgba5rqy12"]
 
 [ext_resource type="Script" uid="uid://b7hphh0wa7fwm" path="res://Data/Scripts/Boss/BossBase.gd" id="1_eplxi"]
-[ext_resource type="Texture2D" uid="uid://dlgkk8wxk0bxc" path="res://Data/Sprites/Boss/EggmobileLaser.png" id="2_5k8kx"]
-[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Boss/s2br_BossExplosion.wav" id="4_c2v4m"]
-[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Boss/s2br_BossHit.wav" id="5_rew13"]
+[ext_resource type="Texture2D" uid="uid://dlgkk8wxk0bxc" path="res://Data/Sprites/Global/Boss/EggmobileLaser.png" id="2_5k8kx"]
+[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Stage/Boss/s2br_BossExplosion.wav" id="4_c2v4m"]
+[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Stage/Boss/s2br_BossHit.wav" id="5_rew13"]
 
 [sub_resource type="RectangleShape2D" id="5"]
 size = Vector2(48, 32)

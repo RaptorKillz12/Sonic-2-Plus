@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhb1yl7cux56b"]
 
 [ext_resource type="Script" uid="uid://lonkq832rkkv" path="res://Data/Scripts/Objects/Crusher.gd" id="1_gofr8"]
-[ext_resource type="Texture2D" uid="uid://dgw4rt1raikgx" path="res://Data/Sprites/Obstacles/MTZ_Crusher.png" id="2_gofr8"]
+[ext_resource type="Texture2D" uid="uid://dgw4rt1raikgx" path="res://Data/Sprites/MPZ/Obstacles/MTZ_Crusher.png" id="2_gofr8"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 64)

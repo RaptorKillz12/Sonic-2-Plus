@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://cl4msslpnhrue"]
 
-[ext_resource type="Texture2D" uid="uid://b4dk86pdwecwe" path="res://Data/Sprites/Enemies/Turtloid.png" id="1_cqjvl"]
+[ext_resource type="Texture2D" uid="uid://b4dk86pdwecwe" path="res://Data/Sprites/Global/Enemies/Turtloid.png" id="1_cqjvl"]
 [ext_resource type="Script" uid="uid://bxueff870qwjm" path="res://Data/Scripts/Enemies/turtloid.gd" id="1_hsq1i"]
 [ext_resource type="PackedScene" uid="uid://mhiwjp660jlu" path="res://Data/Entities/Enemies/TurtleoidPilot.tscn" id="2_6h3ip"]
-[ext_resource type="Texture2D" uid="uid://dxa2a45aax5hl" path="res://Data/Sprites/Enemies/Turtloid_Fire.png" id="3_k0h3p"]
+[ext_resource type="Texture2D" uid="uid://dxa2a45aax5hl" path="res://Data/Sprites/Global/Enemies/Turtloid_Fire.png" id="3_k0h3p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hsq1i"]
 atlas = ExtResource("3_k0h3p")

@@ -3,7 +3,7 @@ extends Node2D
 
 @export var music: AudioStream = preload("res://Data/Music/Results.ogg")
 @export var eggman_music: AudioStream = preload("res://Data/Music/Boss.ogg")
-var title_screen: String = "res://Data/Stages/Presentation/Title.tscn"
+var title_screen: String = "res://Data/Stages/Title/Title.tscn"
 var explosion: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 var endScene: bool = false

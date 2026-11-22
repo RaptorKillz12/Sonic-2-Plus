@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drih671sfony1"]
 
 [ext_resource type="Script" uid="uid://dy2gqcb551jcu" path="res://Data/Scripts/Objects/Hazard.gd" id="1_1k752"]
-[ext_resource type="Texture2D" uid="uid://bhr0o7moirsvy" path="res://Data/Sprites/Obstacles/GHZ_Ball.png" id="2_hlkbj"]
+[ext_resource type="Texture2D" uid="uid://bhr0o7moirsvy" path="res://Data/Sprites/Global/Obstacles/GHZ_Ball.png" id="2_hlkbj"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 20.0

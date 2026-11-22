@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 			Global.save_level_data(player.respawnPosition)
 			
 			# fade to new scene
-			await Main.change_scene("res://Data/Stages/SpecialStage/SpecialStage.tscn","WhiteOut",1.0,false)
+			await Main.change_scene("res://Data/Stages/Special/SpecialStage.tscn","WhiteOut",1.0,false)
 			# wait for scene to fade
 			await Main.scene_faded
 			queue_free()

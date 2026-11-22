@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bisk2itnvknhd"]
 
 [ext_resource type="Script" uid="uid://bs473cwi3208" path="res://Data/Scripts/Enemies/bouncer.gd" id="1_0vtrv"]
-[ext_resource type="Texture2D" uid="uid://bjmgpk072gkwp" path="res://Data/Sprites/Enemies/Ball.png" id="2_qhvqh"]
+[ext_resource type="Texture2D" uid="uid://bjmgpk072gkwp" path="res://Data/Sprites/Global/Enemies/Ball.png" id="2_qhvqh"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 24)

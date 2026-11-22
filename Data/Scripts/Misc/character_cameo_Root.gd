@@ -10,7 +10,7 @@ const JUMP_VELOCITY = -400.0
 "Bubble Shield","Super","Teleport",
 "Boost","Eggman","?",
 "Extra Life","Tails Life") var present: int = 0
-@export var characterTexture: Texture2D = preload("res://Data/Sprites/Misc/Kris.png")
+@export var characterTexture: Texture2D = preload("res://Data/Sprites/Global/Misc/Kris.png")
 
 #Object state controllers
 enum STATES{IDLE,THROW,JUMP}

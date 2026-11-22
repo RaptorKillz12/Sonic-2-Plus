@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://8sljpf878e00"]
 
 [ext_resource type="Script" uid="uid://xa04gwwskvci" path="res://Data/Scripts/Enemies/crawl.gd" id="1_0pgyn"]
-[ext_resource type="Texture2D" uid="uid://c8j6h0dpua10y" path="res://Data/Sprites/Enemies/Crawl_Mobile.png" id="2_evms8"]
-[ext_resource type="AudioStream" uid="uid://twp8cryjv0r6" path="res://Data/SoundFX/Objects/s2br_Bumper.wav" id="4_ryaxe"]
+[ext_resource type="Texture2D" uid="uid://c8j6h0dpua10y" path="res://Data/Sprites/Global/Enemies/Crawl_Mobile.png" id="2_evms8"]
+[ext_resource type="AudioStream" uid="uid://twp8cryjv0r6" path="res://Data/SoundFX/Stage/Objects/s2br_Bumper.wav" id="4_ryaxe"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(28, 28)

@@ -346,28 +346,28 @@ func _ready() -> void:
 			playerPal.set_shader_parameter("amount",5)
 			playerPal.set_shader_parameter("palRows",16)
 			playerPal.set_shader_parameter("row",0)
-			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperSonicPal.png"))
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Global/Palettes/SuperSonicPal.png"))
 		Global.CHARACTERS.TAILS:
 			playerPal.set_shader_parameter("amount",8)
 			playerPal.set_shader_parameter("palRows",16)
 			playerPal.set_shader_parameter("row",0)
-			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperTails.png"))
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Global/Palettes/SuperTails.png"))
 		Global.CHARACTERS.KNUCKLES:
 			playerPal.set_shader_parameter("amount",4)
 			playerPal.set_shader_parameter("palRows",16)
 			playerPal.set_shader_parameter("row",0)
-			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperKnuckles.png"))
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Global/Palettes/SuperKnuckles.png"))
 			strength = Global.STRENGTH_TIER.SUPER
 		Global.CHARACTERS.AMY:
 			playerPal.set_shader_parameter("amount",4)
 			playerPal.set_shader_parameter("palRows",8)
 			playerPal.set_shader_parameter("row",0)
-			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperAmy.png"))
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Global/Palettes/SuperAmy.png"))
 		Global.CHARACTERS.MIGHTY:
 			playerPal.set_shader_parameter("amount",4)
 			playerPal.set_shader_parameter("palRows",16)
 			playerPal.set_shader_parameter("row",0)
-			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Palettes/SuperKnuckles.png"))
+			playerPal.set_shader_parameter("paletteTexture",load("res://Data/Sprites/Global/Palettes/SuperKnuckles.png"))
 		#Global.CHARACTERS.RAY:
 	
 	# Checkpoints

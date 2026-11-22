@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bejo05ritbuln"]
 
 [ext_resource type="Script" uid="uid://c407wh5a6hb7s" path="res://Data/Scripts/Enemies/crawlton_head.gd" id="1_awsd2"]
-[ext_resource type="Texture2D" uid="uid://h6xrx6631sdc" path="res://Data/Sprites/Enemies/Crawlton.png" id="2_dql8y"]
+[ext_resource type="Texture2D" uid="uid://h6xrx6631sdc" path="res://Data/Sprites/Global/Enemies/Crawlton.png" id="2_dql8y"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)

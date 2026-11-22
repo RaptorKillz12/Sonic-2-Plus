@@ -3,7 +3,7 @@ extends Node2D
 ## Scene is in the game but no longer used.
 
 @export var music = preload("res://Data/Music/s2br_Options.ogg")
-@export var next_zone_loader: String = "res://Data/Stages/Presentation/ZoneLoader.tscn"
+@export var next_zone_loader: String = "res://Data/Stages/LSelect/ZoneLoader.tscn"
 var selected: bool = false
 
 const LEFT_ROWS: float = 26 # number of columns to draw, including blank ones

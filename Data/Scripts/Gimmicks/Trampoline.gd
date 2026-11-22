@@ -29,7 +29,7 @@ var trampolineYPosition = 0
 #@export var interpolationMode: INTERPOLATION_MODE = INTERPOLATION_MODE.linear
 
 # Edit this to change the graphic used for the central platform
-@export var platformSprite = preload("res://Data/Sprites/Gimmicks/ICZTrampoline.png")
+@export var platformSprite = preload("res://Data/Sprites/Global/Gimmicks/ICZTrampoline.png")
 # Edit these values if you change the platform graphic to something of a different size
 @export var platformWidth = 22 # how many pixels wide your collider for the platform is. 
 @export var platformHeight = 12 # How many pixels tall the platform should be

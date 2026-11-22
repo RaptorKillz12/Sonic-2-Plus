@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://dpedjdbyu3jqv"]
 
 [ext_resource type="Script" uid="uid://chml3d6gwlo1l" path="res://Data/Scripts/Enemies/shell_cracker.gd" id="1_qrqgo"]
-[ext_resource type="Texture2D" uid="uid://b250c0h5v8bms" path="res://Data/Sprites/Enemies/Shellcracker.png" id="2_n4lpt"]
-[ext_resource type="Texture2D" uid="uid://dtrigmhfabcpx" path="res://Data/Sprites/Enemies/Shellcracker_Seg.png" id="2_v8r7j"]
-[ext_resource type="Texture2D" uid="uid://s5m4nqav0k02" path="res://Data/Sprites/Enemies/Shellcracker_Claw.png" id="4_ijhvp"]
+[ext_resource type="Texture2D" uid="uid://b250c0h5v8bms" path="res://Data/Sprites/Global/Enemies/Shellcracker.png" id="2_n4lpt"]
+[ext_resource type="Texture2D" uid="uid://dtrigmhfabcpx" path="res://Data/Sprites/Global/Enemies/Shellcracker_Seg.png" id="2_v8r7j"]
+[ext_resource type="Texture2D" uid="uid://s5m4nqav0k02" path="res://Data/Sprites/Global/Enemies/Shellcracker_Claw.png" id="4_ijhvp"]
 [ext_resource type="Script" uid="uid://dy2gqcb551jcu" path="res://Data/Scripts/Objects/Hazard.gd" id="4_j1vyy"]
 [ext_resource type="Script" uid="uid://tua2cxnyviq4" path="res://Data/Scripts/Enemies/claw_attack.gd" id="4_o5dbk"]
 

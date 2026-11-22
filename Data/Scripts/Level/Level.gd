@@ -45,8 +45,8 @@ extends Node2D
 ## If 0, the number of rings will be calculated automatically.
 @export var ringsForPerfect: int = 0
 @export_subgroup("Optional")
-@export var waterSourceColor: Texture2D = preload("res://Data/Sprites/Palettes/BasePal.png")
-@export var waterReplaceColor: Texture2D = preload("res://Data/Sprites/Palettes/WetPal.png")
+@export var waterSourceColor: Texture2D = preload("res://Data/Sprites/Global/Palettes/BasePal.png")
+@export var waterReplaceColor: Texture2D = preload("res://Data/Sprites/Global/Palettes/WetPal.png")
 @export var wind_force: Vector2 = Vector2.ZERO
 @export var end_cutscene: bool = false
 
@@ -60,8 +60,8 @@ extends Node2D
 ## If true, the top and bottom boundary will be ignored.
 @export var y_wrap: bool = false
 
-var zone_loader: String = "res://Data/Stages/Presentation/ZoneLoader.tscn"
-var twoPlayerWindow: PackedScene  = preload("res://Data/Stages/TwoPlayerScreenView.tscn")
+var zone_loader: String = "res://Data/Stages/LSelect/ZoneLoader.tscn"
+var twoPlayerWindow: PackedScene  = preload("res://Data/Stages/ZoneM/TwoPlayerScreenView.tscn")
 
 func _ready() -> void:
 	level_reset_data()

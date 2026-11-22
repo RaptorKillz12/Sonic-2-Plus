@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7ebhoiaebh3r"]
 
 [ext_resource type="Script" uid="uid://ey8h3c82aw18" path="res://Data/Scripts/Gimmicks/cnz_bonus_bumper.gd" id="1_0m1u4"]
-[ext_resource type="Texture2D" uid="uid://b14mcok6isknm" path="res://Data/Sprites/Gimmicks/CNZ_Bonus.png" id="1_06dlr"]
+[ext_resource type="Texture2D" uid="uid://b14mcok6isknm" path="res://Data/Sprites/CNZ/Gimmicks/CNZ_Bonus.png" id="1_06dlr"]
 [ext_resource type="Material" uid="uid://b2v0ktdlj41ql" path="res://Data/Shaders/Materials/CNZ_Palcycle.tres" id="1_xi7ob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0m1u4"]

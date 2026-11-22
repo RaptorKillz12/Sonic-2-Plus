@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvaf3mpyum5at"]
 
 [ext_resource type="Script" uid="uid://baeiveqf2mn3b" path="res://Data/Scripts/Enemies/Stegway.gd" id="1_3811d"]
-[ext_resource type="Texture2D" uid="uid://bwbirkbtmiumq" path="res://Data/Sprites/Enemies/stegway.png" id="2_jmtwq"]
+[ext_resource type="Texture2D" uid="uid://bwbirkbtmiumq" path="res://Data/Sprites/Global/Enemies/stegway.png" id="2_jmtwq"]
 [ext_resource type="SpriteFrames" uid="uid://bt3tc4nx84w4k" path="res://Data/Game/Resources/animated_sprites/buzzer_flame.tres" id="3_40q80"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40q80"]

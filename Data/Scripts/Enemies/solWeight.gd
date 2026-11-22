@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var counterWeightSprite: Texture2D = preload("res://Data/Sprites/Enemies/Sol.png")
+@export var counterWeightSprite: Texture2D = preload("res://Data/Sprites/Global/Enemies/Sol.png")
 
 var animationTimer: float = 0.1
 var animationFrame: int = 0

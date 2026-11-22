@@ -1,0 +1,599 @@
+[gd_scene format=3 uid="uid://wc6hh8dbtg1w"]
+
+[ext_resource type="Script" uid="uid://b8tktdmoqx6ix" path="res://Data/Scripts/Level/Level.gd" id="1_bgm8p"]
+[ext_resource type="AudioStream" uid="uid://ddkfg5r0j37l" path="res://Data/Music/WingFortress.ogg" id="2_1cysq"]
+[ext_resource type="PackedScene" uid="uid://cm6qjxupawbta" path="res://Data/Stages/Zone10/Backgrounds/15-SkyFortress.tscn" id="3_sfen5"]
+[ext_resource type="AudioStream" uid="uid://dydk3qg2udn1h" path="res://Data/Music/WingFortress_F.ogg" id="3_ugna3"]
+[ext_resource type="PackedScene" uid="uid://c30uceea18q1w" path="res://Data/Entities/Misc/HUD.tscn" id="5_20kpp"]
+[ext_resource type="PackedScene" uid="uid://cb8fqvfn4u1ht" path="res://Data/Stages/ZoneM/Layouts/layout_sfz_2.scn" id="5_x2o55"]
+[ext_resource type="PackedScene" uid="uid://oce7phvjxdbv" path="res://Data/Entities/Misc/Tornado.tscn" id="6_0fwjd"]
+[ext_resource type="PackedScene" uid="uid://cioq5saowvqxj" path="res://Data/Entities/MainObjects/Player.tscn" id="6_1g2m4"]
+[ext_resource type="PackedScene" uid="uid://b2qs2ji487f1t" path="res://Data/Entities/Gimmicks/Hanger.tscn" id="6_fox10"]
+[ext_resource type="Material" uid="uid://ucnsk4i53l42" path="res://Data/Shaders/Materials/SCZ_PalCycle.tres" id="6_nc0k7"]
+[ext_resource type="Script" uid="uid://lekpwkfad1pq" path="res://Data/Scripts/Misc/path_follow_2d.gd" id="6_pe4xw"]
+[ext_resource type="Script" uid="uid://cgc0jvkdayt0m" path="res://Data/Scripts/Objects/tornado_mover.gd" id="6_ulsoj"]
+[ext_resource type="Script" uid="uid://b3w4d455am02d" path="res://Data/Scripts/Scene/IntroCutsceneDeleter.gd" id="8_pdvm3"]
+[ext_resource type="PackedScene" uid="uid://cdr25gnarvsy8" path="res://Data/Entities/Hazards/scz_h_laser.tscn" id="10_fx22q"]
+[ext_resource type="PackedScene" uid="uid://msycxndhmuin" path="res://Data/Entities/Obstacles/InvisibleBarrier.tscn" id="11_t0ok7"]
+[ext_resource type="PackedScene" uid="uid://dkn7hhll7o4or" path="res://Data/Entities/MainObjects/LayerSwitcher.tscn" id="13_pm2l4"]
+[ext_resource type="PackedScene" uid="uid://c3yq46ay5g4ov" path="res://Data/Entities/Obstacles/MultiRotatingPlatforms.tscn" id="14_kegxj"]
+[ext_resource type="PackedScene" uid="uid://c01c2r12vwpbb" path="res://Data/Entities/ZoneObjects/clucker_base.tscn" id="14_x2o55"]
+[ext_resource type="Texture2D" uid="uid://dnetb4qhu7qkm" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_Platform.png" id="15_n5rds"]
+[ext_resource type="PackedScene" uid="uid://l26y1wupkm3f" path="res://Data/Entities/MainObjects/Signpost_New.tscn" id="16_6be3y"]
+[ext_resource type="PackedScene" uid="uid://bbnywgk4cq5cq" path="res://Data/Entities/Gimmicks/giant_fan.tscn" id="17_6be3y"]
+[ext_resource type="PackedScene" uid="uid://gklj3ebdwveu" path="res://Data/Entities/Items/Monitor.tscn" id="17_m8uev"]
+[ext_resource type="PackedScene" uid="uid://ckauggfqax081" path="res://Data/Stages/Zone09/Layouts/scz_cover_tiles.scn" id="18_ixjjw"]
+[ext_resource type="PackedScene" uid="uid://beebd7dn4ioe1" path="res://Data/Entities/Gimmicks/WindCurrent.tscn" id="19_l0iqx"]
+[ext_resource type="PackedScene" uid="uid://btyydkc7grjn0" path="res://Data/Entities/Hazards/scz_propeller.tscn" id="19_u6hen"]
+[ext_resource type="PackedScene" uid="uid://c43isa3fib6s6" path="res://Data/Entities/Gimmicks/WaterBar.tscn" id="20_hk40m"]
+[ext_resource type="PackedScene" uid="uid://503ojkyystkg" path="res://Data/Entities/ZoneObjects/SCZ_conveyor_belt.tscn" id="21_w7lrh"]
+[ext_resource type="PackedScene" uid="uid://jfg4a5smuc5b" path="res://Data/Entities/Gimmicks/scz_launcher.tscn" id="22_enrbk"]
+[ext_resource type="PackedScene" uid="uid://dyi111jvxw543" path="res://Data/Entities/Gimmicks/shifting_platform.tscn" id="22_hb252"]
+[ext_resource type="PackedScene" uid="uid://m0m4jno5v1di" path="res://Data/Entities/ZoneObjects/scz_wall_panel.tscn" id="22_sla3t"]
+[ext_resource type="PackedScene" uid="uid://bbbho8eh17vq4" path="res://Data/Entities/Obstacles/vent_entrance.tscn" id="24_m6rwo"]
+[ext_resource type="PackedScene" uid="uid://c55d2dd4iyrmr" path="res://Data/Entities/Gimmicks/scz_rising_platforms_test.tscn" id="24_sla3t"]
+[ext_resource type="PackedScene" uid="uid://4vm4ij16saxo" path="res://Data/Entities/ZoneObjects/scz_turret_platform.tscn" id="25_r204o"]
+[ext_resource type="PackedScene" uid="uid://bvv78uhl8idjs" path="res://Data/Entities/Gimmicks/hanging_vine.tscn" id="26_5kxfg"]
+[ext_resource type="PackedScene" uid="uid://cma7d8l5wmqmd" path="res://Data/Entities/Items/LampPost.tscn" id="27_b6bgn"]
+[ext_resource type="Texture2D" uid="uid://cyhr03mdqu0qf" path="res://Data/Sprites/SCZ/Gimmicks/SCZ_Chain.png" id="27_klp80"]
+[ext_resource type="Texture2D" uid="uid://c52jj4iweeadf" path="res://Data/Sprites/SCZ/Gimmicks/SCZ_Hook.png" id="28_rypc6"]
+[ext_resource type="PackedScene" uid="uid://vh0ailk0432j" path="res://Data/Entities/Boss/BossBoundrySetter.tscn" id="37_rypc6"]
+[ext_resource type="PackedScene" uid="uid://bmsutfc5bals8" path="res://Data/Entities/Boss/eggman_mechless.tscn" id="38_77ws5"]
+[ext_resource type="PackedScene" uid="uid://b7f14jop4aapu" path="res://Data/Entities/Boss/Laser_Eggman/scz_boss_platform.tscn" id="39_x62n7"]
+[ext_resource type="Script" uid="uid://1lcvma8blpgd" path="res://Data/Scripts/Boss/Sky_Fortress_Laser.gd" id="39_y3u1e"]
+[ext_resource type="PackedScene" uid="uid://cyyvgba5rqy12" path="res://Data/Entities/Boss/Laser_Eggman/LaserHolder.tscn" id="40_w0x7d"]
+
+[sub_resource type="Curve2D" id="Curve2D_ulsoj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1024, 0)
+}
+point_count = 2
+
+[node name="SkyFortress2" type="Node2D" unique_id=707341587]
+script = ExtResource("1_bgm8p")
+zone_id = 15
+act_number = 0
+music = ExtResource("2_1cysq")
+music2P = ExtResource("2_1cysq")
+F_music = ExtResource("3_ugna3")
+F_music2P = ExtResource("2_1cysq")
+animal1 = 7
+animal2 = 9
+wind_force = Vector2(-60, 0)
+end_cutscene = true
+
+[node name="15-skyFortress" parent="." unique_id=924459020 instance=ExtResource("3_sfen5")]
+
+[node name="HUD" parent="." unique_id=1194614244 instance=ExtResource("5_20kpp")]
+
+[node name="Layout_SFZ2" parent="." unique_id=1698725087 instance=ExtResource("5_x2o55")]
+material = ExtResource("6_nc0k7")
+
+[node name="Player" parent="." unique_id=389313250 instance=ExtResource("6_1g2m4")]
+position = Vector2(88, 1149)
+disablePartner = true
+
+[node name="Entities" type="Node" parent="." unique_id=993914512]
+
+[node name="Path2D" type="Path2D" parent="Entities" unique_id=677702498]
+position = Vector2(64, 1152)
+curve = SubResource("Curve2D_ulsoj")
+script = ExtResource("8_pdvm3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Entities/Path2D" unique_id=1546597268]
+rotates = false
+cubic_interp = false
+loop = false
+script = ExtResource("6_pe4xw")
+speed = 64.0
+
+[node name="Tornado_mover" type="Node2D" parent="Entities/Path2D/PathFollow2D" unique_id=1473824094]
+script = ExtResource("6_ulsoj")
+allow_player_steering = false
+
+[node name="Tornado" parent="Entities/Path2D/PathFollow2D/Tornado_mover" unique_id=51418460 instance=ExtResource("6_0fwjd")]
+position = Vector2(0, 72)
+pilotType = 3
+
+[node name="SCZ_HLaser" parent="Entities" unique_id=1194874622 instance=ExtResource("10_fx22q")]
+position = Vector2(480, 1126)
+speed = 256.0
+
+[node name="SCZ_HLaser2" parent="Entities" unique_id=1063453434 instance=ExtResource("10_fx22q")]
+position = Vector2(544, 1240)
+
+[node name="SCZ_HLaser3" parent="Entities" unique_id=2045399073 instance=ExtResource("10_fx22q")]
+position = Vector2(576, 1184)
+
+[node name="InvisibleBarrier" parent="Entities" unique_id=1633851515 instance=ExtResource("11_t0ok7")]
+position = Vector2(1504, 736)
+scale = Vector2(2, 32)
+
+[node name="InvisibleBarrier2" parent="Entities" unique_id=998971179 instance=ExtResource("11_t0ok7")]
+position = Vector2(10656, 448)
+scale = Vector2(2, 40)
+
+[node name="Hanger" parent="Entities" unique_id=1631592248 instance=ExtResource("6_fox10")]
+position = Vector2(3136, 1552)
+scale = Vector2(5, 1)
+setCenter = false
+player_can_shimmy = true
+
+[node name="Hanger2" parent="Entities" unique_id=625940742 instance=ExtResource("6_fox10")]
+position = Vector2(3392, 1696)
+scale = Vector2(5, 1)
+setCenter = false
+player_can_shimmy = true
+
+[node name="Hanger3" parent="Entities" unique_id=347346002 instance=ExtResource("6_fox10")]
+position = Vector2(3904, 1696)
+scale = Vector2(5, 1)
+setCenter = false
+player_can_shimmy = true
+
+[node name="Hanger4" parent="Entities" unique_id=488208457 instance=ExtResource("6_fox10")]
+position = Vector2(6784.0005, 1504)
+scale = Vector2(30, 3)
+setCenter = false
+player_can_shimmy = true
+
+[node name="LayerSwitcher" parent="Entities" unique_id=1503162357 instance=ExtResource("13_pm2l4")]
+position = Vector2(264, 1024)
+size = Vector2i(1, 64)
+leftLayer = 0
+
+[node name="GiantFan" parent="Entities" unique_id=612417867 instance=ExtResource("17_6be3y")]
+position = Vector2(1984, 1512)
+
+[node name="GiantFan2" parent="Entities" unique_id=991577356 instance=ExtResource("17_6be3y")]
+position = Vector2(2112, 1576)
+
+[node name="GiantFan3" parent="Entities" unique_id=1304034958 instance=ExtResource("17_6be3y")]
+position = Vector2(2880, 1320)
+
+[node name="GiantFan4" parent="Entities" unique_id=944304989 instance=ExtResource("17_6be3y")]
+position = Vector2(3264, 1384)
+
+[node name="ShiftingPlatform" parent="Entities" unique_id=107272240 instance=ExtResource("22_hb252")]
+position = Vector2(1712, 496)
+
+[node name="ShiftingPlatform2" parent="Entities" unique_id=326628212 instance=ExtResource("22_hb252")]
+position = Vector2(2080, 1128)
+
+[node name="ShiftingPlatform3" parent="Entities" unique_id=1112055229 instance=ExtResource("22_hb252")]
+position = Vector2(2144, 1224)
+
+[node name="ShiftingPlatform4" parent="Entities" unique_id=22265618 instance=ExtResource("22_hb252")]
+position = Vector2(2192, 1112)
+
+[node name="ShiftingPlatform5" parent="Entities" unique_id=1926169115 instance=ExtResource("22_hb252")]
+position = Vector2(2248, 1176)
+
+[node name="Vent_Entrance" parent="Entities" unique_id=1129070729 instance=ExtResource("24_m6rwo")]
+position = Vector2(10584, 1088)
+collision_layer = 65542
+lock_left_camera = 10368
+
+[node name="SCZ_CoverTiles" parent="Entities/Vent_Entrance" unique_id=1521323812 instance=ExtResource("18_ixjjw")]
+position = Vector2(-8, 0)
+
+[node name="WindCurrent" parent="Entities" unique_id=418046058 instance=ExtResource("19_l0iqx")]
+position = Vector2(5248, 1200)
+scale = Vector2(104, 8)
+speed = -400.0
+
+[node name="WaterBar" parent="Entities" unique_id=1185438577 node_paths=PackedStringArray("break_parts") instance=ExtResource("20_hk40m")]
+position = Vector2(6240, 1184)
+break_parts = [NodePath("SCZ_WallPanel"), NodePath("SCZ_WallPanel2"), NodePath("SCZ_WallPanel3"), NodePath("SCZ_WallPanel4")]
+
+[node name="SCZ_WallPanel" parent="Entities/WaterBar" unique_id=2032666754 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, -16)
+launch_speed = Vector2(2, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel2" parent="Entities/WaterBar" unique_id=132303319 instance=ExtResource("22_sla3t")]
+position = Vector2(16, -16)
+launch_speed = Vector2(1, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel3" parent="Entities/WaterBar" unique_id=1278264344 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, 16)
+launch_speed = Vector2(2, 0)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel4" parent="Entities/WaterBar" unique_id=448944807 instance=ExtResource("22_sla3t")]
+position = Vector2(16, 16)
+launch_speed = Vector2(1, 0)
+metadata/_edit_lock_ = true
+
+[node name="WaterBar2" parent="Entities" unique_id=127006475 node_paths=PackedStringArray("break_parts") instance=ExtResource("20_hk40m")]
+position = Vector2(6112, 1184)
+break_parts = [NodePath("SCZ_WallPanel"), NodePath("SCZ_WallPanel2"), NodePath("SCZ_WallPanel3"), NodePath("SCZ_WallPanel4")]
+
+[node name="SCZ_WallPanel" parent="Entities/WaterBar2" unique_id=1359687547 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, -16)
+launch_speed = Vector2(2, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel2" parent="Entities/WaterBar2" unique_id=1447740708 instance=ExtResource("22_sla3t")]
+position = Vector2(16, -16)
+launch_speed = Vector2(1, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel3" parent="Entities/WaterBar2" unique_id=1321899588 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, 16)
+launch_speed = Vector2(2, 0)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel4" parent="Entities/WaterBar2" unique_id=1629454260 instance=ExtResource("22_sla3t")]
+position = Vector2(16, 16)
+launch_speed = Vector2(1, 0)
+metadata/_edit_lock_ = true
+
+[node name="WaterBar3" parent="Entities" unique_id=1036568320 node_paths=PackedStringArray("break_parts") instance=ExtResource("20_hk40m")]
+position = Vector2(5792, 1248)
+break_parts = [NodePath("SCZ_WallPanel"), NodePath("SCZ_WallPanel2"), NodePath("SCZ_WallPanel3"), NodePath("SCZ_WallPanel4")]
+
+[node name="SCZ_WallPanel" parent="Entities/WaterBar3" unique_id=2130576727 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, -16)
+launch_speed = Vector2(2, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel2" parent="Entities/WaterBar3" unique_id=1534308603 instance=ExtResource("22_sla3t")]
+position = Vector2(16, -16)
+launch_speed = Vector2(1, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel3" parent="Entities/WaterBar3" unique_id=668245177 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, 16)
+launch_speed = Vector2(2, 0)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel4" parent="Entities/WaterBar3" unique_id=264705552 instance=ExtResource("22_sla3t")]
+position = Vector2(16, 16)
+launch_speed = Vector2(1, 0)
+metadata/_edit_lock_ = true
+
+[node name="WaterBar4" parent="Entities" unique_id=1061436 node_paths=PackedStringArray("break_parts") instance=ExtResource("20_hk40m")]
+position = Vector2(5600, 1184)
+break_parts = [NodePath("SCZ_WallPanel"), NodePath("SCZ_WallPanel2"), NodePath("SCZ_WallPanel3"), NodePath("SCZ_WallPanel4")]
+
+[node name="SCZ_WallPanel" parent="Entities/WaterBar4" unique_id=1232973149 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, -16)
+launch_speed = Vector2(2, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel2" parent="Entities/WaterBar4" unique_id=1946600728 instance=ExtResource("22_sla3t")]
+position = Vector2(16, -16)
+launch_speed = Vector2(1, -60)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel3" parent="Entities/WaterBar4" unique_id=1912796120 instance=ExtResource("22_sla3t")]
+position = Vector2(-16, 16)
+launch_speed = Vector2(2, 0)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_WallPanel4" parent="Entities/WaterBar4" unique_id=10214875 instance=ExtResource("22_sla3t")]
+position = Vector2(16, 16)
+launch_speed = Vector2(1, 0)
+metadata/_edit_lock_ = true
+
+[node name="SCZ_ConveyorBelt" parent="Entities" unique_id=736197859 instance=ExtResource("21_w7lrh")]
+position = Vector2(7568, 1616)
+
+[node name="SCZ_ConveyorBelt2" parent="Entities" unique_id=600302069 instance=ExtResource("21_w7lrh")]
+position = Vector2(7792, 1560)
+
+[node name="SCZ_Launcher" parent="Entities" unique_id=677261116 instance=ExtResource("22_enrbk")]
+position = Vector2(640, 1248)
+
+[node name="SCZ_Launcher2" parent="Entities" unique_id=921502693 instance=ExtResource("22_enrbk")]
+position = Vector2(2624, 1600)
+
+[node name="SCZ_Launcher3" parent="Entities" unique_id=498102923 instance=ExtResource("22_enrbk")]
+position = Vector2(6360, 1600)
+launch_height = 5.0
+
+[node name="SCZ_Launcher4" parent="Entities" unique_id=1391143820 instance=ExtResource("22_enrbk")]
+position = Vector2(7104, 1280)
+
+[node name="SCZ_Launcher5" parent="Entities" unique_id=1943931278 instance=ExtResource("22_enrbk")]
+position = Vector2(7208, 1600)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+launch_height = 5.0
+
+[node name="SCZ_Launcher6" parent="Entities" unique_id=1456501978 instance=ExtResource("22_enrbk")]
+position = Vector2(8000, 1088)
+
+[node name="SCZ_Turret_Platform" parent="Entities" unique_id=881559153 instance=ExtResource("25_r204o")]
+position = Vector2(5216, 1616)
+
+[node name="SCZ_Turret_Platform2" parent="Entities" unique_id=1867337419 instance=ExtResource("25_r204o")]
+position = Vector2(5344, 1560)
+starting_delay = 0.5
+
+[node name="SCZ_Turret_Platform3" parent="Entities" unique_id=1705906114 instance=ExtResource("25_r204o")]
+position = Vector2(5464, 1608)
+starting_delay = 1.0
+
+[node name="SCZ_Turret_Platform4" parent="Entities" unique_id=619385329 instance=ExtResource("25_r204o")]
+position = Vector2(5600, 1608)
+starting_delay = 1.5
+
+[node name="SCZ_Turret_Platform5" parent="Entities" unique_id=494279166 instance=ExtResource("25_r204o")]
+position = Vector2(5736, 1576)
+starting_delay = 2.0
+
+[node name="SCZ_Turret_Platform6" parent="Entities" unique_id=1871547637 instance=ExtResource("25_r204o")]
+position = Vector2(5856, 1576)
+starting_delay = 2.5
+
+[node name="SCZ_Turret_Platform7" parent="Entities" unique_id=1172698153 instance=ExtResource("25_r204o")]
+position = Vector2(5992, 1600)
+starting_delay = 3.0
+
+[node name="HangingVine" parent="Entities" unique_id=898979233 instance=ExtResource("26_5kxfg")]
+position = Vector2(8048, 1096)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine2" parent="Entities" unique_id=844211854 instance=ExtResource("26_5kxfg")]
+position = Vector2(7656, 1040)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine3" parent="Entities" unique_id=1498957544 instance=ExtResource("26_5kxfg")]
+position = Vector2(7872, 768)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine9" parent="Entities" unique_id=2000514400 instance=ExtResource("26_5kxfg")]
+position = Vector2(7040, 648)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine4" parent="Entities" unique_id=561793371 instance=ExtResource("26_5kxfg")]
+position = Vector2(7744, 640)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine5" parent="Entities" unique_id=1102887990 instance=ExtResource("26_5kxfg")]
+position = Vector2(8504, 848)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine6" parent="Entities" unique_id=1935610394 instance=ExtResource("26_5kxfg")]
+position = Vector2(8520, 1240)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine7" parent="Entities" unique_id=1885635634 instance=ExtResource("26_5kxfg")]
+position = Vector2(9184, 1248)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="HangingVine8" parent="Entities" unique_id=1464848091 instance=ExtResource("26_5kxfg")]
+position = Vector2(9344, 1120)
+length = 160
+distance = -128
+vine_texture = ExtResource("27_klp80")
+hook_texture = ExtResource("28_rypc6")
+
+[node name="Platforms" type="Node" parent="." unique_id=1926211673]
+
+[node name="SCZRisingPlatformsTest" parent="Platforms" unique_id=108880094 instance=ExtResource("24_sla3t")]
+position = Vector2(768, 1232)
+scroll_height = -196.0
+
+[node name="SCZRisingPlatformsTest2" parent="Platforms" unique_id=757720224 instance=ExtResource("24_sla3t")]
+position = Vector2(1624, 992)
+scroll_height = -452.0
+
+[node name="SCZRisingPlatformsTest3" parent="Platforms" unique_id=145542587 instance=ExtResource("24_sla3t")]
+position = Vector2(4184, 864)
+scroll_height = -196.0
+
+[node name="SCZRisingPlatformsTest4" parent="Platforms" unique_id=1779000690 instance=ExtResource("24_sla3t")]
+position = Vector2(4840, 1176)
+scroll_height = 204.0
+
+[node name="SCZRisingPlatformsTest5" parent="Platforms" unique_id=806673324 instance=ExtResource("24_sla3t")]
+position = Vector2(4968, 1304)
+scroll_height = 204.0
+
+[node name="SCZRisingPlatformsTest6" parent="Platforms" unique_id=88072573 instance=ExtResource("24_sla3t")]
+position = Vector2(5096, 1432)
+scroll_height = 204.0
+
+[node name="MultiRotatingPlatforms" parent="Platforms" unique_id=1418182564 instance=ExtResource("14_kegxj")]
+position = Vector2(4096, 1792)
+platformCount = 2
+chains = 5
+plat_img = ExtResource("15_n5rds")
+
+[node name="MultiRotatingPlatforms3" parent="Platforms" unique_id=510099867 instance=ExtResource("14_kegxj")]
+position = Vector2(8064, 1408)
+platformCount = 2
+chains = 3
+plat_img = ExtResource("15_n5rds")
+
+[node name="MultiRotatingPlatforms2" parent="Platforms" unique_id=1912657389 instance=ExtResource("14_kegxj")]
+position = Vector2(4488, 1432)
+chains = 6
+plat_img = ExtResource("15_n5rds")
+
+[node name="Hazards" type="Node" parent="." unique_id=478815295]
+
+[node name="SCZ_Propeller" parent="Hazards" unique_id=1686632739 instance=ExtResource("19_u6hen")]
+position = Vector2(1496, 704)
+damage = false
+
+[node name="SCZ_Propeller2" parent="Hazards" unique_id=1802529001 instance=ExtResource("19_u6hen")]
+position = Vector2(1496, 832)
+damage = false
+
+[node name="SCZ_Propeller3" parent="Hazards" unique_id=898291822 instance=ExtResource("19_u6hen")]
+position = Vector2(1496, 960)
+damage = false
+
+[node name="SCZ_Propeller4" parent="Hazards" unique_id=1339179557 instance=ExtResource("19_u6hen")]
+position = Vector2(4056, 704)
+
+[node name="SCZ_Propeller5" parent="Hazards" unique_id=522492108 instance=ExtResource("19_u6hen")]
+position = Vector2(4056, 832)
+
+[node name="SCZ_Propeller6" parent="Hazards" unique_id=2075815760 instance=ExtResource("19_u6hen")]
+position = Vector2(4696, 1216)
+
+[node name="SCZ_Propeller7" parent="Hazards" unique_id=1011058000 instance=ExtResource("19_u6hen")]
+position = Vector2(4696, 1344)
+
+[node name="SCZ_Propeller8" parent="Hazards" unique_id=813251978 instance=ExtResource("19_u6hen")]
+position = Vector2(4824, 1472)
+
+[node name="SCZ_Propeller9" parent="Hazards" unique_id=114259939 instance=ExtResource("19_u6hen")]
+position = Vector2(4952, 1600)
+
+[node name="SCZ_Propeller10" parent="Hazards" unique_id=1594220898 instance=ExtResource("19_u6hen")]
+position = Vector2(10584, 960)
+damage = false
+
+[node name="Environment" type="Node" parent="." unique_id=347227390]
+
+[node name="Items" type="Node" parent="." unique_id=469266472]
+
+[node name="Monitor" parent="Items" unique_id=1663869647 instance=ExtResource("17_m8uev")]
+position = Vector2(1648, 368)
+item = 13
+
+[node name="Monitor2" parent="Items" unique_id=1801960460 instance=ExtResource("17_m8uev")]
+position = Vector2(1680, 1008)
+item = 1
+
+[node name="Monitor3" parent="Items" unique_id=1963993584 instance=ExtResource("17_m8uev")]
+position = Vector2(1712, 1232)
+item = 1
+
+[node name="Monitor4" parent="Items" unique_id=466663491 instance=ExtResource("17_m8uev")]
+position = Vector2(1744, 1232)
+
+[node name="Monitor5" parent="Items" unique_id=2054791048 instance=ExtResource("17_m8uev")]
+position = Vector2(2832, 1456)
+item = 3
+
+[node name="Monitor6" parent="Items" unique_id=481687693 instance=ExtResource("17_m8uev")]
+position = Vector2(4912, 880)
+
+[node name="Monitor7" parent="Items" unique_id=483518212 instance=ExtResource("17_m8uev")]
+position = Vector2(4944, 880)
+
+[node name="Monitor8" parent="Items" unique_id=1946779845 instance=ExtResource("17_m8uev")]
+position = Vector2(4976, 880)
+item = 2
+
+[node name="Monitor9" parent="Items" unique_id=52141176 instance=ExtResource("17_m8uev")]
+position = Vector2(6176, 752)
+
+[node name="Monitor10" parent="Items" unique_id=305455494 instance=ExtResource("17_m8uev")]
+position = Vector2(6800, 584)
+
+[node name="Monitor11" parent="Items" unique_id=142272950 instance=ExtResource("17_m8uev")]
+position = Vector2(6832, 584)
+
+[node name="Monitor12" parent="Items" unique_id=52479258 instance=ExtResource("17_m8uev")]
+position = Vector2(6864, 584)
+
+[node name="Monitor13" parent="Items" unique_id=868775926 instance=ExtResource("17_m8uev")]
+position = Vector2(7328, 880)
+item = 10
+shieldAffinity = 1
+
+[node name="Monitor14" parent="Items" unique_id=1998071008 instance=ExtResource("17_m8uev")]
+position = Vector2(7392, 944)
+item = 2
+
+[node name="Monitor15" parent="Items" unique_id=1958384467 instance=ExtResource("17_m8uev")]
+position = Vector2(7568, 624)
+
+[node name="Monitor16" parent="Items" unique_id=973636415 instance=ExtResource("17_m8uev")]
+position = Vector2(7584, 1136)
+
+[node name="Monitor17" parent="Items" unique_id=1004937321 instance=ExtResource("17_m8uev")]
+position = Vector2(9088, 1472)
+item = 12
+
+[node name="Monitor18" parent="Items" unique_id=449821944 instance=ExtResource("17_m8uev")]
+position = Vector2(11592, 1209)
+item = 12
+
+[node name="LampPost4" parent="Items" unique_id=2126318380 instance=ExtResource("27_b6bgn")]
+position = Vector2(1024, 1224)
+
+[node name="LampPost" parent="Items" unique_id=2106026625 instance=ExtResource("27_b6bgn")]
+position = Vector2(2688, 872)
+
+[node name="LampPost2" parent="Items" unique_id=288940271 instance=ExtResource("27_b6bgn")]
+position = Vector2(6128, 1576)
+
+[node name="LampPost3" parent="Items" unique_id=70466604 instance=ExtResource("27_b6bgn")]
+position = Vector2(10304, 1064)
+
+[node name="SignpostNew" parent="Items" unique_id=2084193526 instance=ExtResource("16_6be3y")]
+position = Vector2(11648, 1536)
+
+[node name="Badniks" type="Node" parent="." unique_id=284651171]
+
+[node name="CluckerBase" parent="Badniks" unique_id=185151935 instance=ExtResource("14_x2o55")]
+position = Vector2(2528, 1600)
+
+[node name="CluckerBase2" parent="Badniks" unique_id=926178696 instance=ExtResource("14_x2o55")]
+position = Vector2(2968, 1344)
+
+[node name="CluckerBase3" parent="Badniks" unique_id=2131371335 instance=ExtResource("14_x2o55")]
+position = Vector2(3024, 1344)
+
+[node name="Rings" type="Node" parent="." unique_id=1181397963]
+
+[node name="Boss" type="Node" parent="." unique_id=1870832565]
+
+[node name="BossBoundrySetter" parent="Boss" unique_id=267494378 instance=ExtResource("37_rypc6")]
+position = Vector2(11136, 1200)
+bossPath = NodePath("../SkyLaser")
+keepTopLocked = false
+keepRightLocked = false
+keepBottomLocked = false
+
+[node name="SkyLaser" parent="Boss" unique_id=1540087462 instance=ExtResource("40_w0x7d")]
+position = Vector2(11136, 1120)
+script = ExtResource("39_y3u1e")
+
+[node name="Eggman_Mechless" parent="Boss" unique_id=350198519 node_paths=PackedStringArray("controller") instance=ExtResource("38_77ws5")]
+position = Vector2(11360, 1264)
+controller = NodePath("../SkyLaser")
+
+[node name="SCZ_Boss_Platform" parent="Boss" unique_id=939047003 instance=ExtResource("39_x62n7")]
+position = Vector2(11360, 1292)
+collision_mask = 0
+
+[node name="SCZ_Boss_Platform2" parent="Boss" unique_id=5103134 instance=ExtResource("39_x62n7")]
+position = Vector2(11136, 1248)
+collision_mask = 0
+
+[node name="Cutscene_Obj" type="Node" parent="." unique_id=1468157296]

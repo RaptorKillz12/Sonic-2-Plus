@@ -2,7 +2,7 @@ extends AnimatableBody2D
 
 @export var rest_time: float = 1.0
 @export var spring_power: float = 600.0
-@export var spring_sfx = preload("res://Data/SoundFX/Gimmicks/s2br_Spring.wav")
+@export var spring_sfx = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Spring.wav")
 
 var Projectile = preload("res://Data/Entities/Hazards/SteamPuff.tscn")
 

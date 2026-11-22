@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://clf2c6scei8yw" path="res://Data/Scripts/Enemies/grabber_main.gd" id="1_skpw2"]
 [ext_resource type="Script" uid="uid://b6yy4ug5xggoi" path="res://Data/Scripts/Enemies/grabber_enemy.gd" id="2_asaak"]
-[ext_resource type="Texture2D" uid="uid://c25m3clg6jo3k" path="res://Data/Sprites/Enemies/Grabber.png" id="2_p1a5s"]
+[ext_resource type="Texture2D" uid="uid://c25m3clg6jo3k" path="res://Data/Sprites/Global/Enemies/Grabber.png" id="2_p1a5s"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 16)

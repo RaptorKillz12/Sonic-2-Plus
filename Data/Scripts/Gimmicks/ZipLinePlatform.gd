@@ -8,8 +8,8 @@ var motionScale = 0.0
 var direction = 1
 var speed = Vector2.ZERO
 
-@onready var platformSprite = preload("res://Data/Sprites/Objects_Zone/HTZ_ZipPlatform.png")
-var soundEffect = preload("res://Data/SoundFX/Gimmicks/HTZ_Liftclick.wav")
+@onready var platformSprite = preload("res://Data/Sprites/HTZ/Objects_Zone/HTZ_ZipPlatform.png")
+var soundEffect = preload("res://Data/SoundFX/Stage/Gimmicks/HTZ_Liftclick.wav")
 
 #State machine
 enum STATES{IDLE,PATH,COLLAPSE,DEAD}

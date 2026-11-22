@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jgm0h2yu3hvb"]
 
 [ext_resource type="Script" uid="uid://bkqguxbsdhv73" path="res://Data/Scripts/Enemies/Redz.gd" id="1_acnt1"]
-[ext_resource type="Texture2D" uid="uid://c80rud4lvtufe" path="res://Data/Sprites/Enemies/Redz.png" id="2_ufqqm"]
+[ext_resource type="Texture2D" uid="uid://c80rud4lvtufe" path="res://Data/Sprites/Global/Enemies/Redz.png" id="2_ufqqm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ouar"]
 radius = 8.0

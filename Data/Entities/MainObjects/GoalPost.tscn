@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c2esop5orct10"]
 
-[ext_resource type="Texture2D" uid="uid://t0a50iu2sqj1" path="res://Data/Sprites/Items/goal_signs.png" id="1"]
-[ext_resource type="AudioStream" uid="uid://b5kihlutipybe" path="res://Data/SoundFX/Objects/s2br_Signpost.wav" id="3_0gcnk"]
+[ext_resource type="Texture2D" uid="uid://t0a50iu2sqj1" path="res://Data/Sprites/Global/Items/goal_signs.png" id="1"]
+[ext_resource type="AudioStream" uid="uid://b5kihlutipybe" path="res://Data/SoundFX/Stage/Objects/s2br_Signpost.wav" id="3_0gcnk"]
 [ext_resource type="Material" uid="uid://bveqi5m5ihsgj" path="res://Data/Shaders/PlayerPalette.tres" id="4"]
 
 [sub_resource type="Animation" id="Animation_crdai"]

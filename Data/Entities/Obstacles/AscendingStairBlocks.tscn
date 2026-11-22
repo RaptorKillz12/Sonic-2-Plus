@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn87d5dg6nv2c" path="res://Data/Scripts/Gimmicks/ascending_stair_blocks.gd" id="1_ad4qi"]
 [ext_resource type="Script" uid="uid://52rnrehskii1" path="res://Data/Scripts/Objects/PlatformChild.gd" id="2_0i0ie"]
-[ext_resource type="Texture2D" uid="uid://dxrqrsfax58dq" path="res://Data/Sprites/Obstacles/Blocks/CPZ Block.png" id="2_kxulp"]
+[ext_resource type="Texture2D" uid="uid://dxrqrsfax58dq" path="res://Data/Sprites/CPZ/Obstacles/Blocks/CPZ Block.png" id="2_kxulp"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 resource_local_to_scene = true

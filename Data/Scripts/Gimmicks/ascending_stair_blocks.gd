@@ -1,7 +1,7 @@
 @tool
 extends Node2D
 
-@export var platformSprite = preload("res://Data/Sprites/Obstacles/Blocks/CPZ Block.png")
+@export var platformSprite = preload("res://Data/Sprites/CPZ/Obstacles/Blocks/CPZ Block.png")
 @export_enum("Up","Down") var direction = 0
 
 # The taget position of each child stair block, in order, by phase, clockwise

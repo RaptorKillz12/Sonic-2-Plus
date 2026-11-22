@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://f2yjfoe6b1n7"]
 
 [ext_resource type="Script" uid="uid://ie88kq1e6ip3" path="res://Data/Scripts/Enemies/aquis.gd" id="1_3kaqv"]
-[ext_resource type="Texture2D" uid="uid://d0l30f6ga0acx" path="res://Data/Sprites/Enemies/Aquis.png" id="2_nbtgr"]
+[ext_resource type="Texture2D" uid="uid://d0l30f6ga0acx" path="res://Data/Sprites/Global/Enemies/Aquis.png" id="2_nbtgr"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 48)

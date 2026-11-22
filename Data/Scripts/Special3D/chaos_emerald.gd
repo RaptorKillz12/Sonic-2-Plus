@@ -4,7 +4,7 @@ extends Node3D
 ## Blue is unused.
 @export_enum(
 "Cyan","Purple","Red","Magenta","Yellow","Green","Silver","Blue") var color: int = 0
-@export var jingleTheme: AudioStreamWAV = preload("res://Data/SoundFX/Misc/Emerald.wav")
+@export var jingleTheme: AudioStreamWAV = preload("res://Data/SoundFX/Stage/Misc/Emerald.wav")
 
 var player = null
 var collected: bool = false

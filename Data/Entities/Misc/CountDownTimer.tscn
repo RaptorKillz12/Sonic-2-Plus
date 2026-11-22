@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://c12gx50tlqv8b"]
 
-[ext_resource type="Texture2D" uid="uid://1njf2n5mf43y" path="res://Data/Sprites/Misc/CountDown.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Items/air_bubbles.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://1njf2n5mf43y" path="res://Data/Sprites/Global/Misc/CountDown.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://ceangqioyo4uf" path="res://Data/Sprites/Global/Items/air_bubbles.png" id="2"]
 [ext_resource type="Script" uid="uid://dn6j0pnl83hu6" path="res://Data/Scripts/Misc/BubbleCountDown.gd" id="3"]
 
 [sub_resource type="AtlasTexture" id="5"]

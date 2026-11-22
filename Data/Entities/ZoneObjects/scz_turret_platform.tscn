@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4vm4ij16saxo"]
 
 [ext_resource type="Script" uid="uid://c6ebmbujq2omg" path="res://Data/Scripts/Gimmicks/scz_turret_platform.gd" id="1_46haj"]
-[ext_resource type="Texture2D" uid="uid://33xthso1be7i" path="res://Data/Sprites/Objects_Zone/SCZ_Turret_Platform.png" id="1_f1c3o"]
+[ext_resource type="Texture2D" uid="uid://33xthso1be7i" path="res://Data/Sprites/SCZ/Objects_Zone/SCZ_Turret_Platform.png" id="1_f1c3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46haj"]
 size = Vector2(64, 24)

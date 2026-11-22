@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cdr25gnarvsy8"]
 
 [ext_resource type="Script" uid="uid://c6elkb3o5xbgm" path="res://Data/Scripts/Objects/scz_h_laser.gd" id="1_w3lqw"]
-[ext_resource type="Texture2D" uid="uid://ygnuwt8t4s6n" path="res://Data/Sprites/Hazards/SCZ_HLaserBeam.png" id="2_67rpk"]
+[ext_resource type="Texture2D" uid="uid://ygnuwt8t4s6n" path="res://Data/Sprites/SCZ/Hazards/SCZ_HLaserBeam.png" id="2_67rpk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgrft"]
 size = Vector2(144, 16)

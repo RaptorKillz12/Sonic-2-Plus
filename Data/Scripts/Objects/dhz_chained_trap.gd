@@ -2,7 +2,7 @@
 extends Node2D
 
 @export var chain_links: int = 8
-@export var sfx: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Spikes.wav")
+@export var sfx: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_Spikes.wav")
 @export_enum("Clockwise","Counter-Clockwise") var fall_direction = 0
 
 var active:bool = false

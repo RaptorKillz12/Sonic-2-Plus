@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cii6vdv1nbk6k"]
 
 [ext_resource type="Script" uid="uid://n81dm8emn3g4" path="res://Data/Scripts/Enemies/slicer.gd" id="1_y81fk"]
-[ext_resource type="Texture2D" uid="uid://dk36bgkg6tusy" path="res://Data/Sprites/Enemies/Slicer.png" id="2_y81fk"]
-[ext_resource type="Texture2D" uid="uid://denlmlcgn4kpt" path="res://Data/Sprites/Enemies/Slicer_color.png" id="3_v7f3y"]
-[ext_resource type="Texture2D" uid="uid://djb0lx62manw7" path="res://Data/Sprites/Enemies/Slicer_Claws.png" id="4_x68up"]
+[ext_resource type="Texture2D" uid="uid://dk36bgkg6tusy" path="res://Data/Sprites/Global/Enemies/Slicer.png" id="2_y81fk"]
+[ext_resource type="Texture2D" uid="uid://denlmlcgn4kpt" path="res://Data/Sprites/Global/Enemies/Slicer_color.png" id="3_v7f3y"]
+[ext_resource type="Texture2D" uid="uid://djb0lx62manw7" path="res://Data/Sprites/Global/Enemies/Slicer_Claws.png" id="4_x68up"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 32)

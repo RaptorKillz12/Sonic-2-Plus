@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=3 uid="uid://c1n8wnllp8pk2"]
 
-[ext_resource type="Texture2D" uid="uid://ud30wfcj20xf" path="res://Data/Sprites/Items/GiantRing.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ud30wfcj20xf" path="res://Data/Sprites/Global/Items/GiantRing.png" id="2"]
 [ext_resource type="Script" uid="uid://ct1k4ppmyf27h" path="res://Data/Scripts/Objects/SpecialStageRing.gd" id="3"]
-[ext_resource type="AudioStream" uid="uid://cb2g1rrn7b6cc" path="res://Data/SoundFX/Objects/SpecialRing.wav" id="4"]
-[ext_resource type="AudioStream" uid="uid://be1vhgdoscd0c" path="res://Data/SoundFX/Misc/s2br_SpecialWarp.wav" id="4_tpig5"]
+[ext_resource type="AudioStream" uid="uid://cb2g1rrn7b6cc" path="res://Data/SoundFX/Stage/Objects/SpecialRing.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://be1vhgdoscd0c" path="res://Data/SoundFX/Stage/Misc/s2br_SpecialWarp.wav" id="4_tpig5"]
 
 [sub_resource type="AtlasTexture" id="2"]
 atlas = ExtResource("2")

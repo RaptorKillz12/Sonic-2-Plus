@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dggjdwwkl527b"]
 
 [ext_resource type="Script" uid="uid://ckwmapye0nveq" path="res://Data/Scripts/Objects/Ring.gd" id="1"]
-[ext_resource type="SpriteFrames" uid="uid://bhtsckwsr2bjs" path="res://Data/Sprites/Items/RingSprite.tres" id="2_lyx02"]
+[ext_resource type="SpriteFrames" uid="uid://bhtsckwsr2bjs" path="res://Data/Sprites/Global/Items/RingSprite.tres" id="2_lyx02"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)

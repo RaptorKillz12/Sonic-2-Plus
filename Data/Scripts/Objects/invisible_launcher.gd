@@ -1,7 +1,7 @@
 extends Node2D
 
 var players: Array[Player2D] = []
-var sfx = preload("res://Data/SoundFX/Player/s2br_Roll.wav")
+var sfx = preload("res://Data/SoundFX/Stage/Player/s2br_Roll.wav")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

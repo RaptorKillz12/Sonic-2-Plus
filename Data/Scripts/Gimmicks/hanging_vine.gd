@@ -10,8 +10,8 @@ extends Node2D
 @export var targetNode: Node2D = null
 
 @export_group("Appearance")
-@export var vine_texture: Texture2D = preload("res://Data/Sprites/Gimmicks/DHZ_VineLength.png")
-@export var hook_texture: Texture2D = preload("res://Data/Sprites/Gimmicks/DHZ_VineHook.png")
+@export var vine_texture: Texture2D = preload("res://Data/Sprites/Global/Gimmicks/DHZ_VineLength.png")
+@export var hook_texture: Texture2D = preload("res://Data/Sprites/Global/Gimmicks/DHZ_VineHook.png")
 
 var currentLength: float = 0
 

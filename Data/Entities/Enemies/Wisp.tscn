@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxflei1nuvbmq"]
 
 [ext_resource type="Script" uid="uid://bgujlcu8w7l1g" path="res://Data/Scripts/Enemies/wisp.gd" id="1_4u37n"]
-[ext_resource type="Texture2D" uid="uid://dbhadxblkwq2" path="res://Data/Sprites/Enemies/Whisp.png" id="2_xv2le"]
+[ext_resource type="Texture2D" uid="uid://dbhadxblkwq2" path="res://Data/Sprites/Global/Enemies/Whisp.png" id="2_xv2le"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)

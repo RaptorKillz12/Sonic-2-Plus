@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ofg8xes04l1m"]
 
-[ext_resource type="Texture2D" uid="uid://cbwebn52lec80" path="res://Data/Sprites/Misc/score_popup.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cbwebn52lec80" path="res://Data/Sprites/Global/Misc/score_popup.png" id="1"]
 [ext_resource type="Script" uid="uid://dcjgec20jd8ju" path="res://Data/Scripts/Misc/Score.gd" id="2"]
 
 [node name="Score" type="Node2D" unique_id=740806318]

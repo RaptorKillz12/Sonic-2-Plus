@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bupr06iwc8aex" path="res://Data/Scripts/Misc/pause_menu.gd" id="1_0jcpr"]
 [ext_resource type="Texture2D" uid="uid://cx6e62r1wdwpy" path="res://Data/Game/Menu/Pause/assets.png" id="3_0jcpr"]
-[ext_resource type="PackedScene" uid="uid://b1ucupog3a1yg" path="res://Data/Stages/Presentation/assets/options_menu_button.tscn" id="4_0jcpr"]
-[ext_resource type="Texture2D" uid="uid://dt51ojxk80oqh" path="res://Data/Sprites/Items/Rings/Ring.tres" id="5_abihq"]
+[ext_resource type="PackedScene" uid="uid://b1ucupog3a1yg" path="res://Data/Stages/LSelect/options_menu_button.tscn" id="4_0jcpr"]
+[ext_resource type="Texture2D" uid="uid://dt51ojxk80oqh" path="res://Data/Sprites/Global/Items/Rings/Ring.tres" id="5_abihq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abihq"]
 atlas = ExtResource("3_0jcpr")

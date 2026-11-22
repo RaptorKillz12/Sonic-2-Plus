@@ -2,7 +2,7 @@ extends EnemyBase
 
 ## Number of projectiles this Aquis can fire before being empty.
 @export var bulletCount: int = 3
-@export var bulletSound = preload("res://Data/SoundFX/Objects/s2br_Projectile.wav")
+@export var bulletSound = preload("res://Data/SoundFX/Stage/Objects/s2br_Projectile.wav")
 
 @onready var bulletPoint = %BulletPoint
 @onready var animator = $AnimationPlayer

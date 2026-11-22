@@ -7,7 +7,7 @@ extends Node2D
 @onready var hoverY = global_position.y
 
 # art
-@export var waterSurface = [preload("res://Data/Sprites/Gimmicks/WaterSurface1.png"),preload("res://Data/Sprites/Gimmicks/WaterSurface2.png")]
+@export var waterSurface = [preload("res://Data/Sprites/Global/Gimmicks/WaterSurface1.png"),preload("res://Data/Sprites/Global/Gimmicks/WaterSurface2.png")]
 
 var frame = 0
 @export var animSpeed = 8

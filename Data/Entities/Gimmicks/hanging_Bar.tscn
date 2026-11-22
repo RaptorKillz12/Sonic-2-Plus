@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfhj1mg80i6pr"]
 
 [ext_resource type="Script" uid="uid://dcsg6nkembge4" path="res://Data/Scripts/Gimmicks/hanging_bar.gd" id="1_hyvnr"]
-[ext_resource type="Texture2D" uid="uid://kra41fcn5qvb" path="res://Data/Sprites/Gimmicks/DHZ_HangSwitch.png" id="2_nxsen"]
+[ext_resource type="Texture2D" uid="uid://kra41fcn5qvb" path="res://Data/Sprites/Global/Gimmicks/DHZ_HangSwitch.png" id="2_nxsen"]
 [ext_resource type="PackedScene" uid="uid://b2qs2ji487f1t" path="res://Data/Entities/Gimmicks/Hanger.tscn" id="4_ej7dn"]
 
 [node name="HangingBar" type="Node2D"]

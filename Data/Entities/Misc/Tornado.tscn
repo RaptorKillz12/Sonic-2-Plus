@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://oce7phvjxdbv"]
 
 [ext_resource type="Script" uid="uid://bbk1lqyklbxgi" path="res://Data/Scripts/Misc/tornado.gd" id="1_gohbb"]
-[ext_resource type="Texture2D" uid="uid://efvmmjbj4otb" path="res://Data/Sprites/Misc/Tornado_Main.png" id="2_8cebi"]
+[ext_resource type="Texture2D" uid="uid://efvmmjbj4otb" path="res://Data/Sprites/Global/Misc/Tornado_Main.png" id="2_8cebi"]
 [ext_resource type="Texture2D" uid="uid://bjf2dsnw7ea5g" path="res://Data/Sprites/Players/Sonic.png" id="2_bfbtt"]
 [ext_resource type="Texture2D" uid="uid://c05fsbnx0p7xf" path="res://Data/Sprites/Players/Tails.png" id="2_jit23"]
-[ext_resource type="Texture2D" uid="uid://jea1meugvs4b" path="res://Data/Sprites/Misc/Tornado_Blade.png" id="3_va0b2"]
-[ext_resource type="Texture2D" uid="uid://lguk2n18twhg" path="res://Data/Sprites/Misc/Tornado_Jet.png" id="5_pk086"]
-[ext_resource type="Texture2D" uid="uid://cl12sj2lb8bka" path="res://Data/Sprites/Misc/Tornado_Fire.png" id="6_p5rm2"]
-[ext_resource type="Texture2D" uid="uid://d2xlm7qxec0or" path="res://Data/Sprites/Misc/Tornado_Sonic.png" id="7_pkbdi"]
+[ext_resource type="Texture2D" uid="uid://jea1meugvs4b" path="res://Data/Sprites/Global/Misc/Tornado_Blade.png" id="3_va0b2"]
+[ext_resource type="Texture2D" uid="uid://lguk2n18twhg" path="res://Data/Sprites/Global/Misc/Tornado_Jet.png" id="5_pk086"]
+[ext_resource type="Texture2D" uid="uid://cl12sj2lb8bka" path="res://Data/Sprites/Global/Misc/Tornado_Fire.png" id="6_p5rm2"]
+[ext_resource type="Texture2D" uid="uid://d2xlm7qxec0or" path="res://Data/Sprites/Global/Misc/Tornado_Sonic.png" id="7_pkbdi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7kll0"]
 atlas = ExtResource("3_va0b2")

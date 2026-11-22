@@ -1,6 +1,6 @@
 extends BossBase
 
-@export var entrySound: AudioStream = preload("res://Data/SoundFX/Boss/s2br_helicopter.wav")
+@export var entrySound: AudioStream = preload("res://Data/SoundFX/Stage/Boss/s2br_helicopter.wav")
 
 # you can use these to control behaviour
 var phase: int = 0

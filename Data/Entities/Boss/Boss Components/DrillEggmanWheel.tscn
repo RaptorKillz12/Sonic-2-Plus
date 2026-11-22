@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d3oh77l2rriqf"]
 
-[ext_resource type="Texture2D" uid="uid://wsytdhn6ttft" path="res://Data/Sprites/Boss/Boss_DrillEggman_Parts.png" id="1_4d1uu"]
+[ext_resource type="Texture2D" uid="uid://wsytdhn6ttft" path="res://Data/Sprites/Global/Boss/Boss_DrillEggman_Parts.png" id="1_4d1uu"]
 [ext_resource type="Script" uid="uid://bhk0xfvq7h4em" path="res://Data/Scripts/Boss/DrillEggmanWheel.gd" id="1_btldt"]
-[ext_resource type="Texture2D" uid="uid://2lnekaja621m" path="res://Data/Sprites/Boss/Boss_DrillEggman_Flash.png" id="3_csi02"]
+[ext_resource type="Texture2D" uid="uid://2lnekaja621m" path="res://Data/Sprites/Global/Boss/Boss_DrillEggman_Flash.png" id="3_csi02"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkuw2"]
 size = Vector2(32, 32)

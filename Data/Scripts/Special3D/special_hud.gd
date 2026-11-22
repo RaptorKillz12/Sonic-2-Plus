@@ -2,13 +2,13 @@ extends CanvasLayer
 
 @onready var message = $Center/TextMessage
 @onready var resultSound = $ResultSound
-@export var success_sfx: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Checkpoint.wav")
-@export var fail_sfx: AudioStream = preload("res://Data/SoundFX/Misc/s2br_Error.wav")
+@export var success_sfx: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_Checkpoint.wav")
+@export var fail_sfx: AudioStream = preload("res://Data/SoundFX/Stage/Misc/s2br_Error.wav")
 
 enum MESSAGES{NULL,GET_RINGS,RINGS_TO_GO,NOT_ENOUGH_RINGS,GOOD,COURSE_OUT}
 var message_state = MESSAGES.GET_RINGS
 
-var resultsScreen: String = "res://Data/Stages/SpecialStage/SpecialStageResult.tscn"
+var resultsScreen: String = "res://Data/Stages/Special/SpecialStageResult.tscn"
 var messageTime = 3.0
 var message_text: String = ""
 var current_round: int = 0

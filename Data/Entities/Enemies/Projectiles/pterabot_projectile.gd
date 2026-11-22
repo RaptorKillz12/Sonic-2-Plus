@@ -1,6 +1,6 @@
 extends EnemyProjectileBase
 
-var explosionSFX = preload("res://Data/SoundFX/Boss/s2br_BossExplosion.wav")
+var explosionSFX = preload("res://Data/SoundFX/Stage/Boss/s2br_BossExplosion.wav")
 var particle = preload("res://Data/Entities/Misc/GenericParticle.tscn")
 
 @export var gravity = false

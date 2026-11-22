@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cyun8u3qemt5i"]
 
-[ext_resource type="Texture2D" uid="uid://bxc21kbjhx0g3" path="res://Data/Sprites/Gimmicks/Screw.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://5x1kqbrlpbt8" path="res://Data/Sprites/Gimmicks/ScrewPipe.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxc21kbjhx0g3" path="res://Data/Sprites/Global/Gimmicks/Screw.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://5x1kqbrlpbt8" path="res://Data/Sprites/Global/Gimmicks/ScrewPipe.png" id="2"]
 [ext_resource type="Script" uid="uid://btpyc0ah1fwhe" path="res://Data/Scripts/Gimmicks/ScrewPlatform.gd" id="3"]
 
 [sub_resource type="RectangleShape2D" id="1"]

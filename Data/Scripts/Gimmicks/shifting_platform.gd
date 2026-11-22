@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var sprite: Texture2D = preload("res://Data/Sprites/Gimmicks/SCZ_ShiftingPlatform1.png")
+@export var sprite: Texture2D = preload("res://Data/Sprites/SCZ/Gimmicks/SCZ_ShiftingPlatform1.png")
 @export var tilt_time: float = 1.0
 
 @onready var platform: AnimatableBody2D = $ShiftingPlatformChild

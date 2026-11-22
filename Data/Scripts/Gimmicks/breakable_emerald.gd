@@ -3,7 +3,7 @@ extends StaticBody2D
 
 var pieces: Vector2 = Vector2(2,2)
 var Piece: PackedScene = preload("res://Data/Entities/Misc/BlockPiece.tscn")
-@export var sound: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+@export var sound: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 @export var score: bool = true
 
 func physics_collision(body: Player2D, hitVector: Vector2) -> bool:

@@ -4,9 +4,9 @@ extends Area2D
 # Author: Sharb (this is a modified version of the Vertical Bar by DimensionWarped)
 
 # Sound to play when the bar is grabbed
-@export var grabSound: AudioStream = preload("res://Data/SoundFX/Player/s2br_Grab.wav")
+@export var grabSound: AudioStream = preload("res://Data/SoundFX/Stage/Player/s2br_Grab.wav")
 # Sound to play when bar broken
-@export var collapseSFX: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+@export var collapseSFX: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 
 @export var break_parts: Array[CharacterBody2D] = []
 

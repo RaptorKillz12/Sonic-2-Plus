@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://boorjic58wlh7"]
 
 [ext_resource type="Script" uid="uid://cklhd54dh62hv" path="res://Data/Scripts/Enemies/pterabot.gd" id="1_1srhs"]
-[ext_resource type="Texture2D" uid="uid://663c42mndvor" path="res://Data/Sprites/Enemies/Pterabot.png" id="2_v74gc"]
-[ext_resource type="Texture2D" uid="uid://clihuhs0po6p0" path="res://Data/Sprites/Enemies/BuzzerFlame.png" id="3_oelgs"]
+[ext_resource type="Texture2D" uid="uid://663c42mndvor" path="res://Data/Sprites/Global/Enemies/Pterabot.png" id="2_v74gc"]
+[ext_resource type="Texture2D" uid="uid://clihuhs0po6p0" path="res://Data/Sprites/Global/Enemies/BuzzerFlame.png" id="3_oelgs"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(48, 16)

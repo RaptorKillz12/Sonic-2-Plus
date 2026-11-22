@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://xbidybme3tde"]
 
 [ext_resource type="Script" uid="uid://bj506m46s33xo" path="res://Data/Scripts/Enemies/spiny.gd" id="1_d667u"]
-[ext_resource type="Texture2D" uid="uid://blms2khcx3knr" path="res://Data/Sprites/Enemies/Spiny_Floor.png" id="2_thbk4"]
+[ext_resource type="Texture2D" uid="uid://blms2khcx3knr" path="res://Data/Sprites/Global/Enemies/Spiny_Floor.png" id="2_thbk4"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(28, 16)

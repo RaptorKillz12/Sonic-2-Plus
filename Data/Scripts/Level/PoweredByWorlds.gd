@@ -1,7 +1,7 @@
 extends Node2D
 
 # next scene
-@export var nextScene: String = "res://Data/Stages/Presentation/Title.tscn"
+@export var nextScene: String = "res://Data/Stages/Title/Title.tscn"
 # already changed is used to check that the powered by isn't already being skipped
 var ending_scene: bool = false
 var globalTime: float = 0.0

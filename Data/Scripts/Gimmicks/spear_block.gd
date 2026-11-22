@@ -3,7 +3,7 @@ extends AnimatableBody2D
 @export var switch_time: float = 1.0
 @export_enum("Counter-Clockwise","Clockwise") var direction = 1
 @export_enum("up","right","down","left") var starting_dir = 0
-@export var sfx = preload("res://Data/SoundFX/Objects/s2br_Spikes.wav")
+@export var sfx = preload("res://Data/SoundFX/Stage/Objects/s2br_Spikes.wav")
 
 @onready var spear: Area2D = $Spear
 

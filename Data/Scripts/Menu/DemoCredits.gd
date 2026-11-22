@@ -3,7 +3,7 @@ extends Node
 ## Time to wait before moving on automaticaly, or 0 to disable the timer.
 @export var time: float = 0.0 
 @export var music: AudioStream = preload("res://Data/Music/Results.ogg")
-@export var returnScene: String = "res://Data/Stages/Presentation/Title.tscn"
+@export var returnScene: String = "res://Data/Stages/Title/Title.tscn"
 
 var endScene: bool = false
 ## The created Timer Node, if applicable.

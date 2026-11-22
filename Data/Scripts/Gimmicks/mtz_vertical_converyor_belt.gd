@@ -2,7 +2,7 @@
 extends Node2D
 
 ## Texture for the platform to inherit at runtime. The size  of the collision box is also inherited from here.
-@export var texture: Texture2D = preload("res://Data/Sprites/Gimmicks/MTZ_CupPlatform.png")
+@export var texture: Texture2D = preload("res://Data/Sprites/MPZ/Gimmicks/MTZ_CupPlatform.png")
 ## Number of Child Platforms on the conveyor Belt.
 @export var platform_count: int = 8
 ## Total Movement Speed

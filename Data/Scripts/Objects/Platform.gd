@@ -1,7 +1,7 @@
 @tool
 extends Node2D
 
-@export var platform_sprite: Texture2D = preload("res://Data/Sprites/Tiles/EHZ_HTZ/EHZ_Platform_Small.png")
+@export var platform_sprite: Texture2D = preload("res://Data/Sprites/EHZ/Tiles/EHZ_HTZ/EHZ_Platform_Small.png")
 ## This is actually where the platform *starts*
 @export var endPosition: Vector2 = Vector2(256,0)
 ## How fast this platform should move.

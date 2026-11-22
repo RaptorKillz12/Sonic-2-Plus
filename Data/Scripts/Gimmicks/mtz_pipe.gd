@@ -5,9 +5,9 @@ extends Area2D
 ## Speed the player should move horizontally when exiting the tube.
 @export var release_velocity: float = 0
 ## Sound to play when charging.
-@export var charge_sfx: AudioStream = preload("res://Data/SoundFX/Player/s2br_Roll.wav")
+@export var charge_sfx: AudioStream = preload("res://Data/SoundFX/Stage/Player/s2br_Roll.wav")
 ## Sound to play when the player is launched.
-@export var release_sfx: AudioStream = preload("res://Data/SoundFX/Player/s2br_DashRelease.wav")
+@export var release_sfx: AudioStream = preload("res://Data/SoundFX/Stage/Player/s2br_DashRelease.wav")
 
 @onready var path: Line2D = null
 @onready var animator: AnimationPlayer = $AnimationPlayer

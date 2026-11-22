@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var multiplayerOnly: bool = false
-var two_player_results: String = "res://Data/Stages/Presentation/TwoPlayerResults.tscn"
+var two_player_results: String = "res://Data/Stages/LSelect/TwoPlayerResults.tscn"
 var camera: Camera2D = null
 var player: Player2D = null
 var winner: Global.CHARACTERS = Global.CHARACTERS.NONE

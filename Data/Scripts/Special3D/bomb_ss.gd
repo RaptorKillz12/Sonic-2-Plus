@@ -4,7 +4,7 @@ extends Node3D
 var player
 
 var Particle = preload("res://Data/Entitites3D/AnimatedParticle3D.tscn")
-var sfx = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+var sfx = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

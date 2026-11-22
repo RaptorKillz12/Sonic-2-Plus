@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bwr3g232p2psd"]
 
 [ext_resource type="Script" uid="uid://c8x7yqihiij8g" path="res://Data/Scripts/Boss/silver_sonic.gd" id="1_muoi7"]
-[ext_resource type="Texture2D" uid="uid://bkgdgsmqi1lh5" path="res://Data/Sprites/Boss/SilverSonic.png" id="2_muoi7"]
-[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Boss/s2br_BossExplosion.wav" id="4_d8vsg"]
-[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Boss/s2br_BossHit.wav" id="5_tdqkg"]
+[ext_resource type="Texture2D" uid="uid://bkgdgsmqi1lh5" path="res://Data/Sprites/Global/Boss/SilverSonic.png" id="2_muoi7"]
+[ext_resource type="AudioStream" uid="uid://u14e5d6axr7x" path="res://Data/SoundFX/Stage/Boss/s2br_BossExplosion.wav" id="4_d8vsg"]
+[ext_resource type="AudioStream" uid="uid://bq25mlko4saoj" path="res://Data/SoundFX/Stage/Boss/s2br_BossHit.wav" id="5_tdqkg"]
 
 [sub_resource type="RectangleShape2D" id="5"]
 size = Vector2(32, 48)

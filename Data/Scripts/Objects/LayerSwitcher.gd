@@ -1,7 +1,7 @@
 @tool
 extends Area2D
 
-var texture: Texture2D = load("res://Data/Sprites/EditorUI/layer_switchers.png")
+var texture: Texture2D = load("res://Data/Sprites/Global/EditorUI/layer_switchers.png")
 # layer settings, should be self explanatory
 @export var size: Vector2i = Vector2(1,3)
 @export_enum("Horizontal", "Vertical") var orientation: int = 0

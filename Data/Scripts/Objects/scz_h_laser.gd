@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 64
-@export var sfx: AudioStream = preload("res://Data/SoundFX/Objects/s2br_BigLaser.wav")
+@export var sfx: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_BigLaser.wav")
 
 func _ready() -> void:
 	velocity.x = -speed

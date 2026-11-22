@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cma2mtbqjiqdc"]
 
-[ext_resource type="Texture2D" uid="uid://cksk8csclwr3p" path="res://Data/Sprites/Gimmicks/HangingBar.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cksk8csclwr3p" path="res://Data/Sprites/Global/Gimmicks/HangingBar.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b2qs2ji487f1t" path="res://Data/Entities/Gimmicks/Hanger.tscn" id="2"]
 
 [node name="Hanger" type="Node2D"]

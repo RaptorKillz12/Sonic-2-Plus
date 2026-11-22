@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fn82q8rojkjl"]
 
-[ext_resource type="Texture2D" uid="uid://curyronsmebvd" path="res://Data/Sprites/Gimmicks/Corkscrew.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://curyronsmebvd" path="res://Data/Sprites/Global/Gimmicks/Corkscrew.png" id="1"]
 [ext_resource type="Script" uid="uid://dd58lbtfwemto" path="res://Data/Scripts/Gimmicks/CorkscrewLoop.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]

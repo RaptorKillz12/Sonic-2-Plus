@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0nxy44wbs4x5"]
 
 [ext_resource type="Script" uid="uid://bkhd21djdcvhg" path="res://Data/Scripts/Player/ElecParticle.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bmx5ij0fowooi" path="res://Data/Sprites/Items/shield_lightning_spark.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bmx5ij0fowooi" path="res://Data/Sprites/Global/Items/shield_lightning_spark.png" id="2"]
 
 [sub_resource type="AtlasTexture" id="1"]
 atlas = ExtResource("2")

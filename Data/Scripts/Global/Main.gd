@@ -42,7 +42,7 @@ func _input(event: InputEvent)-> void:
 # reset game function
 func reset_game()-> void:
 	$GUI/Pause.visible = false
-	await change_scene("res://Data/Stages/Presentation/Title.tscn","FadeOut",1.0,true)
+	await change_scene("res://Data/Stages/Title/Title.tscn","FadeOut",1.0,true)
 
 ## New Scene Change function.Args: Scene path, fade animation, time of transition, clear data
 func change_scene(scene: String, fade_anim: String = "FadeOut", length: float = 1.0, resetData:bool = true)-> void:

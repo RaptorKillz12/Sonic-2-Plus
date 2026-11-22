@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b2v0ktdlj41ql"]
 
 [ext_resource type="Shader" path="res://Data/Shaders/PaletteSwapRow_Timerbased.gdshader" id="1_gtjai"]
-[ext_resource type="Texture2D" uid="uid://c2fkhnfyn7o07" path="res://Data/Sprites/Palettes/CNZ_Palcycle.png" id="2_dfuef"]
+[ext_resource type="Texture2D" uid="uid://c2fkhnfyn7o07" path="res://Data/Sprites/CNZ/Palettes/CNZ_Palcycle.png" id="2_dfuef"]
 
 [resource]
 shader = ExtResource("1_gtjai")

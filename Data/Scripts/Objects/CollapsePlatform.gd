@@ -18,7 +18,7 @@ var players: Array[Player2D] = []
 var active: bool = false
 
 # the collapsing sound
-@export var collapse_sound: AudioStream = preload("res://Data/SoundFX/Gimmicks/s2br_Collapse.wav")
+@export var collapse_sound: AudioStream = preload("res://Data/SoundFX/Stage/Gimmicks/s2br_Collapse.wav")
 @export var respawn: bool = true #If the object should respawn on a timer.
 var respawnCoords: Vector2 = position
 

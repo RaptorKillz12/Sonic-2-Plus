@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://boeily2dlgq8c"]
 
 [ext_resource type="Script" uid="uid://ksxppujnrtyf" path="res://Data/Scripts/Gimmicks/tube_spring.gd" id="1_26exi"]
-[ext_resource type="Texture2D" uid="uid://dpxdl4s4nv383" path="res://Data/Sprites/Gimmicks/CPZTubeCap.png" id="1_m7i4n"]
+[ext_resource type="Texture2D" uid="uid://dpxdl4s4nv383" path="res://Data/Sprites/CPZ/Gimmicks/CPZTubeCap.png" id="1_m7i4n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbug7"]
 size = Vector2(32, 16)

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var drillSound: AudioStream = preload("res://Data/SoundFX/Boss/s2br_Motor.wav")
+@export var drillSound: AudioStream = preload("res://Data/SoundFX/Stage/Boss/s2br_Motor.wav")
 
 const DRIVE_SPEED = 120 #2 ppf, 60 FPS = 120
 

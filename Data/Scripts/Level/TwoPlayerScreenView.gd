@@ -8,20 +8,20 @@ extends Control
 
 # Parallax Layers
 var parallaxBackgrounds: Array[String] = [
-	"res://Data/Stages/Backgrounds/00-EmeraldHill.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/01-HiddenPalace.tscn",
-	"res://Data/Stages/Backgrounds/02-HillTop.tscn",
-	"res://Data/Stages/Backgrounds/03-ChemicalPlant.tscn",
-	"res://Data/Stages/Backgrounds/04-OilOcean.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/05-NeoGreenHill.tscn",
-	"res://Data/Stages/Backgrounds/06-Metropolis.tscn",
-	"res://Data/Stages/Backgrounds/07-DustHill.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/08-WoodGadget.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/09-CasinoNight.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/10-JewelGrotto.tscn",
-	"res://Data/Stages/Backgrounds/11-WinterHill.tscn",
-	"res://Data/Stages/Backgrounds/12-SandShower.tscn",	# Two-Player zone
-	"res://Data/Stages/Backgrounds/13-TropicalJungle.tscn"
+	"res://Data/Stages/Zone01/Backgrounds/00-EmeraldHill.tscn",	# Two-Player zone
+	"res://Data/Stages/Zone12/Backgrounds/01-HiddenPalace.tscn",
+	"res://Data/Stages/Zone05/Backgrounds/02-HillTop.tscn",
+	"res://Data/Stages/Zone02/Backgrounds/03-ChemicalPlant.tscn",
+	"res://Data/Stages/Zone07/Backgrounds/04-OilOcean.tscn",	# Two-Player zone
+	"res://Data/Stages/ZoneM/Backgrounds/05-NeoGreenHill.tscn",
+	"res://Data/Stages/Zone08/Backgrounds/06-Metropolis.tscn",
+	"res://Data/Stages/ZoneM/Backgrounds/07-DustHill.tscn",	# Two-Player zone
+	"res://Data/Stages/ZoneM/Backgrounds/08-WoodGadget.tscn",	# Two-Player zone
+	"res://Data/Stages/Zone04/Backgrounds/09-CasinoNight.tscn",	# Two-Player zone
+	"res://Data/Stages/ZoneM/Backgrounds/10-JewelGrotto.tscn",
+	"res://Data/Stages/ZoneM/Backgrounds/11-WinterHill.tscn",
+	"res://Data/Stages/ZoneM/Backgrounds/12-SandShower.tscn",	# Two-Player zone
+	"res://Data/Stages/ZoneM/Backgrounds/13-TropicalJungle.tscn"
 	# Sky Fortress and Death Egg are excluded from Two-Player Mode
 ]
 

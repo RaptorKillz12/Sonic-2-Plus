@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2klfn6g7sn8j"]
 
 [ext_resource type="Script" uid="uid://cs4qekbpk2bnb" path="res://Data/Scripts/Objects/ghz_log_spike.gd" id="1_gp6er"]
-[ext_resource type="Texture2D" uid="uid://bhr1rne4boshe" path="res://Data/Sprites/Hazards/SpikeLog.png" id="2_gp6er"]
+[ext_resource type="Texture2D" uid="uid://bhr1rne4boshe" path="res://Data/Sprites/Global/Hazards/SpikeLog.png" id="2_gp6er"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gp6er"]
 size = Vector2(16, 16)

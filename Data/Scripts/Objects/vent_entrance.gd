@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var lock_left_camera: int = 0
 
 var explosion_scene: PackedScene = preload("res://Data/Entities/Misc/GenericParticle.tscn")
-var sfx: AudioStream = preload("res://Data/SoundFX/Objects/s2br_Destroy.wav")
+var sfx: AudioStream = preload("res://Data/SoundFX/Stage/Objects/s2br_Destroy.wav")
 
 # physics collision check, see physics object
 func physics_collision(body: Player2D, hitVector: Vector2) -> void:
