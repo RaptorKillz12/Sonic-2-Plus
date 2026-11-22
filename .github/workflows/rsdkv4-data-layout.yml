@@ -148,9 +148,9 @@ jobs:
           planned={}
           for old,new in moves.items():
               if old==new: continue
-              if new in planned and planned[new]!=old:
+              if new in planned.values():
                   raise RuntimeError(f"Destination collision: {new}")
-              planned[new]=old
+              planned[old]=new
           for old,new in sorted(planned.items(), key=lambda x: (x[0].count("/"),x[0])):
               src,dst=Path(old),Path(new)
               if not src.exists(): continue
@@ -158,6 +158,11 @@ jobs:
               if dst.exists():
                   raise RuntimeError(f"Refusing to overwrite {dst} (source {src})")
               shutil.move(str(src),str(dst))
+
+          # Remove empty-folder markers once a directory contains real assets.
+          for marker in ROOT.rglob(".gitkeep"):
+              if any(x.is_file() and x.name != ".gitkeep" for x in marker.parent.rglob("*")):
+                  marker.unlink()
 
           # Rewrite exact res:// path references in all tracked text resources.
           replacements=sorted(((a,b) for a,b in planned.items()), key=lambda x:len(x[0]), reverse=True)
